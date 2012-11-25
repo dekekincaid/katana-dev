@@ -1,0 +1,29 @@
+<args format="1.0">
+    <param label="Roughness" slidermin="1e-05" name="roughness" min="1e-05" slider="True" slidercenter="0.001" slidermax="0.3" max="0.3"/>
+    <param label="Anisotropy" slidermin="-1.0" name="anisotropy" min="-1.0" slider="True" slidercenter="0.0">
+        <help>
+            Amount of anisotropy. Positive or negative values will change the major direction of the anisotrophic effect.
+        </help>
+    </param>
+    <param label="Specular Gain" slidermin="0.0" name="specularGain" slider="True" slidercenter="0.999999" slidermax="1.0"/>
+    <param label="Specular Color" name="incidentColor" widget="color"/>
+    <param name="surfaceColor" widget="color"/>
+    <param label="Min Reflectance" slidermin="0.0" name="minReflectance" min="0.0" slider="True" slidercenter="0.9" slidermax="1.8"/>
+    <param label="Displacement Amount" slidermin="-1.0" name="displacementAmount" min="-1.0" slider="True" slidercenter="0.0" slidermax="1"/>
+    <page name="Maps">
+        <param label="Specular Map" name="specularMap" widget="fileInput"/>
+        <param label="Surface Map" name="surfaceMap" widget="fileInput"/>
+        <param label="Roughness Map" name="roughnessMap" widget="fileInput"/>
+        <param label="Displacement Map" name="displacementMap" widget="fileInput"/>
+    </page>
+    <page name="Sample Controls">
+        <param slidermin="0.0" name="minSpecularSamples" slider="True" slidercenter="1.0" slidermax="2.0" max="2.0"/>
+        <param slidermin="0" name="maxSpecularSamples" slider="True" slidercenter="16.0" slidermax="32.0" max="32.0"/>
+        <param label="Specular Max Distance" name="specularMaxDistance" slider="True" slidercenter="10000000000.0" slidermax="20000000000.0" max="20000000000.0"/>
+    </page>
+    <param slidermin="0" name="specularBroadening" slider="True" slidercenter="1.0" slidermax="8.0" max="8.0"/>
+    <param label="Indirect Specular Subset" name="specularSubset"/>
+    <param name="lightCategory"/>
+    <param name="applySRGB" widget="boolean"/>
+    <param label="computesOpacity" name="__computesOpacity" widget="boolean"/>
+</args>

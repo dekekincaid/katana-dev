@@ -1,0 +1,11 @@
+<args format="1.0">
+ <param name="distribution"/>
+ <param name="diffuseGain" widget="color"/>
+ <param name="diffuseColor" widget="color"/>
+ <param name="specularGain" slider="True"/>
+ <param name="specularColor" widget="color"/>
+ <param name="specularRoughness" slider="True"/>
+ <param name="specularSamples" slider="True" slidercenter="16.0" slidermax="32.0"/>
+ <param name="diffuseSamples" slider="True" slidercenter="64.0" slidermax="128.0"/>
+ <param name="__computesOpacity"/>
+</args>

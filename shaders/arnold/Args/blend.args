@@ -1,0 +1,9 @@
+<args format="1.0">
+   <page name="Basics" open="True">
+      <param name="blend" widget="boolean"/>
+   </page>
+   <page name="Color">
+      <param name="color1" widget="color"/>
+      <param name="color2" widget="color"/>
+   </page>
+</args>

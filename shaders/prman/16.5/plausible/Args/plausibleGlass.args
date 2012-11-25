@@ -1,0 +1,29 @@
+<args format="1.0">
+    <param slidermin="1e-05" name="roughness" min="1e-05" slider="True" slidercenter="0.001" slidermax="0.3" max="0.3"/>
+    <param slidermin="0.0" name="specularGain" slider="True" slidercenter="0.999999" slidermax="1.0"/>
+    <param name="specularColor" widget="color"/>
+    <param name="surfaceColor" widget="color"/>
+    <param name="ior" slider="True" slidercenter="0.5" slidermax="2.66" max="2.66"/>
+    <param slidermin="0" name="mediaIor" min="0" slider="True" slidercenter="1.0" slidermax="2.0" max="2.0"/>
+    <param slidermin="-1.0" name="displacementAmount" min="-1.0" slider="True" slidercenter="0.0" slidermax="1"/>
+        <page name="Maps">
+    <param name="specularMap" widget="fileInput"/>
+    <param name="surfaceMap" widget="fileInput"/>
+    <param name="roughnessMap" widget="fileInput"/>
+    <param name="displacementMap" widget="fileInput"/>
+        </page>
+        <page name="Sample Controls">    
+    <param slidermin="0.0" name="minSpecularSamples" slider="True" slidercenter="1.0" slidermax="2.0" max="2.0"/>
+    <param slidermin="0" name="maxSpecularSamples" slider="True" slidercenter="16.0" slidermax="32.0" max="32.0"/>
+    <param name="specularMaxDistance" slider="True" slidercenter="10000000000.0" slidermax="20000000000.0" max="20000000000.0"/>
+        </page>    
+    <param slidermin="0" name="specularBroadening" slider="True" slidercenter="1.0" slidermax="8.0" max="8.0"/>
+    <param name="indirectSpecularSubset"/>
+    <param name="lightCategory"/>
+    <param name="applySRGB" widget="boolean"/>
+    <param name="__computesOpacity" widget="boolean"/>
+    <param slidermin="0" name="minDirectSamples" min="0" slider="True" slidercenter="4.0" slidermax="8.0" max="8.0"/>
+    <param slidermin="0" name="rouletteDepth" min="0" slider="True" slidercenter="2.0" slidermax="4.0" max="4.0"/>
+    <param slidermin="0" name="rouletteMode" min="0" slider="True" slidercenter="1.0" slidermax="2.0" max="2.0"/>
+    <param slidermin="0" name="internalReflectionAttenuation" min="0" slider="True" slidercenter="0.9" slidermax="1.8" max="1.8"/>
+</args>

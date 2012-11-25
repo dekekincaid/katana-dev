@@ -1,0 +1,45 @@
+<args format="1.0">
+    <param slidermin="0.0" name="intensity" min="0.0" slider="True" slidercenter="1.0" slidermax="2.0" max="2.0"/>
+    <param name="lightcolor" widget="color"/>
+    <param slidermin="0.0" name="nsamples" min="0.0" slider="True" slidercenter="100.0" slidermax="200.0" max="200.0">
+        <help>
+        Number of samples to distribute on the environment sphere. The sampleEnv shadeop will truncate samples to be a square number. i.e. 128 will be 121 samples.  
+        </help>
+    </param>
+    <page name="Maps">    
+    <param name="shadowname" widget="fileInput"/>
+    <param name="mapname" widget="fileInput">
+        <help>
+        Empty mapname string produces ambient occlusion
+        </help>
+    </param>
+    </page>
+    <param name="distribution" widget="popup">
+        <hintlist name="options">
+            <string value="warp"/>
+            <string value="uniform"/>
+        </hintlist>
+    </param>
+    <param slidermin="0.0" name="radius" slider="True" slidercenter="1000.0" slidermax="20000000000.0" max="20000000000.0">
+        <help>
+        Radius of the Environment Sphere
+        </help>
+    </param>
+    <param slidermin="-.49" name="bias" min="-.49" slider="True" slidercenter="0.01" slidermax="0.51" max="0.51"/>-
+    <param name="coordSys" widget="popup">
+        <help>
+        The Coordinate frame of the Environment. Default is the coordinate system of the light "Shader"
+        </help>
+        <hintlist name="options">
+            <string value="shader"/>
+            <string value="object"/>
+            <string value="world"/>
+            <string value="camera"/>
+            <string value="screen"/>
+            <string value="raster"/>
+            <string value="NDC"/>
+        </hintlist>
+    </param>
+    <param name="__category"/>
+</args>
++

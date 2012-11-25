@@ -1,0 +1,8 @@
+<args format="1.0">
+    <param name="colorA_coshader_name" coshaderPort="True" />
+    <param name="colorA" coshaderPair="colorA_coshader_name" />
+    <param name="colorB_coshader_name" coshaderPort="True" />
+    <param name="colorB" coshaderPair="colorB_coshader_name" />
+    <param name="blend" />
+</args>
+

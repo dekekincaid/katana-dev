@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE stormXML>
+<stormXML version="1k">
+ <formats>
+     
+  <format width="2048" height="1556" pixelAspect="1.00" name="2K Full Aperature" alias="2kfa" proxyName="" />
+     
+  <format width="2348" height="1152" pixelAspect="1.00" name="Wide (full)" alias="Wide (full)" proxyName="Wide (quarter)" />
+  <format width="1174" height="576" pixelAspect="1.00" name="Wide (half)" alias="Wide (half)" proxyName="Wide (quarter)" />
+  <format width="587" height="288" pixelAspect="1.00" name="Wide (quarter)" alias="Wide (quarter)" proxyName="" />
+  
+  <format width="2548" height="1352" pixelAspect="1.00" name="Wide OVERSCAN (full)" alias="Wide OVERSCAN (full)" proxyName="Wide OVERSCAN (quarter)" />
+  <format width="1274" height="676" pixelAspect="1.00" name="Wide OVERSCAN (half)" alias="Wide OVERSCAN (half)" proxyName="Wide OVERSCAN (quarter)" />
+  <format width="637" height="338" pixelAspect="1.00" name="Wide OVERSCAN (quarter)" alias="Wide OVERSCAN (quarter)" proxyName="" />
+  
+  <format width="2348" height="1566" pixelAspect="1.00" name="Wide FF (full)" alias="Wide FF (full)" proxyName="Wide FF (quarter)" />
+  <format width="1174" height="783" pixelAspect="1.00" name="Wide FF (half)" alias="Wide FF (half)" proxyName="Wide FF (quarter)" />
+  <format width="587" height="392" pixelAspect="1.00" name="Wide FF (quarter)" alias="Wide FF (quarter)" proxyName="" />
+  
+  <!-- Katana does not want us to rename these
+  <format width="4096" height="4096" pixelAspect="1.00" name="4K Texture" alias="4K Texture" proxyName="512 Texture" />
+  <format width="2048" height="2048" pixelAspect="1.00" name="2K Texture" alias="2K Texture" proxyName="512 Texture" />
+  <format width="1024" height="1024" pixelAspect="1.00" name="1K Texture" alias="1K Texture" proxyName="512 Texture" />
+  <format width="512" height="512" pixelAspect="1.00" name="512 Texture" alias="512 Texture" proxyName="" />
+  -->
+
+  <format width="4096" height="4096" pixelAspect="1.00" name="4K Texture" alias="4ksq" proxyName="256sq" />
+  <format width="3072" height="3072" pixelAspect="1.00" name="2K Texture" alias="3ksq" proxyName="256sq" />
+  <format width="2048" height="2048" pixelAspect="1.00" name="2K Texture" alias="2ksq" proxyName="256sq" />
+  <format width="1024" height="1024" pixelAspect="1.00" name="1K Texture" alias="1ksq" proxyName="256sq" />
+  <format width="512" height="512" pixelAspect="1.00" name="512 Texture" alias="512sq" proxyName="256sq" />
+  <format width="256" height="256" pixelAspect="1.00" name="256 Texture" alias="256sq" proxyName="" />
+  
+ </formats>
+</stormXML>

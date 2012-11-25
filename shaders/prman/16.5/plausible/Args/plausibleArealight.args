@@ -1,0 +1,38 @@
+<args format="1.0">
+    <param slidermin="0.0" name="intensity" min="0.0" slider="True" slidercenter="1.0" slidermax="2.0" max="2.0"/>
+    <param name="lightcolor" widget="color"/>
+    <param slidermin="0.0" name="minSamples" min="0.0" slider="True" slidercenter="16.0" slidermax="32.0" max="32.0"/>
+    <param slidermin="0.0" name="maxSamples" min="0.0" slider="True" slidercenter="100.0" slidermax="200.0" max="200.0"/>
+    <param slidermin="0.0" name="sides" min="0.0" slider="True" slidercenter="2.0" slidermax="4.0" max="4.0"/>
+    <page name="Maps">
+        <param name="shadowname" widget="fileInput"/>
+        <param name="mapname" widget="fileInput">
+            <help>
+            Light Color. Mapped to the light in the appropriate coordinates.
+            </help>
+        </param>
+    </page>
+    <param name="shape" widget="popup">
+        <hintlist name="options">
+            <string value="rect"/>
+            <string value="disk"/>
+            <string value="sphere"/>
+        </hintlist>
+    </param>
+    <param slidermin="-.49" name="bias" min="-.49" slider="True" slidercenter="0.01" slidermax="0.51" max="0.51">
+        <help>
+        Shadow bias
+        </help>
+    </param>
+    <param slidermin="0.0" name="mapbias" min="0.0" slider="True" slidercenter="1.0" slidermax="2.0" max="2.0">
+        <help>
+        Shadow Map Bias
+        </help>
+    </param>
+    <param slidermin="0.0" name="mapbias2" min="0.0" slider="True" slidercenter="5.0" slidermax="10.0" max="10.0">
+        <help>
+        AreaShadow map Bias 2, this is the gap bias.
+        </help>
+    </param>
+    <param name="__category"/>
+</args>

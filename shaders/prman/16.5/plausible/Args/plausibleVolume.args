@@ -1,0 +1,14 @@
+<args format="1.0">
+    <param label="Density" slidermin="0" name="density" min="0" slider="True" slidermax="1.0" max="1.0"/>    
+    <param name="diffuseGain" slider="True"/>
+    <param name="surfaceColor" widget="color"/>
+    <param name="surfaceMap" widget="fileInput"/>
+        <page name="Sample Controls">        
+    <param slidermin="0.0" name="indirectDiffuseSamples" slider="True" slidercenter="64" slidermax="128.0" max="128.0"/>
+    <param slidermin="0" name="indirectDiffuseMaxVar" slider="True" slidercenter="0.02" slidermax="1.0" max="1.0"/>
+    <param name="indirectDiffuseMaxDistance" slider="True" slidercenter="10000000000.0" slidermax="20000000000.0" max="20000000000.0"/>
+        </page>                    
+    <param name="lightCategory"/>
+    <param name="applySRGB" widget="boolean"/>
+    <param label="Computes Opacity" name="__computesOpacity" widget="boolean"/>
+</args>

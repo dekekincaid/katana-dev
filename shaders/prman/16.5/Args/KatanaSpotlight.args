@@ -1,0 +1,62 @@
+<args format="1.0">
+ <page name="Basics">
+  <param name="Intensity"/>
+  <param name="Color" widget="color"/>
+  <param name="Exposure"/>
+  <param name="Cone_Outer_Angle"/>
+  <param name="Cone_Inner_Angle"/>
+ </page>
+ <page name="Fall Off">
+  <param name="Type"/>
+  <param name="Decay_Regions_On" widget="mapper">
+   <hintdict name="options">
+    <float value="0.0" name="No"/>
+    <float value="1.0" name="SmoothStep"/>
+    <float value="2.0" name="InverseSquare"/>
+   </hintdict>
+  </param>
+  <param name="Fall_In_Begin"/>
+  <param name="Fall_In_End"/>
+  <param name="Fall_In_Interp"/>
+  <param name="Fall_In_Exp"/>
+  <param name="Fall_In_Mult"/>
+  <param name="Fall_Out_Begin"/>
+  <param name="Fall_Out_End"/>
+  <param name="Fall_Out_Interp"/>
+  <param name="Fall_Out_Exp"/>
+  <param name="Fall_Out_Mult"/>
+ </page>
+ <page name="Barndoors">
+  <param name="Barndoors_On" widget="boolean"/>
+  <param name="Barndoor_Left_Top"/>
+  <param name="Barndoor_Left_Bottom"/>
+  <param name="Barndoor_Right_Top"/>
+  <param name="Barndoor_Right_Bottom"/>
+  <param name="Barndoor_Top_Left"/>
+  <param name="Barndoor_Top_Right"/>
+  <param name="Barndoor_Bottom_Left"/>
+  <param name="Barndoor_Bottom_Right"/>
+  <param name="Barndoor_Soft"/>
+ </page>
+ <page name="Slide Map">
+  <param name="Slide_On" widget="boolean"/>
+  <param name="Slide_SMult"/>
+  <param name="Slide_TMult"/>
+  <param name="Slide_SOffset"/>
+  <param name="Slide_TOffset"/>
+  <param name="Slide_Rotate"/>
+  <param name="Slide_Space"/>
+  <param name="Slide_Density"/>
+  <param name="Slide_SWrap" widget="boolean"/>
+  <param name="Slide_TWrap" widget="boolean"/>
+  <param name="slidemapname" widget="fileInput"/>
+ </page>
+ <page name="Shadows">
+  <param name="Shadow_File" widget="fileInput"/>
+  <param name="shadownsamps"/>
+  <param name="shadowblur"/>
+  <param name="shadowbias"/>
+ </page>
+ <param name="from"/>
+ <param name="to"/>
+</args>

@@ -1,0 +1,6 @@
+<args format="1.0">
+    <param name="Filename" widget="assetIdInput"/>
+    <param name="RepeatS" widget="boolean"/>
+    <param name="RepeatT" widget="boolean"/>
+</args>
+

@@ -1,0 +1,26 @@
+<args format="1.0">
+    <page name="Basics" open="True">
+        <param name="Kd"/>
+    	<param name="Kd_color_coshader_name" coshaderPort="True" />
+    	<param name="Kd_color" widget="color"/>
+        <param name="Ks"/>
+    	<param name="Ks_color_coshader_name" coshaderPort="True" />
+    	<param name="Ks_color" widget="color"/>
+        <param name="Roughness"/>
+        <param name="Ka"/>
+    	<param name="Ka_color_coshader_name" coshaderPort="True" />
+    	<param name="Ka_color" widget="color"/>
+        <param name="opacity"/>
+    </page>
+    <page name="Reflection">
+        <param name="EnvMap" widget="assetIdInput"/>
+        <param name="EnvVal"/>
+        <param name="UseFresnel" widget="boolean"/>
+    </page>
+    <page name="Refraction">
+        <param name="RefractMap" widget="assetIdInput"/>
+        <param name="RefractVal"/>
+        <param name="RefractEta"/>
+    </page>
+</args>
+

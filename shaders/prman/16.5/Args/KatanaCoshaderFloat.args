@@ -1,0 +1,5 @@
+<args format="1.0">
+    <param name="f"/>
+    
+    <output name="out" tags="number|float|int"/>
+</args>

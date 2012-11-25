@@ -1,0 +1,18 @@
+<args format="1.0">
+    <param slidermin="0.0" name="intensity" min="0.0" slider="True" slidercenter="40.0" slidermax="100.0" max="100.0"/>
+    <param name="lightcolor" widget="color"/>
+    <param slidermin="0.0" name="nsamples" min="0.0" slider="True" slidercenter="32.0" slidermax="100.0" max="100.0"/>
+        <help>
+            Number of samples to distribute on the
+            environment sphere. The sampleEnv shadeop will
+            truncate samples to be a square number.
+            i.e. 128 will be 121 samples.  
+        </help>    
+    <param name="shadowname" widget="fileInput"/>             
+    <param slidermin="0.0" name="angularVisibility" min="0.0" slider="True" slidercenter="5.0" slidermax="100.0" max="100.0"/>
+    <param slidermin="-.49" name="bias" min="-.49" slider="True" slidercenter="0.007" slidermax="0.51" max="0.51"/>
+        <help>
+            Shadow bias
+        </help>    
+    <param name="__category"/>
+</args>

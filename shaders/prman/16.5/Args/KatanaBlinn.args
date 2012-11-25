@@ -1,0 +1,32 @@
+<args format="1.0">
+    <page name="Basics" open="True">
+        <param name="Kd"/>
+        <param name="Kd_color" widget="color"/>
+        <param name="Ks"/>
+        <param name="Ks_color" widget="color"/>
+        <param name="Roughness"/>
+        <param name="Ka"/>
+        <param name="Ka_color" widget="color"/>
+        <param name="opacity"/>
+    </page>
+    <page name="Textures">
+        <param name="ColMap" widget="fileInput"/>
+        <param name="SpecMap" widget="fileInput"/>
+        <param name="RepeatS" widget="boolean"/>
+        <param name="RepeatT" widget="boolean"/>
+    </page>
+    <page name="Bump Mapping">
+        <param name="BumpMap" widget="fileInput"/>
+        <param name="BumpVal"/>
+    </page>
+    <page name="Reflection">
+        <param name="EnvMap" widget="fileInput"/>
+        <param name="EnvVal"/>
+        <param name="UseFresnel" widget="boolean"/>
+    </page>
+    <page name="Refraction">
+        <param name="RefractMap" widget="fileInput"/>
+        <param name="RefractVal"/>
+        <param name="RefractEta"/>
+    </page>
+</args>

@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="diffuseColor" widget="color"/>
+ <param name="specularColor" widget="color"/>
+ <param name="specularRoughness" slider="True"/>
+ <param name="__computesOpacity" widget="boolean"/>
+</args>

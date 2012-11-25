@@ -1,0 +1,5 @@
+<args format="1.0">
+    <param name="specColor" widget="color"/>
+    
+    <output name="out" tags="color|color4|specular"/>
+</args>

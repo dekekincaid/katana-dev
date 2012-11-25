@@ -1,0 +1,48 @@
+shader_obj 5.0 1 0
+KatanaCoshaderDiffuse 17 1 10 3 7 0 1 1 0 1 12 1
+9 133
+rgb
+current
+/home/katana/filmakademie_demos/shaders
+.:
+KatanaCoshaderDiffuse.sl
+diffuseColor
+
+$meta_1602
+$meta___PRMAN_RELEASE__1602
+1
+0
+0
+17
+$meta___PRMAN_RELEASE__ 6 2 -1 7 3 0 0 0 0 0 0
+$meta___PRMAN_RELEASE_TAG__ 6 2 -1 8 3 0 0 0 0 0 0
+$S45 6 2 -1 0 3 0 0 0 0 0 0
+$S47 6 2 -1 1 3 0 0 0 0 0 0
+$srcDir 6 2 -1 2 3 0 0 0 0 0 0
+$includePath 6 2 -1 3 3 0 0 0 0 0 0
+$S52 6 2 -1 4 3 0 0 0 0 1 7
+$C10 4 2 -1 0 3 0 0 0 0 1 1
+$S54 6 2 -1 5 3 0 0 2 2 0 0
+$S55 6 2 -1 6 3 0 0 7 7 0 0
+diffColor 3 5 0 10 3 1 1 1 1 3 6
+$result_diffuseColor 0 15 -1 0 3 0 0 0 0 0 0
+$31_c 3 15 -1 1 2 0 0 6 6 0 0
+N 22 10 1 0 2 0 0 0 0 4 4
+diffuseColor 12 8 -1 0 2 2 11 0 0 1 7
+$T54 3 4 0 0 2 0 0 5 5 6 6
+$T55 22 4 1 0 2 0 0 4 4 5 5
+12
+10 7 
+8 
+10 
+16 13 
+15 16 
+12 10 15 
+9 
+_assign 	2 0  4 1 0
+_enterproc 	1 2  4 3 30
+_lightingstart 	1 3  4 5 31
+normalize 	2 4  4 5 31
+diffuse 	2 6  4 5 31
+_multiply 	3 8  4 5 31
+_enterproc 	1 11  4 3 30

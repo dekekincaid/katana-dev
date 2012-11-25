@@ -1,0 +1,7 @@
+<args format="1.0">
+    <param name="diff" coshaderPort="True" />
+    <param name="diffValue" coshaderPair="diff" />
+    <param name="spec" coshaderPort="True" />
+    <param name="specValue" coshaderPair="spec" />
+</args>
+
