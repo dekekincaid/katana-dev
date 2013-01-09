@@ -1,0 +1,4 @@
+<args format="1.0">
+ <param name="color" widget="color"/>
+ <param name="opacity" widget="color"/>
+</args>

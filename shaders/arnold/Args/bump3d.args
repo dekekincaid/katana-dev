@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="bump_map"/>
+ <param name="bump_height" slider="True"/>
+ <param name="epsilon" slider="True"/>
+ <param name="shader" widget="color"/>
+</args>

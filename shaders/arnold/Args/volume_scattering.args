@@ -1,0 +1,12 @@
+<args format="1.0">
+ <param name="density" slider="True"/>
+ <param int="True" name="samples" slider="True"/>
+ <param name="eccentricity" slider="True"/>
+ <param name="attenuation" slider="True"/>
+ <param name="affect_camera" slider="True"/>
+ <param name="affect_diffuse" slider="True"/>
+ <param name="affect_reflection" slider="True"/>
+ <param name="importance_sampling" widget="checkBox"/>
+ <param name="rgb_density" widget="color"/>
+ <param name="rgb_attenuation" widget="color"/>
+</args>

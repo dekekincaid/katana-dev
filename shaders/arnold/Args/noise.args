@@ -1,0 +1,15 @@
+<args format="1.0">
+ <param int="True" name="octaves" slider="True"/>
+ <param name="distortion" slider="True"/>
+ <param name="lacunarity" slider="True"/>
+ <param name="amplitude" slider="True"/>
+ <param name="scale"/>
+ <param name="offset"/>
+ <param name="coord_space" widget="popup">
+  <hintlist name="options">
+   <string value="world"/>
+   <string value="object"/>
+   <string value="Pref"/>
+  </hintlist>
+ </param>
+</args>

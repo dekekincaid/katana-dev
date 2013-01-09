@@ -1,0 +1,16 @@
+<args format="1.0">
+ <param name="rootcolor" widget="color"/>
+ <param name="tipcolor" widget="color"/>
+ <param name="opacity" widget="color"/>
+ <param name="ambdiff" slider="True"/>
+ <param name="gloss" slider="True"/>
+ <param name="spec_color" widget="color"/>
+ <param name="spec" slider="True"/>
+ <param name="kd_ind" slider="True"/>
+ <param name="uparam"/>
+ <param name="vparam"/>
+ <param name="diffuse_cache" widget="checkBox"/>
+ <param name="aov_direct_diffuse"/>
+ <param name="aov_direct_specular"/>
+ <param name="aov_indirect_diffuse"/>
+</args>

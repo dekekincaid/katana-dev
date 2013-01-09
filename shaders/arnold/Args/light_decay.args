@@ -1,0 +1,8 @@
+<args format="1.0">
+ <param name="use_near_atten" widget="checkBox"/>
+ <param name="use_far_atten" widget="checkBox"/>
+ <param name="near_start" slider="True"/>
+ <param name="near_end" slider="True"/>
+ <param name="far_start" slider="True"/>
+ <param name="far_end" slider="True"/>
+</args>

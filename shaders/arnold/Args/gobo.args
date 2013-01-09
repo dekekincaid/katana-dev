@@ -1,0 +1,35 @@
+<args format="1.0">
+ <param name="slidemap" widget="color"/>
+ <param name="rotate"/>
+ <param name="offset"/>
+ <param name="density" slider="True"/>
+ <param name="filter_mode" widget="popup">
+  <hintlist name="options">
+   <string value="blend"/>
+   <string value="replace"/>
+   <string value="add"/>
+   <string value="sub"/>
+   <string value="mix"/>
+  </hintlist>
+ </param>
+ <param name="scale_s" slider="True"/>
+ <param name="scale_t" slider="True"/>
+ <param name="wrap_s" widget="popup">
+  <hintlist name="options">
+   <string value="periodic"/>
+   <string value="black"/>
+   <string value="clamp"/>
+   <string value="mirror"/>
+   <string value="file"/>
+  </hintlist>
+ </param>
+ <param name="wrap_t" widget="popup">
+  <hintlist name="options">
+   <string value="periodic"/>
+   <string value="black"/>
+   <string value="clamp"/>
+   <string value="mirror"/>
+   <string value="file"/>
+  </hintlist>
+ </param>
+</args>

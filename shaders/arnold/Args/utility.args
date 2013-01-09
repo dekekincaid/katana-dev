@@ -1,0 +1,39 @@
+<args format="1.0">
+ <param name="color_mode" widget="popup">
+  <hintlist name="options">
+   <string value="color"/>
+   <string value="ng"/>
+   <string value="ns"/>
+   <string value="n"/>
+   <string value="bary"/>
+   <string value="uv"/>
+   <string value="u"/>
+   <string value="v"/>
+   <string value="dpdu"/>
+   <string value="dpdv"/>
+   <string value="p"/>
+   <string value="prims"/>
+   <string value="wire"/>
+   <string value="polywire"/>
+   <string value="obj"/>
+   <string value="edgelength"/>
+   <string value="floatgrid"/>
+   <string value="reflectline"/>
+   <string value="bad_uvs"/>
+   <string value="nlights"/>
+   <string value="id"/>
+   <string value="bumpdiff"/>
+  </hintlist>
+ </param>
+ <param name="shade_mode" widget="popup">
+  <hintlist name="options">
+   <string value="ndoteye"/>
+   <string value="lambert"/>
+   <string value="flat"/>
+   <string value="ambocc"/>
+   <string value="plastic"/>
+  </hintlist>
+ </param>
+ <param name="color" widget="color"/>
+ <param name="opacity"/>
+</args>

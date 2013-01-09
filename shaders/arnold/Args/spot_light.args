@@ -1,0 +1,51 @@
+
+
+
+
+
+<args format="1.0">
+ <param name="color" label="Color" open="True" widget="color"/>
+ <param name="intensity" label="Intensity" slider="True" slidermin="0" slidermax="10"/>
+ <param name="decay_type" label="Decay Type" widget="popup">
+  <hintlist name="options">
+   <string value="constant"/>
+   <string value="quadratic"/>
+  </hintlist>
+ </param> 
+ <param name="exposure" label="Exposure" slider="True" slidermin="0" slidermax="10"/>
+ <param name="samples" label="Samples" int="True" slider="True" slidermin="1" slidermax="100" max="100"/>
+ <param name="radius" slider="True"/>
+ <param name="normalize" label="Normalize" widget="checkBox"/>
+
+ <param name="lens_radius" label="Lens Radius" slider="True"/>
+ <param name="cone_angle" label="Cone Angle" slider="True"/>
+ <param name="penumbra_angle" label="Penumbra Angle" slider="True"/>
+ <param name="cosine_power" label="Cosine Power" slider="True"/>
+ <param name="aspect_ratio" label="Aspect Ratio" slider="True"/>
+
+
+ <param name="affect_diffuse" label="Emit Diffuse" widget="checkBox"/>
+ <param name="affect_specular" label="Emit Specular" widget="checkBox"/>
+ 
+
+ <page name="Shadows" open="True">
+  <param name="cast_shadows" label="Cast Shadows" widget="checkBox"/>
+  <param name="shadow_color" label="Shadow Color" widget="color"/> 
+  <param name="shadow_density" label="Shadow Density" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0"/>
+  <param name="affect_volumetrics" label="Affect Volumetrics" widget="checkBox"/>
+  <param name="cast_volumetric_shadows" label="Cast Volumetric Shadows" widget="checkBox"/>
+ </page>
+ <page name="Bounce" open="True"> 
+  <param name="bounce_factor" label="Bounce Factor" slider="True"  slidermin="0" min="0" slidermax="20.0"/>
+  <param name="bounces" label="Max Bounces" int="True" slider="True" slidermin="0" min="0" slidermax="10000.0" max="10000.0"/>
+ </page>
+ <page name="UNSUPPORTED" open="False"> 
+  <param name="position"/>
+  <param name="look_at"/>
+  <param name="up"/>  
+  <param name="volume_density"/>  
+  <param name="matrix"/>
+  <param name="filters"/>
+  <param name="time_samples"/>
+ </page>
+</args>

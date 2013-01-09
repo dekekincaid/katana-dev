@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param name="distance" slider="True"/>
+ <param name="height" slider="True"/>
+ <param name="color" widget="color"/>
+ <param name="ground_point"/>
+ <param name="ground_normal"/>
+</args>

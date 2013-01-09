@@ -1,0 +1,25 @@
+<args format="1.0">
+ <param name="color" label="Color" open="True" widget="color"/>
+ <param name="intensity" label="Intensity" slider="True" slidermin="0" slidermax="10"/>
+ <param name="exposure" label="Exposure" slider="True" slidermin="0" slidermax="10"/>
+ <param name="direction"/>
+ <param name="angle" slider="True"/> 
+ <param name="samples" label="Samples" int="True" slider="True" slidermin="1" slidermax="100" max="100"/>
+ <param name="normalize" label="Normalize" widget="checkBox"/>
+ <param name="affect_diffuse" label="Emit Diffuse" widget="checkBox"/>
+ <param name="affect_specular" label="Emit Specular" widget="checkBox"/>
+ <page name="Shadows" open="True">
+  <param name="cast_shadows" label="Cast Shadows" widget="checkBox"/>
+  <param name="shadow_color" label="Shadow Color" widget="color"/> 
+  <param name="shadow_density" label="Shadow Density" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0"/> 
+  <param name="affect_volumetrics" label="Affect Volumetrics" widget="checkBox"/>
+  <param name="cast_volumetric_shadows" label="Cast Volumetric Shadows" widget="checkBox"/> 
+  <param name="bounce_factor" label="Bounce Factor" slider="True"  slidermin="0" min="0" slidermax="20.0"/>
+  <param name="bounces" label="Max Bounces" int="True" slider="True" slidermin="0" min="0" slidermax="10000.0" max="10000.0"/>
+ </page>
+ <page name="UNSUPPORTED" open="False"> 
+  <param name="matrix"/>
+  <param name="filters"/>
+  <param name="time_samples"/>
+ </page>  
+</args>

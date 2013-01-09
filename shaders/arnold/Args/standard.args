@@ -1,0 +1,70 @@
+<args format="1.0">
+ <param name="Kd" slider="True"/>
+ <param name="Kd_color" widget="color"/>
+ <param name="diffuse_roughness" slider="True"/>
+ <param name="Ks" slider="True"/>
+ <param name="Ks_color" widget="color"/>
+ <param name="specular_brdf" widget="popup">
+  <hintlist name="options">
+   <string value="stretched_phong"/>
+   <string value="ward_duer"/>
+   <string value="cook_torrance"/>
+  </hintlist>
+ </param>
+ <param name="specular_roughness" slider="True"/>
+ <param name="specular_anisotropy" slider="True">
+  <hintdict name="conditionalLockOps">
+   <string value="ward_duer" name="conditionalLockValue"/>
+   <string value="doesNotContain" name="conditionalLockOp"/>
+   <string value="../specular_brdf" name="conditionalLockPath"/>
+  </hintdict>
+ </param>
+ <param name="specular_rotation" slider="True">
+  <hintdict name="conditionalLockOps">
+   <string value="ward_duer" name="conditionalLockValue"/>
+   <string value="doesNotContain" name="conditionalLockOp"/>
+   <string value="../specular_brdf" name="conditionalLockPath"/>
+  </hintdict>
+ </param>
+ <param name="Phong_exponent" slider="True"/>
+ <param name="Kr"/>
+ <param name="Kr_color" widget="color"/>
+ <param name="reflection_exit_color" widget="color"/>
+ <param name="reflection_exit_use_environment" widget="checkBox"/>
+ <param name="Kt"/>
+ <param name="Kt_color" widget="color"/>
+ <param name="transmittance" widget="color"/>
+ <param name="refraction_roughness" slider="True"/>
+ <param name="refraction_exit_color" widget="color"/>
+ <param name="refraction_exit_use_environment" widget="checkBox"/>
+ <param name="IOR" slider="True"/>
+ <param name="Kb" slider="True"/>
+ <param name="Fresnel" widget="checkBox"/>
+ <param name="Krn" slider="True"/>
+ <param name="specular_Fresnel" widget="checkBox"/>
+ <param name="Ksn" slider="True"/>
+ <param name="Fresnel_affect_diff" widget="checkBox"/>
+ <param name="emission" slider="True"/>
+ <param name="emission_color" widget="color"/>
+ <param name="direct_specular" slider="True"/>
+ <param name="indirect_specular" slider="True"/>
+ <param name="direct_diffuse" slider="True"/>
+ <param name="indirect_diffuse" slider="True"/>
+ <param name="enable_glossy_caustics" widget="checkBox"/>
+ <param name="enable_reflective_caustics" widget="checkBox"/>
+ <param name="enable_refractive_caustics" widget="checkBox"/>
+ <param name="enable_internal_reflections" widget="checkBox"/>
+ <param name="Ksss" slider="True"/>
+ <param name="Ksss_color" widget="color"/>
+ <param name="sss_radius" widget="color"/>
+ <param name="bounce_factor" slider="True"/>
+ <param name="opacity" widget="color"/>
+ <param name="aov_emission"/>
+ <param name="aov_direct_diffuse"/>
+ <param name="aov_direct_specular"/>
+ <param name="aov_indirect_diffuse"/>
+ <param name="aov_indirect_specular"/>
+ <param name="aov_reflection"/>
+ <param name="aov_refraction"/>
+ <param name="aov_sss"/>
+</args>

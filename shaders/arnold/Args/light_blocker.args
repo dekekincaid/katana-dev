@@ -1,0 +1,26 @@
+<args format="1.0">
+ <param name="geometry_type" widget="popup">
+  <hintlist name="options">
+   <string value="box"/>
+   <string value="sphere"/>
+   <string value="plane"/>
+   <string value="cylinder"/>
+  </hintlist>
+ </param>
+ <param name="geometry_matrix"/>
+ <param name="density" slider="True"/>
+ <param name="roundness" slider="True"/>
+ <param name="width_edge" slider="True"/>
+ <param name="height_edge" slider="True"/>
+ <param name="ramp" slider="True"/>
+ <param name="ramp_axis" widget="popup">
+  <hintlist name="options">
+   <string value="x"/>
+   <string value="y"/>
+   <string value="z"/>
+   <string value="X"/>
+   <string value="Y"/>
+   <string value="Z"/>
+  </hintlist>
+ </param>
+</args>

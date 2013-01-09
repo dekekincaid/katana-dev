@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="raw" widget="checkBox"/>
+ <param name="time0"/>
+ <param name="time1"/>
+ <param name="max_displace"/>
+</args>

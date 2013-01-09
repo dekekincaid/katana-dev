@@ -1,0 +1,40 @@
+<args format="1.0">
+ <param name="filename" widget="fileInput"/>
+ <param name="filter" widget="popup">
+  <hintlist name="options">
+   <string value="closest"/>
+   <string value="bilinear"/>
+   <string value="bicubic"/>
+   <string value="smart_bicubic"/>
+  </hintlist>
+ </param>
+ <param name="swrap" widget="popup">
+  <hintlist name="options">
+   <string value="periodic"/>
+   <string value="black"/>
+   <string value="clamp"/>
+   <string value="mirror"/>
+   <string value="file"/>
+  </hintlist>
+ </param>
+ <param name="twrap" widget="popup">
+  <hintlist name="options">
+   <string value="periodic"/>
+   <string value="black"/>
+   <string value="clamp"/>
+   <string value="mirror"/>
+   <string value="file"/>
+  </hintlist>
+ </param>
+ <param name="sscale"/>
+ <param name="tscale"/>
+ <param name="sflip" widget="checkBox"/>
+ <param name="tflip" widget="checkBox"/>
+ <param name="swap_st" widget="checkBox"/>
+ <param name="single_channel" widget="checkBox"/>
+ <param int="True" name="mipmap_bias"/>
+ <param name="multiply" widget="color"/>
+ <param name="offset" widget="color"/>
+ <param name="uvcoords"/>
+ <param name="cache_texture_handles" widget="checkBox"/>
+</args>

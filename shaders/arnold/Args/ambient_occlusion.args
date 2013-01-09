@@ -1,0 +1,11 @@
+<args format="1.0">
+ <param int="True" slidermin="0" name="samples" slider="True" slidermax="10.0"/>
+ <param name="spread" slider="True"/>
+ <param name="near_clip" slider="True"/>
+ <param name="far_clip" slider="True"/>
+ <param name="falloff" slider="True"/>
+ <param name="black" widget="color"/>
+ <param name="white" widget="color"/>
+ <param name="invert_normals" widget="checkBox"/>
+ <param name="opacity" widget="color"/>
+</args>

@@ -1,0 +1,13 @@
+<args format="1.0">
+ <param name="line_width" slider="True"/>
+ <param name="fill_color" widget="color"/>
+ <param name="line_color" widget="color"/>
+ <param name="raster_space" widget="checkBox"/>
+ <param name="edge_type" widget="popup">
+  <hintlist name="options">
+   <string value="triangles"/>
+   <string value="polygons"/>
+   <string value="patches"/>
+  </hintlist>
+ </param>
+</args>

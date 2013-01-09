@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param name="Kd" slider="True"/>
+ <param name="Kd_color" widget="color"/>
+ <param name="opacity" widget="color"/>
+ <param name="aov_direct_diffuse"/>
+ <param name="aov_indirect_diffuse"/>
+</args>

@@ -1,0 +1,14 @@
+<args format="1.0">
+ <param name="barndoor_top_left" slider="True"/>
+ <param name="barndoor_top_right" slider="True"/>
+ <param name="barndoor_top_edge" slider="True"/>
+ <param name="barndoor_right_top" slider="True"/>
+ <param name="barndoor_right_bottom" slider="True"/>
+ <param name="barndoor_right_edge" slider="True"/>
+ <param name="barndoor_bottom_left" slider="True"/>
+ <param name="barndoor_bottom_right" slider="True"/>
+ <param name="barndoor_bottom_edge" slider="True"/>
+ <param name="barndoor_left_top" slider="True"/>
+ <param name="barndoor_left_bottom" slider="True"/>
+ <param name="barndoor_left_edge" slider="True"/>
+</args>
