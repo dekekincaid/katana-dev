@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="blender" slider="True"/>
+ <param name="color1" widget="color"/>
+ <param name="color2" widget="color"/>
+</args>

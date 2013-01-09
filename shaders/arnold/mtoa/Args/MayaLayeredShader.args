@@ -1,0 +1,57 @@
+<args format="1.0">
+ <param name="compositingFlag" widget="popup">
+  <hintlist name="options">
+   <string value="shader"/>
+   <string value="texture"/>
+  </hintlist>
+ </param>
+ <param name="numInputs"/>
+ <param name="color0" widget="color"/>
+ <param name="color1" widget="color"/>
+ <param name="color2" widget="color"/>
+ <param name="color3" widget="color"/>
+ <param name="color4" widget="color"/>
+ <param name="color5" widget="color"/>
+ <param name="color6" widget="color"/>
+ <param name="color7" widget="color"/>
+ <param name="color8" widget="color"/>
+ <param name="color9" widget="color"/>
+ <param name="color10" widget="color"/>
+ <param name="color11" widget="color"/>
+ <param name="color12" widget="color"/>
+ <param name="color13" widget="color"/>
+ <param name="color14" widget="color"/>
+ <param name="color15" widget="color"/>
+ <param name="transparency0" widget="color"/>
+ <param name="transparency1" widget="color"/>
+ <param name="transparency2" widget="color"/>
+ <param name="transparency3" widget="color"/>
+ <param name="transparency4" widget="color"/>
+ <param name="transparency5" widget="color"/>
+ <param name="transparency6" widget="color"/>
+ <param name="transparency7" widget="color"/>
+ <param name="transparency8" widget="color"/>
+ <param name="transparency9" widget="color"/>
+ <param name="transparency10" widget="color"/>
+ <param name="transparency11" widget="color"/>
+ <param name="transparency12" widget="color"/>
+ <param name="transparency13" widget="color"/>
+ <param name="transparency14" widget="color"/>
+ <param name="transparency15" widget="color"/>
+ <param name="useTransparency0" widget="checkBox"/>
+ <param name="useTransparency1" widget="checkBox"/>
+ <param name="useTransparency2" widget="checkBox"/>
+ <param name="useTransparency3" widget="checkBox"/>
+ <param name="useTransparency4" widget="checkBox"/>
+ <param name="useTransparency5" widget="checkBox"/>
+ <param name="useTransparency6" widget="checkBox"/>
+ <param name="useTransparency7" widget="checkBox"/>
+ <param name="useTransparency8" widget="checkBox"/>
+ <param name="useTransparency9" widget="checkBox"/>
+ <param name="useTransparency10" widget="checkBox"/>
+ <param name="useTransparency11" widget="checkBox"/>
+ <param name="useTransparency12" widget="checkBox"/>
+ <param name="useTransparency13" widget="checkBox"/>
+ <param name="useTransparency14" widget="checkBox"/>
+ <param name="useTransparency15" widget="checkBox"/>
+</args>

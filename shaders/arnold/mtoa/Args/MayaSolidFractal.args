@@ -1,0 +1,23 @@
+<args format="1.0">
+ <param name="threshold" slider="True"/>
+ <param name="amplitude" slider="True"/>
+ <param name="ratio" slider="True"/>
+ <param name="frequencyRatio" slider="True"/>
+ <param name="ripples"/>
+ <param name="depth"/>
+ <param name="bias" slider="True"/>
+ <param name="inflection" widget="checkBox"/>
+ <param name="animated" widget="checkBox"/>
+ <param name="time" slider="True"/>
+ <param name="timeRatio" slider="True"/>
+ <param name="placementMatrix"/>
+ <param name="wrap" widget="checkBox"/>
+ <param name="local" widget="checkBox"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="alphaOffset"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+</args>

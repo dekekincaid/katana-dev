@@ -1,0 +1,340 @@
+<args format="1.0">
+ <param name="numInputs"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="color0" widget="color"/>
+ <param name="color1" widget="color"/>
+ <param name="color2" widget="color"/>
+ <param name="color3" widget="color"/>
+ <param name="color4" widget="color"/>
+ <param name="color5" widget="color"/>
+ <param name="color6" widget="color"/>
+ <param name="color7" widget="color"/>
+ <param name="color8" widget="color"/>
+ <param name="color9" widget="color"/>
+ <param name="color10" widget="color"/>
+ <param name="color11" widget="color"/>
+ <param name="color12" widget="color"/>
+ <param name="color13" widget="color"/>
+ <param name="color14" widget="color"/>
+ <param name="color15" widget="color"/>
+ <param name="alpha0"/>
+ <param name="alpha1"/>
+ <param name="alpha2"/>
+ <param name="alpha3"/>
+ <param name="alpha4"/>
+ <param name="alpha5"/>
+ <param name="alpha6"/>
+ <param name="alpha7"/>
+ <param name="alpha8"/>
+ <param name="alpha9"/>
+ <param name="alpha10"/>
+ <param name="alpha11"/>
+ <param name="alpha12"/>
+ <param name="alpha13"/>
+ <param name="alpha14"/>
+ <param name="alpha15"/>
+ <param name="colorConnectedToAlpha0" widget="checkBox"/>
+ <param name="colorConnectedToAlpha1" widget="checkBox"/>
+ <param name="colorConnectedToAlpha2" widget="checkBox"/>
+ <param name="colorConnectedToAlpha3" widget="checkBox"/>
+ <param name="colorConnectedToAlpha4" widget="checkBox"/>
+ <param name="colorConnectedToAlpha5" widget="checkBox"/>
+ <param name="colorConnectedToAlpha6" widget="checkBox"/>
+ <param name="colorConnectedToAlpha7" widget="checkBox"/>
+ <param name="colorConnectedToAlpha8" widget="checkBox"/>
+ <param name="colorConnectedToAlpha9" widget="checkBox"/>
+ <param name="colorConnectedToAlpha10" widget="checkBox"/>
+ <param name="colorConnectedToAlpha11" widget="checkBox"/>
+ <param name="colorConnectedToAlpha12" widget="checkBox"/>
+ <param name="colorConnectedToAlpha13" widget="checkBox"/>
+ <param name="colorConnectedToAlpha14" widget="checkBox"/>
+ <param name="colorConnectedToAlpha15" widget="checkBox"/>
+ <param name="blendMode0" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode1" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode2" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode3" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode4" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode5" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode6" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode7" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode8" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode9" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode10" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode11" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode12" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode13" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode14" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="blendMode15" widget="popup">
+  <hintlist name="options">
+   <string value="None"/>
+   <string value="Over"/>
+   <string value="In"/>
+   <string value="Out"/>
+   <string value="Add"/>
+   <string value="Subtract"/>
+   <string value="Multiply"/>
+   <string value="Difference"/>
+   <string value="Lighten"/>
+   <string value="Darken"/>
+   <string value="Saturate"/>
+   <string value="Desaturate"/>
+   <string value="Illuminate"/>
+  </hintlist>
+ </param>
+ <param name="visible0" widget="checkBox"/>
+ <param name="visible1" widget="checkBox"/>
+ <param name="visible2" widget="checkBox"/>
+ <param name="visible3" widget="checkBox"/>
+ <param name="visible4" widget="checkBox"/>
+ <param name="visible5" widget="checkBox"/>
+ <param name="visible6" widget="checkBox"/>
+ <param name="visible7" widget="checkBox"/>
+ <param name="visible8" widget="checkBox"/>
+ <param name="visible9" widget="checkBox"/>
+ <param name="visible10" widget="checkBox"/>
+ <param name="visible11" widget="checkBox"/>
+ <param name="visible12" widget="checkBox"/>
+ <param name="visible13" widget="checkBox"/>
+ <param name="visible14" widget="checkBox"/>
+ <param name="visible15" widget="checkBox"/>
+</args>

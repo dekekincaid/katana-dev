@@ -1,0 +1,20 @@
+<args format="1.0">
+ <param name="color1" widget="color"/>
+ <param name="color2" widget="color"/>
+ <param name="contrast"/>
+ <param name="amplitude"/>
+ <param name="depth"/>
+ <param name="ripples"/>
+ <param name="softEdges" widget="checkBox"/>
+ <param name="edgeThresh"/>
+ <param name="centerThresh"/>
+ <param name="transpRange"/>
+ <param name="ratio"/>
+ <param name="placementMatrix"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="local" widget="checkBox"/>
+ <param name="wrap" widget="checkBox"/>
+</args>

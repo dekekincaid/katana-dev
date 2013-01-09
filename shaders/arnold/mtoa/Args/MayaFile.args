@@ -1,0 +1,32 @@
+<args format="1.0">
+ <param name="coverage"/>
+ <param name="translateFrame"/>
+ <param name="rotateFrame"/>
+ <param name="mirrorU" widget="checkBox"/>
+ <param name="mirrorV" widget="checkBox"/>
+ <param name="wrapU" widget="checkBox"/>
+ <param name="wrapV" widget="checkBox"/>
+ <param name="stagger" widget="checkBox"/>
+ <param name="repeatUV"/>
+ <param name="offsetUV"/>
+ <param name="rotateUV"/>
+ <param name="filename" widget="fileInput"/>
+ <param name="noiseUV"/>
+ <param int="True" name="mipBias"/>
+ <param name="filter" widget="popup">
+  <hintlist name="options">
+   <string value="closest"/>
+   <string value="bilinear"/>
+   <string value="bicubic"/>
+   <string value="smart_bicubic"/>
+  </hintlist>
+ </param>
+ <param name="useDefaultColor" widget="checkBox"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="alphaOffset"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+</args>

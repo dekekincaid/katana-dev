@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param name="beauty" widget="color"/>
+ <param name="aov_inputs"/>
+ <param name="aov_names"/>
+ <param name="enable_matte" widget="checkBox"/>
+ <param name="matte_color" widget="color"/>
+</args>

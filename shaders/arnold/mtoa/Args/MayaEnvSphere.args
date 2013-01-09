@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="image" widget="color"/>
+ <param name="flip" widget="checkBox"/>
+ <param name="placementMatrix"/>
+</args>

@@ -1,0 +1,16 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param name="inputMin" slider="True"/>
+ <param name="inputMax" slider="True"/>
+ <param name="rPositions"/>
+ <param name="rValues"/>
+ <param name="rInterpolations"/>
+ <param name="gPositions"/>
+ <param name="gValues"/>
+ <param name="gInterpolations"/>
+ <param name="bPositions"/>
+ <param name="bValues"/>
+ <param name="bInterpolations"/>
+ <param name="outputMin" slider="True"/>
+ <param name="outputMax" slider="True"/>
+</args>

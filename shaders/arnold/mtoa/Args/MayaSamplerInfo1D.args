@@ -1,0 +1,8 @@
+<args format="1.0">
+ <param name="mode" widget="popup">
+  <hintlist name="options">
+   <string value="facingRatio"/>
+   <string value="flippedNormal"/>
+  </hintlist>
+ </param>
+</args>

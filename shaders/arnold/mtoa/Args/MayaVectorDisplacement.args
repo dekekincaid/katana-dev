@@ -1,0 +1,19 @@
+<args format="1.0">
+ <param name="displacement"/>
+ <param name="vectorDisplacement"/>
+ <param name="scale"/>
+ <param name="vectorEncoding" widget="popup">
+  <hintlist name="options">
+   <string value="absolute"/>
+   <string value="signed"/>
+  </hintlist>
+ </param>
+ <param name="vectorSpace" widget="popup">
+  <hintlist name="options">
+   <string value="world"/>
+   <string value="object"/>
+   <string value="tangent"/>
+  </hintlist>
+ </param>
+ <param name="tangent"/>
+</args>

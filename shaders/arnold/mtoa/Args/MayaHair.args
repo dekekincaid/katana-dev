@@ -1,0 +1,14 @@
+<args format="1.0">
+ <param name="hairColor" widget="color"/>
+ <param name="opacity"/>
+ <param name="translucence"/>
+ <param name="specularColor" widget="color"/>
+ <param name="specularPower"/>
+ <param name="castShadows" widget="checkBox"/>
+ <param name="diffuseRand"/>
+ <param name="specularRand"/>
+ <param name="hueRand"/>
+ <param name="satRand"/>
+ <param name="valRand"/>
+ <param name="hairColorScale"/>
+</args>

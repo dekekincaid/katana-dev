@@ -1,0 +1,8 @@
+<args format="1.0">
+ <param name="mode" widget="popup">
+  <hintlist name="options">
+   <string value="uvCoord"/>
+   <string value="pixelCenter"/>
+  </hintlist>
+ </param>
+</args>

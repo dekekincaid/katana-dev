@@ -1,0 +1,10 @@
+<args format="1.0">
+ <param name="input"/>
+ <param name="inputMin" slider="True"/>
+ <param name="inputMax" slider="True"/>
+ <param name="positions"/>
+ <param name="values"/>
+ <param name="interpolations"/>
+ <param name="outputMin" slider="True"/>
+ <param name="outputMax" slider="True"/>
+</args>

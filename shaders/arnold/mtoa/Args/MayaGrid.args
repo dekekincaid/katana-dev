@@ -1,0 +1,17 @@
+<args format="1.0">
+ <param name="lineColor" widget="color"/>
+ <param name="fillerColor" widget="color"/>
+ <param name="uWidth" slider="True"/>
+ <param name="vWidth" slider="True"/>
+ <param name="contrast" slider="True"/>
+ <param name="uvCoord"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="alphaOffset"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="filter"/>
+ <param name="filterOffset"/>
+</args>

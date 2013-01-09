@@ -1,0 +1,21 @@
+<args format="1.0">
+ <param name="amplitude"/>
+ <param name="threshold"/>
+ <param name="ratio"/>
+ <param name="frequencyRatio"/>
+ <param name="levelMin"/>
+ <param name="levelMax"/>
+ <param name="bias"/>
+ <param name="inflection" widget="checkBox"/>
+ <param name="animated" widget="checkBox"/>
+ <param name="time"/>
+ <param name="timeRatio"/>
+ <param name="uvCoord"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="alphaOffset"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+</args>

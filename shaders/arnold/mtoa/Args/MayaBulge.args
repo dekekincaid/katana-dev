@@ -1,0 +1,12 @@
+<args format="1.0">
+ <param slidermin="0" name="uWidth" min="0" slider="True" slidermax="1" max="1"/>
+ <param name="vWidth" slider="True"/>
+ <param name="uvCoord"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain" slider="True"/>
+ <param name="alphaOffset" slider="True"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+</args>

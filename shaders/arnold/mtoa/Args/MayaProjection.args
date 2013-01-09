@@ -1,0 +1,45 @@
+<args format="1.0">
+ <param name="projType" widget="popup">
+  <hintlist name="options">
+   <string value="off"/>
+   <string value="planar"/>
+   <string value="spherical"/>
+   <string value="cylindrical"/>
+   <string value="ball"/>
+   <string value="cubic"/>
+   <string value="tri_planar"/>
+   <string value="concentric"/>
+   <string value="perspective"/>
+  </hintlist>
+ </param>
+ <param name="image" widget="color"/>
+ <param name="uAngle" slider="True"/>
+ <param name="vAngle" slider="True"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="alphaOffset"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="wrap" widget="checkBox"/>
+ <param name="local" widget="checkBox"/>
+ <param name="placementMatrix"/>
+ <param name="fitType" widget="popup">
+  <hintlist name="options">
+   <string value="none"/>
+   <string value="camera_film_gate"/>
+   <string value="camera_resolution"/>
+  </hintlist>
+ </param>
+ <param name="fitFill" widget="popup">
+  <hintlist name="options">
+   <string value="fill"/>
+   <string value="horizontal"/>
+   <string value="vertical"/>
+  </hintlist>
+ </param>
+ <param name="linkedCamera"/>
+ <param name="cameraNearPlane"/>
+ <param name="cameraHorizontalFOV"/>
+ <param name="cameraAspectRatio"/>
+</args>

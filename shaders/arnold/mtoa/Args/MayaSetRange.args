@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param name="value"/>
+ <param name="min"/>
+ <param name="max"/>
+ <param name="oldMin"/>
+ <param name="oldMax"/>
+</args>

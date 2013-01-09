@@ -1,0 +1,11 @@
+<args format="1.0">
+ <param name="operation" widget="popup">
+  <hintlist name="options">
+   <string value="none"/>
+   <string value="sum"/>
+   <string value="subtract"/>
+   <string value="average"/>
+  </hintlist>
+ </param>
+ <param name="input1D"/>
+</args>

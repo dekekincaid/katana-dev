@@ -1,0 +1,17 @@
+<args format="1.0">
+ <param name="snowColor" widget="color"/>
+ <param name="surfaceColor" widget="color"/>
+ <param name="threshold" slider="True"/>
+ <param name="depthDecay" slider="True"/>
+ <param name="thickness" slider="True"/>
+ <param name="wrap" widget="checkBox"/>
+ <param name="local" widget="checkBox"/>
+ <param name="placementMatrix"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="alphaOffset"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+</args>

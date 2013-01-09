@@ -1,0 +1,15 @@
+<args format="1.0">
+ <param name="shaker" slider="True"/>
+ <param name="channel1" widget="color"/>
+ <param name="channel2" widget="color"/>
+ <param name="wrap" widget="checkBox"/>
+ <param name="local" widget="checkBox"/>
+ <param name="placementMatrix"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="alphaOffset"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+</args>

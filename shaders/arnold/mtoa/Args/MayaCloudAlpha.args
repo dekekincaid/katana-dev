@@ -1,0 +1,15 @@
+<args format="1.0">
+ <param name="amplitude"/>
+ <param name="depth"/>
+ <param name="ripples"/>
+ <param name="edgeThresh"/>
+ <param name="centerThresh"/>
+ <param name="transpRange"/>
+ <param name="ratio"/>
+ <param name="placementMatrix"/>
+ <param name="alphaGain"/>
+ <param name="alpahOffset"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="local" widget="checkBox"/>
+ <param name="wrap" widget="checkBox"/>
+</args>

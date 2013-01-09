@@ -1,0 +1,16 @@
+<args format="1.0">
+ <param slidermin="1.0" name="lacunarity" slider="True" slidermax="5.0"/>
+ <param slidermin="0" name="increment" slider="True" slidermax="1"/>
+ <param slidermin="1.0" name="octaves" slider="True" slidermax="5.0"/>
+ <param name="weight3d"/>
+ <param name="placementMatrix"/>
+ <param name="wrap" widget="checkBox"/>
+ <param name="local" widget="checkBox"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param slidermin="0" name="alphaGain" slider="True" slidermax="2.0"/>
+ <param slidermin="0" name="alphaOffset" slider="True" slidermax="2.0"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+</args>

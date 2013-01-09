@@ -1,0 +1,42 @@
+<args format="1.0">
+ <param name="threshold"/>
+ <param name="amplitude"/>
+ <param name="ratio"/>
+ <param name="frequencyRatio"/>
+ <param int="True" name="depthMax"/>
+ <param name="inflection" widget="checkBox"/>
+ <param name="time"/>
+ <param name="frequency"/>
+ <param name="implode"/>
+ <param name="implodeCenter"/>
+ <param name="noiseType" widget="popup">
+  <hintlist name="options">
+   <string value="perlin"/>
+   <string value="billow"/>
+   <string value="wave"/>
+   <string value="wispy"/>
+   <string value="spacetime"/>
+  </hintlist>
+ </param>
+ <param name="density"/>
+ <param name="spottyness"/>
+ <param name="sizeRand"/>
+ <param name="randomness"/>
+ <param name="falloff" widget="popup">
+  <hintlist name="options">
+   <string value="linear"/>
+   <string value="smooth"/>
+   <string value="fast"/>
+   <string value="bubble"/>
+  </hintlist>
+ </param>
+ <param int="True" name="numWaves"/>
+ <param name="uvCoord"/>
+ <param name="defaultColor" widget="color"/>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="alphaOffset"/>
+ <param name="alphaIsLuminance" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+</args>

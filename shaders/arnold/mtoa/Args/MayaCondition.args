@@ -1,0 +1,16 @@
+<args format="1.0">
+ <param name="operation" widget="popup">
+  <hintlist name="options">
+   <string value="equal"/>
+   <string value="notequal"/>
+   <string value="greaterthan"/>
+   <string value="greaterorequal"/>
+   <string value="lessthan"/>
+   <string value="lessorequal"/>
+  </hintlist>
+ </param>
+ <param name="firstTerm"/>
+ <param name="secondTerm"/>
+ <param name="colorIfTrue" widget="color"/>
+ <param name="colorIfFalse" widget="color"/>
+</args>

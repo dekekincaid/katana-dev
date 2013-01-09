@@ -1,0 +1,20 @@
+<args format="1.0">
+ <param name="filename" widget="fileInput"/>
+ <param name="color" widget="color"/>
+ <param name="displayMode" widget="popup">
+  <hintlist name="options">
+   <string value="none"/>
+   <string value="outline"/>
+   <string value="rgb"/>
+   <string value="rgba"/>
+   <string value="luminance"/>
+   <string value="alpha"/>
+  </hintlist>
+ </param>
+ <param name="colorGain" widget="color"/>
+ <param name="colorOffset" widget="color"/>
+ <param name="alphaGain"/>
+ <param name="coverage"/>
+ <param name="translate"/>
+ <param name="camera"/>
+</args>

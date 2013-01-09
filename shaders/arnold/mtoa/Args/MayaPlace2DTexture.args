@@ -1,0 +1,14 @@
+<args format="1.0">
+ <param name="coverage"/>
+ <param name="translateFrame"/>
+ <param name="rotateFrame" slider="True"/>
+ <param name="mirrorU" widget="checkBox"/>
+ <param name="mirrorV" widget="checkBox"/>
+ <param name="wrapU" widget="checkBox"/>
+ <param name="wrapV" widget="checkBox"/>
+ <param name="stagger" widget="checkBox"/>
+ <param name="repeatUV"/>
+ <param name="offsetUV"/>
+ <param name="rotateUV"/>
+ <param name="noiseUV"/>
+</args>

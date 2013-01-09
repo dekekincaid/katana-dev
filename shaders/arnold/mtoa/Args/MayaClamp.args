@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="min" constant="True" widget="number"/>
+ <param name="max" constant="True" widget="color"/>
+ <param name="input" constant="True" widget="color"/>
+</args>

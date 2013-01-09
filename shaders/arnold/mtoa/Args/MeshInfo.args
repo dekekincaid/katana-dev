@@ -1,0 +1,10 @@
+<args format="1.0">
+ <param name="what" widget="popup">
+  <hintlist name="options">
+   <string value="tangent"/>
+   <string value="bitangent"/>
+   <string value="color"/>
+  </hintlist>
+ </param>
+ <param name="colorSetName"/>
+</args>

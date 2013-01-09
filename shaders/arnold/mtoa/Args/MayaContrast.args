@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="value"/>
+ <param name="contrast"/>
+ <param name="bias"/>
+</args>

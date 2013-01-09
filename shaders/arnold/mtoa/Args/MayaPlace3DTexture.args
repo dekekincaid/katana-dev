@@ -1,0 +1,23 @@
+<args format="1.0">
+ <param name="translate"/>
+ <param name="rotate"/>
+ <param name="scale"/>
+ <param name="shear"/>
+ <param name="rotateOrder" widget="popup">
+  <hintlist name="options">
+   <string value="XYZ"/>
+   <string value="YZX"/>
+   <string value="ZXY"/>
+   <string value="XZY"/>
+   <string value="YXZ"/>
+   <string value="ZYX"/>
+  </hintlist>
+ </param>
+ <param name="rotateAxis"/>
+ <param name="scalePivot"/>
+ <param name="rotatePivot"/>
+ <param name="scalePivotTranslate"/>
+ <param name="rotatePivotTranslate"/>
+ <param name="inheritsTransform" widget="checkBox"/>
+ <param name="parentMatrix"/>
+</args>
