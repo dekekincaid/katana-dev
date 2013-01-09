@@ -1,0 +1,19 @@
+<args format="1.0">
+ <param name="rootcolor"/>
+ <param name="tipcolor"/>
+ <param name="strand_opacity" widget="color"/>
+ <param name="ambdiff"/>
+ <param name="ambient" widget="color"/>
+ <param name="gloss"/>
+ <param name="spec_color" widget="color"/>
+ <param name="spec"/>
+ <param name="kd_ind"/>
+ <param name="uparam"/>
+ <param name="vparam"/>
+ <param name="direct_diffuse"/>
+ <param name="indirect_diffuse"/>
+ <param name="diffuse_cache" widget="checkBox"/>
+ <param name="aov_direct_diffuse"/>
+ <param name="aov_direct_specular"/>
+ <param name="aov_indirect_diffuse"/>
+</args>
