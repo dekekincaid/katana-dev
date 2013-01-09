@@ -1,0 +1,5 @@
+<args format="1.0">
+    <param name="diffColor" widget="color"/>
+    
+    <output name="out" tags="color|color4|diffuse"/>
+</args>

@@ -1,7 +1,13 @@
 <args format="1.0">
-    <param name="diff" coshaderPort="True" />
+    <param name="diff" coshaderPort="True"  />
     <param name="diffValue" coshaderPair="diff" />
-    <param name="spec" coshaderPort="True" />
+    <param name="spec" coshaderPort="True" tags="color|specular" />
     <param name="specValue" coshaderPair="spec" />
+    
+    <input name="diff" tags="color|diffuse"/>
+    <input name="spec" tags="color|specular"/>
+    
+    <output name="out" tags="surface"/>
+    
 </args>
 
