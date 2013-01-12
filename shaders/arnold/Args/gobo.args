@@ -1,35 +1,43 @@
 <args format="1.0">
- <param name="slidemap" widget="color"/>
- <param name="rotate"/>
- <param name="offset"/>
- <param name="density" slider="True"/>
- <param name="filter_mode" widget="popup">
-  <hintlist name="options">
-   <string value="blend"/>
-   <string value="replace"/>
-   <string value="add"/>
-   <string value="sub"/>
-   <string value="mix"/>
-  </hintlist>
- </param>
- <param name="scale_s" slider="True"/>
- <param name="scale_t" slider="True"/>
- <param name="wrap_s" widget="popup">
-  <hintlist name="options">
-   <string value="periodic"/>
-   <string value="black"/>
-   <string value="clamp"/>
-   <string value="mirror"/>
-   <string value="file"/>
-  </hintlist>
- </param>
- <param name="wrap_t" widget="popup">
-  <hintlist name="options">
-   <string value="periodic"/>
-   <string value="black"/>
-   <string value="clamp"/>
-   <string value="mirror"/>
-   <string value="file"/>
-  </hintlist>
- </param>
+ <page name="Gobo Atributes" open="True">
+  <param name="filter_mode" label="Filter Mode" widget="popup">
+   <hintlist name="options">
+    <string value="blend"/>
+    <string value="replace"/>
+    <string value="add"/>
+    <string value="sub"/>
+    <string value="mix"/>
+   </hintlist>
+  </param>
+  <param name="slidemap" label="Slide Map" widget="color"/>
+  <param name="density" label="Density" slider="True" slidermin="0.0" min="0" slidermax="10.0"/>
+ </page>
+ <page name="Placement Atributes" open="True">
+  <param name="offset" label="Offset"/>
+ </page>
+ <page name="Rotate" open="True"> 
+  <param name="scale_s" label="Scale S" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
+  <param name="scale_t" label="Scale T" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
+  <param name="wrap_s" label="Wrap S" widget="popup">
+   <hintlist name="options">
+    <string value="periodic"/>
+    <string value="black"/>
+    <string value="clamp"/>
+    <string value="mirror"/>
+    <string value="file"/>
+   </hintlist>
+  </param>
+  <param name="wrap_t" label="Wrap T" widget="popup">
+   <hintlist name="options">
+    <string value="periodic"/>
+    <string value="black"/>
+    <string value="clamp"/>
+    <string value="mirror"/>
+    <string value="file"/>
+   </hintlist>
+  </param>
+ </page>
+ <page name="UNSUPPORTED" open="False"> 
+  <param name="rotate" label="Rotate"/>
+ </page>  
 </args>

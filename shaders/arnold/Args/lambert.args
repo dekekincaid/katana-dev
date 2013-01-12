@@ -1,7 +1,11 @@
 <args format="1.0">
- <param name="Kd" slider="True"/>
- <param name="Kd_color" widget="color"/>
- <param name="opacity" widget="color"/>
- <param name="aov_direct_diffuse"/>
- <param name="aov_indirect_diffuse"/>
+ <page name="Lambert Attributes" open="True" >    
+  <param name="Kd"  label="Diffuse" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param name="Kd_color" label="Diffuse Color" widget="color"/>
+  <param name="opacity" label="Opacity" widget="color"/>
+ </page>
+ <page name="Extra Attributes" open="True" > 
+  <param name="aov_direct_diffuse" label="AOV Direct Diffuse"/>
+  <param name="aov_indirect_diffuse" label="AOV Indirect Diffuse"/>
+ </page>
 </args>

@@ -1,8 +1,10 @@
 <args format="1.0">
- <param name="camera" widget="color"/>
- <param name="shadow" widget="color"/>
- <param name="reflection" widget="color"/>
- <param name="refraction" widget="color"/>
- <param name="diffuse" widget="color"/>
- <param name="glossy" widget="color"/>
+ <page name="Ray Switch Attributes" open="True" >
+  <param label="Camera" name="camera" widget="color"/>
+  <param label="Shadow" name="shadow" widget="color"/>
+  <param label="Reflection" name="reflection" widget="color"/>
+  <param label="Refractopm" name="refraction" widget="color"/>
+  <param label="Diffuse" name="diffuse" widget="color"/>
+  <param label="Glossy" name="glossy" widget="color"/>
+ </page>
 </args>

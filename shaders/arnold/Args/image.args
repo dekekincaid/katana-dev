@@ -1,40 +1,46 @@
 <args format="1.0">
- <param name="filename" widget="fileInput"/>
- <param name="filter" widget="popup">
-  <hintlist name="options">
-   <string value="closest"/>
-   <string value="bilinear"/>
-   <string value="bicubic"/>
-   <string value="smart_bicubic"/>
-  </hintlist>
- </param>
- <param name="swrap" widget="popup">
-  <hintlist name="options">
-   <string value="periodic"/>
-   <string value="black"/>
-   <string value="clamp"/>
-   <string value="mirror"/>
-   <string value="file"/>
-  </hintlist>
- </param>
- <param name="twrap" widget="popup">
-  <hintlist name="options">
-   <string value="periodic"/>
-   <string value="black"/>
-   <string value="clamp"/>
-   <string value="mirror"/>
-   <string value="file"/>
-  </hintlist>
- </param>
- <param name="sscale"/>
- <param name="tscale"/>
- <param name="sflip" widget="checkBox"/>
- <param name="tflip" widget="checkBox"/>
- <param name="swap_st" widget="checkBox"/>
- <param name="single_channel" widget="checkBox"/>
- <param int="True" name="mipmap_bias"/>
- <param name="multiply" widget="color"/>
- <param name="offset" widget="color"/>
- <param name="uvcoords"/>
- <param name="cache_texture_handles" widget="checkBox"/>
+ <page name="Image Attributes" open="True">
+  <param name="filename" label="Image Name" widget="fileInput"/>
+  <param name="filter" label="Filter" widget="popup">
+   <hintlist name="options">
+    <string value="closest"/>
+    <string value="bilinear"/>
+    <string value="bicubic"/>
+    <string value="smart_bicubic"/>
+   </hintlist>
+  </param>
+  <param name="multiply" label="Multiply" widget="color"/>
+  <param name="offset" label="Offset" widget="color"/>
+  <param name="cache_texture_handles" label="Cache Texture Handles" widget="checkBox"/>
+ </page>
+ <page name="UV Coordinates" open="True" >
+  <param name="uvcoords" label="UV Cord"/>
+  <param name="swrap" label="Wrap U" widget="popup">
+   <hintlist name="options">
+    <string value="periodic"/>
+    <string value="black"/>
+    <string value="clamp"/>
+    <string value="mirror"/>
+    <string value="file"/>
+   </hintlist>
+  </param>
+  <param name="twrap"  label="Wrap V" widget="popup">
+   <hintlist name="options">
+    <string value="periodic"/>
+    <string value="black"/>
+    <string value="clamp"/>
+    <string value="mirror"/>
+    <string value="file"/>
+   </hintlist>
+  </param>
+  <param name="sscale" label="Scale U" slider="True" slidermin="0.0" slidermax="10.0"/>
+  <param name="tscale" label="Scale V" slider="True" slidermin="0.0" slidermax="10.0"/>
+  <param name="sflip"  label="Flip U" widget="checkBox"/>
+  <param name="tflip"  label="Flip V" widget="checkBox"/>
+  <param name="swap_st" label="Swap UV" widget="checkBox"/>
+ </page>
+ <page name="Extra Attributes" open="True" >
+  <param name="single_channel" label="Single Channel" widget="checkBox"/>
+  <param int="True" name="mipmap_bias" slider="True" slidermin="-10.0" slidermax="10.0"/>
+ </page>
 </args>

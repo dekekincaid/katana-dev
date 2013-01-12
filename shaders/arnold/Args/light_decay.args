@@ -1,8 +1,10 @@
 <args format="1.0">
- <param name="use_near_atten" widget="checkBox"/>
- <param name="use_far_atten" widget="checkBox"/>
- <param name="near_start" slider="True"/>
- <param name="near_end" slider="True"/>
- <param name="far_start" slider="True"/>
- <param name="far_end" slider="True"/>
+ <page name="Attenuation" open="True" >    
+  <param label="Use Near Attenuation" name="use_near_atten" widget="checkBox"/>
+  <param label="Near Start" name="near_start" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
+  <param label="Near End" name="near_end" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
+  <param label="Use Far Attenuation" name="use_far_atten" widget="checkBox"/>
+  <param label="Far Start" name="far_start" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
+  <param label="Far End" name="far_end" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
+ </page>
 </args>

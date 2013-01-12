@@ -1,7 +1,12 @@
 <args format="1.0">
- <param name="distance" slider="True"/>
- <param name="height" slider="True"/>
- <param name="color" widget="color"/>
- <param name="ground_point"/>
- <param name="ground_normal"/>
+ <page name="Fog Attributes" open="True">
+  <param name="color" label="Color" widget="color"/>    
+  <param name="distance" label="Distance" slider="True"/>
+  <param name="height" label="Height" slider="True"/>
+ </page>
+ <page name="Ground" open="True"> 
+  <param name="ground_point" label="Ground Point"/>
+  <param name="ground_normal" label="Ground Normal"/>
+ </page>
 </args>
+

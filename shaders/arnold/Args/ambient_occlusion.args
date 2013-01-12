@@ -1,11 +1,15 @@
 <args format="1.0">
- <param int="True" slidermin="0" name="samples" slider="True" slidermax="10.0"/>
- <param name="spread" slider="True"/>
- <param name="near_clip" slider="True"/>
- <param name="far_clip" slider="True"/>
- <param name="falloff" slider="True"/>
- <param name="black" widget="color"/>
- <param name="white" widget="color"/>
- <param name="invert_normals" widget="checkBox"/>
- <param name="opacity" widget="color"/>
+ <page name="Ambient Occlution Attributes" open="True">    
+  <param name="samples" label="Samples" int="True" slider="True" slidermin="0" min="0" slidermax="10.0"/>
+  <param name="white" label="White" widget="color"/>
+  <param name="black" label="Black" widget="color"/>
+  <param name="falloff" label="Falloff" slider="True" slidermin="0" min="0" slidermax="100.0"/> 
+  <page name="Extra Attributes" open="True">
+   <param name="spread" label="Spread" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0"/> 
+   <param name="near_clip" label="Near Clip" slider="True" slidermin="0" min="0" slidermax="100.0"/>
+   <param name="far_clip" label="Far Clip" slider="True" slidermin="0" min="0" slidermax="2000.0"/>
+  </page>   
+  <param name="opacity" label="Opacity" />
+  <param name="invert_normals" widget="checkBox"/>
+ </page>
 </args>

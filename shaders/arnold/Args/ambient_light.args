@@ -1,19 +1,21 @@
 <args format="1.0">
- <param name="color" label="Color" open="True" widget="color"/>
- <param name="intensity" label="Intensity" slider="True" slidermin="0" slidermax="10"/>
- <param name="exposure" label="Exposure" slider="True" slidermin="0" slidermax="10"/>
- <param name="samples" label="Samples" int="True" slider="True" slidermin="1" slidermax="100" max="100"/>
- <param name="normalize" label="Normalize" widget="checkBox"/>
- <param name="affect_diffuse" label="Emit Diffuse" widget="checkBox"/>
- <param name="affect_specular" label="Emit Specular" widget="checkBox"/>
- <param name="use_direction" label="Use Direction" widget="checkBox"/>
- <param name="direction" label="Direction" >
-  <hintdict name="conditionalVisOps">
-   <string value="notEqualTo" name="conditionalVisOp"/>
-   <string value="../use_direction" name="conditionalVisPath"/>
-   <string value="True" name="conditionalVisValue"/>
-  </hintdict>
- </param>
+ <page name="Ambient Light Attributes" open="True">  
+  <param name="color" label="Color" widget="color"/>
+  <param name="intensity" label="Intensity" slider="True" slidermin="0" slidermax="10"/>
+  <param name="exposure" label="Exposure" slider="True" slidermin="0" slidermax="10"/>
+  <param name="samples" label="Samples" int="True" slider="True" slidermin="1" slidermax="100" max="100"/>
+  <param name="normalize" label="Normalize" widget="checkBox"/>
+  <param name="affect_diffuse" label="Emit Diffuse" widget="checkBox"/>
+  <param name="affect_specular" label="Emit Specular" widget="checkBox"/>
+  <param name="use_direction" label="Use Direction" widget="checkBox"/>
+  <param name="direction" label="Direction" >
+   <hintdict name="conditionalVisOps">
+    <string value="notEqualTo" name="conditionalVisOp"/>
+    <string value="../use_direction" name="conditionalVisPath"/>
+    <string value="True" name="conditionalVisValue"/>
+   </hintdict>
+  </param>
+ </page>
  <page name="Shadows" open="True">
   <param name="cast_shadows" label="Cast Shadows" widget="checkBox"/>
   <param name="shadow_color" label="Shadow Color" widget="color"/> 

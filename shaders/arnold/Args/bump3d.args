@@ -1,6 +1,8 @@
 <args format="1.0">
- <param name="bump_map"/>
- <param name="bump_height" slider="True"/>
- <param name="epsilon" slider="True"/>
- <param name="shader" widget="color"/>
+ <page name="Bump 3d Attributes" open="True">      
+  <param name="bump_map" label="Bump Map" slider="True" slidermin="0" slidermax="1"/>
+  <param name="bump_height" label="Bump Height" slider="True" slidermin="0" slidermax="1"/>
+  <param name="epsilon" label="Epsilon" slider="True" slidermin="0" slidermax="1"/>
+  <param name="shader" label="Shader" widget="color"/>
+ </page> 
 </args>

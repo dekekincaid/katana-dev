@@ -1,6 +1,8 @@
 <args format="1.0">
- <param name="raw" widget="checkBox"/>
- <param name="time0"/>
- <param name="time1"/>
- <param name="max_displace"/>
+ <page name="Motion Vector Attributes" open="True" >    
+  <param label="Raw" name="raw" widget="checkBox" slidermin="0.0" min="0.0" slidermax="10.0"/>
+  <param label="Time 0" name="time0"/>
+  <param label="Time 1" name="time1"/>
+  <param label="Max Displace" name="max_displace"/>
+ </page>
 </args>

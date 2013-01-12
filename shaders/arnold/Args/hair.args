@@ -1,16 +1,24 @@
 <args format="1.0">
- <param name="rootcolor" widget="color"/>
- <param name="tipcolor" widget="color"/>
- <param name="opacity" widget="color"/>
- <param name="ambdiff" slider="True"/>
- <param name="gloss" slider="True"/>
- <param name="spec_color" widget="color"/>
- <param name="spec" slider="True"/>
- <param name="kd_ind" slider="True"/>
- <param name="uparam"/>
- <param name="vparam"/>
- <param name="diffuse_cache" widget="checkBox"/>
- <param name="aov_direct_diffuse"/>
- <param name="aov_direct_specular"/>
- <param name="aov_indirect_diffuse"/>
+ <page name="Color" open="True" >
+  <param name="rootcolor" label="Root Color" widget="color"/>
+  <param name="tipcolor" label="Tip Color" widget="color"/>
+ </page> 
+ <page name="Diffuse" open="True" >
+  <param name="diffuse_cache" label="Diffuse Cache" widget="checkBox"/>
+  <param name="ambdiff" label="Ambient Diffuse" slider="True"/>
+  <param name="kd_ind" label="Indirect Diffuse" slider="True"/> 
+ </page>   
+ <page name="Specular" open="True" >
+  <param name="gloss" label="Gloss" slider="True"/>
+  <param name="spec" label="Specular" slider="True"/>
+  <param name="spec_color" label="Specular Color" widget="color"/> 
+ </page>   
+ <page name="Extra Attributes" open="True" >
+  <param name="opacity" label="Opacity" widget="color"/> 
+  <param name="uparam" label="Uparam"/>
+  <param name="vparam" label="Vparam"/>
+  <param name="aov_direct_diffuse" label="AOV Direct Diffuse" />
+  <param name="aov_direct_specular" label="AOV Direct Specular" />
+  <param name="aov_indirect_diffuse" label="AOV Indirect Diffuse" />
+ </page>   
 </args>

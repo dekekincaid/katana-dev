@@ -1,12 +1,16 @@
 <args format="1.0">
- <param name="density" slider="True"/>
- <param int="True" name="samples" slider="True"/>
- <param name="eccentricity" slider="True"/>
- <param name="attenuation" slider="True"/>
- <param name="affect_camera" slider="True"/>
- <param name="affect_diffuse" slider="True"/>
- <param name="affect_reflection" slider="True"/>
- <param name="importance_sampling" widget="checkBox"/>
- <param name="rgb_density" widget="color"/>
- <param name="rgb_attenuation" widget="color"/>
+ <page name="Volume Attributes" open="True" >
+  <param label="Density" name="density" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Attenuation" name="attenuation" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Eccentricity" name="eccentricity" slider="True" slidermin="-1.0"  min="-1.0" slidermax="1.0" man="1.0"/>
+  <param label="Importance Sampling" name="importance_sampling" widget="checkBox"/> 
+  <param label="Samples" name="samples" int="True" slider="True" slidermin="1.0" min="1.0" slidermax="64.0"/>
+ </page>
+ <page name="Contribution Attributes" open="True" >
+  <param label="Affect Camera" name="affect_camera" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Affect Diffuse" name="affect_diffuse" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Affect Reflection" name="affect_reflection" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Rgb Density" name="rgb_density" widget="color"/>
+  <param label="Rgb Attenuation" name="rgb_attenuation" widget="color"/>
+ </page>
 </args>

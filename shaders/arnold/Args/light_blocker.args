@@ -1,26 +1,28 @@
 <args format="1.0">
- <param name="geometry_type" widget="popup">
-  <hintlist name="options">
-   <string value="box"/>
-   <string value="sphere"/>
-   <string value="plane"/>
-   <string value="cylinder"/>
-  </hintlist>
- </param>
- <param name="geometry_matrix"/>
- <param name="density" slider="True"/>
- <param name="roundness" slider="True"/>
- <param name="width_edge" slider="True"/>
- <param name="height_edge" slider="True"/>
- <param name="ramp" slider="True"/>
- <param name="ramp_axis" widget="popup">
-  <hintlist name="options">
-   <string value="x"/>
-   <string value="y"/>
-   <string value="z"/>
-   <string value="X"/>
-   <string value="Y"/>
-   <string value="Z"/>
-  </hintlist>
- </param>
+ <page name="Light Blocker Attributes">
+  <param label="Geometry Type" name="geometry_type" widget="popup">
+   <hintlist name="options">
+    <string value="box"/>
+    <string value="sphere"/>
+    <string value="plane"/>
+    <string value="cylinder"/>
+   </hintlist>
+  </param>
+  <param label="Density" name="density" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Ramp Axis" name="ramp_axis" widget="popup">
+   <hintlist name="options">
+    <string value="x"/>
+    <string value="y"/>
+    <string value="z"/>
+    <string value="X"/>
+    <string value="Y"/>
+    <string value="Z"/>
+   </hintlist>
+  </param>
+  <param label="Ramp" name="ramp" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Height Edge" name="height_edge" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Width Edge" name="width_edge" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Roundness" name="roundness" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Geometry Matrix" name="geometry_matrix"/>
+ </page>
 </args>

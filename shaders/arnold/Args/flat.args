@@ -1,4 +1,6 @@
 <args format="1.0">
- <param name="color" widget="color"/>
- <param name="opacity" widget="color"/>
+ <page name="Flat Attributes" open="True">   
+  <param label="Color" name="color" widget="color"/>
+  <param label="Opacity" name="opacity" widget="color"/>
+ </page>
 </args>

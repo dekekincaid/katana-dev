@@ -1,33 +1,27 @@
-
-
-
-
-
 <args format="1.0">
- <param name="color" label="Color" open="True" widget="color"/>
- <param name="intensity" label="Intensity" slider="True" slidermin="0" slidermax="10"/>
- <param name="decay_type" label="Decay Type" widget="popup">
-  <hintlist name="options">
-   <string value="constant"/>
-   <string value="quadratic"/>
-  </hintlist>
- </param> 
- <param name="exposure" label="Exposure" slider="True" slidermin="0" slidermax="10"/>
- <param name="samples" label="Samples" int="True" slider="True" slidermin="1" slidermax="100" max="100"/>
- <param name="radius" slider="True"/>
- <param name="normalize" label="Normalize" widget="checkBox"/>
-
- <param name="lens_radius" label="Lens Radius" slider="True"/>
- <param name="cone_angle" label="Cone Angle" slider="True"/>
- <param name="penumbra_angle" label="Penumbra Angle" slider="True"/>
- <param name="cosine_power" label="Cosine Power" slider="True"/>
- <param name="aspect_ratio" label="Aspect Ratio" slider="True"/>
-
-
+ <page name="Spot Light Attributes" open="True">    
+  <param name="color" label="Color" widget="color"/>
+  <param name="intensity" label="Intensity" slider="True" slidermin="0" slidermax="10"/>
+  <param name="decay_type" label="Decay Type" widget="popup">
+   <hintlist name="options">
+    <string value="constant"/>
+    <string value="quadratic"/>
+   </hintlist>
+  </param> 
+  <param name="exposure" label="Exposure" slider="True" slidermin="0" slidermax="10"/>
+  <param name="samples" label="Samples" int="True" slider="True" slidermin="1" slidermax="100" max="100"/>
+  <param name="radius" slider="True"/>
+  <param name="normalize" label="Normalize" widget="checkBox"/>
+ </page>
+ <page name="Shape" open="True">
+  <param name="lens_radius" label="Lens Radius" slider="True"/>
+  <param name="cone_angle" label="Cone Angle" slider="True"/>
+  <param name="penumbra_angle" label="Penumbra Angle" slider="True"/>
+  <param name="cosine_power" label="Cosine Power" slider="True"/>
+  <param name="aspect_ratio" label="Aspect Ratio" slider="True"/>
+ </page>
  <param name="affect_diffuse" label="Emit Diffuse" widget="checkBox"/>
  <param name="affect_specular" label="Emit Specular" widget="checkBox"/>
- 
-
  <page name="Shadows" open="True">
   <param name="cast_shadows" label="Cast Shadows" widget="checkBox"/>
   <param name="shadow_color" label="Shadow Color" widget="color"/> 

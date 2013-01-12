@@ -1,13 +1,15 @@
 <args format="1.0">
- <param name="line_width" slider="True"/>
- <param name="fill_color" widget="color"/>
- <param name="line_color" widget="color"/>
- <param name="raster_space" widget="checkBox"/>
- <param name="edge_type" widget="popup">
-  <hintlist name="options">
-   <string value="triangles"/>
-   <string value="polygons"/>
-   <string value="patches"/>
-  </hintlist>
- </param>
+ <page name="Wireframe Attributes" open="True" >   
+  <param label="EdgeType" name="edge_type" widget="popup">
+   <hintlist name="options">
+    <string value="triangles"/>
+    <string value="polygons"/>
+    <string value="patches"/>
+   </hintlist>
+  </param>
+  <param label="Fill Color" name="fill_color" widget="color"/>
+  <param label="Line Color" name="line_color" widget="color"/>    
+  <param label="Line Width" name="line_width" slider="True" slidermin="0.0" min="0.0" slidermax="10.0"/>
+  <param label="Raster Space" name="raster_space" widget="checkBox"/>
+ </page>
 </args>
