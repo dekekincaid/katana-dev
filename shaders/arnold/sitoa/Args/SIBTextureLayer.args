@@ -1,0 +1,23 @@
+<args format="1.0">
+ <param name="color" widget="color"/>
+ <param name="weight"/>
+ <param int="True" name="mode"/>
+ <param name="mute" widget="checkBox"/>
+ <param name="basecolor" widget="color"/>
+ <param name="solo" widget="checkBox"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="scale"/>
+ <param name="mask"/>
+ <param int="True" name="maskmode"/>
+ <param name="maskthreshold"/>
+ <param name="invertmask" widget="checkBox"/>
+ <param int="True" name="colorsource"/>
+ <param name="ignorecoloralpha" widget="checkBox"/>
+ <param name="colorpremulted" widget="checkBox"/>
+ <param name="invertcoloralpha" widget="checkBox"/>
+ <param name="alphacolor" widget="checkBox"/>
+ <param name="red"/>
+ <param name="green"/>
+ <param name="blue"/>
+ <param name="alpha"/>
+</args>

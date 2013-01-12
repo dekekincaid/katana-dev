@@ -1,0 +1,8 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param name="rcurve"/>
+ <param name="gcurve"/>
+ <param name="bcurve"/>
+ <param name="acurve"/>
+ <param name="use_alpha" widget="checkBox"/>
+</args>

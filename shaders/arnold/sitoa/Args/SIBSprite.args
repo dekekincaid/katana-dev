@@ -1,0 +1,8 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param int="True" name="mode"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="alpha_threshold"/>
+ <param name="matte" widget="color"/>
+ <param name="use_matte" widget="checkBox"/>
+</args>

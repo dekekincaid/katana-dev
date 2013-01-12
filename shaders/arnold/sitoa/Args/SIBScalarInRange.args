@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="input"/>
+ <param name="min_thresh"/>
+ <param name="max_thresh"/>
+ <param name="negate" widget="checkBox"/>
+</args>

@@ -1,0 +1,18 @@
+<args format="1.0">
+ <param name="fill"/>
+ <param name="border"/>
+ <param name="grad_min"/>
+ <param name="grad_bias"/>
+ <param name="grad_max"/>
+ <param name="straightborders" widget="checkBox"/>
+ <param name="shape_alignment"/>
+ <param name="shape_jitter"/>
+ <param name="shape"/>
+ <param int="True" name="cell_type"/>
+ <param name="external_coord" widget="checkBox"/>
+ <param name="ext_coord"/>
+ <param name="coord"/>
+ <param name="coord_scale"/>
+ <param name="coord_prescale"/>
+ <param name="coord_scale_global"/>
+</args>

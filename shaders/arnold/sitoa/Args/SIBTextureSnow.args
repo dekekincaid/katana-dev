@@ -1,0 +1,10 @@
+<args format="1.0">
+ <param name="coord"/>
+ <param name="snow_col" widget="color"/>
+ <param name="surface_col" widget="color"/>
+ <param name="threshold"/>
+ <param name="depth_decay"/>
+ <param name="thickness"/>
+ <param name="randomness"/>
+ <param name="rand_freq"/>
+</args>

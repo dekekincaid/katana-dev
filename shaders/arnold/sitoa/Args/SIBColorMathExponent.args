@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param name="factor" widget="color"/>
+ <param int="True" name="op"/>
+ <param name="alpha" widget="checkBox"/>
+</args>

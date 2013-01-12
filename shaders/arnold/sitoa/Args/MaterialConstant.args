@@ -1,0 +1,23 @@
+<args format="1.0">
+ <param name="color" widget="color"/>
+ <param name="transparency" widget="color"/>
+ <param name="trans_glossy"/>
+ <param int="True" name="transparent_samples"/>
+ <param name="reflectivity" widget="color"/>
+ <param name="reflect_glossy"/>
+ <param name="reflect_samples"/>
+ <param name="index_of_refraction"/>
+ <param name="incandescence" widget="color"/>
+ <param name="inc_inten"/>
+ <param int="True" name="notrace"/>
+ <param name="reflect_inuse" widget="checkBox"/>
+ <param name="refract_inuse" widget="checkBox"/>
+ <param name="incand_inuse" widget="checkBox"/>
+ <param name="radiance" widget="color"/>
+ <param name="scaletrans"/>
+ <param name="inverttrans" widget="checkBox"/>
+ <param name="usealphatrans" widget="checkBox"/>
+ <param name="scalerefl"/>
+ <param name="invertrefl" widget="checkBox"/>
+ <param name="usealpharefl" widget="checkBox"/>
+</args>

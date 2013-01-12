@@ -1,0 +1,17 @@
+<args format="1.0">
+ <param name="tex" widget="color"/>
+ <param name="tspace_id"/>
+ <param name="color1" widget="color"/>
+ <param name="color2" widget="color"/>
+ <param name="repeats"/>
+ <param name="min"/>
+ <param name="max"/>
+ <param name="torus_u" widget="checkBox"/>
+ <param name="torus_v" widget="checkBox"/>
+ <param name="alt_x" widget="checkBox"/>
+ <param name="alt_y" widget="checkBox"/>
+ <param name="xsize"/>
+ <param name="ysize"/>
+ <param name="alpha_output" widget="checkBox"/>
+ <param name="alpha_factor"/>
+</args>

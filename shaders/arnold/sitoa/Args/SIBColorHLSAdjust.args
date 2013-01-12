@@ -1,0 +1,24 @@
+<args format="1.0">
+ <param name="color" widget="color"/>
+ <param name="master_h"/>
+ <param name="master_l"/>
+ <param name="master_s"/>
+ <param name="red_h"/>
+ <param name="red_l"/>
+ <param name="red_s"/>
+ <param name="green_h"/>
+ <param name="green_l"/>
+ <param name="green_s"/>
+ <param name="blue_h"/>
+ <param name="blue_l"/>
+ <param name="blue_s"/>
+ <param name="cyan_h"/>
+ <param name="cyan_l"/>
+ <param name="cyan_s"/>
+ <param name="yellow_h"/>
+ <param name="yellow_l"/>
+ <param name="yellow_s"/>
+ <param name="magenta_h"/>
+ <param name="magenta_l"/>
+ <param name="magenta_s"/>
+</args>

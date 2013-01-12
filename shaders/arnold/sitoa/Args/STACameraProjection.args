@@ -1,0 +1,11 @@
+<args format="1.0">
+ <param name="map" widget="color"/>
+ <param name="multiplier"/>
+ <param name="degamma"/>
+ <param name="offscreen_is_environment" widget="checkBox"/>
+ <param name="offscreen_color" widget="color"/>
+ <param name="projection_camera"/>
+ <param name="camera_aspect_ratio"/>
+ <param name="camera_facing_only" widget="checkBox"/>
+ <param name="invert_normals" widget="checkBox"/>
+</args>

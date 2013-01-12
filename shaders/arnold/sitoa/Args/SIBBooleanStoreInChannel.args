@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="input" widget="checkBox"/>
+ <param name="channel"/>
+ <param int="True" name="raytype"/>
+</args>

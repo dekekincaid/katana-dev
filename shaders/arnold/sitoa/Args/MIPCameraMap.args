@@ -1,0 +1,9 @@
+<args format="1.0">
+ <param name="map" widget="color"/>
+ <param name="multiplier"/>
+ <param name="degamma"/>
+ <param name="per_pixel_match" widget="checkBox"/>
+ <param name="transparent_alpha" widget="checkBox"/>
+ <param name="offscreen_is_environment" widget="checkBox"/>
+ <param name="offscreen_color" widget="color"/>
+</args>

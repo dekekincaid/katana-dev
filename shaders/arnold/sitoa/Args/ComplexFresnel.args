@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="ior" widget="color"/>
+ <param name="extinction_k" widget="color"/>
+ <param name="schlick" widget="checkBox"/>
+</args>

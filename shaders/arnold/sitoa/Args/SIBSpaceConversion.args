@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param int="True" name="type"/>
+ <param int="True" name="transform"/>
+ <param name="vector_input"/>
+ <param name="transform_input"/>
+</args>

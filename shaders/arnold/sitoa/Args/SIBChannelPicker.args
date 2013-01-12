@@ -1,0 +1,9 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param int="True" name="colspace"/>
+ <param int="True" name="channel_rgba"/>
+ <param int="True" name="channel_hlsa"/>
+ <param int="True" name="channel_hsva"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="alphamultiply" widget="checkBox"/>
+</args>

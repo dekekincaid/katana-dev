@@ -1,0 +1,11 @@
+<args format="1.0">
+ <param name="input" widget="checkBox"/>
+ <param name="channel1" widget="checkBox"/>
+ <param name="channel2" widget="checkBox"/>
+ <param name="channel3" widget="checkBox"/>
+ <param name="channel4" widget="checkBox"/>
+ <param name="channel5" widget="checkBox"/>
+ <param name="channel6" widget="checkBox"/>
+ <param name="channel7" widget="checkBox"/>
+ <param name="channel8" widget="checkBox"/>
+</args>

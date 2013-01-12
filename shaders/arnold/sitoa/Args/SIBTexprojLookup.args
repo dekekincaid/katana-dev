@@ -1,0 +1,13 @@
+<args format="1.0">
+ <param name="tspace_id"/>
+ <param name="repeats"/>
+ <param name="alt_x" widget="checkBox"/>
+ <param name="alt_y" widget="checkBox"/>
+ <param name="alt_z" widget="checkBox"/>
+ <param name="min"/>
+ <param name="max"/>
+ <param name="step"/>
+ <param name="factor"/>
+ <param name="torus_u" widget="checkBox"/>
+ <param name="torus_v" widget="checkBox"/>
+</args>

@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param name="bump"/>
+ <param name="inuse" widget="checkBox"/>
+ <param name="input" widget="color"/>
+ <param name="scale"/>
+ <param name="spacing"/>
+</args>

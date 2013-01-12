@@ -1,0 +1,10 @@
+<args format="1.0">
+ <param name="input"/>
+ <param name="min_thresh"/>
+ <param name="max_thresh"/>
+ <param name="min_delta"/>
+ <param name="max_delta"/>
+ <param name="inside_value"/>
+ <param name="outside_value"/>
+ <param name="invert" widget="checkBox"/>
+</args>

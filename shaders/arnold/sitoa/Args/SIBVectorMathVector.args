@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="vector_input1"/>
+ <param name="vector_input2"/>
+ <param int="True" name="mode"/>
+ <param name="scalar_input1"/>
+</args>

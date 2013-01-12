@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="scalar1"/>
+ <param name="scalar2"/>
+ <param name="input" widget="checkBox"/>
+</args>

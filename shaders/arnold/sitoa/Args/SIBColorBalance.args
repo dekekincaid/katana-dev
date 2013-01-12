@@ -1,0 +1,13 @@
+<args format="1.0">
+ <param name="color" widget="color"/>
+ <param name="shadows_red"/>
+ <param name="shadows_green"/>
+ <param name="shadows_blue"/>
+ <param name="midtones_red"/>
+ <param name="midtones_green"/>
+ <param name="midtones_blue"/>
+ <param name="highlights_red"/>
+ <param name="highlights_green"/>
+ <param name="highlights_blue"/>
+ <param name="preserve_value" widget="checkBox"/>
+</args>

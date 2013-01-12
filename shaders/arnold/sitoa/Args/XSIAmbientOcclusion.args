@@ -1,0 +1,10 @@
+<args format="1.0">
+ <param int="True" name="samples"/>
+ <param name="bright" widget="color"/>
+ <param name="dark" widget="color"/>
+ <param name="spread"/>
+ <param name="max_distance"/>
+ <param name="reflective" widget="checkBox"/>
+ <param int="True" name="output_mode"/>
+ <param name="occlusion_in_alpha" widget="checkBox"/>
+</args>

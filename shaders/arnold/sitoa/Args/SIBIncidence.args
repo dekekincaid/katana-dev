@@ -1,0 +1,12 @@
+<args format="1.0">
+ <param int="True" name="mode"/>
+ <param name="bias"/>
+ <param name="gain"/>
+ <param name="bump"/>
+ <param name="custom_vector"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="light_intensity" widget="checkBox"/>
+ <param name="normal_shading" widget="checkBox"/>
+ <param name="customlights"/>
+ <param name="lights"/>
+</args>

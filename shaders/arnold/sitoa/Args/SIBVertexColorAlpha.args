@@ -1,0 +1,4 @@
+<args format="1.0">
+ <param name="vprop"/>
+ <param name="alpha_only" widget="checkBox"/>
+</args>

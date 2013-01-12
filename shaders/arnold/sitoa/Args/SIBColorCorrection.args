@@ -1,0 +1,8 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param name="gamma"/>
+ <param name="contrast"/>
+ <param name="hue"/>
+ <param name="saturation"/>
+ <param name="level"/>
+</args>

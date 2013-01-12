@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param int="True" name="mode"/>
+ <param name="refract"/>
+ <param name="reflect"/>
+ <param name="ior"/>
+ <param name="exponent"/>
+</args>

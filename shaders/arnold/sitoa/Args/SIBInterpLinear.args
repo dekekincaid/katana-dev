@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param name="input"/>
+ <param name="oldrange_min"/>
+ <param name="oldrange_max"/>
+ <param name="newrange_min"/>
+ <param name="newrange_max"/>
+</args>

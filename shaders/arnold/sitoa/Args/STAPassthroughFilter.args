@@ -1,0 +1,4 @@
+<args format="1.0">
+ <param int="True" name="mode"/>
+ <param name="color" widget="color"/>
+</args>

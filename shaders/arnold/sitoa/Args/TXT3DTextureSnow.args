@@ -1,0 +1,18 @@
+<args format="1.0">
+ <param name="snow_col" widget="color"/>
+ <param name="surface_col" widget="color"/>
+ <param name="threshold"/>
+ <param name="depth_decay"/>
+ <param name="thickness"/>
+ <param name="randomness"/>
+ <param name="rand_freq"/>
+ <param name="tspace_id"/>
+ <param name="repeats"/>
+ <param name="alt_x" widget="checkBox"/>
+ <param name="alt_y" widget="checkBox"/>
+ <param name="alt_z" widget="checkBox"/>
+ <param name="min"/>
+ <param name="max"/>
+ <param name="alpha_output" widget="checkBox"/>
+ <param name="alpha_factor"/>
+</args>

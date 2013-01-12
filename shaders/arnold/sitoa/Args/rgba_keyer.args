@@ -1,0 +1,8 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param name="min_thresh" widget="color"/>
+ <param name="max_thresh" widget="color"/>
+ <param name="alpha" widget="checkBox"/>
+ <param name="inrange" widget="color"/>
+ <param name="outrange" widget="color"/>
+</args>

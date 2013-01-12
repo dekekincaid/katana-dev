@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param name="color" widget="color"/>
+ <param name="scale"/>
+ <param int="True" name="vectorEncoding"/>
+ <param int="True" name="vectorSpace"/>
+ <param name="tangent"/>
+</args>

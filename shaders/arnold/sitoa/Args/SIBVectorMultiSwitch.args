@@ -1,0 +1,20 @@
+<args format="1.0">
+ <param name="default"/>
+ <param int="True" name="switch"/>
+ <param int="True" name="value0"/>
+ <param name="input0"/>
+ <param int="True" name="value1"/>
+ <param name="input1"/>
+ <param int="True" name="value2"/>
+ <param name="input2"/>
+ <param int="True" name="value3"/>
+ <param name="input3"/>
+ <param int="True" name="value4"/>
+ <param name="input4"/>
+ <param int="True" name="value5"/>
+ <param name="input5"/>
+ <param int="True" name="value6"/>
+ <param name="input6"/>
+ <param int="True" name="value7"/>
+ <param name="input7"/>
+</args>

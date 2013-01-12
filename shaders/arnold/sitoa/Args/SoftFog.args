@@ -1,0 +1,7 @@
+<args format="1.0">
+ <param name="start"/>
+ <param name="stop"/>
+ <param name="rate"/>
+ <param name="transmit" widget="color"/>
+ <param name="lightrays" widget="checkBox"/>
+</args>

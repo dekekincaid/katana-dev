@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="min"/>
+ <param name="max"/>
+ <param name="rgb" widget="checkBox"/>
+ <param name="shadowvisible" widget="checkBox"/>
+</args>

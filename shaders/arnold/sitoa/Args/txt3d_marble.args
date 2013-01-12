@@ -1,0 +1,24 @@
+<args format="1.0">
+ <param name="tspace_id"/>
+ <param name="filler_col" widget="color"/>
+ <param name="vein_col1" widget="color"/>
+ <param name="vein_col2" widget="color"/>
+ <param name="vein_width"/>
+ <param name="diffusion"/>
+ <param name="spot_color" widget="color"/>
+ <param name="spot_density"/>
+ <param name="spot_bias"/>
+ <param name="spot_scale"/>
+ <param name="amplitude"/>
+ <param name="ratio"/>
+ <param name="complexity"/>
+ <param name="absolute" widget="checkBox"/>
+ <param name="frequencies"/>
+ <param name="repeats"/>
+ <param name="min"/>
+ <param name="max"/>
+ <param name="torus_u" widget="checkBox"/>
+ <param name="torus_v" widget="checkBox"/>
+ <param name="alt_x" widget="checkBox"/>
+ <param name="alt_y" widget="checkBox"/>
+</args>

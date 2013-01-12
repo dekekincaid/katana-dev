@@ -1,0 +1,11 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param name="channel1" widget="color"/>
+ <param name="channel2" widget="color"/>
+ <param name="channel3" widget="color"/>
+ <param name="channel4" widget="color"/>
+ <param name="channel5" widget="color"/>
+ <param name="channel6" widget="color"/>
+ <param name="channel7" widget="color"/>
+ <param name="channel8" widget="color"/>
+</args>

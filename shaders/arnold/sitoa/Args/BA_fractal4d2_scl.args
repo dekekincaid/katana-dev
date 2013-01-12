@@ -1,0 +1,23 @@
+<args format="1.0">
+ <param name="color1"/>
+ <param name="color2"/>
+ <param name="grad_min"/>
+ <param name="grad_bias"/>
+ <param name="grad_max"/>
+ <param name="noise_type"/>
+ <param name="recursion"/>
+ <param name="lvl_gain"/>
+ <param name="time"/>
+ <param name="lvl_scale"/>
+ <param name="external_coord" widget="checkBox"/>
+ <param name="ext_coord"/>
+ <param name="coord"/>
+ <param name="coord_scale"/>
+ <param name="distort"/>
+ <param name="distort_scale"/>
+ <param name="coord_prescale"/>
+ <param name="color_invert" widget="checkBox"/>
+ <param name="time_anim_type"/>
+ <param name="time_constant"/>
+ <param name="coord_scale_global"/>
+</args>

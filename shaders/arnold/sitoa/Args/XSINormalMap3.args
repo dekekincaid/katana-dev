@@ -1,0 +1,13 @@
+<args format="1.0">
+ <param name="Map" widget="color"/>
+ <param name="tspaceid"/>
+ <param name="Tangents"/>
+ <param name="UnbiasTangent" widget="checkBox"/>
+ <param name="repeats"/>
+ <param name="alt_x" widget="checkBox"/>
+ <param name="alt_y" widget="checkBox"/>
+ <param name="alt_z" widget="checkBox"/>
+ <param name="min"/>
+ <param name="max"/>
+ <param name="UnbiasNormalMap" widget="checkBox"/>
+</args>

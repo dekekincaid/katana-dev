@@ -1,0 +1,61 @@
+<args format="1.0">
+ <param name="input"/>
+ <param name="coord"/>
+ <param int="True" name="input_type"/>
+ <param int="True" name="gradient_type"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="clip" widget="checkBox"/>
+ <param name="enable_alpha_gradient" widget="checkBox"/>
+ <param name="min"/>
+ <param name="max"/>
+ <param int="True" name="rgba_interpolation"/>
+ <param name="color1" widget="color"/>
+ <param name="pos_color1"/>
+ <param name="mid_color1"/>
+ <param name="color2" widget="color"/>
+ <param name="pos_color2"/>
+ <param name="mid_color2"/>
+ <param name="color3" widget="color"/>
+ <param name="pos_color3"/>
+ <param name="mid_color3"/>
+ <param name="color4" widget="color"/>
+ <param name="pos_color4"/>
+ <param name="mid_color4"/>
+ <param name="color5" widget="color"/>
+ <param name="pos_color5"/>
+ <param name="mid_color5"/>
+ <param name="color6" widget="color"/>
+ <param name="pos_color6"/>
+ <param name="mid_color6"/>
+ <param name="color7" widget="color"/>
+ <param name="pos_color7"/>
+ <param name="mid_color7"/>
+ <param name="color8" widget="color"/>
+ <param name="pos_color8"/>
+ <param name="mid_color8"/>
+ <param int="True" name="alpha_interpolation"/>
+ <param name="alpha1"/>
+ <param name="pos_alpha1"/>
+ <param name="mid_alpha1"/>
+ <param name="alpha2"/>
+ <param name="pos_alpha2"/>
+ <param name="mid_alpha2"/>
+ <param name="alpha3"/>
+ <param name="pos_alpha3"/>
+ <param name="mid_alpha3"/>
+ <param name="alpha4"/>
+ <param name="pos_alpha4"/>
+ <param name="mid_alpha4"/>
+ <param name="alpha5"/>
+ <param name="pos_alpha5"/>
+ <param name="mid_alpha5"/>
+ <param name="alpha6"/>
+ <param name="pos_alpha6"/>
+ <param name="mid_alpha6"/>
+ <param name="alpha7"/>
+ <param name="pos_alpha7"/>
+ <param name="mid_alpha7"/>
+ <param name="alpha8"/>
+ <param name="pos_alpha8"/>
+ <param name="mid_alpha8"/>
+</args>

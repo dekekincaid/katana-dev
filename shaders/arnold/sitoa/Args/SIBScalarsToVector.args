@@ -1,0 +1,9 @@
+<args format="1.0">
+ <param name="inputX"/>
+ <param name="inputY"/>
+ <param name="inputZ"/>
+ <param int="True" name="modeX"/>
+ <param int="True" name="modeY"/>
+ <param int="True" name="modeZ"/>
+ <param int="True" name="math_op"/>
+</args>

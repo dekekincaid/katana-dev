@@ -1,0 +1,13 @@
+<args format="1.0">
+ <param name="enabled" widget="checkBox"/>
+ <param name="input" widget="color"/>
+ <param name="refract" widget="color"/>
+ <param name="usealpha" widget="checkBox"/>
+ <param name="scale"/>
+ <param name="invert" widget="checkBox"/>
+ <param name="ior"/>
+ <param int="True" name="max_depth"/>
+ <param name="alpha" widget="checkBox"/>
+ <param name="glossy"/>
+ <param int="True" name="samples"/>
+</args>

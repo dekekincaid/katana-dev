@@ -1,0 +1,47 @@
+<args format="1.0">
+ <param name="SourceFileName"/>
+ <param name="SourceName"/>
+ <param name="Radius"/>
+ <param name="Amount"/>
+ <param name="BlurAlpha" widget="checkBox"/>
+ <param name="Hue"/>
+ <param name="Saturation"/>
+ <param name="Gain"/>
+ <param name="Brightness"/>
+ <param name="Xmin"/>
+ <param name="Xmax"/>
+ <param name="Ymin"/>
+ <param name="Ymax"/>
+ <param name="UsingNormalized" widget="checkBox"/>
+ <param name="GrayScale" widget="checkBox"/>
+ <param name="SixteenBitsPerChannel" widget="checkBox"/>
+ <param name="EnableMipMap" widget="checkBox"/>
+ <param name="MipMapScale"/>
+ <param name="EnableMemoryMapping" widget="checkBox"/>
+ <param int="True" name="ImageDefinitionType"/>
+ <param int="True" name="ResX"/>
+ <param int="True" name="ResY"/>
+ <param int="True" name="Type"/>
+ <param name="FlipX" widget="checkBox"/>
+ <param name="FlipY" widget="checkBox"/>
+ <param name="Image" widget="checkBox"/>
+ <param int="True" name="oglminfilter"/>
+ <param int="True" name="oglmagfilter"/>
+ <param name="oglmipmap" widget="checkBox"/>
+ <param int="True" name="oglmaxsize"/>
+ <param name="incroglmaxsize"/>
+ <param name="decroglmaxsize"/>
+ <param int="True" name="FieldType"/>
+ <param int="True" name="SourceTrack"/>
+ <param name="Exposure"/>
+ <param name="DisplayGamma"/>
+ <param name="DisplayGammaAffectsRendering" widget="checkBox"/>
+ <param name="TimeSource"/>
+ <param name="RenderColorProfile"/>
+ <param name="RenderGamma"/>
+ <param int="True" name="filter"/>
+ <param int="True" name="mipmap_bias"/>
+ <param name="swap_st" widget="checkBox"/>
+ <param int="True" name="s_wrap"/>
+ <param int="True" name="t_wrap"/>
+</args>

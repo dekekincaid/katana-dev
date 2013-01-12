@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="hue"/>
+ <param name="lum"/>
+ <param name="sat"/>
+ <param name="alpha"/>
+</args>

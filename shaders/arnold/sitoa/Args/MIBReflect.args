@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="input" widget="color"/>
+ <param name="reflect" widget="color"/>
+ <param name="notrace" widget="checkBox"/>
+</args>

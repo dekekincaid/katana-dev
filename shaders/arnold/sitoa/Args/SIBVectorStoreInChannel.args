@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="input"/>
+ <param name="channel"/>
+ <param int="True" name="raytype"/>
+ <param int="True" name="component"/>
+</args>

@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="tex" widget="color"/>
+ <param int="True" name="mode"/>
+ <param name="reflection_intensity"/>
+</args>

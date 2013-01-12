@@ -1,0 +1,11 @@
+<args format="1.0">
+ <param name="input"/>
+ <param name="channel1"/>
+ <param name="channel2"/>
+ <param name="channel3"/>
+ <param name="channel4"/>
+ <param name="channel5"/>
+ <param name="channel6"/>
+ <param name="channel7"/>
+ <param name="channel8"/>
+</args>

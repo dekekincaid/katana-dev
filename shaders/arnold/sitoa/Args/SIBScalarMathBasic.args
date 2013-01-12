@@ -1,0 +1,5 @@
+<args format="1.0">
+ <param name="input1"/>
+ <param name="input2"/>
+ <param int="True" name="op"/>
+</args>
