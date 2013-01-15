@@ -1,46 +1,52 @@
 <args format="1.0">
- <param name="threshold" slider="True"/>
- <param name="amplitude"/>
- <param name="ratio"/>
- <param name="frequencyRatio"/>
- <param int="True" name="depthMax"/>
- <param name="inflection" widget="checkBox"/>
- <param name="time"/>
- <param name="frequency"/>
- <param name="scale"/>
- <param name="origin"/>
- <param name="implode"/>
- <param name="implodeCenter"/>
- <param name="noiseType" widget="popup">
-  <hintlist name="options">
-   <string value="Perlin"/>
-   <string value="Billow"/>
-   <string value="VolumeWave"/>
-   <string value="Wispy"/>
-   <string value="SpaceTime"/>
-  </hintlist>
- </param>
- <param name="density"/>
- <param name="spottyness"/>
- <param name="sizeRand"/>
- <param name="randomness"/>
- <param name="falloff" widget="popup">
-  <hintlist name="options">
-   <string value="Linear"/>
-   <string value="Smooth"/>
-   <string value="Fast"/>
-   <string value="Bubble"/>
-  </hintlist>
- </param>
- <param int="True" name="numWaves"/>
- <param name="placementMatrix"/>
- <param name="wrap" widget="checkBox"/>
- <param name="local" widget="checkBox"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="alphaOffset"/>
- <param name="alphaIsLuminance" widget="checkBox"/>
- <param name="invert" widget="checkBox"/>
+ <page name="Volume Noise Attributes" open="True">  
+  <param label="Threshold" name="threshold" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Amplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Ratio" name="ratio" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Frequency Ratio" name="frequencyRatio" slider="True" slidermin="1.0" slidermax="10.0"/>
+  <param label="Depth Max" name="depthMax"  int="True" slider="True" slidermin="1.0" min="1.0" slidermax="8.0" max="8.0"/>
+  <param label="Inflection" name="inflection" widget="checkBox"/>
+
+  <param label="Time" name="time" slidermin="0.0" slidermax="1.0"/>
+  <param label="Frequency" name="frequency" slidermin="0.0" slidermax="100.0"/>
+  <param label="Scale" name="scale"/>
+  <param label="Origin" name="origin"/>
+
+  <param label="Implode" name="implode" slidermin="-1.0" slidermax="1.0"/>
+  <param label="Implode Center" name="implodeCenter"/>
+
+  <param label="Noise Type" name="noiseType" widget="popup">
+   <hintlist name="options">
+    <string value="perlin"/>
+    <string value="billow"/>
+    <string value="wave"/>
+    <string value="wispy"/>
+    <string value="spacetime"/>
+   </hintlist>
+  </param>
+  <param label="Density" name="density" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Spottyness" name="spottyness" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Size Rand" name="sizeRand" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Randomness" name="randomness" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Falloff" name="falloff" widget="popup">
+   <hintlist name="options">
+    <string value="linear"/>
+    <string value="smooth"/>
+    <string value="fast"/>
+    <string value="bubble"/>
+   </hintlist>
+  </param>
+  <param label="Num Waves" name="numWaves" int="True" slidermin="1.0" min="1.0" slidermax="20.0"/>
+ </page>
+ <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ </page>
+ <page name="Effects" open="True">
+  <param label="Invert" name="invert" widget="checkBox"/>
+ </page> 
 </args>

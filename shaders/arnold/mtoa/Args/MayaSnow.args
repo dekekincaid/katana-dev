@@ -1,17 +1,23 @@
 <args format="1.0">
- <param name="snowColor" widget="color"/>
- <param name="surfaceColor" widget="color"/>
- <param name="threshold" slider="True"/>
- <param name="depthDecay" slider="True"/>
- <param name="thickness" slider="True"/>
- <param name="wrap" widget="checkBox"/>
- <param name="local" widget="checkBox"/>
- <param name="placementMatrix"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="alphaOffset"/>
- <param name="alphaIsLuminance" widget="checkBox"/>
- <param name="invert" widget="checkBox"/>
+ <page name="Snow Attributes" open="True">     
+  <param label="Snow Color" name="snowColor" widget="color"/>
+  <param label="Surface Color" name="surfaceColor" widget="color"/>
+  <param label="Threshold" name="threshold" slider="True"/>
+  <param label="Depth Decay" name="depthDecay" slider="True"/>
+  <param label="Thickness" name="thickness" slider="True"/>
+ </page>
+ <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ </page>
+ <page name="Effects" open="True">
+  <param label="Invert" name="invert" widget="checkBox"/>
+  <param label="Wrap" name="wrap" widget="checkBox"/>
+  <param label="Local" name="local" widget="checkBox"/>
+  <param label="Placement Matrix" name="placementMatrix" open="True"/>  
+ </page> 
 </args>

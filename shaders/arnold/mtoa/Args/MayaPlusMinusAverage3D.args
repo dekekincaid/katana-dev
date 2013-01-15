@@ -1,11 +1,13 @@
 <args format="1.0">
- <param name="operation" widget="popup">
-  <hintlist name="options">
-   <string value="none"/>
-   <string value="sum"/>
-   <string value="subtract"/>
-   <string value="average"/>
-  </hintlist>
- </param>
- <param name="input3D"/>
+ <page name="Plus Minus Average 3D Attributes" open="True">    
+  <param label="Operation" name="operation" widget="popup">
+   <hintlist name="options">
+    <string value="none"/>
+    <string value="sum"/>
+    <string value="subtract"/>
+    <string value="average"/>
+   </hintlist>
+  </param>
+  <param label="Input 3D" name="input3D"/>
+ </page>
 </args>

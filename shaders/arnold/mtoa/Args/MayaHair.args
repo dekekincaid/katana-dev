@@ -1,14 +1,22 @@
 <args format="1.0">
- <param name="hairColor" widget="color"/>
- <param name="opacity"/>
- <param name="translucence"/>
- <param name="specularColor" widget="color"/>
- <param name="specularPower"/>
- <param name="castShadows" widget="checkBox"/>
- <param name="diffuseRand"/>
- <param name="specularRand"/>
- <param name="hueRand"/>
- <param name="satRand"/>
- <param name="valRand"/>
- <param name="hairColorScale"/>
+ <page name="Common Material Attributes" open="True">
+  <param label="Color" name="hairColor" widget="color"/>
+ </page>  
+ <page name="Color Scale" open="True">  
+  <param label="Transparency" name="opacity" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Translucence" name="translucence" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Diffuse Rand" name="diffuseRand" slider="True" />
+  <param label="Specular Rand" name="specularRand" slider="True" />
+  <param label="Hue Rand" name="hueRand" slider="True" />
+  <param label="Saturation Rand" name="satRand" slider="True" />
+  <param label="Value Rand" name="valRand" slider="True" />
+  <param label="Cast Shadows" name="castShadows" widget="checkBox"/>  
+ </page>  
+ <page name="Specular Shading" open="True">
+  <param label="Specular Power" name="specularPower" slider="True" slidermin="2.0" min="2.0" slidermax="100.0"/>
+  <param label="Specular Color" name="specularColor" widget="color"/>
+ </page>
+ <page name="UNIMPLEMENTED" open="False">
+  <param label="Hair Color Scale" name="hairColorScale"/>  
+ </page>
 </args>

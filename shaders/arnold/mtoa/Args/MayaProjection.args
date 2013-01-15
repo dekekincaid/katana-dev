@@ -1,45 +1,54 @@
 <args format="1.0">
- <param name="projType" widget="popup">
-  <hintlist name="options">
-   <string value="off"/>
-   <string value="planar"/>
-   <string value="spherical"/>
-   <string value="cylindrical"/>
-   <string value="ball"/>
-   <string value="cubic"/>
-   <string value="tri_planar"/>
-   <string value="concentric"/>
-   <string value="perspective"/>
-  </hintlist>
- </param>
- <param name="image" widget="color"/>
- <param name="uAngle" slider="True"/>
- <param name="vAngle" slider="True"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="alphaOffset"/>
- <param name="invert" widget="checkBox"/>
- <param name="wrap" widget="checkBox"/>
- <param name="local" widget="checkBox"/>
- <param name="placementMatrix"/>
- <param name="fitType" widget="popup">
-  <hintlist name="options">
-   <string value="none"/>
-   <string value="camera_film_gate"/>
-   <string value="camera_resolution"/>
-  </hintlist>
- </param>
- <param name="fitFill" widget="popup">
-  <hintlist name="options">
-   <string value="fill"/>
-   <string value="horizontal"/>
-   <string value="vertical"/>
-  </hintlist>
- </param>
- <param name="linkedCamera"/>
- <param name="cameraNearPlane"/>
- <param name="cameraHorizontalFOV"/>
- <param name="cameraAspectRatio"/>
+ <page name="Projection Attributes" open="True">  
+  <param label="Projection Type" name="projType" widget="popup">
+   <hintlist name="options">
+    <string value="off"/>
+    <string value="planar"/>
+    <string value="spherical"/>
+    <string value="cylindrical"/>
+    <string value="ball"/>
+    <string value="cubic"/>
+    <string value="tri_planar"/>
+    <string value="concentric"/>
+    <string value="perspective"/>
+   </hintlist>
+  </param>
+  <param label="Image" name="image" widget="color"/>
+  <param label="U Angle" name="uAngle" slider="True"/>
+  <param label="V Angle" name="vAngle" slider="True"/>
+ </page>
+ <page name="Camera Projection Attributes" open="True">  
+  <param label="Link To Camera" name="linkedCamera" widget="scenegraphLocator"/>
+  <param label="Fit Type" name="fitType" widget="popup">
+   <hintlist name="options">
+    <string value="none"/>
+    <string value="camera_film_gate"/>
+    <string value="camera_resolution"/>
+   </hintlist>
+  </param>
+  <param label="Fit Fill" name="fitFill" widget="popup">
+   <hintlist name="options">
+    <string value="fill"/>
+    <string value="horizontal"/>
+    <string value="vertical"/>
+   </hintlist>
+  </param>
+  <param label="Wrap" name="wrap" widget="checkBox"/>
+  <param label="Local" name="local" widget="checkBox"/>
+  <param label="Placement Matrix" name="placementMatrix" open="True"/>  
+  <param label="Camera Near Clipping Plane" name="cameraNearPlane" slider="True" slidermin="0.0" min="0.0" slidermax="10.0"/>
+  <param label="Camera Horizontal FOV" name="cameraHorizontalFOV" slider="True" slidermin="0.0" min="0.0" slidermax="360.0"/>
+  <param label="Camera Aspect Ratio" name="cameraAspectRatio" slider="True" slidermin="0.0" min="0.0" slidermax="10.0"/>
+ </page>
+ <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ </page>
+  <page name="Effects" open="True">
+  <param label="Invert" name="invert" widget="checkBox"/>
+ </page>
 </args>

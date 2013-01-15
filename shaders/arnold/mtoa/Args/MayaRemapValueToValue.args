@@ -1,10 +1,16 @@
 <args format="1.0">
- <param name="input"/>
- <param name="inputMin" slider="True"/>
- <param name="inputMax" slider="True"/>
- <param name="positions"/>
- <param name="values"/>
- <param name="interpolations"/>
- <param name="outputMin" slider="True"/>
- <param name="outputMax" slider="True"/>
+ <page name="Remap Value to Value Attributes" open="True"> 
+  <param label="Input Value" name="input"/>
+ </page>    
+ <page name="Value" open="True">   
+  <param label="Positions" name="positions"/>
+  <param label="Values" name="values"/>
+  <param label="Interpolations" name="interpolations"/>
+ </page>  
+ <page name="Input and Output Ranges" open="True">   
+  <param label="Input Min" name="inputMin" slider="True"/>
+  <param label="Input Max" name="inputMax" slider="True"/>  
+  <param label="Output Min" name="outputMin" slider="True"/>
+  <param label="Output Max" name="outputMax" slider="True"/>
+ </page>
 </args>

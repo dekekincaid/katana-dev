@@ -1,3 +1,5 @@
 <args format="1.0">
- <param name="value" widget="color"/>
+ <page name="Luminance Attributes" open="True">
+  <param label="Value" name="value" widget="color"/>
+ </page> 
 </args>

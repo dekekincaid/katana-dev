@@ -1,23 +1,32 @@
 <args format="1.0">
- <param name="translate"/>
- <param name="rotate"/>
- <param name="scale"/>
- <param name="shear"/>
- <param name="rotateOrder" widget="popup">
-  <hintlist name="options">
-   <string value="XYZ"/>
-   <string value="YZX"/>
-   <string value="ZXY"/>
-   <string value="XZY"/>
-   <string value="YXZ"/>
-   <string value="ZYX"/>
-  </hintlist>
- </param>
- <param name="rotateAxis"/>
- <param name="scalePivot"/>
- <param name="rotatePivot"/>
- <param name="scalePivotTranslate"/>
- <param name="rotatePivotTranslate"/>
- <param name="inheritsTransform" widget="checkBox"/>
- <param name="parentMatrix"/>
+ <page name="Transform Attributes" open="True">    
+  <param label="Translate" name="translate"/>
+  <param label="Rotate" name="rotate"/>
+  <param label="Scale" name="scale"/>
+  <param label="Shear" name="shear"/>
+  <param label="Rotate Order" name="rotateOrder" widget="popup">
+   <hintlist name="options">
+    <string value="XYZ"/>
+    <string value="YZX"/>
+    <string value="ZXY"/>
+    <string value="XZY"/>
+    <string value="YXZ"/>
+    <string value="ZYX"/>
+   </hintlist>
+  </param>
+  <param label="Rotate Axis" name="rotateAxis"/>
+  <param label="Inherits Tranform" name="inheritsTransform" widget="checkBox"/>
+ </page>
+ <page name="Pivots" open="True">   
+  <param label="Display Scale Pivot" name="scalePivot"/>
+  <param label="Display Rotate Pivot" name="rotatePivot"/>
+
+ </page>
+ <page name="Local Space" open="True">  
+  <param label="Local Scale Pivot" name="scalePivotTranslate"/>
+  <param label="Local Rotate Pivot" name="rotatePivotTranslate"/>
+ </page>
+ <page name="World Space" open="True">  
+  <param label="Parent Matrix" name="parentMatrix" open="True"/>
+ </page>
 </args>

@@ -1,23 +1,41 @@
 <args format="1.0">
- <param name="threshold" slider="True"/>
- <param name="amplitude" slider="True"/>
- <param name="ratio" slider="True"/>
- <param name="frequencyRatio" slider="True"/>
- <param name="ripples"/>
- <param name="depth"/>
- <param name="bias" slider="True"/>
- <param name="inflection" widget="checkBox"/>
- <param name="animated" widget="checkBox"/>
- <param name="time" slider="True"/>
- <param name="timeRatio" slider="True"/>
- <param name="placementMatrix"/>
- <param name="wrap" widget="checkBox"/>
- <param name="local" widget="checkBox"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="alphaOffset"/>
- <param name="alphaIsLuminance" widget="checkBox"/>
- <param name="invert" widget="checkBox"/>
+ <page name="Solid Fractal Attributes" open="True">    
+  <param label="Threshold" name="threshold" slider="True"/>
+  <param label="Amplitude" name="amplitude" slider="True"/>
+  <param label="Ratio" name="ratio" slider="True"/>
+  <param label="FrequencyRatio" name="frequencyRatio" slider="True"/>
+  <param label="Ripples" name="ripples"/>
+  <param label="Depth" name="depth"/>
+  <param label="Bias" name="bias" slider="True"/>
+  <param label="Inflection" name="inflection" widget="checkBox"/>
+  <param label="Animated" name="animated" widget="checkBox"/>
+  <param label="Time" name="time" slider="True" slidermin="0.0" min="0.0" slidermax="100.0" max="100.0"/>
+  <hintdict name="conditionalLockOps">
+     <string value="True" name="conditionalLockValue"/>
+     <string value="equalTo" name="conditionalLockOp"/>
+     <string value="../animated" name="conditionalLockPath"/>
+    </hintdict>
+   </param>
+  <param label="TimeRatio" name="timeRatio" slider="True" slidermin="1.0" slidermax="10.0"/>
+  <hintdict name="conditionalLockOps">
+     <string value="True" name="conditionalLockValue"/>
+     <string value="equalTo" name="conditionalLockOp"/>
+     <string value="../animated" name="conditionalLockPath"/>
+    </hintdict>
+   </param>
+ </page>
+  <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ </page>
+  <page name="Effects" open="True">
+  <param label="Invert" name="invert" widget="checkBox"/>
+  <param label="wrap" name="wrap" widget="checkBox"/>
+  <param label="local" name="local" widget="checkBox"/>
+  <param label="Placement Matrix" name="placementMatrix"/>    
+ </page>
 </args>

@@ -1,5 +1,7 @@
 <args format="1.0">
- <param name="blender" slider="True"/>
- <param name="color1" widget="color"/>
- <param name="color2" widget="color"/>
+ <page name="Blend Colors Attributes" open="True">
+  <param label="Blender" name="blender" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Color 1" name="color1" widget="color"/>
+  <param label="Color 2" name="color2" widget="color"/>
+ </page>
 </args>

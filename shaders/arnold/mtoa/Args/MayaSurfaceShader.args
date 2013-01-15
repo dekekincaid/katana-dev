@@ -1,5 +1,7 @@
 <args format="1.0">
- <param name="outColor" widget="color"/>
- <param name="outTransparency" widget="color"/>
- <param name="outMatteOpacity" widget="color"/>
+ <page name="Surface Shader Attributes" open="True">
+  <param label="Out Color" name="outColor" widget="color"/>
+  <param label="Out Transparency" name="outTransparency" widget="color"/>
+  <param label= "Out Matte Opacity" name="outMatteOpacity" widget="color"/>
+ </page>
 </args>

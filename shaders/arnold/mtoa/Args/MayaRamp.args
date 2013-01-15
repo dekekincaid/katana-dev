@@ -1,46 +1,52 @@
 <args format="1.0">
- <param name="type" widget="popup">
-  <hintlist name="options">
-   <string value="v"/>
-   <string value="u"/>
-   <string value="diagonal"/>
-   <string value="radial"/>
-   <string value="circular"/>
-   <string value="box"/>
-   <string value="uv"/>
-   <string value="fourcorner"/>
-   <string value="tartan"/>
-  </hintlist>
- </param>
- <param name="interpolation" widget="popup">
-  <hintlist name="options">
-   <string value="none"/>
-   <string value="linear"/>
-   <string value="exponentialup"/>
-   <string value="exponentialdown"/>
-   <string value="smooth"/>
-   <string value="bump"/>
-   <string value="spike"/>
-  </hintlist>
- </param>
- <param name="uWave" slider="True"/>
- <param name="vWave" slider="True"/>
- <param name="uvCoord"/>
- <param name="noise" slider="True"/>
- <param name="noiseFreq" slider="True"/>
- <param name="position"/>
- <param name="color"/>
- <param name="hueNoise"/>
- <param name="satNoise"/>
- <param name="valNoise"/>
- <param name="hueNoiseFreq"/>
- <param name="satNoiseFreq"/>
- <param name="valNoiseFreq"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="alphaOffset"/>
- <param name="alphaIsLuminance" widget="checkBox"/>
- <param name="invert" widget="checkBox"/>
+ <page name="Ramp Attributes" open="True">
+  <param label="Type" name="type" widget="popup">
+   <hintlist name="options">
+    <string value="v"/>
+    <string value="u"/>
+    <string value="diagonal"/>
+    <string value="radial"/>
+    <string value="circular"/>
+    <string value="box"/>
+    <string value="uv"/>
+    <string value="fourcorner"/>
+    <string value="tartan"/>
+   </hintlist>
+  </param>
+  <param label="Interpolation" name="interpolation" widget="popup">
+   <hintlist name="options">
+    <string value="none"/>
+    <string value="linear"/>
+    <string value="exponentialup"/>
+    <string value="exponentialdown"/>
+    <string value="smooth"/>
+    <string value="bump"/>
+    <string value="spike"/>
+   </hintlist>
+  </param>
+  <param label="U Wave" name="uWave" slider="True"/>
+  <param label="V Wave" name="vWave" slider="True"/>
+  <param label="UV Coordinates" name="uvCoord"/>
+  <param label="Noise" name="noise" slider="True"/>
+  <param label="Noise Frequency" name="noiseFreq" slider="True"/>
+  <param label="Position" name="position"/>
+  <param label="Color" name="color"/>
+  <param label="Hue Noise" name="hueNoise"/>
+  <param label="Saturation Noise" name="satNoise"/>
+  <param label="Value Noise" name="valNoise"/>
+  <param label="Hue Noise Frequency" name="hueNoiseFreq"/>
+  <param label="Saturation Noise Frequency" name="satNoiseFreq"/>
+  <param label="Value Noise Frequency" name="valNoiseFreq"/>
+ </page>
+ <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ </page>
+ <page name="Effects" open="True">
+  <param label="Invert" name="invert" widget="checkBox"/>
+ </page> 
 </args>

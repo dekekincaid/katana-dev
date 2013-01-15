@@ -1,15 +1,21 @@
 <args format="1.0">
- <param name="shaker" slider="True"/>
- <param name="channel1" widget="color"/>
- <param name="channel2" widget="color"/>
- <param name="wrap" widget="checkBox"/>
- <param name="local" widget="checkBox"/>
- <param name="placementMatrix"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="alphaOffset"/>
- <param name="alphaIsLuminance" widget="checkBox"/>
- <param name="invert" widget="checkBox"/>
+ <page name="Stucco Attributes" open="True">
+  <param label="Shaker" name="shaker" slider="True" slidermin="0.0" min="0.0" slidermax="20.0"/>
+  <param label="Channel 1" name="channel1" widget="color"/>
+  <param label="Channel 2" name="channel2" widget="color"/>
+ </page>
+ <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ </page>
+  <page name="Effects" open="True">
+  <param label="Invert" name="invert" widget="checkBox"/>
+  <param label="Wrap" name="wrap" widget="checkBox"/>
+  <param label="Local" name="local" widget="checkBox"/>
+  <param label="Placement Matrix" name="placementMatrix"/>  
+ </page>
 </args>

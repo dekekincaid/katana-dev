@@ -1,3 +1,5 @@
 <args format="1.0">
- <param name="input" widget="color"/>
+ <page name="Reverse Attributes" open="True">
+  <param label="Input" name="input" widget="float"/>
+ </page>
 </args>

@@ -1,16 +1,18 @@
 <args format="1.0">
- <param name="operation" widget="popup">
-  <hintlist name="options">
-   <string value="equal"/>
-   <string value="notequal"/>
-   <string value="greaterthan"/>
-   <string value="greaterorequal"/>
-   <string value="lessthan"/>
-   <string value="lessorequal"/>
-  </hintlist>
- </param>
- <param name="firstTerm"/>
- <param name="secondTerm"/>
- <param name="colorIfTrue" widget="color"/>
- <param name="colorIfFalse" widget="color"/>
+ <page name="Condition Attributes" open="True">
+  <param label="First Term" name="firstTerm"/>
+  <param label="Second Term" name="secondTerm"/>
+  <param label="Operation" name="operation" widget="popup">
+   <hintlist name="options">
+    <string value="equal"/>
+    <string value="notequal"/>
+    <string value="greaterthan"/>
+    <string value="greaterorequal"/>
+    <string value="lessthan"/>
+    <string value="lessorequal"/>
+   </hintlist>
+  </param>  
+  <param label="Color If True" name="colorIfTrue" widget="color"/>
+  <param label="Color If False" name="colorIfFalse" widget="color"/>
+ </page>
 </args>

@@ -1,16 +1,26 @@
 <args format="1.0">
- <param name="input" widget="color"/>
- <param name="inputMin" slider="True"/>
- <param name="inputMax" slider="True"/>
- <param name="rPositions"/>
- <param name="rValues"/>
- <param name="rInterpolations"/>
- <param name="gPositions"/>
- <param name="gValues"/>
- <param name="gInterpolations"/>
- <param name="bPositions"/>
- <param name="bValues"/>
- <param name="bInterpolations"/>
- <param name="outputMin" slider="True"/>
- <param name="outputMax" slider="True"/>
+ <page name="Remap Color Attributes" open="True">  
+  <param label="Color" name="input" widget="color"/>
+ </page>  
+ <page name="Red" open="True">  
+  <param label="Positions" name="rPositions"/>
+  <param label="Values" name="rValues"/>
+  <param label="Interpolations" name="rInterpolations"/>
+ </page>  
+ <page name="Green" open="True">    
+  <param label="Positions" name="gPositions"/>
+  <param label="Values" name="gValues"/>
+  <param label="Interpolations" name="gInterpolations"/>
+ </page>  
+ <page name="Blue" open="True">    
+  <param label="Positions" name="bPositions"/>
+  <param label="Values" name="bValues"/>
+  <param label="Interpolations" name="bInterpolations"/>
+ </page>  
+ <page name="Input and Output Ranges" open="True">    
+  <param label="Input Min" name="inputMin" slider="True"/>
+  <param label="Input Max" name="inputMax" slider="True"/>  
+  <param label="Output Min" name="outputMin" slider="True"/>
+  <param label="Output Max" name="outputMax" slider="True"/>
+ </page>
 </args>

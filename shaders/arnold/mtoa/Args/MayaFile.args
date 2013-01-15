@@ -1,32 +1,37 @@
 <args format="1.0">
- <param name="coverage"/>
- <param name="translateFrame"/>
- <param name="rotateFrame"/>
- <param name="mirrorU" widget="checkBox"/>
- <param name="mirrorV" widget="checkBox"/>
- <param name="wrapU" widget="checkBox"/>
- <param name="wrapV" widget="checkBox"/>
- <param name="stagger" widget="checkBox"/>
- <param name="repeatUV"/>
- <param name="offsetUV"/>
- <param name="rotateUV"/>
- <param name="filename" widget="fileInput"/>
- <param name="noiseUV"/>
- <param int="True" name="mipBias"/>
- <param name="filter" widget="popup">
-  <hintlist name="options">
-   <string value="closest"/>
-   <string value="bilinear"/>
-   <string value="bicubic"/>
-   <string value="smart_bicubic"/>
-  </hintlist>
- </param>
- <param name="useDefaultColor" widget="checkBox"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="alphaOffset"/>
- <param name="alphaIsLuminance" widget="checkBox"/>
- <param name="invert" widget="checkBox"/>
+ <page name="File Attributes" open="True">
+  <param label="Filter Type" name="filter" widget="popup">
+   <hintlist name="options">
+    <string value="closest"/>
+    <string value="bilinear"/>
+    <string value="bicubic"/>
+    <string value="smart_bicubic"/>
+   </hintlist>
+  </param>
+  <param label="Filename" name="filename" widget="fileInput"/>
+  <param label="Mip-map Bias" int="True" name="mipBias"/>
+  <param label="Use Default Color" name="useDefaultColor" widget="checkBox"/>
+  <param label="Invert" name="invert" widget="checkBox"/>  
+ <page name="2d Texture Placement Attributes" open="True">
+  <param label="Coverage" name="coverage"/>
+  <param label="Translate Frame" name="translateFrame"/>
+  <param label="Rotate Frame" name="rotateFrame"/>
+  <param label="Mirror U" name="mirrorU" widget="checkBox"/>
+  <param label="Mirror V" name="mirrorV" widget="checkBox"/>
+  <param label="Wrap U" name="wrapU" widget="checkBox"/>
+  <param label="Wrap V" name="wrapV" widget="checkBox"/>
+  <param label="Stagger" name="stagger" widget="checkBox"/>
+  <param label="Repeat UV" name="repeatUV"/>
+  <param label="Offset UV" name="offsetUV"/>
+  <param label="Rotate UV" name="rotateUV"/>
+  <param label="Noise UV" name="noiseUV"/>
+ </page>
+ <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ </page>
 </args>

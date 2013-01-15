@@ -1,15 +1,22 @@
 <args format="1.0">
- <param name="color1" widget="color"/>
- <param name="color2" widget="color"/>
- <param slidermin="0" name="contrast" min="0" slider="True" slidermax="1" max="1"/>
- <param name="uvCoord"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param slidermin="0" name="alphaGain" slider="True" slidermax="2.0"/>
- <param slidermin="0" name="alphaOffset" slider="True" slidercenter="1.0" slidermax="2.0"/>
- <param name="alphaIsLuminance" widget="checkBox"/>
- <param name="invert" widget="checkBox"/>
- <param slidermin="0" name="filter" min="0" slider="True" slidermax="1"/>
- <param slidermin="0" name="filterOffset" slider="True" slidermax="1"/>
+ <page name="Checker Attributes" open="True">  
+  <param name="color1" widget="color"/>
+  <param name="color2" widget="color"/>
+  <param name="contrast" slider="True" slidermin="0" min="0" slidermax="1" max="1"/>
+  <param name="filter" slider="True" slidermin="0" min="0"  slidermax="1"/>
+  <param name="filterOffset" slider="True" slidermin="0" slidermax="1"/>
+ </page>
+ <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox" slidermin="0.0" slidermax="2.0"/>
+ </page>
+  <page name="Misc" open="True">
+  <param label="Invert" name="invert" widget="checkBox"/>
+  <param label="UV Coordinates" name="uvCoord"/>
+ </page>
+ </page>  
 </args>

@@ -1,3 +1,5 @@
 <args format="1.0">
- <param name="inRgb" widget="color"/>
+ <page name="RGB to HSV Attributes" open="True">
+  <param label="In Rgb" name="inRgb" widget="color"/>
+ </page>
 </args>

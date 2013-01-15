@@ -1,4 +1,6 @@
 <args format="1.0">
- <param name="value"/>
- <param name="gamma"/>
+ <page name="Gamma Attributes" open="True">    
+  <param label="Value" name="value" widget="color"/>
+  <param label="Gamma" name="gamma"/>
+ </page>
 </args>

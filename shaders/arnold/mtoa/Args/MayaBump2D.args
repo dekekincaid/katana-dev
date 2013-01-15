@@ -1,0 +1,22 @@
+<args format="1.0">
+ <page name="2D Bump Attributes" open="True">
+  <param label="Bump Value" name="bump_map" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Bump Depth" name="bump_height" slider="True" slidermin="-5.0" slidermax="5.0"/>
+  <param label="Use As:" name="use_as" widget="popup">
+   <hintlist name="options">
+    <string value="bump"/>
+    <string value="tangent_normal"/>
+    <string value="object_normal"/>
+   </hintlist>
+  </param>
+ </page>
+ <page name="Extra Attributes" open="True">
+  <param label="Normal Map" name="normal_map" widget="color"/>
+  <param label="Shader" name="shader" widget="color"/>  
+  <param label="Flip R Channel" name="flip_r" widget="checkBox"/>
+  <param label="Flip G Channel" name="flip_g" widget="checkBox"/>
+  <param label="Swap Tangents" name="swap_tangents" widget="checkBox"/>
+  <param label="Use Derivatives" name="use_derivatives" widget="checkBox"/>
+  <param label="Gamma Correct" name="gamma_correct" widget="checkBox"/>
+ </page>
+</args>

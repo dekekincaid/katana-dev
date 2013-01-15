@@ -1,5 +1,8 @@
 <args format="1.0">
- <param name="value"/>
- <param name="contrast"/>
- <param name="bias"/>
+ <page name="Contrast Attributes" open="True">
+  <page label="" name="Contrast Attributes" open="True">  
+   <param label="Value" name="value"/>
+   <param label="Contrast" name="contrast"/>
+   <param label="Bias" name="bias"/>
+ </page>
 </args>

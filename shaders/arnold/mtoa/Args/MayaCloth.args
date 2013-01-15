@@ -1,26 +1,26 @@
 <args format="1.0">
- <page name="Cloth Attributes" open="True">  
-  <param name="gapColor" widget="color"/>
-  <param name="uColor" widget="color"/>
-  <param name="vColor" widget="color"/>
-  <param name="uWidth" slider="True" slidermin="0" slidermax="1" min="0" max="1"/>
-  <param name="vWidth" slider="True" slidermin="0" slidermax="1" min="0" max="1"/>
-  <param name="uWave" slider="True" slidermin="0" slidermax=".5" min="0"/>
-  <param name="vWave" slider="True" slidermin="0" slidermax=".5" min="0"/>
-  <param name="randomness" slidermin="0" slidermax="1" min="0"/>
-  <param name="widthSpread" slidermin="0" slidermax="1" min="0"/>
-  <param name="brightSpread" slidermin="0" slidermax="1" min="0"/>
+ <page name="Cloth Attributes" open="True">
+  <param label="Gap Color" name="gapColor" widget="color"/>
+  <param label="U Color" name="uColor" widget="color"/>
+  <param label="V Color" name="vColor" widget="color"/>
+  <param label="U Width" name="uWidth" slider="True" slidermin="0" slidermax="1" min="0" max="1"/>
+  <param label="V Width" name="vWidth" slider="True" slidermin="0" slidermax="1" min="0" max="1"/>
+  <param label="U Wave" name="uWave" slider="True" slidermin="0" slidermax=".5" min="0"/>
+  <param label="V Wave" name="vWave" slider="True" slidermin="0" slidermax=".5" min="0"/>
+  <param label="Randomness" name="randomness" slidermin="0" slidermax="1" min="0"/>
+  <param label="Width Spread" name="widthSpread" slidermin="0" slidermax="1" min="0"/>
+  <param label="Bright Spread" name="brightSpread" slidermin="0" slidermax="1" min="0"/>
  </page>
  <page name="Color Balance" open="False">
-  <param name="defaultColor" widget="color"/>
-  <param name="colorGain" widget="color"/>
-  <param name="colorOffset" widget="color"/>
-  <param name="alphaGain" slider="True"/>
-  <param name="alphaOffset" slider="True"/>
-  <param name="alphaIsLuminance" widget="checkBox"/>
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page>
   <page name="Misc" open="True">
-  <param name="invert" widget="checkBox"/>
-  <param name="uvCoord"/>
+  <param label="Invert" name="invert" widget="checkBox"/>
+  <param label="UV Coordinates" name="uvCoord"/>
  </page>
 </args>

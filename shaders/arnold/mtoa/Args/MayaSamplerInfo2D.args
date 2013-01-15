@@ -1,8 +1,10 @@
 <args format="1.0">
- <param name="mode" widget="popup">
-  <hintlist name="options">
-   <string value="uvCoord"/>
-   <string value="pixelCenter"/>
-  </hintlist>
- </param>
+ <page name="Sampler Info 2D Attributes" open="True"> 
+  <param label="Mode" name="mode" widget="popup">
+   <hintlist name="options">
+    <string value="uvCoord"/>
+    <string value="pixelCenter"/>
+   </hintlist>
+  </param>
+ </page>
 </args>

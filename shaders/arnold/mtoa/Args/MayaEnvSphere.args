@@ -1,5 +1,7 @@
 <args format="1.0">
- <param name="image" widget="color"/>
- <param name="flip" widget="checkBox"/>
- <param name="placementMatrix"/>
+ <page name="Environment Sphere Attributes" open="True">      
+  <param label="Image" name="image" widget="fileInput"/>
+  <param label="Flip" name="flip" widget="checkBox"/>
+  <param label="Placement Matrix" name="placementMatrix"/>
+ </page> 
 </args>

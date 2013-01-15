@@ -1,14 +1,16 @@
 <args format="1.0">
- <param name="coverage"/>
- <param name="translateFrame"/>
- <param name="rotateFrame" slider="True"/>
- <param name="mirrorU" widget="checkBox"/>
- <param name="mirrorV" widget="checkBox"/>
- <param name="wrapU" widget="checkBox"/>
- <param name="wrapV" widget="checkBox"/>
- <param name="stagger" widget="checkBox"/>
- <param name="repeatUV"/>
- <param name="offsetUV"/>
- <param name="rotateUV"/>
- <param name="noiseUV"/>
+ <page name="2D Texture Placement Attributes" open="True">    
+  <param label="Coverage" name="coverage"/>
+  <param label="Translate Frame" name="translateFrame"/>
+  <param label="Rotate Frame" name="rotateFrame" slider="True" slidermin="0.0" slidermax="360.0"/>
+  <param label="Mirror U" name="mirrorU" widget="checkBox"/>
+  <param label="Mirror V" name="mirrorV" widget="checkBox"/>
+  <param label="Wrap U" name="wrapU" widget="checkBox"/>
+  <param label="Wrap V" name="wrapV" widget="checkBox"/>
+  <param label="Stagger" name="stagger" widget="checkBox"/>
+  <param label="Repeat UV" name="repeatUV"/>
+  <param label="Offset" name="offsetUV"/>
+  <param label="Rotate UV" name="rotateUV"/>
+  <param label="Noise UV" name="noiseUV"/>
+ </page>
 </args>

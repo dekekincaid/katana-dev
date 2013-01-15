@@ -1,12 +1,14 @@
 <args format="1.0">
- <param name="input1"/>
- <param name="input2"/>
- <param name="operation" widget="popup">
-  <hintlist name="options">
-   <string value="nop"/>
-   <string value="multiply"/>
-   <string value="divide"/>
-   <string value="power"/>
-  </hintlist>
- </param>
+ <page name="Multiply Divide Attributes" open="True">    
+  <param label="Operation" name="operation" widget="popup">
+   <hintlist name="options">
+    <string value="nop"/>
+    <string value="multiply"/>
+    <string value="divide"/>
+    <string value="power"/>
+   </hintlist>
+  </param>
+  <param label="Input 1" name="input1"/>
+  <param label="Input 2" name="input2"/>
+ </page>
 </args>

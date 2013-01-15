@@ -1,7 +1,9 @@
 <args format="1.0">
- <param name="value"/>
- <param name="min"/>
- <param name="max"/>
- <param name="oldMin"/>
- <param name="oldMax"/>
+ <page name="Set Range Attributes" open="True"> 
+  <param label="Value" name="value"/>
+  <param label="Min" name="min"/>
+  <param label="Max" name="max"/>
+  <param label="Old Min" name="oldMin"/>
+  <param label="Old Max" name="oldMax"/>
+ </page>
 </args>

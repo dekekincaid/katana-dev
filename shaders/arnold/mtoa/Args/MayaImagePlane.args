@@ -1,20 +1,26 @@
 <args format="1.0">
- <param name="filename" widget="fileInput"/>
- <param name="color" widget="color"/>
- <param name="displayMode" widget="popup">
-  <hintlist name="options">
-   <string value="none"/>
-   <string value="outline"/>
-   <string value="rgb"/>
-   <string value="rgba"/>
-   <string value="luminance"/>
-   <string value="alpha"/>
-  </hintlist>
- </param>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="coverage"/>
- <param name="translate"/>
- <param name="camera"/>
+ <page name="Image Plane Attributes" open="True">
+   <param label="Display Mode" name="displayMode" widget="popup">
+   <hintlist name="options">
+    <string value="none"/>
+    <string value="outline"/>
+    <string value="rgb"/>
+    <string value="rgba"/>
+    <string value="luminance"/>
+    <string value="alpha"/>
+   </hintlist>
+  </param> 
+  <param label="Image Name" name="filename" widget="fileInput"/>
+  <param label="Color" name="color" widget="color"/>
+ </page>  
+ <page name="Placement Extras" open="True">
+  <param label="Coverage XY" name="coverage"/>
+  <param label="Coverage Origin XY" name="translate"/>
+  <param label="Camera" name="camera"/>
+ </page>
+ <page name="Color Balance" open="False">
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True"/>
+ </page>
 </args>

@@ -1,16 +1,28 @@
 <args format="1.0">
- <param name="input" widget="color"/>
- <param name="inputMin" slider="True"/>
- <param name="inputMax" slider="True"/>
- <param name="hPositions"/>
- <param name="hValues"/>
- <param name="hInterpolations"/>
- <param name="sPositions"/>
- <param name="sValues"/>
- <param name="sInterpolations"/>
- <param name="vPositions"/>
- <param name="vValues"/>
- <param name="vInterpolations"/>
- <param name="outputMin" slider="True"/>
- <param name="outputMax" slider="True"/>
+ <page name="Remap Hsv Attributes" open="True">  
+  <param label="Color" name="input" widget="color"/>
+ </page>  
+ <page name="Hue" open="True">  
+  <param label="Positions" name="hPositions"/>
+  <param label="Values" name="hValues"/>
+  <param label="Interpolations" name="hInterpolations"/>
+ </page>  
+ <page name="Saturation" open="True">    
+  <param label="Positions" name="sPositions"/>
+  <param label="Values" name="sValues"/>
+  <param label="Interpolations" name="sInterpolations"/>
+ </page>  
+ <page name="Value" open="True">    
+  <param label="Positions" name="vPositions"/>
+  <param label="Values" name="vValues"/>
+  <param label="Interpolations" name="vInterpolations"/>
+ </page>  
+ <page name="Input and Output Ranges" open="True">    
+  <param label="Input Min" name="inputMin" slider="True"/>
+  <param label="Input Max" name="inputMax" slider="True"/>  
+  <param label="Output Min" name="outputMin" slider="True"/>
+  <param label="Output Max" name="outputMax" slider="True"/>
+ </page>
 </args>
+
+

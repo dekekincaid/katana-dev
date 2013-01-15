@@ -1,10 +1,12 @@
 <args format="1.0">
- <param name="what" widget="popup">
-  <hintlist name="options">
-   <string value="tangent"/>
-   <string value="bitangent"/>
-   <string value="color"/>
-  </hintlist>
- </param>
- <param name="colorSetName"/>
+ <page label="" name="Mesh Info Attributes" open="True">
+  <param label="Type" name="what" widget="popup">
+   <hintlist name="options">
+    <string value="tangent"/>
+    <string value="bitangent"/>
+    <string value="color"/>
+   </hintlist>
+  </param>
+  <param label="Color Set Name" name="colorSetName"/>
+ </args>
 </args>

@@ -1,13 +1,15 @@
 <args format="1.0">
- <param name="mode" widget="popup">
-  <hintlist name="options">
-   <string value="pointWorld"/>
-   <string value="pointObj"/>
-   <string value="pointCamera"/>
-   <string value="normalCamera"/>
-   <string value="rayDirection"/>
-   <string value="tangentUCamera"/>
-   <string value="tangentVCamera"/>
-  </hintlist>
- </param>
+ <page name="Sampler Info 3D Attributes" open="True">     
+  <param label="Mode" name="mode" widget="popup">
+   <hintlist name="options">
+    <string value="pointWorld"/>
+    <string value="pointObj"/>
+    <string value="pointCamera"/>
+    <string value="normalCamera"/>
+    <string value="rayDirection"/>
+    <string value="tangentUCamera"/>
+    <string value="tangentVCamera"/>
+   </hintlist>
+  </param>
+ </page>
 </args>

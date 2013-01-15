@@ -1,7 +1,11 @@
 <args format="1.0">
- <param name="beauty" widget="color"/>
- <param name="aov_inputs"/>
- <param name="aov_names"/>
- <param name="enable_matte" widget="checkBox"/>
- <param name="matte_color" widget="color"/>
+ <page name="Shading Engine Attributes" open="True">     
+  <param label="Beauty" name="beauty" widget="color"/>
+  <param label="Matte Color" name="matte_color" widget="color"/>
+  <param label="Enable Matte" name="enable_matte" widget="checkBox"/>
+ </page>  
+ <page name="AOV" open="True">       
+  <param label="AOV Inputs" name="aov_inputs"/>
+  <param label="AOV Names" name="aov_names"/>  
+ </page>
 </args>

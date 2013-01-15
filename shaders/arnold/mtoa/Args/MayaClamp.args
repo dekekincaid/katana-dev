@@ -1,5 +1,7 @@
 <args format="1.0">
- <param name="min" constant="True" widget="number"/>
- <param name="max" constant="True" widget="color"/>
- <param name="input" constant="True" widget="color"/>
+ <page name="Clamp Color Attributes" open="True">    
+  <param label="Min" name="min" constant="True" widget="float"/>
+  <param label="Max" name="max" constant="True" widget="float"/>
+  <param label="Input" name="input" constant="True" widget="float"/>
+ </page>
 </args>

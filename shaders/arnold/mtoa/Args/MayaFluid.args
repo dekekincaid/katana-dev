@@ -1,0 +1,78 @@
+<args format="1.0">
+ <page name="Container Properties" open="True">  
+
+  <param name="color" widget="color"/>
+  <param name="step_size"/>
+  <param name="shadow_density"/>
+  <param int="True" name="xres"/>
+  <param int="True" name="yres"/>
+  <param int="True" name="zres"/>
+  <param name="xdim"/>
+  <param name="ydim"/>
+  <param name="zdim"/>
+
+  <param name="color_gradient_type" widget="popup">
+   <hintlist name="options">
+    <string value="Constant"/>
+    <string value="X Gradient"/>
+    <string value="Y Gradient"/>
+    <string value="Z Gradient"/>
+    <string value="Center Gradient"/>
+    <string value="Density"/>
+    <string value="Temperature"/>
+    <string value="Fuel"/>
+    <string value="Pressure"/>
+    <string value="Speed"/>
+    <string value="Density And Fuel"/>
+   </hintlist>
+  </param>
+
+  <param name="color_gradient_input_bias"/>
+  <param name="incandescence_gradient_type" widget="popup">
+   <hintlist name="options">
+    <string value="Constant"/>
+    <string value="X Gradient"/>
+    <string value="Y Gradient"/>
+    <string value="Z Gradient"/>
+    <string value="Center Gradient"/>
+    <string value="Density"/>
+    <string value="Temperature"/>
+    <string value="Fuel"/>
+    <string value="Pressure"/>
+    <string value="Speed"/>
+    <string value="Density And Fuel"/>
+   </hintlist>
+  </param>
+
+  <param name="incandescence_gradient_input_bias"/>
+  <param name="opacity_gradient_type" widget="popup">
+   <hintlist name="options">
+    <string value="Constant"/>
+    <string value="X Gradient"/>
+    <string value="Y Gradient"/>
+    <string value="Z Gradient"/>
+    <string value="Center Gradient"/>
+    <string value="Density"/>
+    <string value="Temperature"/>
+    <string value="Fuel"/>
+    <string value="Pressure"/>
+    <string value="Speed"/>
+    <string value="Density And Fuel"/>
+   </hintlist>
+  </param>
+
+  <param name="opacity_gradient_input_bias"/>
+ </page>
+ <page name="UNIMPLEMENTED" open="False">
+  <param name="density"/>
+  <param name="fuel"/>
+  <param name="temperature"/>
+  <param name="pressure"/>
+  <param name="velocity"/>
+  <param name="colors"/>
+  <param name="matrix"/>
+  <param name="color_gradient"/>
+  <param name="incandescence_gradient"/>
+  <param name="opacity_gradient"/>    
+ </page>
+</args>

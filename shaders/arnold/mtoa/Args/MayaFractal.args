@@ -1,21 +1,39 @@
 <args format="1.0">
- <param name="amplitude"/>
- <param name="threshold"/>
- <param name="ratio"/>
- <param name="frequencyRatio"/>
- <param name="levelMin"/>
- <param name="levelMax"/>
- <param name="bias"/>
- <param name="inflection" widget="checkBox"/>
- <param name="animated" widget="checkBox"/>
- <param name="time"/>
- <param name="timeRatio"/>
- <param name="uvCoord"/>
- <param name="defaultColor" widget="color"/>
- <param name="colorGain" widget="color"/>
- <param name="colorOffset" widget="color"/>
- <param name="alphaGain"/>
- <param name="alphaOffset"/>
- <param name="alphaIsLuminance" widget="checkBox"/>
- <param name="invert" widget="checkBox"/>
+ <page name="Fractal Attributes" open="True">  
+  <param label="Aplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Threshold" name="threshold" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Ratio" name="ratio" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Frequency Ratio" name="frequencyRatio" slider="True" slidermin="1.0" slidermax="10.0"/>
+  <param label="Level Min" name="levelMin" slider="True" slidermin="0.0" min="0.0" slidermax="25.0" max="25.0"/>
+  <param label="Level Max" name="levelMax" slider="True" slidermin="0.0" min="0.0" slidermax="25.0" max="25.0"/>
+  <param label="Bias" name="bias" slider="True" slidermin="-1.0" slidermax="1.0"/>
+  <param label="Inflection" name="inflection" widget="checkBox"/>
+  <param label="Animated" name="animated" widget="checkBox"/>
+  <param label="Time" name="time" slider="True" slidermin="0.0" min="0.0" slidermax="100.0" max="100.0"/>
+  <hintdict name="conditionalLockOps">
+     <string value="True" name="conditionalLockValue"/>
+     <string value="equalTo" name="conditionalLockOp"/>
+     <string value="../animated" name="conditionalLockPath"/>
+    </hintdict>
+   </param>
+  <param label="TimeRatio" name="timeRatio" slider="True" slidermin="1.0" slidermax="10.0"/>
+  <hintdict name="conditionalLockOps">
+     <string value="True" name="conditionalLockValue"/>
+     <string value="equalTo" name="conditionalLockOp"/>
+     <string value="../animated" name="conditionalLockPath"/>
+    </hintdict>
+   </param>
+ </page> 
+ <page name="Extra Attributes" open="True">   
+  <param label="UV Coord" name="uvCoord"/>
+  <param label="Invert" name="invert" widget="checkBox"/>
+ </page> 
+ <page name="Color Balance" open="False">
+  <param label="Default Color" name="defaultColor" widget="color"/>
+  <param label="Color Gain" name="colorGain" widget="color"/>
+  <param label="Color Offset" name="colorOffset" widget="color"/>
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ </page> 
 </args>
