@@ -1,70 +1,108 @@
 <args format="1.0">
- <param name="Kd" slider="True"/>
- <param name="Kd_color" widget="color"/>
- <param name="diffuse_roughness" slider="True"/>
- <param name="Ks" slider="True"/>
- <param name="Ks_color" widget="color"/>
- <param name="specular_brdf" widget="popup">
-  <hintlist name="options">
-   <string value="stretched_phong"/>
-   <string value="ward_duer"/>
-   <string value="cook_torrance"/>
-  </hintlist>
- </param>
- <param name="specular_roughness" slider="True"/>
- <param name="specular_anisotropy" slider="True">
-  <hintdict name="conditionalLockOps">
-   <string value="ward_duer" name="conditionalLockValue"/>
-   <string value="doesNotContain" name="conditionalLockOp"/>
-   <string value="../specular_brdf" name="conditionalLockPath"/>
-  </hintdict>
- </param>
- <param name="specular_rotation" slider="True">
-  <hintdict name="conditionalLockOps">
-   <string value="ward_duer" name="conditionalLockValue"/>
-   <string value="doesNotContain" name="conditionalLockOp"/>
-   <string value="../specular_brdf" name="conditionalLockPath"/>
-  </hintdict>
- </param>
- <param name="Phong_exponent" slider="True"/>
- <param name="Kr"/>
- <param name="Kr_color" widget="color"/>
- <param name="reflection_exit_color" widget="color"/>
- <param name="reflection_exit_use_environment" widget="checkBox"/>
- <param name="Kt"/>
- <param name="Kt_color" widget="color"/>
- <param name="transmittance" widget="color"/>
- <param name="refraction_roughness" slider="True"/>
- <param name="refraction_exit_color" widget="color"/>
- <param name="refraction_exit_use_environment" widget="checkBox"/>
- <param name="IOR" slider="True"/>
- <param name="Kb" slider="True"/>
- <param name="Fresnel" widget="checkBox"/>
- <param name="Krn" slider="True"/>
- <param name="specular_Fresnel" widget="checkBox"/>
- <param name="Ksn" slider="True"/>
- <param name="Fresnel_affect_diff" widget="checkBox"/>
- <param name="emission" slider="True"/>
- <param name="emission_color" widget="color"/>
- <param name="direct_specular" slider="True"/>
- <param name="indirect_specular" slider="True"/>
- <param name="direct_diffuse" slider="True"/>
- <param name="indirect_diffuse" slider="True"/>
- <param name="enable_glossy_caustics" widget="checkBox"/>
- <param name="enable_reflective_caustics" widget="checkBox"/>
- <param name="enable_refractive_caustics" widget="checkBox"/>
- <param name="enable_internal_reflections" widget="checkBox"/>
- <param name="Ksss" slider="True"/>
- <param name="Ksss_color" widget="color"/>
- <param name="sss_radius" widget="color"/>
- <param name="bounce_factor" slider="True"/>
- <param name="opacity" widget="color"/>
- <param name="aov_emission"/>
- <param name="aov_direct_diffuse"/>
- <param name="aov_direct_specular"/>
- <param name="aov_indirect_diffuse"/>
- <param name="aov_indirect_specular"/>
- <param name="aov_reflection"/>
- <param name="aov_refraction"/>
- <param name="aov_sss"/>
+ <page name="Diffuse" open="True">
+  <param label="Color" name="Kd_color" widget="color"/>
+  <param label="Weight" name="Kd" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>  
+  <param label="Roughness" name="diffuse_roughness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Backlighting" name="Kb" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>  
+  <param label="Fresnel affects Diffuse" name="Fresnel_affect_diff" widget="checkBox"/>  
+ </page>
+
+ <page name="Extended Controls Diffuse" open="True">
+  <param label="Direct Diffuse Scale" name="direct_diffuse"  slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Indirect Diffuse Scale" name="indirect_diffuse" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+ </page>  
+
+ <page name="Specular" open="True">
+  <param label="Color" name="Ks_color" widget="color"/>  
+  <param label="Weight" name="Ks" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="BRDF" name="specular_brdf" widget="popup">
+   <hintlist name="options">
+    <string value="stretched_phong"/>
+    <string value="ward_duer"/>
+    <string value="cook_torrance"/>
+   </hintlist>
+  </param>
+  <param label="Roughness" name="specular_roughness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Anisotrophy" name="specular_anisotropy" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
+   <hintdict name="conditionalLockOps">
+    <string value="ward_duer" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../specular_brdf" name="conditionalLockPath"/>
+   </hintdict>
+  </param>
+  <param label="Rotation" name="specular_rotation" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+   <hintdict name="conditionalLockOps">
+    <string value="ward_duer" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../specular_brdf" name="conditionalLockPath"/>
+   </hintdict>
+  </param>
+  <param label="Glossiness" name="Phong_exponent" slider="True"/> 
+  <param label="Fresnel" name="specular_Fresnel" widget="checkBox"/>
+  <param label="Reflectance at Normal" name="Ksn" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+ </page>  
+
+ <page name="Extended Controls Specular" open="True">
+  <param label="Direct Specular Scale" name="direct_specular" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Indirect Specular Scale" name="indirect_specular" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+ </page>  
+
+ <page name="Reflection" open="True">
+  <param label="Color" name="Kr_color" widget="color"/>
+  <param label="Weight" name="Kr" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Enable Internal Reflections" name="enable_internal_reflections" widget="checkBox"/>
+  <param label="Fresnel" name="Fresnel" widget="checkBox"/>  
+  <param label="Reflectance at Normal" name="Krn" slider="True"/>
+ </page>
+
+ <page name="Exit Color Reflection" open="True">
+  <param label="Use Environment" name="reflection_exit_use_environment" widget="checkBox"/>
+  <param label="Color" name="reflection_exit_color" widget="color"/>
+ </page>  
+
+ <page name="Refraction" open="True">
+  <param label="Color" name="Kt_color" widget="color"/>
+  <param label="Weight" name="Kt" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="IOR" name="IOR" slider="True" slidermin="0.0" min="0.0" slidermax="3.0"/>
+  <param label="Roughness" name="refraction_roughness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Transmittance" name="transmittance" widget="color"/>
+  <param label="Opacity" name="opacity" widget="color"/>
+ </page>
+
+ <page name="Exit Color Refraction" open="True">
+  <param label="Use Environment" name="refraction_exit_use_environment" widget="checkBox"/>
+  <param label="Color" name="refraction_exit_color" widget="color"/>  
+ </page> 
+
+ <page name="Sub-Surface Scattering" open="True">
+  <param label="Color" name="Ksss_color" widget="color"/>  
+  <param label="Weight" name="Ksss" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Radius" name="sss_radius" widget="color"/>
+ </page> 
+
+ <page name="Emission" open="True">
+  <param label="Color" name="emission_color" widget="color"/>
+  <param label="Scale" name="emission" slider="True"/>
+ </page> 
+
+ <page name="Caustics" open="True">
+  <param label="Enable Glossy Caustics" name="enable_glossy_caustics" widget="checkBox"/>
+  <param label="Enable Reflective Caustics" name="enable_reflective_caustics" widget="checkBox"/>
+  <param label="Enable Refractive Caustics" name="enable_refractive_caustics" widget="checkBox"/>
+ </page> 
+
+ <page name="Advanced" open="True">
+  <param label="Bounce Factor" name="bounce_factor" slider="True" slidermin="0.0" min="0.0" slidermax="4.0"/>
+ </page> 
+ 
+ <page name="AOV Names" open="False">
+  <param label="" name="aov_direct_diffuse"/>
+  <param label="" name="aov_indirect_diffuse"/>  
+  <param label="" name="aov_direct_specular"/>   
+  <param label="" name="aov_indirect_specular"/>
+  <param label="" name="aov_reflection"/>
+  <param label="" name="aov_refraction"/>
+  <param label="" name="aov_emission"/>
+  <param label="" name="aov_sss"/>
+ </page>
 </args>
