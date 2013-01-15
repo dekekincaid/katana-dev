@@ -16,7 +16,7 @@
   <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page>
-  <page name="Misc" open="True">
+  <page name="Effects" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>
  </page>
  </page>   

@@ -24,10 +24,6 @@
     </hintdict>
    </param>
  </page> 
- <page name="Extra Attributes" open="True">   
-  <param label="UV Coord" name="uvCoord"/>
-  <param label="Invert" name="invert" widget="checkBox"/>
- </page> 
  <page name="Color Balance" open="False">
   <param label="Default Color" name="defaultColor" widget="color"/>
   <param label="Color Gain" name="colorGain" widget="color"/>
@@ -35,5 +31,11 @@
   <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
- </page> 
+ </page>    
+  <page name="Effects" open="True">
+  <param label="Invert" name="invert" widget="checkBox"/>
+ </page>  
+  <page name="UV Coordinates" open="False">  
+  <param label="UV Coord" name="uvCoord"/>
+ </page>  
 </args>

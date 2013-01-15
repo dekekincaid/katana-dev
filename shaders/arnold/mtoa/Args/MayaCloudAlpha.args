@@ -8,14 +8,14 @@
   <param label="Transport Range" name="transpRange" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
   <param label="Ratio" name="ratio" slider="True"/>
  </page>
- <page name="Effects" open="False">   
-  <param label="Invert" name="invert" widget="checkBox"/>
-  <param label="Local" name="local" widget="checkBox"/>
-  <param label="Wrap" name="wrap" widget="checkBox"/>
-  <param label="Placement Matrix" name="placementMatrix"/>
- </page>
   <page name="Color Balance" open="False">
   <param label="Alpha Gain" name="alphaGain" slider="True"  slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha Offset" name="alpahOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
  </page>
+ <page name="Effects" open="True">   
+  <param label="Invert" name="invert" widget="checkBox"/>
+  <param label="Local" name="local" widget="checkBox"/>
+  <param label="Wrap" name="wrap" widget="checkBox"/>
+  <param label="Placement Matrix" name="placementMatrix"/>
+ </page> 
 </args>

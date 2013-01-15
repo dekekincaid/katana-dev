@@ -14,9 +14,10 @@
   <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox" slidermin="0.0" slidermax="2.0"/>
  </page>
-  <page name="Misc" open="True">
+  <page name="Effects" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>
-  <param label="UV Coordinates" name="uvCoord"/>
  </page>
+  <page name="UV Coordinates" open="False">  
+  <param label="UV Coord" name="uvCoord"/>
  </page>  
 </args>

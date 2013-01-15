@@ -19,7 +19,7 @@
   <param label="Filter Offset" name="filterOffset" slider="True" slidermin="0.0" slidermax="1.0"/>  
   <param label="Invert" name="invert" widget="checkBox"/>
  </page> 
- <page name="UV Coordinates" open="True">
+ <page name="UV Coordinates" open="False">
   <param label="UV Coordinates" name="uvCoord"/>
  </page> 
 </args>
