@@ -1,0 +1,9 @@
+<args format="1.0">
+ <param name="input"/>
+ <param name="component" widget="popup">
+  <hintlist name="options">
+   <string value="X"/>
+   <string value="Y"/>
+  </hintlist>
+ </param>
+</args>

@@ -1,5 +1,5 @@
 <args format="1.0">
- <page label="" name="Mesh Info Attributes" open="True">
+ <page name="Mesh Info Attributes" open="True">
   <param label="Type" name="what" widget="popup">
    <hintlist name="options">
     <string value="tangent"/>
@@ -8,5 +8,5 @@
    </hintlist>
   </param>
   <param label="Color Set Name" name="colorSetName"/>
- </args>
+ </page>
 </args>

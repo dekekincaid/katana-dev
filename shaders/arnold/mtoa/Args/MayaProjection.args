@@ -46,7 +46,6 @@
   <param label="Color Offset" name="colorOffset" widget="color"/>
   <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page>
   <page name="Effects" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>

@@ -1,0 +1,4 @@
+<args format="1.0">
+ <param name="colorAttrName"/>
+ <param name="defaultValue" widget="color"/>
+</args>

@@ -1,0 +1,6 @@
+<args format="1.0">
+ <param name="host_name"/>
+ <param int="True" name="port"/>
+ <param int="True" name="bucket_threshold"/>
+ <param name="swatch" widget="scenegraphLocation"/>
+</args>

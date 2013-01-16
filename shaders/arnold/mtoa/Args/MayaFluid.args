@@ -2,14 +2,14 @@
  <page name="Container Properties" open="True">  
 
   <param name="color" widget="color"/>
-  <param name="step_size"/>
-  <param name="shadow_density"/>
-  <param int="True" name="xres"/>
-  <param int="True" name="yres"/>
-  <param int="True" name="zres"/>
-  <param name="xdim"/>
-  <param name="ydim"/>
-  <param name="zdim"/>
+  <param name="step_size" slider="True"/>
+  <param name="shadow_density" slider="True"/>
+  <param int="True" name="xres" slider="True"/>
+  <param int="True" name="yres" slider="True"/>
+  <param int="True" name="zres" slider="True"/>
+  <param name="xdim" slider="True"/>
+  <param name="ydim" slider="True"/>
+  <param name="zdim" slider="True"/>
 
   <param name="color_gradient_type" widget="popup">
    <hintlist name="options">
@@ -27,7 +27,7 @@
    </hintlist>
   </param>
 
-  <param name="color_gradient_input_bias"/>
+  <param name="color_gradient_input_bias" slider="True"/>
   <param name="incandescence_gradient_type" widget="popup">
    <hintlist name="options">
     <string value="Constant"/>
@@ -44,7 +44,7 @@
    </hintlist>
   </param>
 
-  <param name="incandescence_gradient_input_bias"/>
+  <param name="incandescence_gradient_input_bias" slider="True"/>
   <param name="opacity_gradient_type" widget="popup">
    <hintlist name="options">
     <string value="Constant"/>
@@ -61,7 +61,7 @@
    </hintlist>
   </param>
 
-  <param name="opacity_gradient_input_bias"/>
+  <param name="opacity_gradient_input_bias" slider="True"/>
  </page>
  <page name="UNIMPLEMENTED" open="False">
   <param name="density"/>

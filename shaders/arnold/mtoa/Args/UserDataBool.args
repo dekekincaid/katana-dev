@@ -1,0 +1,4 @@
+<args format="1.0">
+ <param name="boolAttrName"/>
+ <param name="defaultValue" widget="checkBox"/>
+</args>

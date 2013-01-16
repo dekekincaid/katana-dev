@@ -1,0 +1,10 @@
+<args format="1.0">
+ <param name="catchShadows" widget="checkBox"/>
+ <param name="backgroundColor" widget="color"/>
+ <param name="shadowColor" widget="color"/>
+ <param name="enableTransparency" widget="checkBox"/>
+ <param name="shadowTransparency" widget="color"/>
+ <param name="catchDiffuse" widget="checkBox"/>
+ <param name="diffuseColor" widget="color"/>
+ <param name="reflection" widget="color"/>
+</args>
