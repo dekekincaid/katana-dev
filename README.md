@@ -17,21 +17,21 @@ Prman 16.5/17.0 Args are for the default shaders included in the package.  Under
 My Directory structure
 ==========
 
-/shaders
-__/prman
-____/16.5 < prman 16.5 shaders go here
-______/Args < args for prman 16.5 shaders of the same name goes here
-____/17.0 < prman 17.0 shaders go here
-______/Args < args for prman 17 shaders of the same name goes here
-__/Arnold < default shaders inside libai.so which is included with arnold
-____/Args < args for default arnold shaders
-____/mtoa < mtoa shaders
-______/Args < mtoa args
-____/sitoa < sitoa shaders
-______/Args < sitoa args
-__/shave < shave shaders
-____/Args  <shave args
-
+/shaders  
+--/prman  
+----/16.5 < prman 16.5 shaders go here  
+------/Args < args for prman 16.5 shaders of the same name goes here  
+----/17.0 < prman 17.0 shaders go here  
+------/Args < args for prman 17 shaders of the same name goes here  
+--/Arnold < default shaders inside libai.so which is included with arnold  
+----/Args < args for default arnold shaders  
+----/mtoa < mtoa shaders  
+------/Args < mtoa args  
+----/sitoa < sitoa shaders  
+------/Args < sitoa args  
+--/shave < shave shaders  
+----/Args  <shave args  
+  
 ==========
 To use these files 
 ==========
