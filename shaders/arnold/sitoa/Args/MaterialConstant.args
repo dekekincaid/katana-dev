@@ -1,23 +1,38 @@
 <args format="1.0">
- <param name="color" widget="color"/>
- <param name="transparency" widget="color"/>
- <param name="trans_glossy"/>
- <param int="True" name="transparent_samples"/>
- <param name="reflectivity" widget="color"/>
- <param name="reflect_glossy"/>
- <param name="reflect_samples"/>
- <param name="index_of_refraction"/>
- <param name="incandescence" widget="color"/>
- <param name="inc_inten"/>
- <param int="True" name="notrace"/>
- <param name="reflect_inuse" widget="checkBox"/>
- <param name="refract_inuse" widget="checkBox"/>
- <param name="incand_inuse" widget="checkBox"/>
- <param name="radiance" widget="color"/>
- <param name="scaletrans"/>
- <param name="inverttrans" widget="checkBox"/>
- <param name="usealphatrans" widget="checkBox"/>
- <param name="scalerefl"/>
- <param name="invertrefl" widget="checkBox"/>
- <param name="usealpharefl" widget="checkBox"/>
+ <page name="Illumination" open="True">
+  <param label="Color" name="color" widget="color"/>
+ <page name="Transparency" open="True">
+  <param label="Enable Transparency" name="refract_inuse" widget="checkBox"/>
+  <param label="Transparency" name="transparency" widget="color"/>
+  <param label="Use Alpha" name="usealphatrans" widget="checkBox"/>  
+  <param label="Invert" name="inverttrans" widget="checkBox"/>
+  <param label="Scale" name="scaletrans"/>
+
+  <param label="Frost" name="trans_glossy"/>
+  <param label="Transparent Samples" name="transparent_samples" int="True" />  
+  <param label="Index Of Refraction" name="index_of_refraction"/>
+ </page>
+ <page name="Reflection" open="True">
+  <param label="Enable Reflectivity" name="reflect_inuse" widget="checkBox"/>
+  <param label="Reflectivity" name="reflectivity" widget="color"/>
+  <param label="Use Alpha" name="usealpharefl" widget="checkBox"/>
+  <param label="Invert" name="invertrefl" widget="checkBox"/>  
+  <param label="Scale" name="scalerefl"/>
+
+  <param label="Reflectivity Glossy" name="reflect_glossy"/>
+  <param label="Reflect Samples" name="reflect_samples"/>
+  <param label="Reflection Mode" name="notrace" int="True" />
+ </page>
+ <page name="Indirect Illumination" open="True">
+  <page name="Global Illumination/Caustics/Final Gathering" open="True">
+   <param label="Radiance" name="radiance" widget="color"/>
+  </page>
+  <page name="Incandescence" open="True">
+   <param label="Enable incandesence" name="incand_inuse" widget="checkBox"/>
+   <param label="Incandescence" name="incandescence" widget="color"/>
+   <param label="Incandescence Intensity" name="inc_inten"/>
+  </page>
+ </page>
 </args>
+
+
