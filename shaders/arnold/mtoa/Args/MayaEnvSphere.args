@@ -2,6 +2,6 @@
  <page name="Environment Sphere Attributes" open="True">      
   <param label="Image" name="image" widget="fileInput"/>
   <param label="Flip" name="flip" widget="checkBox"/>
-  <param label="Placement Matrix" name="placementMatrix"/>
+  <param label="Placement Matrix" name="placementMatrix" open="True"/>
  </page> 
 </args>

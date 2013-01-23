@@ -1,6 +1,6 @@
 <args format="1.0">
- <param name="input" widget="color"/>
- <param name="component" widget="popup">
+ <param label="Input" name="input" widget="color"/>
+ <param label="Component" name="component" widget="popup">
   <hintlist name="options">
    <string value="R"/>
    <string value="G"/>

@@ -7,10 +7,10 @@
   <param label="Depth Max" name="depthMax"  int="True" slider="True" slidermin="1.0" min="1.0" slidermax="8.0" max="8.0"/>
   <param label="Inflection" name="inflection" widget="checkBox"/>
 
-  <param label="Time" name="time" slidermin="0.0" slidermax="1.0"/>
-  <param label="Frequency" name="frequency" slidermin="0.0" slidermax="100.0"/>
+  <param label="Time" name="time" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Frequency" name="frequency" slider="True" slidermin="0.0" slidermax="100.0"/>
 
-  <param label="Implode" name="implode" slidermin="-1.0" slidermax="1.0"/>
+  <param label="Implode" name="implode" slider="True" slidermin="-1.0" slidermax="1.0"/>
   <param label="Implode Center" name="implodeCenter"/>
 
   <param label="Noise Type" name="noiseType" widget="popup">
@@ -22,10 +22,10 @@
     <string value="spacetime"/>
    </hintlist>
   </param>
-  <param label="Density" name="density" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Spottyness" name="spottyness" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Size Rand" name="sizeRand" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Randomness" name="randomness" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Density" name="density" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Spottyness" name="spottyness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Size Rand" name="sizeRand" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Randomness" name="randomness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
   <param label="Falloff" name="falloff" widget="popup">
    <hintlist name="options">
     <string value="linear"/>

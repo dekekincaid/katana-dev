@@ -1,10 +1,10 @@
 <args format="1.0">
  <page name="Checker Attributes" open="True">  
-  <param name="color1" widget="color"/>
-  <param name="color2" widget="color"/>
-  <param name="contrast" slider="True" slidermin="0" min="0" slidermax="1" max="1"/>
-  <param name="filter" slider="True" slidermin="0" min="0"  slidermax="1"/>
-  <param name="filterOffset" slider="True" slidermin="0" slidermax="1"/>
+  <param label="Color 1" name="color1" widget="color"/>
+  <param label="Color 2"  name="color2" widget="color"/>
+  <param label="Contrast" name="contrast" slider="True" slidermin="0" min="0" slidermax="1" max="1"/>
+  <param label="Filter" name="filter" slider="True" slidermin="0" min="0"  slidermax="1"/>
+  <param label="Filter Offset" name="filterOffset" slider="True" slidermin="0" slidermax="1"/>
  </page>
  <page name="Color Balance" open="False">
   <param label="Default Color" name="defaultColor" widget="color"/>

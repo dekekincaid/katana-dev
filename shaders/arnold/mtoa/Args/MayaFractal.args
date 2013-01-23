@@ -1,5 +1,5 @@
 <args format="1.0">
- <page name="Fractal Attributes" open="True">  
+ <page name="Fractal Attributes" open="True">
   <param label="Aplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
   <param label="Threshold" name="threshold" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
   <param label="Ratio" name="ratio" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
@@ -9,21 +9,21 @@
   <param label="Bias" name="bias" slider="True" slidermin="-1.0" slidermax="1.0"/>
   <param label="Inflection" name="inflection" widget="checkBox"/>
   <param label="Animated" name="animated" widget="checkBox"/>
-  <param label="Time" name="time" slider="True" slidermin="0.0" min="0.0" slidermax="100.0" max="100.0"/>
-  <hintdict name="conditionalLockOps">
-     <string value="True" name="conditionalLockValue"/>
-     <string value="equalTo" name="conditionalLockOp"/>
-     <string value="../animated" name="conditionalLockPath"/>
-    </hintdict>
-   </param>
-  <param label="TimeRatio" name="timeRatio" slider="True" slidermin="1.0" slidermax="10.0"/>
-  <hintdict name="conditionalLockOps">
-     <string value="True" name="conditionalLockValue"/>
-     <string value="equalTo" name="conditionalLockOp"/>
-     <string value="../animated" name="conditionalLockPath"/>
-    </hintdict>
-   </param>
- </page> 
+  <param label="Time" name="time" slider="True" slidermin="0.0" min="0.0" slidermax="100.0" max="100.0">
+   <hintdict name="conditionalLockOps">
+    <string value="True" name="conditionalLockValue"/>
+    <string value="equalTo" name="conditionalLockOp"/>
+    <string value="../animated" name="conditionalLockPath"/>
+   </hintdict>
+  </param>
+  <param label="TimeRatio" name="timeRatio" slider="True" slidermin="1.0" slidermax="10.0">
+   <hintdict name="conditionalLockOps">
+    <string value="True" name="conditionalLockValue"/>
+    <string value="equalTo" name="conditionalLockOp"/>
+    <string value="../animated" name="conditionalLockPath"/>
+   </hintdict>
+  </param>
+ </page>
  <page name="Color Balance" open="False">
   <param label="Default Color" name="defaultColor" widget="color"/>
   <param label="Color Gain" name="colorGain" widget="color"/>
@@ -31,11 +31,11 @@
   <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
- </page>    
-  <page name="Effects" open="True">
+ </page>
+ <page name="Effects" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>
- </page>  
-  <page name="UV Coordinates" open="False">  
+ </page>
+ <page name="UV Coordinates" open="False">
   <param label="UV Coord" name="uvCoord"/>
- </page>  
+ </page>
 </args>

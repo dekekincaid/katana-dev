@@ -9,14 +9,14 @@
   <param label="Bias" name="bias" slider="True"/>
   <param label="Inflection" name="inflection" widget="checkBox"/>
   <param label="Animated" name="animated" widget="checkBox"/>
-  <param label="Time" name="time" slider="True" slidermin="0.0" min="0.0" slidermax="100.0" max="100.0"/>
+  <param label="Time" name="time" slider="True" slidermin="0.0" min="0.0" slidermax="100.0" max="100.0">
   <hintdict name="conditionalLockOps">
      <string value="True" name="conditionalLockValue"/>
      <string value="equalTo" name="conditionalLockOp"/>
      <string value="../animated" name="conditionalLockPath"/>
     </hintdict>
    </param>
-  <param label="TimeRatio" name="timeRatio" slider="True" slidermin="1.0" slidermax="10.0"/>
+  <param label="TimeRatio" name="timeRatio" slider="True" slidermin="1.0" slidermax="10.0">
   <hintdict name="conditionalLockOps">
      <string value="True" name="conditionalLockValue"/>
      <string value="equalTo" name="conditionalLockOp"/>
@@ -34,8 +34,8 @@
  </page>
   <page name="Effects" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>
-  <param label="wrap" name="wrap" widget="checkBox"/>
-  <param label="local" name="local" widget="checkBox"/>
-  <param label="Placement Matrix" name="placementMatrix"/>    
+  <param label="Wrap" name="wrap" widget="checkBox"/>
+  <param label="Local" name="local" widget="checkBox"/>
+  <param label="Placement Matrix" name="placementMatrix" open="True"/>    
  </page>
 </args>

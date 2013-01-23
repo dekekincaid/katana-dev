@@ -4,8 +4,8 @@
   <param label="Increment" name="increment" slider="True" slidermin="0" slidermax="1.0"/>
   <param label="Octaves" name="octaves" slidermin="1.0"  slider="True" slidermax="5.0"/>
   <param label="Weight3d" name="weight3d"/>
-  <param label="PlacementMatrix" name="placementMatrix"/>
-  <param label="wrap" name="wrap" widget="checkBox"/>
+  <param label="PlacementMatrix" name="placementMatrix" open="True"/>
+  <param label="Wrap" name="wrap" widget="checkBox"/>
   <param label="Local" name="local" widget="checkBox"/>
  </page>
  <page name="Color Balance" open="False">
@@ -16,8 +16,7 @@
   <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page>
-  <page name="Effects" open="True">
+ <page name="Effects" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>
- </page>
  </page>   
 </args>

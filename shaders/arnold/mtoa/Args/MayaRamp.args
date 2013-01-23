@@ -31,13 +31,14 @@
   <param label="Noise Frequency" name="noiseFreq" slider="True"/>
   <param label="Position" name="position"/>
   <param label="Color" name="color"/>
-  <param label="Hue Noise" name="hueNoise"/>
-  <param label="Saturation Noise" name="satNoise"/>
-  <param label="Value Noise" name="valNoise"/>
-  <param label="Hue Noise Frequency" name="hueNoiseFreq"/>
-  <param label="Saturation Noise Frequency" name="satNoiseFreq"/>
-  <param label="Value Noise Frequency" name="valNoiseFreq"/>
+  <param label="Hue Noise" name="hueNoise" slider="True"/>
+  <param label="Saturation Noise" name="satNoise" slider="True"/>
+  <param label="Value Noise" name="valNoise" slider="True"/>
+  <param label="Hue Noise Frequency" name="hueNoiseFreq" slider="True"/>
+  <param label="Saturation Noise Frequency" name="satNoiseFreq" slider="True"/>
+  <param label="Value Noise Frequency" name="valNoiseFreq" slider="True"/>
  </page>
+
  <page name="Color Balance" open="False">
   <param label="Default Color" name="defaultColor" widget="color"/>
   <param label="Color Gain" name="colorGain" widget="color"/>
@@ -46,6 +47,7 @@
   <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page>
+
  <page name="Effects" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>
  </page> 

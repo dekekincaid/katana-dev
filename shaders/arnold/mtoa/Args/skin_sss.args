@@ -1,0 +1,42 @@
+<args format="1.0">
+ <page name="Container Properties" open="True">      
+  <param name="diffuse_color" widget="color"/>
+  <param name="diffuse_weight"/>
+  <param name="diffuse_roughness"/>
+  <param name="sss_weight"/>
+  <param name="shallow_scatter_color" widget="color"/>
+  <param name="shallow_scatter_weight"/>
+  <param name="shallow_scatter_radius"/>
+  <param name="mid_scatter_color" widget="color"/>
+  <param name="mid_scatter_weight"/>
+  <param name="mid_scatter_radius"/>
+  <param name="deep_scatter_color" widget="color"/>
+  <param name="deep_scatter_weight"/>
+  <param name="deep_scatter_radius"/>
+  <param name="primary_reflection_color" widget="color"/>
+  <param name="primary_reflection_weight"/>
+  <param name="primary_reflection_roughness"/>
+  <param name="primary_reflection_specular_weight"/>
+  <param name="primary_reflection_reflection_weight"/>
+  <param name="primary_reflection_enable_fresnel_falloff" widget="checkBox"/>
+  <param name="primary_reflection_fresnel_coefficient"/>
+  <param name="secondary_reflection_color" widget="color"/>
+  <param name="secondary_reflection_weight"/>
+  <param name="secondary_reflection_roughness"/>
+  <param name="secondary_reflection_specular_weight"/>
+  <param name="secondary_reflection_reflection_weight"/>
+  <param name="secondary_reflection_enable_fresnel_falloff" widget="checkBox"/>
+  <param name="secondary_reflection_fresnel_coefficient"/>
+  <param name="global_sss_radius_multiplier"/>
+  <param name="use_screen_compositing_for_colors" widget="checkBox"/>
+  <param name="sample_sss_only_in_gi_rays" widget="checkBox"/>
+  <param name="sample_sss_only_in_glossy_rays" widget="checkBox"/>
+  <param name="aov_direct_diffuse"/>
+  <param name="aov_indirect_diffuse"/>
+  <param name="aov_primary_specular"/>
+  <param name="aov_secondary_specular"/>
+  <param name="aov_shallow_scatter"/>
+  <param name="aov_mid_scatter"/>
+  <param name="aov_deep_scatter"/>
+ </page>
+</args>

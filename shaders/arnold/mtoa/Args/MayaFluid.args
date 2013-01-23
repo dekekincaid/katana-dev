@@ -1,17 +1,17 @@
 <args format="1.0">
  <page name="Container Properties" open="True">  
 
-  <param name="color" widget="color"/>
-  <param name="step_size" slider="True"/>
-  <param name="shadow_density" slider="True"/>
-  <param int="True" name="xres" slider="True"/>
-  <param int="True" name="yres" slider="True"/>
-  <param int="True" name="zres" slider="True"/>
-  <param name="xdim" slider="True"/>
-  <param name="ydim" slider="True"/>
-  <param name="zdim" slider="True"/>
+  <param label="Color" name="color" widget="color"/>
+  <param label="Step Size" name="step_size" slider="True"/>
+  <param label="Shadow Density" name="shadow_density" slider="True"/>
+  <param label="Xres" name="xres" int="True" slider="True"/>
+  <param label="Yres" name="yres" int="True" slider="True"/>
+  <param label="Zres" name="zres" int="True" slider="True"/>
+  <param label="Xdim" name="xdim" slider="True"/>
+  <param label="Ydim" name="ydim" slider="True"/>
+  <param label="Zdim" name="zdim" slider="True"/>
 
-  <param name="color_gradient_type" widget="popup">
+  <param label="Color Gradient Type" name="color_gradient_type" widget="popup">
    <hintlist name="options">
     <string value="Constant"/>
     <string value="X Gradient"/>
@@ -27,8 +27,8 @@
    </hintlist>
   </param>
 
-  <param name="color_gradient_input_bias" slider="True"/>
-  <param name="incandescence_gradient_type" widget="popup">
+  <param label="Color Gradient Input Bias" name="color_gradient_input_bias" slider="True"/>
+  <param label="Incandescense Gradient Type" name="incandescence_gradient_type" widget="popup">
    <hintlist name="options">
     <string value="Constant"/>
     <string value="X Gradient"/>
@@ -44,8 +44,8 @@
    </hintlist>
   </param>
 
-  <param name="incandescence_gradient_input_bias" slider="True"/>
-  <param name="opacity_gradient_type" widget="popup">
+  <param label="Incandescence Gradient Input Bias" name="incandescence_gradient_input_bias" slider="True"/>
+  <param label="Opacity Gradient Type" name="opacity_gradient_type" widget="popup">
    <hintlist name="options">
     <string value="Constant"/>
     <string value="X Gradient"/>
@@ -61,18 +61,18 @@
    </hintlist>
   </param>
 
-  <param name="opacity_gradient_input_bias" slider="True"/>
+  <param label="Opacity Gradient Input Bias" name="opacity_gradient_input_bias" slider="True"/>
  </page>
  <page name="UNIMPLEMENTED" open="False">
-  <param name="density"/>
-  <param name="fuel"/>
-  <param name="temperature"/>
-  <param name="pressure"/>
-  <param name="velocity"/>
-  <param name="colors"/>
-  <param name="matrix"/>
-  <param name="color_gradient"/>
-  <param name="incandescence_gradient"/>
-  <param name="opacity_gradient"/>    
+  <param label="" name="density"/>
+  <param label="" name="fuel"/>
+  <param label="" name="temperature"/>
+  <param label="" name="pressure"/>
+  <param label="" name="velocity"/>
+  <param label="" name="colors"/>
+  <param label="" name="matrix"/>
+  <param label="" name="color_gradient"/>
+  <param label="" name="incandescence_gradient"/>
+  <param label="" name="opacity_gradient"/>    
  </page>
 </args>

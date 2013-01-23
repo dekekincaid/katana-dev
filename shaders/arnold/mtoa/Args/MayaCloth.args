@@ -7,9 +7,9 @@
   <param label="V Width" name="vWidth" slider="True" slidermin="0" slidermax="1" min="0" max="1"/>
   <param label="U Wave" name="uWave" slider="True" slidermin="0" slidermax=".5" min="0"/>
   <param label="V Wave" name="vWave" slider="True" slidermin="0" slidermax=".5" min="0"/>
-  <param label="Randomness" name="randomness" slidermin="0" slidermax="1" min="0"/>
-  <param label="Width Spread" name="widthSpread" slidermin="0" slidermax="1" min="0"/>
-  <param label="Bright Spread" name="brightSpread" slidermin="0" slidermax="1" min="0"/>
+  <param label="Randomness" name="randomness" slider="True" slidermin="0" slidermax="1" min="0"/>
+  <param label="Width Spread" name="widthSpread" slider="True" slidermin="0" slidermax="1" min="0"/>
+  <param label="Bright Spread" name="brightSpread" slider="True" slidermin="0" slidermax="1" min="0"/>
  </page>
  <page name="Color Balance" open="False">
   <param label="Default Color" name="defaultColor" widget="color"/>

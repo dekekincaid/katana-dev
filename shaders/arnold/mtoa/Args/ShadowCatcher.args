@@ -1,10 +1,12 @@
 <args format="1.0">
- <param name="catchShadows" widget="checkBox"/>
- <param name="backgroundColor" widget="color"/>
- <param name="shadowColor" widget="color"/>
- <param name="enableTransparency" widget="checkBox"/>
- <param name="shadowTransparency" widget="color"/>
- <param name="catchDiffuse" widget="checkBox"/>
- <param name="diffuseColor" widget="color"/>
- <param name="reflection" widget="color"/>
+ <page name="Shadow Catcher Properties" open="True">      
+  <param label="Catch Shadows" name="catchShadows" widget="checkBox"/>
+  <param label="Background Color" name="backgroundColor" widget="color"/>
+  <param label="Shadow Color" name="shadowColor" widget="color"/>
+  <param label="Enable Transparency" name="enableTransparency" widget="checkBox"/>
+  <param label="Shadow Transparency" name="shadowTransparency" widget="color"/>
+  <param label="Catch Diffuse" name="catchDiffuse" widget="checkBox"/>
+  <param label="Diffuse Color" name="diffuseColor" widget="color"/>
+  <param label="Reflection" name="reflection" widget="color"/>
+ </page>
 </args>
