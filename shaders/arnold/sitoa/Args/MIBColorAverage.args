@@ -1,4 +1,6 @@
 <args format="1.0">
- <param name="input" widget="color"/>
- <param name="factor"/>
+ <page name="Color Average" open="True">    
+  <param name="input" widget="color"/>
+  <param name="factor"/>
+ </page>
 </args>

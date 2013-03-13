@@ -1,18 +1,56 @@
 <args format="1.0">
- <param name="fill"/>
- <param name="border"/>
- <param name="grad_min"/>
- <param name="grad_bias"/>
- <param name="grad_max"/>
- <param name="straightborders" widget="checkBox"/>
- <param name="shape_alignment"/>
- <param name="shape_jitter"/>
- <param name="shape"/>
- <param int="True" name="cell_type"/>
- <param name="external_coord" widget="checkBox"/>
- <param name="ext_coord"/>
- <param name="coord"/>
- <param name="coord_scale"/>
- <param name="coord_prescale"/>
- <param name="coord_scale_global"/>
+ <page name="Cell Scalar" open="True">
+  <page name="Color" open="True">
+   <param label="Fill" name="fill" slider="True" slidermin="0.0" slidermax="1.0"/>
+   <param label="Border" name="border" slider="True" slidermin="0.0" slidermax="1.0"/>
+  </page>
+  <page name="Contrast" open="True">
+   <param label="Min" name="grad_min" slider="True" slidermin="0.0" slidermax="1.0"/>
+   <param label="Max" name="grad_max" slider="True" slidermin="0.0" slidermax="1.0"/>
+   <param label="Bias" name="grad_bias" slider="True" slidermin="0.05" slidermax="0.95"/>
+  </page>
+  <page name="Cell" open="True">
+   <param label="Alignment" name="shape_alignment" constant="True" widget="mapper">
+    <hintdict name="options">
+     <string value="0" name="Random (less white spots)"/>
+     <string value="1" name="Random"/> 
+     <string value="2" name="Random (more white spots)"/> 
+     <string value="3" name="Grid"/> 
+     <string value="4" name="Grid2"/> 
+     <string value="5" name="Grid4"/>
+     <string value="6" name="Honeycombs"/>                       
+    </hintdict>
+   </param>
+   <param label="Cell Jitter" name="shape_jitter" slider="True" slidermin="0.0" slidermax="0.75"/>
+   <param label="Shape" name="shape" constant="True" widget="mapper">
+    <hintdict name="options">
+     <string value="1" name="Square"/>
+     <string value="2" name="Round"/>     
+    </hintdict>
+   </param>
+   <param int="True" label="Cell Type" name="cell_type" constant="True" widget="mapper">
+    <hintdict name="options">
+     <string value="0" name="Round Cells"/>
+     <string value="1" name="Flagstones"/>
+    </hintdict>
+   </param>
+   <param label="Straight Border" name="straightborders" widget="checkBox"/>
+  </page>
+  <page name="Texture Support" open="True">
+   <page name="Coordinate Scale" open="True">
+    <param label="Pre-Scale" name="coord_prescale" widget="mapper">
+     <hintdict name="options">
+      <string value="0" name="Big Noise"/>
+      <string value="1" name="Default"/>
+      <string value="2" name="Small Noise"/>
+     </hintdict>
+    </param>
+    <param label="External Coordinates" name="external_coord" widget="checkBox"/>
+    <param label="Texture Coordinates" name="ext_coord"/>
+    <param label="Coordinates" name="coord"/>
+    <param label="Scale" name="coord_scale_global" slider="True" slidermin="0.1" slidermax="50.0"/>    
+    <param label="Scale Per Axis" name="coord_scale" min="0" max="10"/>
+   </page>
+  </page>
+ </page>
 </args>

@@ -1,23 +1,59 @@
 <args format="1.0">
- <param name="color1"/>
- <param name="color2"/>
- <param name="grad_min"/>
- <param name="grad_bias"/>
- <param name="grad_max"/>
- <param name="noise_type"/>
- <param name="recursion"/>
- <param name="lvl_gain"/>
- <param name="time"/>
- <param name="lvl_scale"/>
- <param name="external_coord" widget="checkBox"/>
- <param name="ext_coord"/>
- <param name="coord"/>
- <param name="coord_scale"/>
- <param name="distort"/>
- <param name="distort_scale"/>
- <param name="coord_prescale"/>
- <param name="color_invert" widget="checkBox"/>
- <param name="time_anim_type"/>
- <param name="time_constant"/>
- <param name="coord_scale_global"/>
+ <page name="Fractal Scalar" open="True">
+  <page name="Color" open="True">  
+   <param label="Color 1" name="color1" slider="True" slidermin="0.0" slidermax="1.0"/>
+   <param label="Color 2" name="color2" slider="True" slidermin="0.0" slidermax="1.0"/>
+   <param label="Switch Colors" name="color_invert" widget="checkBox"/>   
+  </page>
+  <page name="Contrast" open="True">
+   <param label="Clamp Min" name="grad_min" slider="True" slidermin="0.0" slidermax="1.0"/>
+   <param label="Clamp Max" name="grad_max" slider="True" slidermin="0.0" slidermax="1.0"/>   
+   <param label="Bias (Gamma)" name="grad_bias" slider="True" slidermin="0.0" slidermax="1.0"/>
+  </page>
+  <page name="Noise" open="True">
+   <param label="Noise Type" name="noise_type" constant="True" widget="mapper">
+    <hintdict name="options">
+     <string value="2" name="Fractalsum"/>
+     <string value="3" name="Turbulence"/>     
+    </hintdict>
+   </param>
+   <page name="Recursion" open="True">   
+    <param label="Level" name="recursion" slider="True" slidermin="1.0" slidermax="20.0"/>
+    <page name="Next Recursion Level" open="True">   
+     <param label="Recursion Scaledown" name="lvl_scale" slider="True" slidermin="0.0" slidermax="30.0"/>   
+     <param label="Recursion Gain/Smooth" name="lvl_gain" slider="True" slidermin="0.5" slidermax="50.0"/>
+    </page>
+   </page>
+   <param label="Distortion" name="distort" slider="True" slidermin="0.0" slidermax="100.0"/>
+   <param label="Distortion Scale" name="distort_scale" slider="True" slidermin="0.1" slidermax="7.0"/>
+  </page>
+  <page name="Time" open="True">   
+   <param label="Time" name="time_anim_type" constant="True" widget="mapper">
+    <hintdict name="options">
+     <string value="0" name="No change over time"/>
+     <string value="1" name="Constant"/>  
+     <string value="2" name="User animated"/>          
+    </hintdict>
+   </param>
+   <param label="Speed" name="time_constant" slider="True" slidermin="0.0" slidermax="5000.0"/>
+   <param label="Time" name="time"/>   
+  </page>
+  <page name="Texture Support" open="True">
+   <page name="Coordinate Scale" open="True">
+    <param label="Pre-Scale" name="coord_prescale" widget="mapper">
+     <hintdict name="options">
+      <string value="0" name="Big Noise"/>
+      <string value="1" name="Default"/>
+      <string value="2" name="Small Noise"/>
+     </hintdict>
+    </param>
+    <param label="External Coordinates" name="external_coord" widget="checkBox"/>
+    <param label="Texture Coordinates" name="ext_coord"/>
+    <param label="Coordinates" name="coord"/>
+    <param label="Scale" name="coord_scale_global" slider="True" slidermin="0.1" slidermax="50.0"/>    
+    <param label="Scale Per Axis" name="coord_scale" min="0" max="10"/>
+   </page>      
+  </page>   
+ </page>
 </args>
+
