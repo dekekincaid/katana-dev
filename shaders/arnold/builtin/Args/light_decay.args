@@ -1,10 +1,40 @@
 <args format="1.0">
+ <help>
+ 	This filter can be added to all Arnold Lights. This is where you will specify the attenuation ranges (the type of distance fall-off used is specified on the light node itself).
+  <a href="https://support.solidangle.com/display/NodeRef/light_decay">
+   Light Decay on Arnoldpedia 
+  </a>  
+ </help>   	
  <page name="Attenuation" open="True" >    
-  <param label="Use Near Attenuation" name="use_near_atten" widget="checkBox"/>
-  <param label="Near Start" name="near_start" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
-  <param label="Near End" name="near_end" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
-  <param label="Use Far Attenuation" name="use_far_atten" widget="checkBox"/>
-  <param label="Far Start" name="far_start" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
-  <param label="Far End" name="far_end" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
+  <param label="Use Near Attenuation" name="use_near_atten" widget="checkBox">
+   <help>
+   	The Near attenuation value sets the distance at which the light intensity "fades in". It works like a reverse decay. The light does not shine from the source to the Start range of the Near Attenuation then increases brightness until the End range of Near Attenuation.
+   </help>  
+  </param>     	
+  <param label="Near Start" name="near_start" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0">
+   <help>
+   	The distance at which the light begins to fade in. ie, 0 = light source. 
+   </help>  
+  </param>   
+  <param label="Near End" name="near_end" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0">
+   <help>
+   	The distance at which the light reaches its full value. 
+   </help>  
+  </param>   
+  <param label="Use Far Attenuation" name="use_far_atten" widget="checkBox">
+   <help>
+   	The Far attenuation value sets the distance at which the light "fades out". It works like a normal decay, but you can specify the start and end distance. The light diminishes from the Far Start range to the Far End range using a smooth ramp between.
+   </help>  
+  </param>   
+  <param label="Far Start" name="far_start" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0">
+   <help>
+   	The distance at which the light begins to fade out.
+   </help>  
+  </param>   
+  <param label="Far End" name="far_end" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0">
+   <help>
+   	The distance at which the light has faded out to 0.
+   </help>  
+  </param>     	
  </page>
 </args>

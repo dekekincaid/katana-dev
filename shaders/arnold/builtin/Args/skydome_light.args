@@ -1,12 +1,46 @@
 <args format="1.0">
+ <help>
+  Simulates light from a hemisphere or dome above the scene, representing the sky. Can also be used with high dynamic range (HDR) images to perform image-based environment lighting. This is the node which is typically used for lighting exterior scenes.
+  <a href="https://support.solidangle.com/display/NodeRef/skydome_light">
+   Skydome Light on Arnoldpedia 
+  </a>  
+ </help>  
  <page name="Skydome Light Attributes" open="True">      
-  <param name="color" label="Color" widget="color"/>
-  <param name="intensity" label="Intensity" slider="True" slidermin="0" slidermax="10"/>
-  <param name="exposure" label="Exposure" slider="True" slidermin="0" slidermax="10"/>
-  <param name="samples" label="Samples" int="True" slider="True" slidermin="1" slidermax="100" max="100"/>
-  <param name="normalize" label="Normalize" widget="checkBox"/>
-  <param name="affect_diffuse" label="Emit Diffuse" widget="checkBox"/>
-  <param name="affect_specular" label="Emit Specular" widget="checkBox"/>
+  <param name="color" label="Color" widget="color">
+   <help>
+    The color of the light.
+   </help>     
+  </param>  
+  <param label="Intensity" name="intensity" slider="True" slidermin="0" slidermax="10">
+   <help>
+    Intensity controls the brightness of light emitted by the light source by multiplying the color.
+   </help>     
+  </param>  
+  <param label="Exposure" name="exposure" slider="True" slidermin="0" slidermax="10">
+   <help>
+    Exposure is an f-stop value which multiplies the intensity by 2 to the power of the f-stop. Increasing the exposure by 1 results in double the amount of light.
+   </help>     
+  </param>  
+  <param label="Samples" name="samples" int="True" slider="True" slidermin="1" slidermax="100" max="100">
+   <help>
+    Controls the quality of the noise in the soft shadows. The higher the number of samples, the lower the noise, and the longer it takes to render. The exact number of shadow rays sent to the light is the square of this value multiplied by the AA samples.
+   </help>
+  </param>
+  <param label="Normalize" name="normalize" widget="checkBox">
+   <help>
+    If enabled, you will be able to tweak the shadow softness by changing the size (i.e., radius) of the light, without affecting the amount of emitted light. This is very handy for artistic control. Otherwise, if not enabled, the amount of emitted light is proportional to the light's surface area, as dictated by physics.
+   </help>
+  </param>  
+  <param label="Emit Diffuse" name="affect_diffuse" widget="checkBox">
+   <help>
+    Allow the light to affect a material's diffuse component.
+   </help>     
+  </param>  
+  <param label="Emit Specular" name="affect_specular" widget="checkBox">
+   <help>
+    Allow the light to affect a material's specular component.
+   </help>     
+  </param>  
   <param name="format" widget="popup">
    <hintlist name="options">
     <string value="mirrored_ball"/>
@@ -14,19 +48,65 @@
     <string value="latlong"/>
     <string value="cubic"/>
    </hintlist>
+   <help>
+    The type of map being connected. Can be set to Mirrored Ball, Cubic, Lat-long or Angular.
+   </help>
   </param>
 </page>
  <page name="Shadows" open="True">
   <param name="cast_shadows" label="Cast Shadows" widget="checkBox"/>
-  <param name="shadow_color" label="Shadow Color" widget="color"/> 
-  <param name="shadow_density" label="Shadow Density" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0"/>
-  <param int="True" name="resolution" constant="True"/>  
-  <param name="affect_volumetrics" label="Affect Volumetrics" widget="checkBox"/>
-  <param name="cast_volumetric_shadows" label="Cast Volumetric Shadows" widget="checkBox"/>
+  <param label="Shadow Color" name="shadow_color" widget="color">
+   <help>
+    Sets the intensity of each color channel for shadows. Normally this would be black.   
+   </help>
+  </param>
+  <param name="shadow_density" label="Shadow Density" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0">
+   <help>
+    Sets the shadow density, or strength. This controls how the shadow blends with the material on which the shadow is cast: a value of 1.0 produces an opaque, black shadow, and a value of 0.0 gives no shadow. Normally this would be 1.0. 
+   </help>
+  </param>
+  <param int="True" name="resolution" constant="True">
+   <help>
+    In order to keep noise and fireflies to a minimum when using the Skydome light it's very important to set the "resolution". By default this is set to 1000 which means if you're using environment maps larger than 1000 pixels you should adjust the "resolution" accordingly. For example, if your environment map is 3000*1500 pixels, the resolution in the skydome shader should be set to 3000 and so on. You may use smaller resolution values if your environment map doesn't have a lot of small bright spots.
+   </help>
+  </param>  
  </page>
- <page name="Bounce" open="True">   
-  <param name="bounce_factor" label="Bounce Factor" slider="True"  slidermin="0" min="0" slidermax="20.0"/>
-  <param name="bounces" label="Max Bounces" int="True" slider="True" slidermin="0" min="0" slidermax="10000.0" max="10000.0"/>
+ <page name="Volumetric Attributes" open="True"> 
+  <param label="Cast Volumetric Shadows" name="cast_volumetric_shadows" widget="checkBox"/>  
+  <param label="Affect Volumetrics" name="affect_volumetrics" widget="checkBox"/> 
+  <param label="Volume Density" name="volume_density"  slider="True" widget="number" slidermin="0" min="0" slidermax="1.0" max="1.0"/>
+  <param label="Volume Samples" name="volume_samples" int="True" slider="True" slidermin="0" min="0" slidermax="10">
+   <help>
+    The volume samples parameter is similar to the light's "samples" parameter for surface shading, but in the context of volumes. It controls the number of direct light samples for a ray intersecting a volume on a per-light basis, and like the "samples" parameter for surfaces, it is also a squared number.
+   </help>
+  </param>
+ </page>
+ <page name="Per-light Scaling" open="True"> 
+  <param label="Diffuse" name="diffuse" slider="True" slidermin="0" slidermax="1">
+   <help>
+    Per-light scaling for Diffuse. Weights scaling the light contribution to each of those components independently.
+   </help>
+  </param>     
+  <param label="Specular" name="specular" slider="True" slidermin="0" slidermax="1">
+   <help>
+    Per-light scaling for Specular. Weights scaling the light contribution to each of those components independently.
+   </help>
+  </param>    
+  <param label="SSS" name="sss" slider="True" slidermin="0" slidermax="1">
+   <help>
+    Per-light scaling for SSS. Weights scaling the light contribution to each of those components independently.
+   </help>
+  </param>    
+  <param label="Indirect" name="indirect" slider="True" slidermin="0" slidermax="1">
+   <help>
+    Per-light scaling for Indirect. Weights scaling the light contribution to each of those components independently.
+   </help>
+  </param>    
+  <param name="max_bounces" label="Max Bounces" int="True" slider="True" slidermin="0" min="0" slidermax="10000.0" max="10000.0"> 
+   <help>
+    Defines the maximum number of bounces the light will take part of the light loop. A Max Bounces value of 0 means that the light is only visible to 'primary visibility' rays and not visible in the other rays of that light (reflection, refraction, glossy, etc). Note that the global ray depth limits are still taken into account. In the real world, this number would be infinite. 
+   </help>
+  </param>  
  </page>
  <page name="UNSUPPORTED" open="False"> 
   <param name="matrix"/>

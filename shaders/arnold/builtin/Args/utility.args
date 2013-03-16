@@ -1,4 +1,10 @@
 <args format="1.0">
+ <help>
+  General 'all purpose' utility node shader that can be used for creating passes for use within compositing packages. It can also be useful for debugging scenes.
+  <a href="https://support.solidangle.com/display/NodeRef/utility">
+   Utility on Arnoldpedia 
+  </a>  
+ </help>     
  <page name="Utility Attributes" open="True" > 
   <param label="Shade Mode" name="shade_mode" widget="popup">
    <hintlist name="options">
@@ -8,7 +14,10 @@
     <string value="ambocc"/>
     <string value="plastic"/>
    </hintlist>
-  </param>  
+   <help>
+   The shading mode used to render the mesh. 'Ndoteye' renders using the eye vector mode. 'Lambert' renders using a simple lambertian shading model. 'Flat' renders the model as a pure, solid flatly lit and shaded color. 'Ambocc' renders the model using an ambient occlusion technique.    
+   </help>
+  </param>
   <param  label="Color Mode" name="color_mode" widget="popup">
    <hintlist name="options">
     <string value="color"/>
@@ -34,8 +43,22 @@
     <string value="id"/>
     <string value="bumpdiff"/>
    </hintlist>
+   <help>
+    The mode used to color the mesh. You can either choose a flat color as specified by the color setting, or the output color can be chosen to represent various things such as the geometry normal, the shading normal, a wireframe view, etc.
+    <a href="https://support.solidangle.com/display/NodeRef/utility">
+     More on Color Modes here.
+    </a>     
+   </help>
   </param>
-  <param label="Color" name="color" widget="color"/>
-  <param label="Opacity" name="opacity" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Color" name="color" widget="color">
+   <help>
+    Color used as the shading mode for the model.
+   </help> 
+  </param>  
+  <param label="Opacity" name="opacity" slider="True" slidermin="0.0" slidermax="1.0">
+   <help>
+    Sets the opacity of the shader. Ensure that 'opaque' is switched off in the Arnold attributes of the mesh.
+   </help> 
+  </param>  
  </page>
 </args>

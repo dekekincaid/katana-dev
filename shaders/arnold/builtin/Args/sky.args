@@ -1,24 +1,73 @@
 <args format="1.0">
- <page name="Sky Attributes" open="True" >    
-  <param label="Color" name="color" widget="color"/>
-  <param label="Intensity" name="intensity"  slider="True" slidermin="0.0" slidermax="10.0"/>
-  <param label="Visibility" name="visibility" int="True" />
-  <param label="Opaque_alpha" name="opaque_alpha" widget="checkBox"/>
- </page>  
- <page name="Geometry Attributes" open="True" >      
-  <param label="Format" name="format" widget="popup">
+ <help>
+  This is an environment shader (or a background shader in Arnold terms). For image based lighting, use the skydome_light node instead.
+  <a href="https://support.solidangle.com/display/NodeRef/sky">
+   Sky on Arnoldpedia 
+  </a>  
+ </help>     
+ <page name="Sky Attributes" open="True">
+   <param label="Format" name="format" widget="popup">
    <hintlist label="Options" name="options">
     <string value="mirrored_ball"/>
     <string value="angular"/>
     <string value="latlong"/>
     <string value="cubic"/>
    </hintlist>
+   <help>
+    How the environment / image will be interpreted. Cubic, Angular, LatLong or Mirrored Ball.
+   </help>   
   </param>
-  <param label="X Angle" name="X_angle"/>
-  <param label="Y Angle" name="Y_angle"/>
-  <param label="Z Angle" name="Z_angle"/>
-  <param label="X" name="X"/>
-  <param label="Y" name="Y"/>
-  <param label="Z" name="Z"/>
+  <param label="Color" name="color" widget="color">
+   <help>
+    The color to be used as environment. This could be mapped to an image probe.
+   </help>  
+  </param>       
+  <param label="Intensity" name="intensity"  slider="True" slidermin="0.0" slidermax="10.0">
+   <help>
+    A multiplier for the color.
+   </help>
+  </param>
+  <param label="Visibility" name="visibility" int="True">
+   <help>
+    This sets whether the Sky shader is visible to the camera's rendered output or not.
+   </help>
+  </param>
+  <param label="Opaque_alpha" name="opaque_alpha" widget="checkBox">
+   <help>
+    The opacity settings of the sky shader, as seen in the camera viewport. Useful when scene geometry visibility is blocked by the sky node. 
+   </help>
+  </param>
+ </page>  
+ <page name="Geometry Attributes" open="True">
+  <param label="X Angle" name="X_angle">
+   <help>
+
+   </help>
+  </param>
+  <param label="Y Angle" name="Y_angle">
+   <help>
+
+   </help>
+  </param>
+  <param label="Z Angle" name="Z_angle">
+   <help>
+
+   </help>
+  </param>
+  <param label="X" name="X">
+   <help>
+
+   </help>
+  </param>
+  <param label="Y" name="Y">
+   <help>
+
+   </help>
+  </param>
+  <param label="Z" name="Z">
+   <help>
+
+   </help>
+  </param>
 </page>
 </args>

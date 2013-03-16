@@ -1,4 +1,10 @@
 <args format="1.0">
+ <help>
+  The gobo filter can only be used with spot lights. In theatrical stage lighting, a gobo (or "cookie", slang for Cucoloris) is a thin sheet of metal with holes used to break up the light beam into an irregular, more natural pattern such as tree leaves etc. In the computer graphics world, gobos are sometimes referred to as "slide projectors" (or sometimes "projector lights", but note that in Arnold the gobo is not light source itself, but a filter applied to a spot light source). Any texture map or procedural shader can be projected through the light.
+  <a href="https://support.solidangle.com/display/NodeRef/gobo">
+   Gobo on Arnoldpedia 
+  </a>  
+ </help>    
  <page name="Gobo Atributes" open="True">
   <param name="filter_mode" label="Filter Mode" widget="popup">
    <hintlist name="options">
@@ -8,16 +14,39 @@
     <string value="sub"/>
     <string value="mix"/>
    </hintlist>
+   <help>
+    The blending equation by which the gobo's slide map is combined with the lights output. 'Blend' creates a default gobo effect. 'Replace' multiplies the slide map over the spot light. 'Add' multiplies the spot light over the gobo. 'Sub' inverts the RGB values of the slide map. 'Mix' averages the results equally between the spotlight and the slide map.
+   </help>     
   </param>
-  <param name="slidemap" label="Slide Map" widget="color"/>
-  <param name="density" label="Density" slider="True" slidermin="0.0" min="0" slidermax="10.0"/>
+  <param name="slidemap" label="Slide Map" widget="color">
+   <help>
+    Texture map used to create the gobo effect.
+   </help>     
+  </param>     
+  <param name="density" label="Density" slider="True" slidermin="0.0" min="0" slidermax="10.0">
+   <help>
+    Controls the density of the gobo. Higher values will make the gobo more opaque, thereby letting less light through.
+   </help>     
+  </param>   
  </page>
  <page name="Placement Atributes" open="True">
-  <param name="offset" label="Offset"/>
+  <param name="offset" label="Offset">
+   <help>
+    UV coordinate values used to offset the direction of the slide map.
+   </help>     
+  </param>    
  </page>
  <page name="Rotate" open="True"> 
-  <param name="scale_s" label="Scale S" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
-  <param name="scale_t" label="Scale T" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0"/>
+  <param name="scale_s" label="Scale S" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0">
+   <help>
+    Scales the texture used for the slide map in the S direction.
+   </help>     
+  </param>   
+  <param name="scale_t" label="Scale T" slider="True" slidermin="0.0" min="0.0" slidermax="1000.0">
+   <help>
+    Scales the texture used for the slide map in the T direction.
+   </help>     
+  </param>   
   <param name="wrap_s" label="Wrap S" widget="popup">
    <hintlist name="options">
     <string value="periodic"/>
@@ -26,6 +55,9 @@
     <string value="mirror"/>
     <string value="file"/>
    </hintlist>
+   <help>
+    Controls how the 2d texture map is repeated on a surface in the S direction.
+   </help>     
   </param>
   <param name="wrap_t" label="Wrap T" widget="popup">
    <hintlist name="options">
@@ -35,9 +67,16 @@
     <string value="mirror"/>
     <string value="file"/>
    </hintlist>
+   <help>
+    Controls how the 2d texture map is repeated on a surface in the T direction.
+   </help>     
   </param>
  </page>
  <page name="UNSUPPORTED" open="False"> 
-  <param name="rotate" label="Rotate"/>
+  <param name="rotate" label="Rotate">
+   <help>
+    Rotate the texture image.
+   </help>     
+  </param>    
  </page>  
 </args>

@@ -1,19 +1,52 @@
 <args format="1.0">
+ <help>
+  Shader which evaluates a coherent noise function (potentially summed over several octaves, giving fractal noise, sometimes known as a turbulence function). The (floating point) output of this node can be used as input to several other shader nodes to produce various effects. This is useful for creating many real-world patterns (marble, granite, leather, etc.)
+  <a href="https://support.solidangle.com/display/NodeRef/noise">
+   Noise on Arnoldpedia 
+  </a>  
+ </help>     
  <page name="Noise Attributes" open="True">
-  <param label="Octaves" name="octaves" int="True" slider="True" slidermin="0.0" slidermax="10.0"/>
-  <param label="Distortion" name="distortion" slider="True" slidermin="0.0" slidermax="1.0"/>
-  <param label="Lacunarity" name="lacunarity" slider="True" slidermin="0.0" slidermax="1.0"/>
-  <param label="Amplitude" name="amplitude" slider="True" slidermin="0.0" slidermax="1.0"/>
+  <param label="Octaves" name="octaves" int="True" slider="True" slidermin="0.0" slidermax="10.0">
+   <help>
+    The number of octaves over which the noise function is calculated (the fractal noise function is repeated at multiple frequencies, known as octaves; normally each octave is at about twice the frequency, i.e., half the size, of the previous one, but you can alter this with the lacunarity control).
+   </help>  
+  </param>       
+  <param label="Distortion" name="distortion" slider="True" slidermin="0.0" slidermax="1.0">
+   <help>
+    Defines a degree of random displacement applied to each point as part of the noise calculation, giving a different aesthetic feel.
+   </help>  
+  </param>       
+  <param label="Lacunarity" name="lacunarity" slider="True" slidermin="0.0" slidermax="1.0">
+   <help>
+    Controls the average size of gaps in the texture pattern produced. Lacunarity actually means the change in scale between each octave - in musical scales this would be 2.0, meaning each octave is at twice the frequency / half the scale of the previous one, but for our purposes numbers that are near 2.0, but not actually 2.0 are best. In most cases we recommend using the default value of 1.92.
+   </help>  
+  </param>       
+  <param label="Amplitude" name="amplitude" slider="True" slidermin="0.0" slidermax="1.0">
+   <help>
+    Controls the amplitude, or range, of the output. Normally the output is RGBA with values between 0 and 1, the amplitude control multiplies this.
+   </help>  
+  </param>      
  </page>  
- <page name="Transform" open="True">  
-  <param label="Scale" name="scale"/>
-  <param label="Offset" name="offset"/>
+ <page name="Transform" open="True">
+  <param label="Scale" name="scale">
+   <help>
+    Controls the scale of the noise function in x, y, and z directions.
+   </help>  
+  </param>       
+  <param label="Offset" name="offset">
+   <help>
+    Offset the noise in x, y, or z directions.
+   </help>  
+  </param>       
   <param label="Coordinate Space" name="coord_space" widget="popup">
    <hintlist name="options">
     <string value="world"/>
     <string value="object"/>
     <string value="Pref"/>
    </hintlist>
+   <help>
+    Specifies the coordinate space to use. These include World, Object and Pref space co-ordinates. Pref is short for 'vertex in reference pose'. MtoA can pass these vertices to Arnold (in addition to the regular, deformed vertices) which can in turn be queried by the noise shader so that the noise 'sticks' to the reference pose and does not swim as the mesh deforms.
+   </help>   
   </param>
  </page>
 </args>

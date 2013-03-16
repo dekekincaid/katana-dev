@@ -1,10 +1,40 @@
 <args format="1.0">
+ <help>
+ 	A shader which allows the red, green, blue and alpha channels of camera, shadow, reflection, refraction, diffuse and glossy rays to be selected and combined as required, and output as RGBA for use elsewhere. For example, when performing image based lighting, this node allows you to switch between a high resolution environment map for reflection and refraction rays, and a much lower resolution / more blurred map for diffuse and glossy rays.
+  <a href="https://support.solidangle.com/display/NodeRef/ray_switch">
+   Ray Switch on Arnoldpedia 
+  </a>  
+ </help>   	
  <page name="Ray Switch Attributes" open="True" >
-  <param label="Camera" name="camera" widget="color"/>
-  <param label="Shadow" name="shadow" widget="color"/>
-  <param label="Reflection" name="reflection" widget="color"/>
-  <param label="Refractopm" name="refraction" widget="color"/>
-  <param label="Diffuse" name="diffuse" widget="color"/>
-  <param label="Glossy" name="glossy" widget="color"/>
+  <param label="Camera" name="camera" widget="color">
+   <help>
+   	Plug the output of the node you wish to use when calculating camera rays here. 
+   </help>  
+  </param>   
+  <param label="Shadow" name="shadow" widget="color">
+   <help>
+   	Plug the output of the node you wish to use when calculating shadow rays here. 
+   </help>  
+  </param>   
+  <param label="Reflection" name="reflection" widget="color">
+   <help>
+   	Plug the output of the node you wish to use when calculating reflection rays here. 
+   </help>  
+  </param>   
+  <param label="Refractopm" name="refraction" widget="color">
+   <help>
+   	Plug the output of the node you wish to use when calculating refraction rays here. 
+   </help>  
+  </param>   
+  <param label="Diffuse" name="diffuse" widget="color">
+   <help>
+   	Plug the output of the node you wish to use when calculating diffuse rays here. 
+   </help>  
+  </param>   
+  <param label="Glossy" name="glossy" widget="color">
+   <help>
+   	Plug the output of the node you wish to use when calculating glossy rays here. 
+   </help>  
+  </param>     	
  </page>
 </args>

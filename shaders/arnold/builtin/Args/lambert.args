@@ -1,10 +1,28 @@
 <args format="1.0">
+ <help>
+  Simple Lambertian reflectance model. Outputs a simple color (RGB).
+  <a href="https://support.solidangle.com/display/NodeRef/lambert">
+   Lambert on Arnoldpedia 
+  </a>  
+ </help> 	
  <page name="Lambert Attributes" open="True" >    
-  <param name="Kd"  label="Diffuse" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param name="Kd_color" label="Diffuse Color" widget="color"/>
-  <param name="opacity" label="Opacity" widget="color"/>
+  <param name="Kd"  label="Diffuse" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+   <help>
+   	Diffuse weight.
+   </help>  
+  </param>    
+  <param name="Kd_color" label="Diffuse Color" widget="color">
+   <help>
+   	Diffuse color.
+   </help>  
+  </param>   
+  <param name="opacity" label="Opacity" widget="color">
+   <help>
+   	The opacity of the material, expressed as a colour value. 
+   </help>  
+  </param>     	
  </page>
- <page name="Extra Attributes" open="True" > 
+ <page name="AOV Names" open="False" > 
   <param name="aov_direct_diffuse" label="AOV Direct Diffuse"/>
   <param name="aov_indirect_diffuse" label="AOV Indirect Diffuse"/>
  </page>
