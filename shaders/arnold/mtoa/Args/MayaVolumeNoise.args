@@ -24,11 +24,40 @@
     <string value="spacetime"/>
    </hintlist>
   </param>
-  <param label="Density" name="density" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Spottyness" name="spottyness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Size Rand" name="sizeRand" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Randomness" name="randomness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
+  <param label="Density" slidermin="0.0" name="density" min="0.0" slider="True" slidermax="1.0">
+   <hintdict name="conditionalLockOps">
+    <string value="billow" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../noiseType" name="conditionalLockPath"/>
+   </hintdict>
+  </param>
+  <param label="Spottyness" slidermin="0.0" name="spottyness" min="0.0" slider="True" slidermax="1.0">
+   <hintdict name="conditionalLockOps">
+    <string value="billow" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../noiseType" name="conditionalLockPath"/>
+   </hintdict>
+  </param>
+  <param label="Size Rand" slidermin="0.0" name="sizeRand" min="0.0" slider="True" slidermax="1.0">
+   <hintdict name="conditionalLockOps">
+    <string value="billow" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../noiseType" name="conditionalLockPath"/>
+   </hintdict>
+  </param>
+  <param label="Randomness" slidermin="0.0" name="randomness" min="0.0" slider="True" slidermax="1.0">
+   <hintdict name="conditionalLockOps">
+    <string value="billow" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../noiseType" name="conditionalLockPath"/>
+   </hintdict>
+  </param>
   <param label="Falloff" name="falloff" widget="popup">
+   <hintdict name="conditionalLockOps">
+    <string value="billow" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../noiseType" name="conditionalLockPath"/>
+   </hintdict>
    <hintlist name="options">
     <string value="linear"/>
     <string value="smooth"/>
@@ -36,8 +65,7 @@
     <string value="bubble"/>
    </hintlist>
   </param>
-  <param label="Num Waves" name="numWaves" int="True" slider="True" slidermin="1.0" min="1.0" slidermax="20.0"/>
- </page>
+
  <page name="Color Balance" open="False">
   <param label="Default Color" name="defaultColor" widget="color"/>
   <param label="Color Gain" name="colorGain" widget="color"/>
