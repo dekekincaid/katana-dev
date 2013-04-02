@@ -1,19 +1,22 @@
 <args format="1.0">
  <help>
   Simple color shader node which just allows a color and opacity value to be combined, with no other effects.
-  <a href="https://support.solidangle.com/display/NodeRef/flat">
-   Flat on Arnoldpedia 
-  </a>  
+  <br></br> 
+  <br><a href="https://support.solidangle.com/display/NodeRef/flat">Flat on Arnoldpedia</a></br>
  </help>	
  <page name="Flat Attributes" open="True">   
   <param label="Color" name="color" widget="color">
    <help>
-   	The input color.
+    <b>color</b>
+    <br></br>    
+   	<br>The input color.</br>
    </help>     
-  </param> 
+  </param>
   <param label="Opacity" name="opacity" widget="color">
    <help>
-    The input opacity.
+    <b>opacity</b>
+    <br></br>    
+    <br>The input opacity.</br>
    </help>     
   </param>   
  </page>

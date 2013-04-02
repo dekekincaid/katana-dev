@@ -1,29 +1,46 @@
 <args format="1.0">
  <help>
   Simple Lambertian reflectance model. Outputs a simple color (RGB).
-  <a href="https://support.solidangle.com/display/NodeRef/lambert">
-   Lambert on Arnoldpedia 
-  </a>  
+  <br></br> 
+  <br><a href="https://support.solidangle.com/display/NodeRef/lambert">Lambert on Arnoldpedia</a></br>
  </help> 	
- <page name="Lambert Attributes" open="True" >    
-  <param name="Kd"  label="Diffuse" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+ <page name="Lambert Attributes" open="True">    
+  <param label="Diffuse" name="Kd" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
    <help>
-   	Diffuse weight.
+    <b>Kd</b>
+    <br></br>
+   	<br>Diffuse weight.</br>
    </help>  
   </param>    
-  <param name="Kd_color" label="Diffuse Color" widget="color">
+  <param label="Diffuse Color" name="Kd_color" widget="color">
    <help>
-   	Diffuse color.
+    <b>Kd_color</b>
+    <br></br>    
+   	<br>Diffuse color.</br>
    </help>  
   </param>   
-  <param name="opacity" label="Opacity" widget="color">
+  <param label="Opacity" name="opacity" widget="color">
    <help>
-   	The opacity of the material, expressed as a colour value. 
+    <b>opacity</b>
+    <br></br>    
+   	<br>The opacity of the material, expressed as a colour value.</br>
    </help>  
   </param>     	
  </page>
  <page name="AOV Names" open="False" > 
-  <param name="aov_direct_diffuse" label="AOV Direct Diffuse"/>
-  <param name="aov_indirect_diffuse" label="AOV Indirect Diffuse"/>
+  <param label="AOV Direct Diffuse" name="aov_direct_diffuse">
+   <help>
+    <b>aov_direct_diffuse</b>
+    <br></br>    
+    <br></br>
+   </help>  
+  </param>      
+  <param label="AOV Indirect Diffuse" name="aov_indirect_diffuse">
+   <help>
+    <b>aov_indirect_diffuse</b>
+    <br></br>    
+    <br></br>
+   </help>  
+  </param>      
  </page>
 </args>

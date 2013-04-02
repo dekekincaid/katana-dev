@@ -1,9 +1,8 @@
 <args format="1.0">
  <help>
   Color shader which produces a wire-frame style output (as RGB).
-  <a href="https://support.solidangle.com/display/NodeRef/wireframe">
-   Wireframe on Arnoldpedia 
-  </a>  
+  <br></br>  
+  <br><a href="https://support.solidangle.com/display/NodeRef/wireframe">Wireframe on Arnoldpedia</a></br> 
  </help>     
  <page name="Wireframe Attributes" open="True" >   
   <param label="EdgeType" name="edge_type" widget="popup">
@@ -13,27 +12,37 @@
     <string value="patches"/>
    </hintlist>
    <help>
-    Determines how the mesh is represented. Quads will render as polygon faces. If triangles is selected, polygons will be broken up into their triangular tessellation. Patches are currently unsupported.
+    <b>edge_type</b>
+    <br></br>    
+    <br>Determines how the mesh is represented. Quads will render as polygon faces. If triangles is selected, polygons will be broken up into their triangular tessellation. Patches are currently unsupported.</br> 
    </help> 
   </param>
   <param label="Fill Color" name="fill_color" widget="color">
    <help>
-    The color used to represent the polygon faces.
+    <b>fill_color</b>
+    <br></br>    
+    <br>The color used to represent the polygon faces.</br> 
    </help>
   </param>
   <param label="Line Color" name="line_color" widget="color">
    <help>
-    The color used to represent the edges.
+    <b>line_color</b>
+    <br></br>    
+    <br>The color used to represent the edges.</br> 
    </help>
   </param>
   <param label="Line Width" name="line_width" slider="True" slidermin="0.0" min="0.0" slidermax="10.0">
    <help>
-    The thickness of the edge lines of the polygon faces.
+    <b>line_width</b>
+    <br></br>    
+    <br>The thickness of the edge lines of the polygon faces.</br> 
    </help>
   </param>
   <param label="Raster Space" name="raster_space" widget="checkBox">
    <help>
-    When enabled, the line width will be set in screen space pixels instead of world units.
+    <b>raster_space</b>
+    <br></br>    
+    <br>When enabled, the line width will be set in screen space pixels instead of world units.</br> 
    </help>
   </param>    
  </page>

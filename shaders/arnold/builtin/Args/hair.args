@@ -1,58 +1,77 @@
 <args format="1.0">
  <help>
   The Hair shader is designed to render the look of hair or fur. Note that this shader needs to be used on geometry that has been defined to look like hair or fur (for example using Arnold's curves shape node). Other shaders such as Lambert could be used, but the Hair shader has a specular shading model specifically designed for thin hair fibers and lets you define different diffuse colors for the root and tip of the hairs, for example. This shader currently uses a simple Kay-Kajiya shading model.
-  <a href="https://support.solidangle.com/display/NodeRef/hair">
-   Hair on Arnoldpedia 
-  </a>  
+  <br></br> 
+  <br><a href="https://support.solidangle.com/display/NodeRef/hair">Hair on Arnoldpedia</a></br>
  </help>    
  <page name="Color" open="True" >
   <param name="rootcolor" label="Root Color" widget="color">
    <help>
-    Diffuse color at the root of the hair
+    <b>rootcolor</b>
+    <br></br>
+    <br>Diffuse color at the root of the hair</br>
    </help>     
   </param> 
   <param name="tipcolor" label="Tip Color" widget="color">
    <help>
-    Diffuse color at the tip of the hair
+    <b>tipcolor</b>
+    <br></br>    
+    <br>Diffuse color at the tip of the hair</br>
    </help>     
   </param>     
  </page>
  <page name="Diffuse" open="True" >
   <param label="Diffuse Cache" name="diffuse_cache" widget="checkBox">
    <help>
-    When enabled, global illumination rays will only see the automatically baked direct diffuse illumination from each control point of the strands rather than a full shader evaluation as they normally would. This can give a big reduction in render time specially in scenes with many lights.
+    <b>diffuse_cache</b>
+    <br></br>    
+    <br>When enabled, global illumination rays will only see the automatically baked direct diffuse illumination from each control point of the strands rather than a full shader evaluation as they normally would. This can give a big reduction in render time specially in scenes with many lights.</br>
    </help>     
   </param>     
   <param label="Ambient Diffuse" name="ambdiff" slider="True">
    <help>
-    Ambient Diffuse controls the blending between two different diffuse shading models: fully isotropic and the Kajiya-Kay diffuse BRDF. When set to 0, the diffuse part of the shader will be fully isotropic, which means that the strand will reflect the same amount of light towards the camera no matter which direction the light is coming from. When set to 1, the diffuse part of the shader will follow the Kajiya-Kay diffuse equation, which means that light shining down on the tip of a hair will not brighten the strand as much as light shining in from the sides. Any value between 0 and 1 is also valid, and will just blend between the two models.
+    <b>ambdiff</b>
+    <br></br>    
+    <br>Ambient Diffuse controls the blending between two different diffuse shading models: fully isotropic and the Kajiya-Kay diffuse BRDF. When set to 0, the diffuse part of the shader will be fully isotropic, which means that the strand will reflect the same amount of light towards the camera no matter which direction the light is coming from. When set to 1, the diffuse part of the shader will follow the Kajiya-Kay diffuse equation, which means that light shining down on the tip of a hair will not brighten the strand as much as light shining in from the sides. Any value between 0 and 1 is also valid, and will just blend between the two models.</br>
    </help>     
   </param>   
   <param label="Indirect Diffuse" name="kd_ind" slider="True"> 
    <help>
-    Indirect diffuse controls the amount of indirect diffuse light (GI light rays) reflected by the shader. Setting it to 0 disables indirect lighting and is the fastest to render. The higher the setting, the more that global illumination will affect the final color of the shader. It is strongly recommended to stay in the 0 to 1 range, as values higher than 1 will create energy out of nowhere and therefore break energy conservation and introduce excessive noise. The example below shows an exaggerated value of 5 merely for illustrative purposes.
+    <b>kd_ind</b>
+    <br></br>    
+    <br>Indirect diffuse controls the amount of indirect diffuse light (GI light rays) reflected by the shader. Setting it to 0 disables indirect lighting and is the fastest to render. The higher the setting, the more that global illumination will affect the final color of the shader. It is strongly recommended to stay in the 0 to 1 range, as values higher than 1 will create energy out of nowhere and therefore break energy conservation and introduce excessive noise. The example below shows an exaggerated value of 5 merely for illustrative purposes.</br>
    </help>     
   </param> 
  </page>
  <page name="Specular" open="True" >
   <param label="Glossiness" name="gloss" slider="True">
    <help>
-    Glossiness of the primary specular component. The higher the value, the tighter and sharper the specular. Internally, this corresponds to the exponent of a cosine power. For realistic hair, the value should be in the range 5 to 500.
+    <b>gloss</b>
+    <br></br>    
+    <br>Glossiness of the primary specular component. The higher the value, the tighter and sharper the specular. Internally, this corresponds to the exponent of a cosine power. For realistic hair, the value should be in the range 5 to 500.</br>
    </help>     
   </param>     
   <param label="Weight" name="spec" slider="True">
    <help>
-    Scale of the primary specular contribution, which simply multiplies the primary specular color. It's strongly recommended to stay in the 0 to 1 range. In particular, values above 1 will create energy out of nowhere and break energy conservation and possibly introduce more noise than necessary.
+    <b>spec</b>
+    <br></br>    
+    <br>Scale of the primary specular contribution, which simply multiplies the primary specular color. It's strongly recommended to stay in the 0 to 1 range. In particular, values above 1 will create energy out of nowhere and break energy conservation and possibly introduce more noise than necessary.</br>
    </help>     
   </param>     
   <param label="Color" name="spec_color" widget="color">
    <help>
-    The color of the primary specular component. For realistic and clean hair, the color should be set to white. It is also possible to assign texture maps to the specular color attribute. The image on the left is an example of some hair that has been rendered with a brown specular color. On the right is the same hair that has been rendered with a fractal texture connected to the specular color attribute.
+    <b>spec_color</b>
+    <br></br>    
+    <br>The color of the primary specular component. For realistic and clean hair, the color should be set to white.</br>
+    <br></br>     
+    <br>It is also possible to assign texture maps to the specular color attribute. The image on the left is an example of some hair that has been rendered with a brown specular color. On the right is the same hair that has been rendered with a fractal texture connected to the specular color attribute.</br>
    </help>     
   </param>    
   <param label="Angular Shift" name="spec_shift" slider="True">
    <help>
-    Angular shift of the primary specular in degrees. It controls the shift of the specular lobes away from the perfect mirror direction and is used to control the offset of the specular highlight along the hair strand. For realistic results, it should take a negative value, typically in the -10 to -5 range.
+    <b>spec_shift</b>
+    <br></br>    
+    <br>Angular shift of the primary specular in degrees. It controls the shift of the specular lobes away from the perfect mirror direction and is used to control the offset of the specular highlight along the hair strand. For realistic results, it should take a negative value, typically in the -10 to -5 range.</br>
    </help>     
   </param>     
  </page>
@@ -60,22 +79,30 @@
  <page name="Secondary Specular" open="True" >
   <param label="Glossiness" name="gloss2" slider="True">
    <help>
-    Glossiness of the secondary specular component. The higher the value, the tighter and sharper the specular. Internally, this corresponds to the exponent of a cosine power. For realistic hair, the value should be around half the primary specular glossiness, i.e. it's slightly rougher due to scattering when light goes through the hair fiber.
+    <b>gloss2</b>
+    <br></br>    
+    <br>Glossiness of the secondary specular component. The higher the value, the tighter and sharper the specular. Internally, this corresponds to the exponent of a cosine power. For realistic hair, the value should be around half the primary specular glossiness, i.e. it's slightly rougher due to scattering when light goes through the hair fiber.</br>
    </help>     
   </param>     
   <param label="Weight"  name="spec2" slider="True">
    <help>
-    Scale of the secondary specular contribution, which simply multiplies the secondary specular color. It's strongly recommended to stay in the 0 to 1 range. In particular, values above 1 will create energy out of nowhere and break energy conservation and possibly introduce more noise than necessary.
+    <b>spec2</b>
+    <br></br>    
+    <br>Scale of the secondary specular contribution, which simply multiplies the secondary specular color. It's strongly recommended to stay in the 0 to 1 range. In particular, values above 1 will create energy out of nowhere and break energy conservation and possibly introduce more noise than necessary.</br>
    </help>     
   </param>     
   <param label="Color" name="spec2_color" widget="color">
    <help>
-    The color of the secondary specular component. For realistic and clean hair, the color is usually non-white, tinted by absorption inside the hair fiber.
+    <b>spec2_color</b>
+    <br></br>    
+    <br>The color of the secondary specular component. For realistic and clean hair, the color is usually non-white, tinted by absorption inside the hair fiber.</br>
    </help>     
   </param>    
   <param label="Angular Shift" name="spec2_shift" slider="True">
    <help>
-    Angular shift of the secondary specular in degrees. It controls the shift of the specular lobes away from the perfect mirror direction and is used to control the offset of the specular highlight along the hair strand. For realistic results, it should take a positive value. A suggested expression is to link the primary and secondary specular shift values together like: secondary specular shift = -1.5 * primary specular shift.
+    <b>spec2_shift</b>
+    <br></br>    
+    <br>Angular shift of the secondary specular in degrees. It controls the shift of the specular lobes away from the perfect mirror direction and is used to control the offset of the specular highlight along the hair strand. For realistic results, it should take a positive value. A suggested expression is to link the primary and secondary specular shift values together like: secondary specular shift = -1.5 * primary specular shift.</br>
    </help>     
   </param>     
  </page>
@@ -83,7 +110,9 @@
  <page name="Extra Attributes" open="True" >
   <param label="Opacity" name="opacity" widget="color">
    <help>
-    Opacity of the hair. This is set to full white by default, which means fully opaque hair. Playing with this value to make the hair less opaque (or in other words, more transparent) can sometimes help make the hair look softer, at the expense of increased render times. If not set to full white, be sure to have the Opaque flag off in the Arnold Parameters property of the hair object, or else Arnold will bypass any transparency-related calculations to optimize render times.
+    <b>opacity</b>
+    <br></br>
+    <br>Opacity of the hair. This is set to full white by default, which means fully opaque hair. Playing with this value to make the hair less opaque (or in other words, more transparent) can sometimes help make the hair look softer, at the expense of increased render times. If not set to full white, be sure to have the Opaque flag off in the Arnold Parameters property of the hair object, or else Arnold will bypass any transparency-related calculations to optimize render times.</br>
    </help>     
   </param>    
   <param label="Uparam" name="uparam">

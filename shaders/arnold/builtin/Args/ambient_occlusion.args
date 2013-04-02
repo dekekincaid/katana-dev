@@ -1,56 +1,75 @@
 <args format="1.0">
  <help>
-  Ambient occlusion is an approximation of global illumination that emulates the complex interactions between the diffuse inter-reflections of objects. While not physically accurate (for that use full global illumination), this shader is fast and produces a realistic effect. The ambient occlusion shader essentially fires a number of rays in the upper hemispheric defined by the tangent plane of the shading point and returns the ratio of the hits divided by the total rays as a color. When the ratio of the ray hits / total rays = 0, the output is considered fully unoccluded or 'Bright' (with white color by default). When the ratio of the ray hits / total rays = 1, the output is considered fully occluded or Dark (with black color by default). In between there is a linear interpolation of the two values.
-  <a href="https://support.solidangle.com/display/NodeRef/ambient_occlusion">
-   Ambient Occlusion on Arnoldpedia 
-  </a>  
+  Ambient occlusion is an approximation of global illumination that emulates the complex interactions between the diffuse inter-reflections of objects. While not physically accurate (for that use full global illumination), this shader is fast and produces a realistic effect.
+  <br></br> 
+  <br>The ambient occlusion shader essentially fires a number of rays in the upper hemispheric defined by the tangent plane of the shading point and returns the ratio of the hits divided by the total rays as a color. When the ratio of the ray hits / total rays = 0, the output is considered fully unoccluded or 'Bright' (with white color by default). When the ratio of the ray hits / total rays = 1, the output is considered fully occluded or Dark (with black color by default). In between there is a linear interpolation of the two values.</br>
+  <br></br>
+  <br><a href="https://support.solidangle.com/display/NodeRef/ambient_occlusion">Ambient Occlusion on Arnoldpedia</a></br>
  </help>  
  <page name="Ambient Occlusion Attributes" open="True">    
   <param label="Samples" name="samples" int="True" slider="True" slidermin="0" min="0" slidermax="10.0">
    <help>
-    Controls the number of rays that will be fired to compute the ray hits/total ratio. Increasing the number of samples will reduce noise and give a better quality result.
+    <b>samples</b>
+    <br></br>
+    <br>Controls the number of rays that will be fired to compute the ray hits/total ratio. Increasing the number of samples will reduce noise and give a better quality result.</br>
    </help>     
   </param>    
   <param label="White"  name="white" widget="color">
    <help>
-    The output color when the ratio of the ray hits/total rays is zero (fully unoccluded). 
+    <b>white</b>
+    <br></br>    
+    <br>The output color when the ratio of the ray hits/total rays is zero (fully unoccluded).</br> 
    </help>     
   </param>    
   <param label="Black" name="black" widget="color">
    <help>
-    The output color when the ratio of the ray hits/total rays is one (fully occluded).
+    <b>black</b>
+    <br></br>    
+    <br>The output color when the ratio of the ray hits/total rays is one (fully occluded).</br>
    </help>     
-  </param>    
+  </param>  
   <param label="Falloff" name="falloff" slider="True" slidermin="0" min="0" slidermax="100.0">
    <help>
-    An exponential falloff rate for the occlusion along the ray distance. It is not compatible with semi-opaque surfaces hit by the occlusion rays.
+    <b>falloff</b>
+    <br></br>    
+    <br>An exponential falloff rate for the occlusion along the ray distance. It is not compatible with semi-opaque surfaces hit by the occlusion rays.</br>
    </help>     
   </param>      
   <page name="Extra Attributes" open="True">
    <param label="Spread" name="spread" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0">
     <help>
-     Angular spread around the normal vector N, in the range [0,1], where 1 maps to 90 degrees (the full hemisphere). 1.0 is the most common value. Other values may produce results that are not useful.
+    <b>spread</b>
+    <br></br>      
+     <br>Angular spread around the normal vector N, in the range [0,1], where 1 maps to 90 degrees (the full hemisphere). 1.0 is the most common value. Other values may produce results that are not useful.</br>
     </help>     
    </param>      
    <param label="Near Clip" name="near_clip" slider="True" slidermin="0" min="0" slidermax="100.0">
     <help>
-     Minimum occlusion distance that is sampled.
+    <b>near_clip</b>
+    <br></br>      
+     <br>Minimum occlusion distance that is sampled.</br>
     </help>     
    </param>     
    <param label="Far Clip" name="far_clip" slider="True" slidermin="0" min="0" slidermax="2000.0">
     <help>
-     Maximum occlusion distance that is sampled.
+    <b>far_clip</b>
+    <br></br>      
+     <br>Maximum occlusion distance that is sampled.</br>
     </help>     
    </param>     
   </page>   
   <param label="Opacity" name="opacity">
    <help>
-    Alters the opacity of the ambient occlusion effect, thereby changing the opacity of the object. Lower values increase the opacity. It is possible to drive the opacity of the ambient occlusion effect with a shading network. You must ensure that Opaque is switched off for the geometry. 
+    <b>opacity</b>
+    <br></br>    
+    <br>Alters the opacity of the ambient occlusion effect, thereby changing the opacity of the object. Lower values increase the opacity. It is possible to drive the opacity of the ambient occlusion effect with a shading network. You must ensure that Opaque is switched off for the geometry.</br>
    </help>     
   </param>     
   <param label="Invert Normals" name="invert_normals" widget="checkBox">
    <help>
-    This attribute changes the direction of the rays being traced. When it is off the rays are traced outside of the surface. When it is on the rays are traced inside the surface. The most common use for this is to simulate dirt or erosion, as corners and cracks will get darker. 
+    <b>invert_normals</b>
+    <br></br>    
+    <br>This attribute changes the direction of the rays being traced. When it is off the rays are traced outside of the surface. When it is on the rays are traced inside the surface. The most common use for this is to simulate dirt or erosion, as corners and cracks will get darker.</br>
    </help>     
   </param>    
  </page>

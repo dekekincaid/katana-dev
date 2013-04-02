@@ -1,75 +1,98 @@
 <args format="1.0">
  <help>
   This light filter can only be used with spot lights. Barn doors are opaque moving panels attached to the sides of the light's opening. They are typically used in theatrical and film lighting for additional control over the shape of the light beam. This Barndoor filter introduces four barndoor flaps. Each barndoor flap has three parameters. The first two parameters position the two ends of the flap across the face of the light. The third parameter (Edge) controls the softness of the edge. The positions are distances from the respective edge. The edge softness is a ramp width. The ramp starts at one (fully-open) at the barndoor's edge and tapers off to zero based on the edge width in the direction to the perimeter of the spotlight. For example, a flap with coordinates 0.25, 0.25 and an edge of 0.125 will be perfectly "open" at 0.25, and will be perfectly "closed" at 0.375. The edge effect starts at the barndoor edge and works its way outward (*not* inward).
-  <a href="https://support.solidangle.com/display/NodeRef/barndoor">
-   barndoor on Arnoldpedia 
-  </a>  
+  <br></br> 
+  <br><a href="https://support.solidangle.com/display/NodeRef/barndoor">barndoor on Arnoldpedia</a></br>
  </help>  
  <page name="Top" open="True">    
-  <param name="barndoor_top_left" label="Top Left" slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Top Left" name="barndoor_top_left" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Moves the left corner of the top flap across the face of the light.
+    <b>barndoor_top_left</b>
+    <br></br>    
+    <br>Moves the left corner of the top flap across the face of the light.</br> 
    </help>     
   </param>      
-  <param name="barndoor_top_right" label="Top Right" slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Top Right" name="barndoor_top_right" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Moves the right corner of the top flap across the face of the light.
+    <b>barndoor_top_right</b>
+    <br></br>     
+    <br>Moves the right corner of the top flap across the face of the light.</br> 
    </help>     
   </param>      
-  <param name="barndoor_top_edge" label="Top Edge" slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Top Edge" name="barndoor_top_edge" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Controls the edge softness of the top flap.
+    <b>barndoor_top_edge</b>
+    <br></br>     
+    <br>Controls the edge softness of the top flap.</br> 
    </help>     
   </param>      
  </page>
  <page name="Right" open="True">
-  <param name="barndoor_right_top" label="Right Top"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Right Top" name="barndoor_right_top" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Moves the top corner of the right flap across the face of the light.
+    <b>barndoor_right_top</b>
+    <br></br>     
+    <br>Moves the top corner of the right flap across the face of the light.</br> 
    </help>     
   </param>      
-  <param name="barndoor_right_bottom" label="Right Bottom"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Right Bottom" name="barndoor_right_bottom" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Moves the bottom corner of the right flap across the face of the light.
+    <b>barndoor_right_bottom</b>
+    <br></br>     
+    <br>Moves the bottom corner of the right flap across the face of the light.</br> 
    </help>     
   </param>      
-  <param name="barndoor_right_edge" label="Right Edge"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Right Edge" name="barndoor_right_edge" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Controls the edge softness of the right flap.
+    <b>barndoor_right_edge</b>
+    <br></br>     
+    <br>Controls the edge softness of the right flap.</br> 
    </help>     
   </param>      
  </page>
  <page name="Bottom" open="True">
-  <param name="barndoor_bottom_left" label="Bottom Left"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Bottom Left" name="barndoor_bottom_left" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Moves the left corner of the bottom flap across the face of the light.
+    <b>barndoor_bottom_left</b>
+    <br></br>     
+    <br>Moves the left corner of the bottom flap across the face of the light.</br> 
    </help>     
   </param>      
-  <param name="barndoor_bottom_right" label="Bottom Right"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Bottom Right" name="barndoor_bottom_right" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Moves the right corner of the bottom flap across the face of the light.
+    <b>barndoor_bottom_right</b>
+    <br></br>     
+    <br>Moves the right corner of the bottom flap across the face of the light.</br> 
    </help>     
   </param>      
-  <param name="barndoor_bottom_edge" label="Bottom Edge"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Bottom Edge" name="barndoor_bottom_edge" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Controls the edge softness of the bottom flap.
+    <b>barndoor_bottom_edge</b>
+    <br></br>     
+    <br>Controls the edge softness of the bottom flap.</br> 
    </help>     
   </param>      
  </page>
  <page name="Left" open="True">
-  <param name="barndoor_left_top" label="Left Top"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param  label="Left Top" name="barndoor_left_top" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Moves the top corner of the left flap across the face of the light.
+    <b>barndoor_left_top</b>
+    <br></br>     
+    <br>Moves the top corner of the left flap across the face of the light.</br> 
    </help>     
   </param>      
-  <param name="barndoor_left_bottom" label="Left Bottom"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Left Bottom" name="barndoor_left_bottom" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Moves the bottom corner of the left flap across the face of the light.
+    <b>barndoor_left_bottom</b>
+    <br></br>     
+    <br>Moves the bottom corner of the left flap across the face of the light.</br> 
    </help>     
   </param>      
-  <param name="barndoor_left_edge" label="Left Bottom"  slider="True" slidermin="0" min="0" slidermax="1" max="1">
+  <param label="Left Bottom" name="barndoor_left_edge" slider="True" slidermin="0" min="0" slidermax="1" max="1">
    <help>
-    Controls the edge softness of the left flap.s
+    <b>barndoor_left_edge</b>
+    <br></br>     
+    <br>Controls the edge softness of the left flap.</br> 
    </help>     
   </param>      
  </page>  

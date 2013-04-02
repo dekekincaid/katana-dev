@@ -1,29 +1,38 @@
 <args format="1.0">
  <help>
-  Provides bump mapping based on a 3d input. Bump3D works by evaluating the bump input at different points (P + epsilon, P + epsilon, P + epsilon). Since the only thing displaced is the point, the uv coordinates will be the same in the different lookups. These will give the same texel in the image and result in no perturbation of the normal. If you are using texture file images, you should use Bump2D for images. Keep in mind that each bump3d bump nodes needs to evaluate the texture map 4 times (to get the partial derivatives in X, Y, Z).
-  <a href="https://support.solidangle.com/display/NodeRef/bump3d">
-   Bump3d on Arnoldpedia 
-  </a>  
+  Provides bump mapping based on a 3d input. Bump3D works by evaluating the bump input at different points (P + epsilon, P + epsilon, P + epsilon). Since the only thing displaced is the point, the uv coordinates will be the same in the different lookups. These will give the same texel in the image and result in no perturbation of the normal. If you are using texture file images, you should use Bump2D for images.
+  <br></br>
+  <br>Keep in mind that each bump3d bump nodes needs to evaluate the texture map 4 times (to get the partial derivatives in X, Y, Z).</br>
+  <br></br>
+  <br><a href="https://support.solidangle.com/display/NodeRef/bump3d">Bump3d on Arnoldpedia</a></br>
  </help>	
  <page name="Bump 3d Attributes" open="True">      
-  <param name="bump_map" label="Bump Map" slider="True" slidermin="0" slidermax="1">
+  <param label="Bump Map" name="bump_map" slider="True" slidermin="0" slidermax="1">
    <help>
-   	The input used to compute the normal perturbation, provided as a float value representing the height (such as noise), or directly as an RGB texture map, in which case the mean average of the R,G,B channels will be used.
+    <b>bump_map</b>
+    <br></br>      
+   	<br>The input used to compute the normal perturbation, provided as a float value representing the height (such as noise), or directly as an RGB texture map, in which case the mean average of the R,G,B channels will be used.</br> 
    </help>     
   </param> 
-  <param name="bump_height" label="Bump Height" slider="True" slidermin="0" slidermax="1">
+  <param label="Bump Height" name="bump_height" slider="True" slidermin="0" slidermax="1">
    <help>
-   	Scales the height of the bump map output.
+    <b>bump_height</b>
+    <br></br>      
+   	<br>Scales the height of the bump map output.</br>
    </help>
   </param>   
-  <param name="epsilon" label="Epsilon" slider="True" slidermin="0" slidermax="1">
+  <param label="Epsilon" name="epsilon" slider="True" slidermin="0" slidermax="1">
    <help>
-   	Epsilon is used to remove noisy shading artifacts caused by insufficient precision in the small floating point differences between P and P+epsilon. Ideally it should be left at its default value of 1e-5 but in problematic cases it may be preferable to increase the epsilon, which may solve the numerical artifacts trading them for blurrier bump.
+    <b>epsilon</b>
+    <br></br>      
+   	<br>Epsilon is used to remove noisy shading artifacts caused by insufficient precision in the small floating point differences between P and P+epsilon. Ideally it should be left at its default value of 1e-5 but in problematic cases it may be preferable to increase the epsilon, which may solve the numerical artifacts trading them for blurrier bump.</br> 
    </help>     
   </param>   
-  <param name="shader" label="Shader" widget="color">
+  <param label="Shader" name="shader" widget="color">
    <help>
-   	Optionally, a shader to specify the color and/or reflectance can be specified here, allowing the node to be connected to the Surface slot of the material (rather than connecting bump3d to the Bump Map slot and the other shader to the Surface slot separately). This may be useful in some situations.
+    <b>shader</b>
+    <br></br>    
+   	<br>Optionally, a shader to specify the color and/or reflectance can be specified here, allowing the node to be connected to the Surface slot of the material (rather than connecting bump3d to the Bump Map slot and the other shader to the Surface slot separately). This may be useful in some situations.</br> 
    </help>     
   </param>   
  </page> 

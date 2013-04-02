@@ -1,14 +1,17 @@
 <args format="1.0">
  <help>
-  The Image node is a color shader which performs texture mapping using a specified image file. You can control the position, size, and rotation of this frame on the surface using the Coverage, Translate Frame and Rotate Frame attributes. You can control how the texture is tiled within the frame using the Repeat UV, Rotate UV, Offset, Mirror, Stagger, and Wrap attributes.
-  <a href="https://support.solidangle.com/display/NodeRef/image">
-   Image on Arnoldpedia 
-  </a>  
+  The Image node is a color shader which performs texture mapping using a specified image file. 
+  <br></br> 
+  <br>You can control the position, size, and rotation of this frame on the surface using the Coverage, Translate Frame and Rotate Frame attributes. You can control how the texture is tiled within the frame using the Repeat UV, Rotate UV, Offset, Mirror, Stagger, and Wrap attributes.</br> 
+  <br></br> 
+  <br><a href="https://support.solidangle.com/display/NodeRef/image">Image on Arnoldpedia</a></br>
  </help>    
  <page name="Image Attributes" open="True">
   <param label="Image Name" name="filename" widget="fileInput">
    <help>
-    The image file.
+    <b>filename</b>
+    <br></br>    
+    <br>The image file.</br>
    </help>  
   </param>  
   <param label="Filter" name="filter" widget="popup">
@@ -19,39 +22,51 @@
     <string value="smart_bicubic"/>
    </hintlist>
    <help>
-    Texel interpolation method used to filter the rendered image file. Cubic is slower but smoother, closest is faster but looks blocky when magnified.
+    <b>filter</b>
+    <br></br>
+    <br>Texel interpolation method used to filter the rendered image file. Cubic is slower but smoother, closest is faster but looks blocky when magnified.</br>
    </help>  
   </param>
   <param label="Mipmap Bias" name="mipmap_bias" int="True" slider="True" slidermin="-10.0" slidermax="10.0">
    <help>
-    Mip-Mapping Bias offsets the Mip-Map level from which a texture is sampled. Negative value indicates a larger Mip-Map level (bigger texture); a positive value indicates a smaller Mip-Map level (smaller texture). 
+    <b>mipmap_bias</b>
+    <br></br>    
+    <br>Mip-Mapping Bias offsets the Mip-Map level from which a texture is sampled. Negative value indicates a larger Mip-Map level (bigger texture); a positive value indicates a smaller Mip-Map level (smaller texture).</br>
    </help>  
   </param>    
   <param label="Multiply" name="multiply" widget="color">
    <help>
-    Multiplies the image by a constant.
+    <b>multiply</b>
+    <br></br>    
+    <br>Multiplies the image by a constant.</br>
    </help>  
   </param>  
   <param label="Offset" name="offset" widget="color">
    <help>
-    Uniformly darkens or lighten the texture.
+    <b>offset</b>
+    <br></br>    
+    <br>Uniformly darkens or lighten the texture.</br>
    </help>  
   </param>  
   <param label="Cache Texture Handles" name="cache_texture_handles" widget="checkBox">
    <help>
-
+    <b>cache_texture_handles</b>
+    <br></br>
    </help>  
   </param>
   <param label="Single Channel" name="single_channel" widget="checkBox">
    <help>
-    Uses a single channel instead of the rgb of the image
+    <b>single_channel</b>
+    <br></br>    
+    <br>Uses a single channel instead of the rgb of the image</br>
    </help>  
   </param>  
  </page>
  <page name="UV Coordinates" open="True" >
   <param label="UV Cord" name="uvcoords">
    <help>
-
+    <b>uvcoords</b>
+    <br></br>
    </help>  
   </param>  
   <param label="Wrap U" name="swrap" widget="popup">
@@ -63,7 +78,8 @@
     <string value="file"/>
    </hintlist>
    <help>
-
+    <b>swrap</b>
+    <br></br>
    </help>  
   </param>   
   <param label="Wrap V" name="twrap" widget="popup">
@@ -75,32 +91,44 @@
     <string value="file"/>
    </hintlist>
    <help>
-    Controls how a texture repeats on a large surface.
+    <b>twrap</b>
+    <br></br>    
+    <br>Controls how a texture repeats on a large surface.</br>
    </help>  
   </param>
   <param label="Scale U" name="sscale" slider="True" slidermin="0.0" slidermax="10.0">
    <help>
-    Scales the image.
+    <b>sscale</b>
+    <br></br>    
+    <br>Scales the image.</br>
    </help>  
   </param>    
   <param label="Scale V" name="tscale" slider="True" slidermin="0.0" slidermax="10.0">
    <help>
-    Scales the image.
+    <b>tscale</b>
+    <br></br>    
+    <br>Scales the image.</br>
    </help>  
   </param>    
   <param label="Flip U" name="sflip"  widget="checkBox">
    <help>
-    Flip (mirror) the image in the s direction.
+    <b>sflip</b>
+    <br></br>    
+    <br>Flip (mirror) the image in the s direction.</br>
    </help>  
   </param>    
   <param label="Flip V" name="tflip"  widget="checkBox">
    <help>
-    Flip (mirror) the image in the t direction.
+    <b>tflip</b>
+    <br></br>    
+    <br>Flip (mirror) the image in the t direction.</br>
    </help>  
   </param>    
   <param label="Swap UV" name="swap_st" widget="checkBox">
    <help>
-    Swap the s and t axes.
+    <b>swap_st</b>
+    <br></br>    
+    <br>Swap the s and t axes.</br>
    </help>  
   </param>    
  </page>

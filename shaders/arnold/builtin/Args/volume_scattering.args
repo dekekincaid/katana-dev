@@ -1,61 +1,82 @@
 <args format="1.0">
  <help>
   This shader simulates light scattered by a thin, uniform atmosphere. It produces shafts of light and volumetric shadows cast from geometric objects. It works with point, spot and quad area lights. This is a scene-wide volume shader (or an atmosphere shader in Arnold terms). Volume shaders can be attached to the Volume slot of the Render Pass.
-  <a href="https://support.solidangle.com/display/NodeRef/volume_scattering">
-   Volume Scattering on Arnoldpedia 
-  </a>  
+  <br></br>
+  <br><a href="https://support.solidangle.com/display/NodeRef/volume_scattering">Volume Scattering on Arnoldpedia</a></br> 
  </help>    
  <page name="Volume Attributes" open="True" >
   <param label="Density" name="density" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
    <help>
-    Increases/ decreases the atmospheric volume density. 
+    <b>density</b>
+    <br></br>    
+    <br>Increases/ decreases the atmospheric volume density.</br> 
    </help>
   </param>
   <param label="Attenuation" name="attenuation" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
    <help>
-    The attenuation parameter sets the rate at which the rays of light traveling through the scattering medium are extinguished. A high value means that light will only travel a short distance through the volume, while a low value means that light will travel a long distance through the volume.
+    <b>attenuation</b>
+    <br></br>    
+    <br>The attenuation parameter sets the rate at which the rays of light traveling through the scattering medium are extinguished. A high value means that light will only travel a short distance through the volume, while a low value means that light will travel a long distance through the volume.</br> 
    </help>
   </param>
   <param label="Eccentricity" name="eccentricity" slider="True" slidermin="-1.0"  min="-1.0" slidermax="1.0" man="1.0">
    <help>
-    Henyey-Greenstein Anisotropy coefficient between -1 (full back-scatter) and 1 (full forward-scatter). Default is 0 for an isotropic medium, which scatters the light evenly in all directions, giving a uniform effect. Positive values bias the scattering effect forwards, in the direction of the light, while negative values bias the scattering backwards, toward the light. Changing the eccentricity therefore means that you will get a different effect depending on whether the camera is looking toward the light or away from the light.   Note that values very close to 1.0 (above 0.95) or -1.0 (below -0.95) will produce scattering that is so directional that it will not be very visible from most angles (and what scattering you do see may be noisy), so such values are not recommended."
+    <b>eccentricity</b>
+    <br></br>
+    <br>Henyey-Greenstein Anisotropy coefficient between -1 (full back-scatter) and 1 (full forward-scatter). Default is 0 for an isotropic medium, which scatters the light evenly in all directions, giving a uniform effect. Positive values bias the scattering effect forwards, in the direction of the light, while negative values bias the scattering backwards, toward the light. Changing the eccentricity therefore means that you will get a different effect depending on whether the camera is looking toward the light or away from the light.</br>
+    <br></br>
+    <br>Note that values very close to 1.0 (above 0.95) or -1.0 (below -0.95) will produce scattering that is so directional that it will not be very visible from most angles (and what scattering you do see may be noisy), so such values are not recommended."</br> 
    </help>
   </param>
   <param label="Importance Sampling" name="importance_sampling" widget="checkBox"> 
    <help>
-    Specify whether importance sampling is used. This parameter should always be on, and thus is not exposed.
+    <b>importance_sampling</b>
+    <br></br>    
+    <br>Specify whether importance sampling is used. This parameter should always be on, and thus is not exposed.</br> 
    </help>
   </param>
   <param label="Samples" name="samples" int="True" slider="True" slidermin="1.0" min="1.0" slidermax="64.0">
    <help>
-    The samples are distributed according to the volume density. More samples will refine the quality of the solution.
+    <b>samples</b>
+    <br></br>    
+    <br>The samples are distributed according to the volume density. More samples will refine the quality of the solution.</br> 
    </help>
   </param>
  </page>
  <page name="Contribution Attributes" open="True" >
   <param label="Affect Camera" name="affect_camera" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
    <help>
-    Controls the degree to which volume scattering affects camera rays.
+    <b>affect_camera</b>
+    <br></br>    
+    <br>Controls the degree to which volume scattering affects camera rays.</br> 
    </help>
   </param>
   <param label="Affect Diffuse" name="affect_diffuse" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
    <help>
-    Controls the degree to which volume scattering affects diffuse GI rays. 
+    <b>affect_diffuse</b>
+    <br></br>    
+    <br>Controls the degree to which volume scattering affects diffuse GI rays.</br>  
    </help>
   </param>
   <param label="Affect Reflection" name="affect_reflection" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
    <help>
-    Controls the degree to which volume scattering affects reflection / glossy rays.
+    <b>affect_reflection</b>
+    <br></br>    
+    <br>Controls the degree to which volume scattering affects reflection / glossy rays.</br> 
    </help>
   </param>
   <param label="Rgb Density" name="rgb_density" widget="color">
    <help>
-    The density control is multiplied by this RGB value (so a blue value here means blue light is scattered). 
+    <b>rgb_density</b>
+    <br></br>    
+    <br>The density control is multiplied by this RGB value (so a blue value here means blue light is scattered).</br> 
    </help>
   </param>
   <param label="Rgb Attenuation" name="rgb_attenuation" widget="color">
    <help>
-    The attenuation control is multiplied by this RGB value (so a red value here means red light is attenuated).
+    <b>rgb_attenuation</b>
+    <br></br>    
+    <br>The attenuation control is multiplied by this RGB value (so a red value here means red light is attenuated).</br> 
    </help>
   </param>    
  </page>

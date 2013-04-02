@@ -1,24 +1,29 @@
 <args format="1.0">
  <help>
   Provides bump mapping based on a 2d texture map. Note that bump mapping doesn't alter the geometry of the object, it only changes shading normals, so things won't look right in silhouette; however, very often this does not matter. Keep in mind that the object will need UV coordinates that will be used to derive the perturbation. The bump2d node evaluates the bump function at three locations with an offset in u and v from the shading point, via a "forward differencing" algorithm.
-  <a href="https://support.solidangle.com/display/NodeRef/bump2d">
-   Bump2d on Arnoldpedia 
-  </a>  
- </help>	
+  <br></br> 
+  <br><a href="https://support.solidangle.com/display/NodeRef/bump2d">Bump2d on Arnoldpedia</a></br>
+ </help>
  <page name="Bump 2d Attributes" open="True">      
-  <param name="bump_map" label="Bump Map" slider="True" slidermin="0" slidermax="1">
+  <param label="Bump Map" name="bump_map" slider="True" slidermin="0" slidermax="1">
    <help>
-    The input used to compute the normal perturbation, provided as a float value representing the height (for example by using a node to isolate a particular channel of a texture map) or directly as an RGB texture map, in which case the mean average of the R,G,B channels will be used.
+    <b>bump_map</b>
+    <br></br>
+    <br>The input used to compute the normal perturbation, provided as a float value representing the height (for example by using a node to isolate a particular channel of a texture map) or directly as an RGB texture map, in which case the mean average of the R,G,B channels will be used.</br> 
    </help>     
-  </param> 
-  <param name="bump_height" label="Bump Height" slider="True" slidermin="0" slidermax="1">
+  </param>
+  <param label="Bump Height" name="bump_height" slider="True" slidermin="0" slidermax="1">
    <help>
-    Allows you to scale the height of the bump map output.   	
+    <b>bump_height</b>
+    <br></br>
+    <br>Allows you to scale the height of the bump map output.</br>    	
    </help>     
   </param>   
-  <param name="shader" label="Shader" widget="color">
+  <param label="Shader" name="shader" widget="color">
    <help>
-    Optionally, a shader to be evaluated after the normal perturbation has been completed. Then, the perturbed normals are restored.  This will allow the node to be connected to the Surface slot of the material (rather than connecting bump2d to the Bump Map slot and the other shader to the Surface slot separately). This may be useful in some situations.   	
+    <b>shader</b>
+    <br></br>
+    <br>Optionally, a shader to be evaluated after the normal perturbation has been completed. Then, the perturbed normals are restored.  This will allow the node to be connected to the Surface slot of the material (rather than connecting bump2d to the Bump Map slot and the other shader to the Surface slot separately). This may be useful in some situations.</br>    	
    </help>     
   </param>   
  </page>

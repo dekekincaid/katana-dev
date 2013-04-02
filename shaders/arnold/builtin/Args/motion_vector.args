@@ -1,29 +1,38 @@
 <args format="1.0">
  <help>
- 	This shader will encode a vector representing the motion of the object in the Red and Green components. To use this shader correctly, you must enable motion blur in the render options and use an instantaneous shutter: the shutter start/end values should both be set to the same value.  When rendering a motion vector, you must disable 'Ignore Motion Blur' in the Arnold render settings.
-  <a href="https://support.solidangle.com/display/NodeRef/motion_vector">
-   Motion Vector on Arnoldpedia 
-  </a>  
+ 	This shader will encode a vector representing the motion of the object in the Red and Green components. To use this shader correctly, you must enable motion blur in the render options and use an instantaneous shutter: the shutter start/end values should both be set to the same value.  
+  <br></br>
+  <br>*** When rendering a motion vector, you must disable 'Ignore Motion Blur' in the Arnold render settings.</br>
+  <br></br>
+  <br><a href="https://support.solidangle.com/display/NodeRef/motion_vector">Motion Vector on Arnoldpedia</a></br>
  </help>	
  <page name="Motion Vector Attributes" open="True" >    
   <param label="Raw" name="raw" widget="checkBox" slidermin="0.0" min="0.0" slidermax="10.0">
    <help>
-   	The vector won't be normalized.
+    <b>raw</b>
+    <br></br>    
+   	<br>The vector won't be normalized.</br> 
    </help>  
   </param>     
   <param label="Time 0" name="time0">
    <help>
-   	Sample time for shutter start.
+    <b>time0</b>
+    <br></br>    
+   	<br>Sample time for shutter start.</br> 
    </help>  
   </param>     
   <param label="Time 1" name="time1">
    <help>
-   	Sample time for shutter end.
+    <b>time1</b>
+    <br></br>    
+   	<br>Sample time for shutter end.</br> 
    </help>  
   </param>     
   <param label="Max Displace" name="max_displace">
    <help>
-   	When greater than 0, this is the maximum amount of screen-space motion. The motion vector encoded in the RG components is then normalized to this value. This is better when writing to 8 or 16-bit formats like JPEG, TIFF etc. On the other hand, when this value is less than or equal to zero, magnitude encoding is used instead: RG holds the unit direction vector, and B holds the magnitude. This is better when writing to floating point formats (EXR etc). 
+    <b>max_displace</b>
+    <br></br>    
+   	<br>When greater than 0, this is the maximum amount of screen-space motion. The motion vector encoded in the RG components is then normalized to this value. This is better when writing to 8 or 16-bit formats like JPEG, TIFF etc. On the other hand, when this value is less than or equal to zero, magnitude encoding is used instead: RG holds the unit direction vector, and B holds the magnitude. This is better when writing to floating point formats (EXR etc).</br>
    </help>  
   </param>     
  </page>

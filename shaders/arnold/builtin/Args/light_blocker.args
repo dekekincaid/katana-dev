@@ -1,9 +1,10 @@
 <args format="1.0">
  <help>
-  Light blockers give flexibility to the Lighting TD. They can be used as an artificial method of masking light in a scene without the overhead of adding additional geometry. Used carefully, they provide a degree of artistic freedom, allowing you to define the light boundaries in non physical ways.  The LightBlocker is a light filter that specifies a primitive volume defined in the Geometry Type (box, sphere, cylinder, or plane) which when connected to a light node will block or modify the light as it passes through that volume. The blocker will only influence a light it is connected to, just like other filters (i.e., the geometry affects nothing else, including GI,  and is invisible). One, simplistic, use would be to mimic the effect of a complex lamp housing (possibly in combination with the barndoor filter) without modeling the lamp geometry. Or, you might just like to create shadows in your scene that look different to how they normally would.
-  <a href="https://support.solidangle.com/display/NodeRef/light_blocker">
-   Light Blocker on Arnoldpedia 
-  </a>  
+  Light blockers give flexibility to the Lighting TD. They can be used as an artificial method of masking light in a scene without the overhead of adding additional geometry. Used carefully, they provide a degree of artistic freedom, allowing you to define the light boundaries in non physical ways.
+  <br></br> 
+  <br>The LightBlocker is a light filter that specifies a primitive volume defined in the Geometry Type (box, sphere, cylinder, or plane) which when connected to a light node will block or modify the light as it passes through that volume. The blocker will only influence a light it is connected to, just like other filters (i.e., the geometry affects nothing else, including GI,  and is invisible). One, simplistic, use would be to mimic the effect of a complex lamp housing (possibly in combination with the barndoor filter) without modeling the lamp geometry. Or, you might just like to create shadows in your scene that look different to how they normally would.</br> 
+  <br></br> 
+  <br><a href="https://support.solidangle.com/display/NodeRef/light_blocker">Light Blocker on Arnoldpedia</a></br>
  </help>     
  <page name="Light Blocker Attributes" open="True" >
   <param label="Geometry Type" name="geometry_type" widget="popup">
@@ -14,12 +15,16 @@
     <string value="cylinder"/>
    </hintlist>
    <help>
-    Determines the shape of the blocked light. A light blocker can be a box, cylinder, sphere, or plane.
+    <b>geometry_type</b>
+    <br></br>    
+    <br>Determines the shape of the blocked light. A light blocker can be a box, cylinder, sphere, or plane.</br>
    </help>  
   </param>
   <param label="Density" name="density" slider="True" slidermin="0.0" slidermax="1.0">
    <help>
-    This value is the strength of the light blocker effect. The light blocker will not be apparent unless the density value is above 0.
+    <b>density</b>
+    <br></br>    
+    <br>This value is the strength of the light blocker effect. The light blocker will not be apparent unless the density value is above 0.</br>
    </help>  
   </param>     
   <param label="Ramp Axis" name="ramp_axis" widget="popup">
@@ -32,29 +37,43 @@
     <string value="Z"/>
    </hintlist>
    <help>
-    Attenuates the ramp based on the direction set.
+    <b>ramp_axis</b>
+    <br></br>    
+    <br>Attenuates the ramp based on the direction set.</br>
    </help>     
   </param>
   <param label="Ramp" name="ramp" slider="True" slidermin="0.0" slidermax="1.0">
    <help>
-    This is the magnitude of the ramp multiplier, applying along the Ramp Axis direction.
+    <b>ramp</b>
+    <br></br>    
+    <br>This is the magnitude of the ramp multiplier, applying along the Ramp Axis direction.</br>
    </help>  
   </param>       
   <param label="Height Edge" name="height_edge" slider="True" slidermin="0.0" slidermax="1.0">
    <help>
-    Attenuates the edge of the height of the light blocker.
+    <b>height_edge</b>
+    <br></br>    
+    <br>Attenuates the edge of the height of the light blocker.</br>
    </help>  
-  </param>       
+  </param>  
   <param label="Width Edge" name="width_edge" slider="True" slidermin="0.0" slidermax="1.0">
    <help>
-    Attenuates the edge of the width of the light blocker
+    <b>width_edge</b>
+    <br></br>    
+    <br>Attenuates the edge of the width of the light blocker.</br>
    </help>  
   </param>       
   <param label="Roundness" name="roundness" slider="True" slidermin="0.0" slidermax="1.0">
    <help>
-
+    <b>roundness</b>
+    <br></br>
    </help>  
   </param>       
-  <param label="Geometry Matrix" name="geometry_matrix"/>
+  <param label="Geometry Matrix" name="geometry_matrix">
+   <help>
+    <b>geometry_matrix</b>
+    <br></br>
+   </help> 
+  </param>        
  </page>
 </args>

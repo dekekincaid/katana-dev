@@ -1,9 +1,8 @@
 <args format="1.0">
  <help>
   General 'all purpose' utility node shader that can be used for creating passes for use within compositing packages. It can also be useful for debugging scenes.
-  <a href="https://support.solidangle.com/display/NodeRef/utility">
-   Utility on Arnoldpedia 
-  </a>  
+  <br></br>
+  <br><a href="https://support.solidangle.com/display/NodeRef/utility">Utility on Arnoldpedia</a></br>
  </help>     
  <page name="Utility Attributes" open="True" > 
   <param label="Shade Mode" name="shade_mode" widget="popup">
@@ -15,7 +14,19 @@
     <string value="plastic"/>
    </hintlist>
    <help>
-   The shading mode used to render the mesh. 'Ndoteye' renders using the eye vector mode. 'Lambert' renders using a simple lambertian shading model. 'Flat' renders the model as a pure, solid flatly lit and shaded color. 'Ambocc' renders the model using an ambient occlusion technique.    
+    <b>shade_mode</b>
+    <br></br>
+    <br>The shading mode used to render the mesh. 'Ndoteye' renders using the eye vector mode. 'Lambert' renders using a simple lambertian shading model. 'Flat' renders the model as a pure, solid flatly lit and shaded color. 'Ambocc' renders the model using an ambient occlusion technique.</br>
+    <br></br>    
+    <br><b>Ndoteye</b> - uses a dot product between the Normal and the Eye vector.</br>
+    <br></br>
+    <br><b>Lambert</b> - uses a Lambertian shading model.</br>
+    <br></br>
+    <br><b>Flat</b> - renders the model as a pure, solid flatly lit and shaded color.</br>
+    <br></br>
+    <br><b>Ambocc</b> - renders the model using an ambient occlusion technique.</br>
+    <br></br>
+    <br><b>Plastic</b> - has both diffuse (0.7) and specular (0.1) components. The specular component is hardcoded to a Cook-Torrance BRDF with MIS support. This mode can be helpful when debugging and optimizing glossy materials, as it can be quickly assigned to all objects in the scene with the simple kick commands: -is -sm plastic.</br>
    </help>
   </param>
   <param  label="Color Mode" name="color_mode" widget="popup">
@@ -44,20 +55,69 @@
     <string value="bumpdiff"/>
    </hintlist>
    <help>
-    The mode used to color the mesh. You can either choose a flat color as specified by the color setting, or the output color can be chosen to represent various things such as the geometry normal, the shading normal, a wireframe view, etc.
-    <a href="https://support.solidangle.com/display/NodeRef/utility">
-     More on Color Modes here.
-    </a>     
+    <b>color_mode</b>
+    <br></br>    
+    <br>The mode used to color the mesh. You can either choose a flat color as specified by the color setting, or the output color can be chosen to represent various things such as the geometry normal, the shading normal, a wireframe view, etc.</br> 
+    <br></br>
+    <br><a href="https://support.solidangle.com/display/NodeRef/utility">More on Color Modes here.</a></br>
+    <br></br>
+    <br><b>Color</b>  -  Single color output.</br>
+    <br></br>
+    <br><b>Normal</b>  -  Geometry normals in world space.</br>
+    <br></br>
+    <br><b>Geometric Normal</b>  -  Shader normals in world space.</br>
+    <br></br>
+    <br><b>Un-bumped Normal</b>  -  Smooth un-bumped normals in screen space.</br>
+    <br></br>
+    <br><b>Bump Difference</b>  -  This mode shows how far the bump and autobump normals vary from the base smooth-shaded normals as a heatmap (blue is the same, going through green to red, varying up to 90 degrees away). This is useful for debugging the balance between subdivision iterations with displacement vs autobump making up for the rest.</br>
+    <br></br>
+    <br><b>Barycentric Coords</b>  -  Barycentric coordinates (bu corresponds to red and bv to green) of the primitive</br>
+    <br></br>
+    <br><b>UV Coords</b>  -  uv coordinates (u corresponds to red and v to green) of the primitive.</br>
+    <br></br>
+    <br><b>U Coords</b>  -  u coordinate mapped to the red green, and blue channels.</br>
+    <br></br>
+    <br><b>V Coords</b>  -  v coordinate mapped to the red,green, and blue channels.</br>
+    <br></br>
+    <br><b>U Surface Derivative (dPdu)</b>  -  Surface derivative with respect to u coordinate</br>
+    <br></br>
+    <br><b>V Surface Derivative (dPdv)</b>  -  Surface derivative with respect to v coordinate</br>
+    <br></br>
+    <br><b>Shading Point (Relative to BBox)</b>  -  Shading point, relative to the Bounding Box</br>
+    <br></br>
+    <br><b>Primitive ID</b>  -  Each primitive ID is represented in a different color.</br>
+    <br></br>
+    <br><b>Triangle Wireframe</b>  -  Renders a triangulated wireframe of the mesh.</br>
+    <br></br>
+    <br><b>Polygon Wireframe</b>  -  Renders a wireframe of the mesh's polygons.</br>
+    <br></br>
+    <br><b>Object</b>  -  Object mode uses the name of the shapes to compute the color.</br>
+    <br></br>
+    <br><b>Subdivision Edge Length</b>  -  Shows in a heatmap mode the edge length of the primitive (only visible when adaptive subdivision is enabled for the mesh.)</br>
+    <br></br>
+    <br><b>Floatgrid</b>  -  A color is mapped around a Hash function based on the Shading Point.</br>
+    <br></br>
+    <br><b>Reflection Lines</b>  -  Useful for diagnosing the contour lines of the shape of a mesh.</br>
+    <br></br>
+    <br><b>Bad UVs</b>  -  Returns magenta in the UV of the primitive that are degenerated.</br>
+    <br></br>
+    <br><b>Number of lights</b>  -  Shows the relative number of lights considered at the shading point, which is helpful when debugging scenes with many lights. This is visualized with a 'heatmap' color gradient that goes from red (all lights in the scene are considered), passing through yellow and green, to blue (very few lights are considered) and finally black (no lights considered).</br>
+    <br></br>
+    <br><b>Object ID</b> -  Commonly used when outputting a render per material.  ID mode uses the ID parameter shapes have in order to compute the color.  To change the id, select the mesh and in the attribute editor type 'id 1,2,3 etc' in the Ai User Options.</br>
    </help>
   </param>
   <param label="Color" name="color" widget="color">
    <help>
-    Color used as the shading mode for the model.
+    <b>color</b>
+ 
+    <br>Color used as the shading mode for the model.</br> 
    </help> 
   </param>  
   <param label="Opacity" name="opacity" slider="True" slidermin="0.0" slidermax="1.0">
    <help>
-    Sets the opacity of the shader. Ensure that 'opaque' is switched off in the Arnold attributes of the mesh.
+    <b>opacity</b>
+    <br></br>    
+    <br>Sets the opacity of the shader. Ensure that 'opaque' is switched off in the Arnold attributes of the mesh.</br> 
    </help> 
   </param>  
  </page>

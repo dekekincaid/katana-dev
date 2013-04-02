@@ -1,44 +1,57 @@
 <args format="1.0">
  <help>
   Simulates light from an area source (a quadrilateral, specified by 4 vertices). Can be used to model light from an extended source (flourescent strip lights) or in some circumstances from a window.
-  <a href="https://support.solidangle.com/display/NodeRef/quad_light">
-   Quad Light on Arnoldpedia 
-  </a>  
+  <br></br>
+  <br><a href="https://support.solidangle.com/display/NodeRef/quad_light">Quad Light on Arnoldpedia</a></br>
  </help>  
  <page name="Quad Light Attributes" open="True">      
   <param name="color" label="Color" widget="color">
    <help>
-    The color of the light.
+    <b>color</b>
+    <br></br>    
+    <br>The color of the light.</br>
    </help>     
   </param>
   <param label="Intensity" name="intensity" slider="True" slidermin="0" slidermax="10">
    <help>
-    Intensity controls the brightness of light emitted by the light source by multiplying the color.
+    <b>intensity</b>
+    <br></br>    
+    <br>Intensity controls the brightness of light emitted by the light source by multiplying the color.</br>
    </help>     
   </param>  
   <param label="Exposure" name="exposure" slider="True" slidermin="0" slidermax="10">
    <help>
-    Exposure is an f-stop value which multiplies the intensity by 2 to the power of the f-stop. Increasing the exposure by 1 results in double the amount of light.
+    <b>exposure</b>
+    <br></br>    
+    <br>Exposure is an f-stop value which multiplies the intensity by 2 to the power of the f-stop. Increasing the exposure by 1 results in double the amount of light.</br>
    </help>     
   </param>  
   <param label="Samples" name="samples" int="True" slider="True" slidermin="1" slidermax="100" max="100">
    <help>
-    Controls the quality of the noise in the soft shadows. The higher the number of samples, the lower the noise, and the longer it takes to render. The exact number of shadow rays sent to the light is the square of this value multiplied by the AA samples.
+    <b>samples</b>
+    <br></br>    
+    <br>Controls the quality of the noise in the soft shadows. The higher the number of samples, the lower the noise, and the longer it takes to render. The exact number of shadow rays sent to the light is the square of this value multiplied by the AA samples.</br>
    </help>
   </param>
   <param label="Normalize" name="normalize" widget="checkBox">
    <help>
-    If enabled, you will be able to tweak the shadow softness by changing the size (i.e., radius) of the light, without affecting the amount of emitted light. This is very handy for artistic control. Otherwise, if not enabled, the amount of emitted light is proportional to the light's surface area, as dictated by physics.
+    <b>normalize</b>
+    <br></br>    
+    <br>If enabled, you will be able to tweak the shadow softness by changing the size (i.e., radius) of the light, without affecting the amount of emitted light. This is very handy for artistic control. Otherwise, if not enabled, the amount of emitted light is proportional to the light's surface area, as dictated by physics.</br>
    </help>
   </param>  
   <param label="Emit Diffuse" name="affect_diffuse" widget="checkBox">
    <help>
-    Allow the light to affect a material's diffuse component.
+    <b>affect_diffuse</b>
+    <br></br>    
+    <br>Allow the light to affect a material's diffuse component.</br>
    </help>     
   </param>  
   <param label="Emit Specular" name="affect_specular" widget="checkBox">
    <help>
-    Allow the light to affect a material's specular component.
+    <b>affect_specular</b>
+    <br></br>    
+    <br>Allow the light to affect a material's specular component.</br>
    </help>     
   </param>  
   <param name="decay_type" widget="popup">
@@ -46,23 +59,34 @@
     <string value="constant"/>
     <string value="quadratic"/>
    </hintlist>
+   <help>
+    <b>decay_type</b>
+    <br></br>    
+    <br></br>
+   </help>     
   </param>
  </page>
  <page name="Shadows" open="True">
   <param name="cast_shadows" label="Cast Shadows" widget="checkBox"/>
   <param label="Shadow Color" name="shadow_color" widget="color">
    <help>
-    Sets the intensity of each color channel for shadows. Normally this would be black.   
+    <b>shadow_color</b>
+    <br></br>    
+    <br>Sets the intensity of each color channel for shadows. Normally this would be black. </br>  
    </help>
   </param>
   <param name="shadow_density" label="Shadow Density" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0">
    <help>
-    Sets the shadow density, or strength. This controls how the shadow blends with the material on which the shadow is cast: a value of 1.0 produces an opaque, black shadow, and a value of 0.0 gives no shadow. Normally this would be 1.0. 
+    <b>shadow_density</b>
+    <br></br>    
+    <br>Sets the shadow density, or strength. This controls how the shadow blends with the material on which the shadow is cast: a value of 1.0 produces an opaque, black shadow, and a value of 0.0 gives no shadow. Normally this would be 1.0.</br>
    </help>
   </param>  
-  <param int="True" name="resolution">
+  <param label="Resolution" name="resolution" int="True">
    <help>
-    This attribute is only provided for the quad shape area light. The quad light can be used for Image Based Lighting by assigning the output of a color shader of a texture file to the color input of the quad light. If you do this, the Resolution attribute gives control over the importance sampling (MIS). When a shader is connected to a quad_light, Arnold will automatically construct importance sampling tables similar to those used in the skydome_light. This permits efficient sampling according to the luminance of the texture, which can greatly reduce sampling noise, specially when using HDRI textures. Like the skydome_light, the resolution of the table is controlled by the resolution parameter with a default value of 512. If you are using a color image as input then you will not need to set this value any higher than the resolution of the image passed to the color parameter.
+    <b>resolution</b>
+    <br></br>    
+    <br>This attribute is only provided for the quad shape area light. The quad light can be used for Image Based Lighting by assigning the output of a color shader of a texture file to the color input of the quad light. If you do this, the Resolution attribute gives control over the importance sampling (MIS). When a shader is connected to a quad_light, Arnold will automatically construct importance sampling tables similar to those used in the skydome_light. This permits efficient sampling according to the luminance of the texture, which can greatly reduce sampling noise, specially when using HDRI textures. Like the skydome_light, the resolution of the table is controlled by the resolution parameter with a default value of 512. If you are using a color image as input then you will not need to set this value any higher than the resolution of the image passed to the color parameter.</br>
    </help>
   </param>   
  </page>
@@ -72,41 +96,53 @@
   <param label="Volume Density" name="volume_density"  slider="True" widget="number" slidermin="0" min="0" slidermax="1.0" max="1.0"/>
   <param label="Volume Samples" name="volume_samples" int="True" slider="True" slidermin="0" min="0" slidermax="10">
    <help>
-    The volume samples parameter is similar to the light's "samples" parameter for surface shading, but in the context of volumes. It controls the number of direct light samples for a ray intersecting a volume on a per-light basis, and like the "samples" parameter for surfaces, it is also a squared number.
+    <b>volume_samples</b>
+    <br></br>    
+    <br>The volume samples parameter is similar to the light's "samples" parameter for surface shading, but in the context of volumes. It controls the number of direct light samples for a ray intersecting a volume on a per-light basis, and like the "samples" parameter for surfaces, it is also a squared number.</br>
    </help>
   </param>
  </page>
  <page name="Per-light Scaling" open="True"> 
   <param label="Diffuse" name="diffuse" slider="True" slidermin="0" slidermax="1">
    <help>
-    Per-light scaling for Diffuse. Weights scaling the light contribution to each of those components independently.
+    <b>diffuse</b>
+    <br></br>    
+    <br>Per-light scaling for Diffuse. Weights scaling the light contribution to each of those components independently.</br>
    </help>
   </param>     
   <param label="Specular" name="specular" slider="True" slidermin="0" slidermax="1">
    <help>
-    Per-light scaling for Specular. Weights scaling the light contribution to each of those components independently.
+    <b>specular</b>
+    <br></br>    
+    <br>Per-light scaling for Specular. Weights scaling the light contribution to each of those components independently.</br>
    </help>
   </param>    
   <param label="SSS" name="sss" slider="True" slidermin="0" slidermax="1">
    <help>
-    Per-light scaling for SSS. Weights scaling the light contribution to each of those components independently.
+    <b>sss</b>
+    <br></br>    
+    <br>Per-light scaling for SSS. Weights scaling the light contribution to each of those components independently.</br>
    </help>
   </param>    
   <param label="Indirect" name="indirect" slider="True" slidermin="0" slidermax="1">
    <help>
-    Per-light scaling for Indirect. Weights scaling the light contribution to each of those components independently.
+    <b>indirect</b>
+    <br></br>    
+    <br>Per-light scaling for Indirect. Weights scaling the light contribution to each of those components independently.</br>
    </help>
   </param>    
-  <param name="max_bounces" label="Max Bounces" int="True" slider="True" slidermin="0" min="0" slidermax="10000.0" max="10000.0"> 
+  <param label="Max Bounces" name="max_bounces" int="True" slider="True" slidermin="0" min="0" slidermax="10000.0" max="10000.0"> 
    <help>
-    Defines the maximum number of bounces the light will take part of the light loop. A Max Bounces value of 0 means that the light is only visible to 'primary visibility' rays and not visible in the other rays of that light (reflection, refraction, glossy, etc). Note that the global ray depth limits are still taken into account. In the real world, this number would be infinite. 
+    <b>max_bounces</b>
+    <br></br>    
+    <br>Defines the maximum number of bounces the light will take part of the light loop. A Max Bounces value of 0 means that the light is only visible to 'primary visibility' rays and not visible in the other rays of that light (reflection, refraction, glossy, etc). Note that the global ray depth limits are still taken into account. In the real world, this number would be infinite. </br>
    </help>
   </param>  
  </page> 
  <page name="UNSUPPORTED" open="False">
-  <param name="vertices"/>
-  <param name="matrix"/>
-  <param name="filters"/>
-  <param name="time_samples"/>
+  <param label="vertices" name="vertices"/>
+  <param label="Matrix" name="matrix"/>
+  <param label="Filters" name="filters"/>
+  <param label="Time Samples" name="time_samples"/>
  </page>
 </args>

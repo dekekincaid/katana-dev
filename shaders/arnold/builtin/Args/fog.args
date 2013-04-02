@@ -1,36 +1,45 @@
 <args format="1.0">
  <help>
   This atmospheric shader node simulates the effect of light scattering, which causes more distant objects to appear lower in contrast, especially in outdoor environments.
-  <a href="https://support.solidangle.com/display/NodeRef/fog">
-   Fog on Arnoldpedia 
-  </a>  
+  <br></br> 
+  <br><a href="https://support.solidangle.com/display/NodeRef/fog">Fog on Arnoldpedia</a></br> 
  </help>	
  <page name="Fog Attributes" open="True">
   <param name="color" label="Color" widget="color">
    <help>
-   	The color of the fog. Unsaturated values work best.
+    <b>color</b>
+    <br></br>      
+   	<br>The color of the fog. Unsaturated values work best.</br>
    </help>     
   </param>   
   <param name="distance" label="Distance" slider="True">
    <help>
-   	Fog distance controls the fog density. Fog density is modeled with an exponential distribution. Smaller values make the fog appear less dense, while larger values make it appear more dense.
+    <b>distance</b>
+    <br></br>      
+   	<br>Fog distance controls the fog density. Fog density is modeled with an exponential distribution. Smaller values make the fog appear less dense, while larger values make it appear more dense.</br>
    </help>     
   </param>    
   <param name="height" label="Height" slider="True">
    <help>
-   	This value changes the rate of the exponential decay along the direction axis.
+    <b>height</b>
+    <br></br>      
+   	<br>This value changes the rate of the exponential decay along the direction axis.</br>
    </help>     
   </param>    
  </page>
  <page name="Ground" open="True"> 
   <param name="ground_point" label="Ground Point">
    <help>
-   	Determines the starting point for the fog along the axis set by the direction. 
-   </help>     
-  </param>    
+    <b>ground_point</b>
+    <br></br>
+   	<br>Determines the starting point for the fog along the axis set by the direction.</br>
+   </help>
+  </param>
   <param name="ground_normal" label="Ground Normal">
    <help>
-   	Determines the axis for the direction of fog. 
+    <b>ground_normal</b>
+    <br></br>    
+   	<br>Determines the axis for the direction of fog.</br>
    </help>     
   </param>    
  </page>

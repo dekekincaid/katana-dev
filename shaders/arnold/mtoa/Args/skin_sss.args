@@ -1,179 +1,242 @@
 <args format="1.0">
  <help>
-
-  <a href="https://support.solidangle.com/display/NodeRef/skin_sss">
-   Skin SSS on Arnoldpedia 
-  </a>  
+  <b>skin_sss</b>
+  <br></br>
+  <br>The skin_sss shader node is provided in MtoA to give an easy to use generic skin shader. It is implemented on top of existing Arnold shaders, so there is no need to install anything extra to use it. We've provided it as a separate shader to make the functionality easier to use.</br>
+  <br></br>
+  <br><a href="https://support.solidangle.com/display/NodeRef/skin_sss">Skin SSS on Arnoldpedia</a></br>
  </help>     
  <page name="Container Properties" open="True">
   <page name="Diffuse" open="True">
    <param label="Color" name="diffuse_color" widget="color">
     <help>
-      Controls the overall color of the top layer of skin.
+     <b>diffuse_color</b>
+     <br></br>         
+     <br>Controls the overall color of the top layer of skin.</br>
     </help> 
    </param>   
    <param label="Weight" name="diffuse_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      The overall diffuse weight component represents the top layer of skin.
+     <b>diffuse_weight</b>
+     <br></br>       
+     <br>The overall diffuse weight component represents the top layer of skin.</br>
     </help> 
    </param>      
    <param label="Roughness" name="diffuse_roughness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      Controls the diffuse roughness using the Oren-Nayar reflectance model (which models diffuse reflection from rough surfaces). A zero value is equivalent to Lambertian reflectance, higher values (up to 1) are equivalent to a much rougher surface (e.g., plaster, sand, concrete, etc.)
+     <b>diffuse_roughness</b>
+     <br></br>        
+     <br>Controls the diffuse roughness using the Oren-Nayar reflectance model (which models diffuse reflection from rough surfaces). A zero value is equivalent to Lambertian reflectance, higher values (up to 1) are equivalent to a much rougher surface (e.g., plaster, sand, concrete, etc.)</br>
     </help> 
    </param>      
   </page>
   <page name="SSS" open="True">      
    <param label="SSS Weight" name="sss_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      Specifies the overall weight of the SSS contribution. 
+     <b>sss_weight</b>
+     <br></br>        
+     <br>Specifies the overall weight of the SSS contribution.</br>
     </help> 
    </param>      
   </page>
   <page name="Shallow Scatter" open="True">     
    <param label="Color" name="shallow_scatter_color" widget="color">
     <help>
-      Color of scatter near the surface of the skin
+     <b>shallow_scatter_color</b>
+     <br></br>        
+     <br>Color of scatter near the surface of the skin.</br>
     </help> 
    </param>      
    <param label="Weight" name="shallow_scatter_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      Controls the weight contribution of scatter near the surface of the skin
+     <b>shallow_scatter_weight</b>
+     <br></br>        
+     <br>Controls the weight contribution of scatter near the surface of the skin.</br>
     </help> 
    </param>      
    <param label="Radius" name="shallow_scatter_radius" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      ontrols the radius of the scatter near the surface of the skin
+     <b>shallow_scatter_radius</b>
+     <br></br>        
+     <br>Controls the radius of the scatter near the surface of the skin.</br>
     </help>
    </param>     
   </page>
   <page name="Mid Scatter" open="True">      
    <param label="Color" name="mid_scatter_color" widget="color">
     <help>
-      Controls the color of scatter in the mid level or dermis level of the skin
+     <b>mid_scatter_color</b>
+     <br></br>        
+     <br>Controls the color of scatter in the mid level or dermis level of the skin.</br>
     </help>
    </param>
    <param label="Weight" name="mid_scatter_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      Controls the weight contribution of scatter in the mid level or dermis level of the skin.
+     <b>mid_scatter_weight</b>
+     <br></br>        
+     <br>Controls the weight contribution of scatter in the mid level or dermis level of the skin.</br>
     </help> 
    </param>      
    <param label="Radius" name="mid_scatter_radius" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      Controls the radius of the scatter in the mid level or dermis level of the skin.
+     <b>mid_scatter_radius</b>
+     <br></br>        
+     <br>Controls the radius of the scatter in the mid level or dermis level of the skin.</br>
     </help> 
    </param>      
   </page>
   <page name="Deep Scatter" open="True">      
    <param label="Color" name="deep_scatter_color" widget="color">
     <help>
-     Controls the color of scatter behind the skin (you will see from the default colors for example that a red color for the deep scattering picks up the red color from blood beneath the skin)
+     <b>deep_scatter_color</b>
+     <br></br>        
+     <br>Controls the color of scatter behind the skin (you will see from the default colors for example that a red color for the deep scattering picks up the red color from blood beneath the skin).</br>
     </help> 
    </param>     
    <param label="Weight" name="deep_scatter_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      Controls the weight contribution of scatter behind the skin.
+     <b>deep_scatter_weight</b>
+     <br></br>        
+     <br>Controls the weight contribution of scatter behind the skin.</br>
     </help> 
    </param>      
    <param label="Radius" name="deep_scatter_radius" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-      Controls the radius of the scatter behind the skin.
+     <b>deep_scatter_radius</b>
+     <br></br>          
+     <br>Controls the radius of the scatter behind the skin.</br>
     </help> 
    </param>      
   </page>
   <page name="Primary Reflection" open="True">      
    <param label="Color" name="primary_reflection_color" widget="color">
     <help>
-
+     <b>primary_reflection_color</b>
+     <br></br>    
+     <br></br>      
     </help> 
    </param>    
    <param label="Weight" name="primary_reflection_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>primary_reflection_weight</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Roughness" name="primary_reflection_roughness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>primary_reflection_roughness</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Specular Weight" name="primary_reflection_specular_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>primary_reflection_specular_weight</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Reflection Weight" name="primary_reflection_reflection_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>primary_reflection_reflection_weight</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Enable Fresnel Falloff" name="primary_reflection_enable_fresnel_falloff" widget="checkBox">
     <help>
-
+     <b>primary_reflection_enable_fresnel_falloff</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Reflectance at normal incidence" name="primary_reflection_fresnel_coefficient" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>primary_reflection_fresnel_coefficient</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
   </page>
   <page name="Secondary Reflection" open="True">       
    <param label="Color" name="secondary_reflection_color" widget="color">
     <help>
-
+     <b>secondary_reflection_color</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Weight" name="secondary_reflection_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+    <b>secondary_reflection_weight</b>
+    <br></br>    
+    <br></br>    
     </help> 
    </param>      
    <param label="Roughness" name="secondary_reflection_roughness" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>secondary_reflection_roughness</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Specular Weight" name="secondary_reflection_specular_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>secondary_reflection_specular_weight</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Reflection Weight" name="secondary_reflection_reflection_weight" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>secondary_reflection_reflection_weight</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Enable Fresnel Falloff" name="secondary_reflection_enable_fresnel_falloff" widget="checkBox">
     <help>
-
+     <b>secondary_reflection_enable_fresnel_falloff</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
    <param label="Reflectance at normal incidence" name="secondary_reflection_fresnel_coefficient" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
     <help>
-
+     <b>secondary_reflection_fresnel_coefficient</b>
+     <br></br>    
+     <br></br>    
     </help> 
    </param>      
   </page>
   <page name="Options" open="True">      
    <param label="SSS Radius Multiplier" name="global_sss_radius_multiplier" slider="True" slidermin="0.0" min="0.0" slidermax="20.0">
     <help>
-      Overall control for the scale of the three SSS layers.
+     <b>global_sss_radius_multiplier</b>
+     <br></br>        
+     <br>Overall control for the scale of the three SSS layers.</br>
     </help> 
    </param>      
    <param label="Use Screen Compositing" name="use_screen_compositing_for_colors" widget="checkBox">
     <help>
-      You can also control how the layers are combined (composited) - either by simple addition, or using a screen blend, 
+     <b>use_screen_compositing_for_colors</b>
+     <br></br>        
+     <br>You can also control how the layers are combined (composited) - either by simple addition, or using a screen blend.</br>
     </help> 
    </param>      
    <param label="Sample only SSS in GI rays" name="sample_sss_only_in_gi_rays" widget="checkBox">
     <help>
-      When on, GI/Diffuse rays will only "see" the SSS component of the shader, thus making it faster to render.
+     <b>sample_sss_only_in_gi_rays</b>
+     <br></br>      
+     <br>When on, GI/Diffuse rays will only "see" the SSS component of the shader, thus making it faster to render.</br>
     </help> 
    </param>      
    <param label="Sample only SSS in Glossy rays" name="sample_sss_only_in_glossy_rays" widget="checkBox">
     <help>
-      When on, Glossy rays will only "see" the SSS component of the shader, thus making it faster to render.
+     <b>sample_sss_only_in_glossy_rays</b>
+     <br></br>
+     <br>When on, Glossy rays will only "see" the SSS component of the shader, thus making it faster to render.</br>
     </help> 
    </param>      
   </page>
