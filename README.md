@@ -7,15 +7,15 @@ This is my scripts for customizing The Foundry's Katana.  Currently it mostly co
 Easy Install Method
 ==========
 
-1. Set this env variable for your prman shaders
+(1) Set this env variable for your prman shaders
 
 RMAN_SHADERPATH=$RMANTREE/lib/shaders
 
-2. Set this env variable for your arnold shaders for sitoa/mtoa
+(2) Set this env variable for your arnold shaders for sitoa/mtoa
  
 ARNOLD_SHADERLIB_PATH=/opt/arnold/sitoa/shaders:/opt/arnold/mtoa/shaders
 
-3. Installing Args files
+(3) Installing Args files
 
 copy all .args files into the folder
 $HOME/.katana/Args/
