@@ -1,7 +1,8 @@
-katana-dev
+Katana Args & config files
 ==========
 
 This is my scripts for customizing The Foundry's Katana.  Currently it mostly consists of args & lookfiles for shaders for Prman 16.5/17.0, Mtoa and SitoA shaders for Arnold 4.0.11.
+
 ==========
 Easy Install Method
 ==========
