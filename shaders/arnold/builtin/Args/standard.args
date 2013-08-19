@@ -42,7 +42,7 @@
   </param>
  </page>
 
- <page name="Extended Controls Diffuse" open="True">
+ <page name="Extended Controls Diffuse -----------------------------------------------------------------------------------------" open="True">
   <param label="Direct Diffuse Scale" name="direct_diffuse"  slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
    <help>
     <b>direct_diffuse</b>
@@ -59,7 +59,7 @@
   </param>
  </page>  
 
- <page name="Specular" open="True">
+ <page name="Specular -----------------------------------------------------------------------------------------------------------------" open="True">
   <param label="Color" name="Ks_color" widget="color">
    <help>
     <b>Ks_color</b>
@@ -139,13 +139,12 @@
     <br>Legacy parameter for the deprecated Stretched Phong BRDF, not used.</br> 
    </help>
   </param>  
-  <param label="Fresnel" name="specular_Fresnel" widget="checkBox">  <param label="Glossiness" name="Phong_exponent" slider="True">
+  <param label="Fresnel" name="specular_Fresnel" widget="checkBox">
    <hintdict name="conditionalLockOps">
     <string value="stretched_phong" name="conditionalLockValue"/>
     <string value="doesNotContain" name="conditionalLockOp"/>
     <string value="../specular_brdf" name="conditionalLockPath"/>
    </hintdict>
-   <help>
    <help>
     <b>specular_Fresnel</b>
     <br></br>  
@@ -161,7 +160,7 @@
   </param>
  </page>  
 
- <page name="Extended Controls Specular" open="True">
+ <page name="Extended Controls Specular -------------------------------------------------------------------------------------" open="True">
   <param label="Direct Specular Scale" name="direct_specular" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
    <help>
     <b>direct_specular</b>
@@ -178,7 +177,7 @@
   </param>
  </page>  
 
- <page name="Reflection" open="True">
+ <page name="Reflection ---------------------------------------------------------------------------------------------------------------" open="True">
   <param label="Color" name="Kr_color" widget="color">
    <help>
     <b>Kr_color</b>
@@ -216,7 +215,7 @@
   </param>
  </page>
 
- <page name="Exit Color Reflection" open="True">
+ <page name="Exit Color Reflection ------------------------------------------------------------------------------------------------" open="True">
   <param label="Use Environment" name="reflection_exit_use_environment" widget="checkBox">
    <help>
     <b>reflection_exit_use_environment</b>
@@ -233,7 +232,7 @@
   </param>
  </page>  
 
- <page name="Refraction" open="True">
+ <page name="Refraction --------------------------------------------------------------------------------------------------------------" open="True">
   <param label="Color" name="Kt_color" widget="color">
    <help>
     <b>Kt_color</b>
@@ -296,7 +295,7 @@
   </param>
  </page>
 
- <page name="Exit Color Refraction" open="True">
+ <page name="Exit Color Refraction -----------------------------------------------------------------------------------------------" open="True">
   <param label="Use Environment" name="refraction_exit_use_environment" widget="checkBox">
    <help>
     <b>refraction_exit_use_environment</b>
@@ -313,7 +312,7 @@
   </param>
  </page> 
 
- <page name="Sub-Surface Scattering" open="True">
+ <page name="Sub-Surface Scattering -------------------------------------------------------------------------------------------" open="True">
   <param label="Color" name="Ksss_color" widget="color">  
    <help>
     <b>Ksss_color</b>
@@ -337,7 +336,7 @@
   </param>
  </page> 
 
- <page name="Emission" open="True">
+ <page name="Emission ---------------------------------------------------------------------------------------------------------------" open="True">
   <param label="Color" name="emission_color" widget="color">
    <help>
     <b>emission_color</b>
@@ -354,7 +353,7 @@
   </param>
  </page> 
 
- <page name="Caustics" open="True">
+ <page name="Caustics ---------------------------------------------------------------------------------------------------------------" open="True">
   <param label="Enable Glossy Caustics" name="enable_glossy_caustics" widget="checkBox">
    <help>
     <b>enable_glossy_caustics</b>
@@ -388,7 +387,7 @@
   </param>
  </page> 
  
- <page name="AOV Names" open="False">
+ <page name="AOV Names ----------------------------------------------------------------------------------------------------------" open="False" >
   <param label="AOV Direct Diffuse" name="aov_direct_diffuse">
    <help>
     <b>aov_direct_diffuse</b>

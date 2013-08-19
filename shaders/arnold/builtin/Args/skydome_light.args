@@ -25,21 +25,11 @@
     <br></br>    
     <br>Exposure is an f-stop value which multiplies the intensity by 2 to the power of the f-stop. Increasing the exposure by 1 results in double the amount of light.</br>
    </help>     
-  </param>  
-  <param label="Samples" name="samples" int="True" slider="True" slidermin="1" slidermax="100" max="100">
-   <help>
-    <b>samples</b>
-    <br></br>    
-    <br>Controls the quality of the noise in the soft shadows. The higher the number of samples, the lower the noise, and the longer it takes to render. The exact number of shadow rays sent to the light is the square of this value multiplied by the AA samples.</br>
-   </help>
   </param>
-  <param label="Normalize" name="normalize" widget="checkBox">
-   <help>
-    <b>normalize</b>
-    <br></br>    
-    <br>If enabled, you will be able to tweak the shadow softness by changing the size (i.e., radius) of the light, without affecting the amount of emitted light. This is very handy for artistic control. Otherwise, if not enabled, the amount of emitted light is proportional to the light's surface area, as dictated by physics.</br>
-   </help>
-  </param>  
+
+ </page> 
+ <page name="------------------------------------------------------------------------------------------------------------------------" open="True">
+
   <param label="Emit Diffuse" name="affect_diffuse" widget="checkBox">
    <help>
     <b>affect_diffuse</b>
@@ -67,8 +57,28 @@
     <br>The type of map being connected. Can be set to Mirrored Ball, Cubic, Lat-long or Angular.</br>
    </help>
   </param>
+ </page> 
+ <page name="-----------------------------------------------------------------------------------------------------------------------" open="True">
+   
+
+  <param label="Samples" name="samples" int="True" slider="True" slidermin="1" slidermax="100" max="100">
+   <help>
+    <b>samples</b>
+    <br></br>    
+    <br>Controls the quality of the noise in the soft shadows. The higher the number of samples, the lower the noise, and the longer it takes to render. The exact number of shadow rays sent to the light is the square of this value multiplied by the AA samples.</br>
+   </help>
+  </param>
+  <param label="Normalize" name="normalize" widget="checkBox">
+   <help>
+    <b>normalize</b>
+    <br></br>    
+    <br>If enabled, you will be able to tweak the shadow softness by changing the size (i.e., radius) of the light, without affecting the amount of emitted light. This is very handy for artistic control. Otherwise, if not enabled, the amount of emitted light is proportional to the light's surface area, as dictated by physics.</br>
+   </help>
+  </param>
+
+
 </page>
- <page name="Shadows" open="True">
+ <page name="Shadow Attributes --------------------------------------------------------------------------------------------" open="True">
   <param name="cast_shadows" label="Cast Shadows" widget="checkBox"/>
   <param label="Shadow Color" name="shadow_color" widget="color">
    <help>
@@ -92,7 +102,7 @@
    </help>
   </param>  
  </page>
- <page name="Volumetric Attributes" open="True"> 
+ <page name="Volumetric Attributes ----------------------------------------------------------------------------------------" open="True">
   <param label="Cast Volumetric Shadows" name="cast_volumetric_shadows" widget="checkBox"/>  
   <param label="Affect Volumetrics" name="affect_volumetrics" widget="checkBox"/> 
   <param label="Volume Density" name="volume_density"  slider="True" widget="number" slidermin="0" min="0" slidermax="1.0" max="1.0"/>
@@ -104,7 +114,7 @@
    </help>
   </param>
  </page>
- <page name="Per-light Scaling" open="True"> 
+ <page name="Per-light Scaling -----------------------------------------------------------------------------------------------" open="True"> 
   <param label="Diffuse" name="diffuse" slider="True" slidermin="0" slidermax="1">
    <help>
     <b>diffuse</b>
@@ -141,7 +151,7 @@
    </help>
   </param>  
  </page>
- <page name="UNSUPPORTED" open="False"> 
+ <page name="UNSUPPORTED -----------------------------------------------------------------------------------------------" open="False">
   <param name="matrix"/>
   <param name="filters"/>
   <param name="time_samples"/>

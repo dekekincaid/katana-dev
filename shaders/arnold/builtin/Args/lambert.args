@@ -27,7 +27,7 @@
    </help>  
   </param>     	
  </page>
- <page name="AOV Names" open="False" > 
+ <page name="AOV Names ------------------------------------------------------------------------------------------------------------" open="False" >
   <param label="AOV Direct Diffuse" name="aov_direct_diffuse">
    <help>
     <b>aov_direct_diffuse</b>

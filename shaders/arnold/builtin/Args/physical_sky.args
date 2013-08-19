@@ -1,0 +1,122 @@
+<args format="1.0">
+ <help>
+  This shader implements a variation of the Hosek-Wilkie sky radiance model, including the direct solar radiance function. You can plug it into the environment, or to color input of a Skydome light (which benefits from efficient importance sampling, sending more rays to bright areas around the sun) or add directly as an environment shader.
+  <br></br>
+  <br>*** This is an experimental shader. Although it has been tested extensively, please be warned before using it in production. Parameter names and controls could change in the next release.</br>
+  <br></br>
+  <br>Currently this shader is invisible to GI and glossy rays. To use it as a light source you must attach it to a skydome_light with sufficient resolution to capture the small solar disk. 
+</br>
+  <br></br>
+  <br>The physical sky uses a polar coordinate system. Elevation has an angle between 0 degrees to 180 degrees (sunrise to sunset). The sun is at the zenith at 90 degrees. The azimuth has an angle between 0 degrees to 360 degrees.</br>
+  <br></br>          
+  <br><a href="https://support.solidangle.com/display/NodeRef/physical_sky">Physical Sky on Arnoldpedia</a></br>
+ </help>
+ <page name="Physical Sky Attributes" open="True">	
+  <param label="Turbidity" name="turbidity" slider="True" slidermin="1.0" slidermax="10.0">
+   <help>
+    <b>turbidity</b>
+    <br></br>    
+    <br>Turbidity determines the overall aerosol content (dust, moisture, ice, fog) of the air. It is used to easily deﬁne sky appearance and affects the color of the sun and sky (see images below):</br>
+    <br></br> 
+    <br>Turbidity values range from 1 to 10 with.</br>
+    <br>2 - yields a very clear, Arctic-like sky</br>
+    <br>3 - a clear sky in a temperate climate</br>
+    <br>6 - a sky on a warm, moist day</br>
+    <br>10 - a slightly hazy day</br>
+   </help>
+  </param> 
+  <param label="Ground Albedo" name="ground_albedo" widget="color">
+   <help>
+    <b>ground_albedo</b>
+    <br></br>    
+    <br></br>
+   </help>
+  </param>
+  <param label="Elevation" name="elevation" slider="True" slidermin="0.0" slidermax="90.0">
+   <help>
+    <b>elevation</b>
+    <br></br>    
+    <br>The angle between the sun and the observable horizon. The range is between 0 and 180 (90 to 180 is a mirror reflection of 0 to 90).</br>
+   </help>
+  </param>    
+  <param label="Azimuth" name="azimuth" slider="True" slidermin="0.0" slidermax="360.0">
+   <help>
+    <b>azimuth</b>
+    <br></br>    
+    <br>The angle of the sun around the horizon. Measured from the north, increasing towards the east (0 to 360 degrees).</br>
+   </help>
+  </param>    
+  <param label="Intensity" name="intensity" slider="True" slidermin="0.1" slidermax="10.0">
+   <help>
+    <b>intensity</b>
+    <br></br>    
+    <br>Intensity is a scalar multiplier for the sky radiance. This value is similar to the Sky Tint, however the Sky Tint uses RGB values whereas Intensity uses scalar values (easier to adjust).</br>
+   </help>
+  </param>  
+  <param label="Use Degrees" name="use_degrees" widget="checkBox">
+   <help>
+    <b>use_degrees</b>
+    <br></br>    
+    <br>When disabled, the Solar Direction values replace Elevation and Azimuth (see Solar Direction).</br>
+   </help>
+  </param>    
+  <param label="Sun Direction" name="sun_direction">
+   <help>
+    <b>sun_direction</b>
+    <br></br>    
+    <br>It is possible to connect a native distant/directional sunlight to the physical sky using this attribute. Solar Direction will not work unless 'Use Degrees' is first disabled.</br>
+   </help>
+  </param>    
+ </page>
+ <page name="Sun Attributes ---------------------------------------------------------------------------------------------------" open="True">
+  <param label="Enable Sun" name="enable_sun" widget="checkBox">
+   <help>
+    <b>enable_sun</b>
+    <br></br>    
+    <br>Toggle switch that enables/disables visibility of the sun.</br>
+   </help>
+  </param>     
+  <param label="Sun Size" name="sun_size" slider="True" slidermin="0.1" slidermax="5.0">
+   <help>
+    <b>sun_size</b>
+    <br></br>    
+    <br>Sets the size of the visible sun disk. It is possible to change the size of the sun for 'artistic' reasons. However, 0.51 is the solid angle (degrees) of the sun, as seen from the earth. Increasing this value increases the area size of the sun and will therefore create softer shadows.</br>
+   </help>
+  </param>    
+  <param label="Sun Tint" name="sun_tint" widget="color">
+   <help>
+    <b>sun_tint</b>
+    <br></br>    
+    <br>Allows you to set a color that 'tints' the color of the sun. This a RGB multiplier that should be used for subtle coloration. Any non-subtle coloration will give physically inaccurate results and will produce a strange inconsistency between the sun and the sky colors (unless both tints are exactly the same).</br>
+   </help>
+  </param>    
+  <param label="Sky Tint" name="sky_tint" widget="color">
+   <help>
+    <b>sky_tint</b>
+    <br></br>    
+    <br>Allows you to set a color that 'tints' the sky color. The sky tint should be used for subtle coloration. For example making the sky a slightly deeper blue color.</br>
+   </help>
+  </param>
+  <param label="X" name="X">
+   <help>
+    <b>Orientation Axis</b>
+    <br></br>
+    <br>In certain cases it may be useful to change the orientation of the Physical Sky. For example, your scene up direction is mapped to +Z instead of +Y.</br>    
+   </help>
+  </param>    
+  <param label="Y" name="Y">
+   <help>
+    <b>Orientation Axis</b>
+    <br></br>
+    <br>In certain cases it may be useful to change the orientation of the Physical Sky. For example, your scene up direction is mapped to +Z instead of +Y.</br>    
+   </help>
+  </param>      
+  <param label="Z" name="Z">
+   <help>
+    <b>Orientation Axis</b>
+    <br></br>
+    <br>In certain cases it may be useful to change the orientation of the Physical Sky. For example, your scene up direction is mapped to +Z instead of +Y.</br>    
+   </help>
+  </param>
+ </page>  
+</args>

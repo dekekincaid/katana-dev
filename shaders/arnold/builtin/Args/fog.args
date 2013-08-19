@@ -27,7 +27,7 @@
    </help>     
   </param>    
  </page>
- <page name="Ground" open="True"> 
+ <page name="Ground ---------------------------------------------------------------------------------------------------------------------" open="True"> 
   <param name="ground_point" label="Ground Point">
    <help>
     <b>ground_point</b>

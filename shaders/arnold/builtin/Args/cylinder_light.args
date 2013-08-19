@@ -3,145 +3,197 @@
   The cylinder light shape simulates light from a cylindrical area source tube shape.
   <br></br>
   <br><a href="https://support.solidangle.com/display/NodeRef/cylinder_light">Cylinder Light on Arnoldpedia</a></br>
- </help>  
+ </help>
  <page name="Cyclinder Light Attributes" open="True">
+
   <param label="Color" name="color" widget="color">
    <help>
     <b>color</b>
-    <br></br>      
+    <br></br>
     <br>The color of the light.</br>
-   </help>     
-  </param> 
-  <param label="Intensity" name="intensity" slider="True" slidermin="0" slidermax="10">
-   <help>
-    <b>intensity</b>
-    <br></br>      
-    <br>Intensity controls the brightness of light emitted by the light source by multiplying the color.</br>
-   </help>     
-  </param>  
-
-  <param label="Exposure" name="exposure" slider="True" slidermin="0" slidermax="10">
-   <help>
-    <b>exposure</b>
-    <br></br>      
-    <br>Exposure is an f-stop value which multiplies the intensity by 2 to the power of the f-stop. Increasing the exposure by 1 results in double the amount of light.</br>
-   </help>     
-  </param>  
-  
-  <param label="Samples" name="samples" int="True" slider="True" slidermin="1" slidermax="100" max="100">
-   <help>
-    <b>samples</b>
-    <br></br>      
-    <br>Controls the quality of the noise in the soft shadows. The higher the number of samples, the lower the noise, and the longer it takes to render. The exact number of shadow rays sent to the light is the square of this value multiplied by the AA samples.</br>
    </help>
   </param>
   <param label="Radius" name="radius" slider="True" slidermin="0" min="0" slidermax="10">
    <help>
     <b>radius</b>
-    <br></br>      
+    <br></br>
     <br>The radius of the cylinder.</br>
    </help>
-  </param>      
-  <param label="Normalize" name="normalize" widget="checkBox">
+  </param>
+  <param label="Intensity" name="intensity" slider="True" slidermin="0" slidermax="10">
    <help>
-    <b>normalize</b>
-    <br></br>      
-    <br>If enabled, you will be able to tweak the shadow softness by changing the size (i.e., radius) of the light, without affecting the amount of emitted light. This is very handy for artistic control. Otherwise, if not enabled, the amount of emitted light is proportional to the light's surface area, as dictated by physics.</br>
+    <b>intensity</b>
+    <br></br>
+    <br>Intensity controls the brightness of light emitted by the light source by multiplying the color.</br>
    </help>
-  </param>  
+  </param>
+
+  <param label="Exposure" name="exposure" slider="True" slidermin="0" slidermax="10">
+   <help>
+    <b>exposure</b>
+    <br></br>
+    <br>Exposure is an f-stop value which multiplies the intensity by 2 to the power of the f-stop. Increasing the exposure by 1 results in double the amount of light.</br>
+    <br></br>
+    <br>In Arnold, the total intensity of the light is computed with the following formula:</br>
+    <br><b>color * intensity * 2exposure</b></br>
+    <br></br>
+    <br>You can get exactly the same output by modifying either the intensity or the exposure. For example, intensity=1, exposure=4 is the same as intensity=16, exposure=0.  Note: 20 = 1, not 0.</br>
+    <br><b>1 * 1 * 24 = 16</b></br>
+    <br><b>1 * 16 * 20 = 16</b></br>
+    <br></br>
+    <br>The reasoning behind this apparent redundancy is that, for some people, f-stops are a much more intuitive way of describing light brightness than raw intensity values, especially when you're directly matching values to a plate. You may be asked by the director of photography - who is used to working with camera f-stop values - to increase or decrease a certain light by "one stop". Other than that, this light parameter has nothing to do with a real camera's f-stop control. Also, working with exposure means you won't have to type in huge values like 10,000 in the intensity input if your lights have quadratic falloff (which they should).</br>
+    <br></br>
+    <br>If you are not used to working with exposure in the lights, you can simply leave the exposure parameter at its default value of 0 (since 20 = 1, the formula then simplifies to: color * intensity * 1).</br>
+   </help>
+  </param>
+ </page>
+ <page name="------------------------------------------------------------------------------------------------------------------------" open="True">
+
   <param label="Emit Diffuse" name="affect_diffuse" widget="checkBox">
    <help>
     <b>affect_diffuse</b>
-    <br></br>      
+    <br></br>
     <br>Allow the light to affect a material's diffuse component.</br>
-   </help>     
-  </param>  
+   </help>
+  </param>
   <param label="Emit Specular" name="affect_specular" widget="checkBox">
    <help>
     <b>affect_specular</b>
-    <br></br>      
+    <br></br>
     <br>Allow the light to affect a material's specular component.</br>
-   </help>     
-  </param>  
-  
+   </help>
+  </param>
   <param label="Decay Rate" name="decay_type" widget="popup">
    <hintlist name="options">
     <string value="constant"/>
     <string value="quadratic"/>
    </hintlist>
-  </param>
- </page>
- <page name="Shadows" open="True">
-  <param label="Cast Shadows" name="cast_shadows" widget="checkBox"/>
-  <param label="Shadow Color" name="shadow_color" widget="color">
    <help>
-    <b>shadow_color</b>
-    <br></br>      
-    <br>Sets the intensity of each color channel for shadows. Normally this would be black.</br>
+    <b>decay_type</b>
+    <br></br>
+    <br>Decay type is not available on Distant or Skydome lights. Arnold supports two decay types: Constant will disable any decay, and is equivalent to an exponent of 0.  Quadratic will use an inverse-square decay following the formula 1/distance2, which is actually the only physically meaningful decay in real-world lights.</br>
+    <br></br>
+    <br><b>*** It is strongly suggested to use quadratic decay.</b></br>
    </help>
   </param>
-  <param label="Shadow Density" name="shadow_density" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0"> 
+
+ </page>
+ <page name="-----------------------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Samples" name="samples" int="True" slider="True" slidermin="1" slidermax="100" max="100">
+   <help>
+    <b>samples</b>
+    <br></br>
+    <br>Controls the quality of the noise in the soft shadows. The higher the number of samples, the lower the noise, and the longer it takes to render. The exact number of shadow rays sent to the light is the square of this value multiplied by the AA samples.</br>
+   </help>
+  </param>
+
+  <param label="Normalize" name="normalize" widget="checkBox">
+   <help>
+    <b>normalize</b>
+    <br></br>
+    <br>If enabled, you will be able to tweak the shadow softness by changing the size (i.e., radius) of the light, without affecting the amount of emitted light. This is very handy for artistic control. Otherwise, if not enabled, the amount of emitted light is proportional to the light's surface area, as dictated by physics.</br>
+   </help>
+  </param>
+
+ </page>
+ <page name="Shadow Attributes --------------------------------------------------------------------------------------------" open="True">
+  <param label="Cast Shadows" name="cast_shadows" widget="checkBox">
+   <help>
+    <b>cast_shadows</b>
+    <br></br>
+    <br>Enables the computation of shadows cast from this light.</br>
+   </help>
+  </param>
+  <param label="Shadow Density" name="shadow_density" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0">
    <help>
     <b>shadow_density</b>
-    <br></br>      
+    <br></br>
     <br>Sets the shadow density, or strength. This controls how the shadow blends with the material on which the shadow is cast: a value of 1.0 produces an opaque, black shadow, and a value of 0.0 gives no shadow. Normally this would be 1.0. </br>
    </help>
   </param>
+  <param label="Shadow Color" name="shadow_color" widget="color">
+   <help>
+    <b>shadow_color</b>
+    <br></br>
+    <br>Sets the intensity of each color channel for shadows. Normally this would be black.</br>
+   </help>
+  </param>
  </page>
- <page name="Volumetric Attributes" open="True"> 
-  <param label="Cast Volumetric Shadows" name="cast_volumetric_shadows" widget="checkBox"/>  
-  <param label="Affect Volumetrics" name="affect_volumetrics" widget="checkBox"/> 
-  <param label="Volume Density" name="volume_density"  slider="True" widget="number" slidermin="0" min="0" slidermax="1.0" max="1.0"/>
+
+ <page name="Volumetric Attributes ----------------------------------------------------------------------------------------" open="True">
+  <param label="Cast Volumetric Shadows" name="cast_volumetric_shadows" widget="checkBox">
+   <help>
+    <b>cast_volumetric_shadows</b>
+    <br></br>
+    <br>Determines if volumetric shadows will be computed. This option is not in Ambient, Distant or Skydome Lights.</br>
+   </help>
+  </param>
+  <param label="Affect Volumetrics" name="affect_volumetrics" widget="checkBox">
+   <help>
+    <b>affect_volumetrics</b>
+    <br></br>
+    <br>Allow the light to affect atmospheric scattering and fog. Distant lights don't support atmospheric volumetrics.</br>
+   </help>
+  </param>
+  <param label="Volume Density" name="volume_density"  slider="True" widget="number" slidermin="0" min="0" slidermax="1.0" max="1.0">
+   <help>
+    <b>volume_density</b>
+    <br></br>
+    <br>Increases/decreases the atmospheric volume density.</br>
+    <br></br>
+    <br>--- This option is not in Ambient, Distant or Skydome Lights.</br>
+   </help>
+  </param>
   <param label="Volume Samples" name="volume_samples" int="True" slider="True" slidermin="0" min="0" slidermax="10">
    <help>
     <b>cast_volumetric_shadows</b>
-    <br></br>      
+    <br></br>
     <br>The volume samples parameter is similar to the light's "samples" parameter for surface shading, but in the context of volumes. It controls the number of direct light samples for a ray intersecting a volume on a per-light basis, and like the "samples" parameter for surfaces, it is also a squared number.</br>
    </help>
   </param>
  </page>
- <page name="Per-light Scaling" open="True"> 
+ <page name="Per-light Scaling -----------------------------------------------------------------------------------------------" open="True">
   <param label="Diffuse" name="diffuse" slider="True" slidermin="0" slidermax="1">
-   <help>    
+   <help>
     <b>diffuse</b>
-    <br></br>      
+    <br></br>
     <br>Per-light scaling for Diffuse. Weights scaling the light contribution to each of those components independently.</br>
    </help>
-  </param>     
+  </param>
   <param label="Specular" name="specular" slider="True" slidermin="0" slidermax="1">
    <help>
     <b>specular</b>
-    <br></br>      
+    <br></br>
     <br>Per-light scaling for Specular. Weights scaling the light contribution to each of those components independently.</br>
    </help>
-  </param>    
+  </param>
   <param label="SSS" name="sss" slider="True" slidermin="0" slidermax="1">
    <help>
     <b>sss</b>
-    <br></br>      
+    <br></br>
     <br>Per-light scaling for SSS. Weights scaling the light contribution to each of those components independently.</br>
    </help>
-  </param>    
+  </param>
   <param label="Indirect" name="indirect" slider="True" slidermin="0" slidermax="1">
    <help>
     <b>indirect</b>
-    <br></br>      
+    <br></br>
     <br>Per-light scaling for Indirect. Weights scaling the light contribution to each of those components independently.</br>
    </help>
-  </param>    
-  <param name="max_bounces" label="Max Bounces" int="True" slider="True" slidermin="0" min="0" slidermax="10000.0" max="10000.0"> 
+  </param>
+  <param name="max_bounces" label="Max Bounces" int="True" slider="True" slidermin="0" min="0" slidermax="10000.0" max="10000.0">
    <help>
     <b>max_bounces</b>
-    <br></br>      
+    <br></br>
     <br>Defines the maximum number of bounces the light will take part of the light loop. A Max Bounces value of 0 means that the light is only visible to 'primary visibility' rays and not visible in the other rays of that light (reflection, refraction, glossy, etc). Note that the global ray depth limits are still taken into account. In the real world, this number would be infinite.</br>
    </help>
-  </param>  
+  </param>
  </page>
- <page name="UNSUPPORTED" open="False"> 
+ <page name="UNSUPPORTED -----------------------------------------------------------------------------------------------" open="False">
   <param label="Bottom" name="bottom"/>
   <param label="Top" name="top"/>
   <param label="Matrix" name="matrix"/>
   <param label="Filters" name="filters"/>
-  <param label="Time Samples" name="time_samples"/>  
- </page> 
+  <param label="Time Samples" name="time_samples"/>
+ </page>
 </args>

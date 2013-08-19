@@ -20,7 +20,7 @@
    </help>     
   </param>     
  </page>
- <page name="Diffuse" open="True" >
+ <page name="Diffuse ---------------------------------------------------------------------------------------------------------------------" open="True" >
   <param label="Diffuse Cache" name="diffuse_cache" widget="checkBox">
    <help>
     <b>diffuse_cache</b>
@@ -43,7 +43,7 @@
    </help>     
   </param> 
  </page>
- <page name="Specular" open="True" >
+ <page name="Specular -----------------------------------------------------------------------------------------------------------------" open="True" >
   <param label="Glossiness" name="gloss" slider="True">
    <help>
     <b>gloss</b>
@@ -76,7 +76,7 @@
   </param>     
  </page>
 
- <page name="Secondary Specular" open="True" >
+ <page name="Secondary Specular -------------------------------------------------------------------------------------------------" open="True" >
   <param label="Glossiness" name="gloss2" slider="True">
    <help>
     <b>gloss2</b>
@@ -107,7 +107,7 @@
   </param>     
  </page>
 
- <page name="Extra Attributes" open="True" >
+ <page name="Extra Attributes --------------------------------------------------------------------------------------------------------" open="True" >
   <param label="Opacity" name="opacity" widget="color">
    <help>
     <b>opacity</b>
@@ -125,7 +125,7 @@
   </param>     
  </page>
  
- <page name="AOV Names" open="False" >
+ <page name="AOV Names ------------------------------------------------------------------------------------------------------------" open="False" >
   <param name="aov_direct_diffuse" label="AOV Direct Diffuse" />
   <param name="aov_direct_specular" label="AOV Direct Specular" />
   <param name="aov_indirect_diffuse" label="AOV Indirect Diffuse" />  

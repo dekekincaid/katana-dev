@@ -11,7 +11,7 @@
    <help>
     <b>filename</b>
     <br></br>    
-    <br>The image file.</br>
+    <br>The image file. Requires an absolute pathname.</br>
    </help>  
   </param>  
   <param label="Filter" name="filter" widget="popup">
@@ -62,11 +62,20 @@
    </help>  
   </param>  
  </page>
- <page name="UV Coordinates" open="True" >
-  <param label="UV Cord" name="uvcoords">
+ <page name="UV Coordinates ----------------------------------------------------------------------------------------------------------" open="True">
+  <param label="UV Set" name="uvset">
+   <help>
+    <b>uvset</b>
+    <br></br>
+    <br>If geometry has multiple UV sets then put the desired set name in the uvset parameter to use it in the image node. For example, if you have created a secondary UV set in a polymesh node and named it "UVset2", then you can use this UV set by setting uvset equal to "UVset2". By default, when the uvset parameter is empty, the primary UV set in the polymesh will be used.</br>
+   </help>  
+  </param>
+
+  <param label="UV Coords" name="uvcoords">
    <help>
     <b>uvcoords</b>
     <br></br>
+    <br>This attribute takes a 2D displacement image and uses it to distort the pixels of the image.</br>
    </help>  
   </param>  
   <param label="Wrap U" name="swrap" widget="popup">

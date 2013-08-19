@@ -47,7 +47,7 @@
    </help>
   </param>
  </page>  
- <page name="Geometry Attributes" open="True">
+ <page name="Geometry Attributes ---------------------------------------------------------------------------------------------------" open="True">
   <param label="X Angle" name="X_angle">
    <help>
     <b>X_angle</b>

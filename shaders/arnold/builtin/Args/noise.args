@@ -34,7 +34,7 @@
    </help>  
   </param>      
  </page>  
- <page name="Transform" open="True">
+ <page name="Transform ------------------------------------------------------------------------------------------------------------------" open="True">
   <param label="Scale" name="scale">
    <help>
     <b>scale</b>

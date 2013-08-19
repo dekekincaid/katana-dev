@@ -13,7 +13,15 @@
     <br></br>
     <br>Controls the number of rays that will be fired to compute the ray hits/total ratio. Increasing the number of samples will reduce noise and give a better quality result.</br>
    </help>     
-  </param>    
+  </param>
+   <param label="Spread" name="spread" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0">
+    <help>
+    <b>spread</b>
+    <br></br>      
+     <br>Angular spread around the normal vector N, in the range [0,1], where 1 maps to 90 degrees (the full hemisphere). 1.0 is the most common value. Other values may produce results that are not useful.</br>
+    </help>     
+   </param>
+
   <param label="White"  name="white" widget="color">
    <help>
     <b>white</b>
@@ -34,30 +42,7 @@
     <br></br>    
     <br>An exponential falloff rate for the occlusion along the ray distance. It is not compatible with semi-opaque surfaces hit by the occlusion rays.</br>
    </help>     
-  </param>      
-  <page name="Extra Attributes" open="True">
-   <param label="Spread" name="spread" slider="True" slidermin="0" min="0" slidermax="1.0" max="1.0">
-    <help>
-    <b>spread</b>
-    <br></br>      
-     <br>Angular spread around the normal vector N, in the range [0,1], where 1 maps to 90 degrees (the full hemisphere). 1.0 is the most common value. Other values may produce results that are not useful.</br>
-    </help>     
-   </param>      
-   <param label="Near Clip" name="near_clip" slider="True" slidermin="0" min="0" slidermax="100.0">
-    <help>
-    <b>near_clip</b>
-    <br></br>      
-     <br>Minimum occlusion distance that is sampled.</br>
-    </help>     
-   </param>     
-   <param label="Far Clip" name="far_clip" slider="True" slidermin="0" min="0" slidermax="2000.0">
-    <help>
-    <b>far_clip</b>
-    <br></br>      
-     <br>Maximum occlusion distance that is sampled.</br>
-    </help>     
-   </param>     
-  </page>   
+  </param>
   <param label="Opacity" name="opacity">
    <help>
     <b>opacity</b>
@@ -73,4 +58,23 @@
    </help>     
   </param>    
  </page>
+
+  <page name="Extra Attributes ----------------------------------------------------------------------------------------------------------" open="True">
+ 
+   <param label="Near Clip" name="near_clip" slider="True" slidermin="0" min="0" slidermax="100.0">
+    <help>
+    <b>near_clip</b>
+    <br></br>      
+     <br>Minimum occlusion distance that is sampled.</br>
+    </help>     
+   </param>     
+   <param label="Far Clip" name="far_clip" slider="True" slidermin="0" min="0" slidermax="2000.0">
+    <help>
+    <b>far_clip</b>
+    <br></br>      
+     <br>Maximum occlusion distance that is sampled.</br>
+    </help>     
+   </param>     
+  </page>
+
 </args>
