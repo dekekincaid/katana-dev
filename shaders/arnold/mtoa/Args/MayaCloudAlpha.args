@@ -1,21 +1,108 @@
 <args format="1.0">
+ <help>
+  Simulates clouds.
+  <br></br> 
+  <br>You should only map the Cloud texture to a sphere. You can combine several spheres to create complex cloud arrangements. If you map the Cloud texture to any other type of surface, the results may be unpredictable.</br> 
+  <br></br>   
+  <br>The area surrounding the cloud is always transparent, regardless of the map type.</br> 
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Cloud.htm">3d Cloud in Autodesk's Maya Docs</a></br>
+ </help>    
  <page name="Cloud Alpha Attributes" open="True">      
-  <param label="Amplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="5.0"/>
-  <param label="Depth" name="depth"/>
-  <param label="Ripples" name="ripples"/>
-  <param label="Edge Threshold" name="edgeThresh" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Center Threshold" name="centerThresh" slider="True" slidermin="0.0" slidermax="1.0"/>
-  <param label="Transport Range" name="transpRange" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
-  <param label="Ratio" name="ratio" slider="True"/>
+  <param label="Amplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="5.0">
+   <help>
+    <b>amplitude</b>
+    <br></br>      
+    <br>Controls the strength of the fractal noise used to generate the Cloud texture. The valid range is 0 (no noise) to + infinity (strong noise). The default is 1.</br> 
+   </help>
+  </param>      
+  <param label="Depth" name="depth">
+   <help>
+    <b>depth</b>
+    <br></br>      
+    <br>Controls the granularity of the texture. Values represent the minimum and maximum number of iterations used to calculate the texture pattern. The range is 0 to + infinity. The defaults are 0 and 8.</br> 
+   </help>
+  </param>      
+  <param label="Ripples" name="ripples">
+   <help>
+    <b>ripples</b>
+    <br></br>      
+    <br>Determines the texture’s waviness in the X, Y, and Z directions. The values represent the frequency scale of the fractal used to generate the texture. The range is from 0 to + infinity on X, Y and Z. The default is 1.</br> 
+   </help>
+  </param>      
+  <param label="Edge Threshold" name="edgeThresh" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>edgeThresh</b>
+    <br></br>      
+    <br>If Center Thresh is low and Edge Thresh is high, the texture resembles a dense cotton-ball. If Center Thresh is high and Edge Thresh is low, the texture resembles a wispy cloud. The range is from - infinity to + infinity. The default is 0 for Center Thresh and 1 for Edge Thresh.</br> 
+   </help>
+  </param>      
+  <param label="Center Threshold" name="centerThresh" slider="True" slidermin="0.0" slidermax="1.0">
+   <help>
+    <b>centerThresh</b>
+    <br></br>      
+    <br>If Center Thresh is low and Edge Thresh is high, the texture resembles a dense cotton-ball. If Center Thresh is high and Edge Thresh is low, the texture resembles a wispy cloud. The range is from - infinity to + infinity. The default is 0 for Center Thresh and 1 for Edge Thresh.</br> 
+   </help>
+  </param>      
+  <param label="Transport Range" name="transpRange" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
+   <help>
+    <b>transpRange</b>
+    <br></br>      
+    <br>The range over which the texture becomes transparent. The value controls the sharpness/softness of the cloud’s edges. The valid range is 0 to infinity. The slider range is 0 (sharp edges) to 1 (very soft edges). The default is 0.5.</br> 
+   </help>
+  </param>      
+  <param label="Ratio" name="ratio" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+   <help>
+    <b>ratio</b>
+    <br></br>      
+    <br>Controls the frequency of the fractal noise used to generate the Cloud texture. The range is 0 (low frequency) to + infinity (high frequency). The default is 0.707.</br> 
+   </help>
+  </param>      
  </page>
-  <page name="Color Balance" open="False">
-  <param label="Alpha Gain" name="alphaGain" slider="True"  slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha Offset" name="alpahOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+ <page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaGain</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Scaling factor applied to the texture's outAlpha channel. The default value is 1 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaOffset</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Offset factor applied to the texture's outAlpha channel. For example, if the Alpha Gain value is -1 and the Alpha Offset value is 1, the outAlpha channel is inverted. The default value is 0 (no effect).</br> 
+   </help>
+  </param>   
  </page>
- <page name="Effects" open="True">   
-  <param label="Invert" name="invert" widget="checkBox"/>
-  <param label="Local" name="local" widget="checkBox"/>
-  <param label="Wrap" name="wrap" widget="checkBox"/>
-  <param label="Placement Matrix" name="placementMatrix"/>
+ <page name="Effects ---------------------------------------------------------------------------------------------------------------------" open="True">   
+  <param label="Invert" name="invert" widget="checkBox">
+   <help>
+    <b>invert</b>
+    <br></br>      
+    <br>Reverses all texture colors (black becomes white, white becomes black, and so on). Invert is off by default. For example, you can change a bump or displacement map's raised regions to depressions and vice versa by setting Invert on or off.</br> 
+   </help>
+  </param>       
+  <param label="Local" name="local" widget="checkBox">
+   <help>
+    <b>local</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>  
+  <param label="Wrap" name="wrap" widget="checkBox">
+   <help>
+    <b>wrap</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>  
+  <param label="Placement Matrix" name="placementMatrix">
+   <help>
+    <b>placementMatrix</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>
  </page> 
 </args>

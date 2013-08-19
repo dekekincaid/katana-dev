@@ -1,5 +1,0 @@
-<args format="1.0">
- <param name="input" widget="color"/>
- <param name="aov_name"/>
- <param name="sets"/>
-</args>

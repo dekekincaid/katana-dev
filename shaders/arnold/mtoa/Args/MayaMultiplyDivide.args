@@ -1,4 +1,11 @@
 <args format="1.0">
+ <help>
+  Multiplies or divides input attributes. This utility is divided into three parts-two input attributes, an operator you apply to the two input attributes, and an output attribute to hold the result of the operation. The input and output attributes represent X, Y and Z. Use this node to multiply colors or triple-value attributes.
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Multiply_Divide_utility.htm">Use the Multiply Divide utility</a>.</br>
+  <br></br>       
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Multiply_Divide.htm">Multiply Divide in Autodesk's Maya Docs</a></br>
+ </help>
  <page name="Multiply Divide Attributes" open="True">    
   <param label="Operation" name="operation" widget="popup">
    <hintlist name="options">
@@ -7,8 +14,58 @@
     <string value="divide"/>
     <string value="power"/>
    </hintlist>
+   <help>
+    <b>operation</b>
+    <br>Displays a pop-up menu from which you can select an operator.</br>      
+    <br></br>
+    <br><b>No operation</b></br>      
+    <br>Copies the value of the Input1 attribute to the output attribute without making any changes.</br> 
+    <br>For example, if Input 1 is a Checker texture and Input 2 is a Crater texture, when you select No Operation, only the Checker texture's attributes are rendered.
+</br>      
+    <br></br> 
+    <br><b>Multiply</b></br>      
+    <br>Multiplies the Input1 attribute and the Input2 attribute, as in the following formula:</br> 
+    <br><b>Output = Input1 x Input2</b></br>      
+    <br></br> 
+    <br><b>Divide</b></br>      
+    <br>Divides the Input1 attribute by the Input2 attribute, as in the following formula:</br> 
+    <br><b>Output = Input1 / Input2</b></br>      
+    <br></br> 
+    <br><b>Power</b></br>   
+    <br>Sets the output to equal Input 1 raised to the power of Input 2.</br> 
+    <br>It evaluates an expression by raising the value to the power of a number you choose or by calculating the square root. Raising a value to the power means multiplying a number by itself a given number of times as in:</br> 
+    <br><b>2^3 = 2 x 2 x 2</b></br>
+    <br></br>    
+    <br>The command for calculating the square of a number is:</br> 
+    <br><b>power (value, 2.0)</b></br>
+    <br></br>     
+    <br>The mathematical formula is:</br> 
+    <br><b>Power = value^2</b></br>
+    <br></br>     
+    <br>The formula for computing the square root is:</br> 
+    <br><b>Power = sqrt(value)</b></br>
+    <br></br>     
+    <br>If you want to multiply the value of a component twice, you would set Input1 to represent the color (possibly mapping it with a texture), and then set all the three components of Input2 to 2.0. Because the inputs are both colors, you can work on the color of a single-component value or on all three-component values.</br> 
+    <br></br> 
+    <br>You can also get the square root of a number by setting Input2 to 0.5 as shown in the following:</br> 
+    <br><b>Output = power (input1, input2)</b></br> 
+    <br>which, in math terms, would be written like input1^input2.</br> 
+    <br>See also the <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Multiply_Divide.htm#WS73099CC142F48755-3D114B7511812357EFE-5AAB">Power</a> operator example.</br> 
+   </help>   
   </param>
-  <param label="Input 1" name="input1"/>
-  <param label="Input 2" name="input2"/>
+  <param label="Input 1" name="input1">
+   <help>
+    <b>input1</b>
+    <br></br>      
+    <br>The first of two arguments presented to <b>Multiply Divide</b>.</br> 
+   </help>
+  </param>       
+  <param label="Input 2" name="input2">
+   <help>
+    <b>input2</b>
+    <br></br>      
+    <br>The second of two arguments presented to <b>Multiply Divide</b>.</br> 
+   </help>
+  </param>       
  </page>
 </args>

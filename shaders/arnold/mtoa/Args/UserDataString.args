@@ -1,4 +1,9 @@
 <args format="1.0">
+ <help>
+
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Brownian.htm"> in Autodesk's Maya Docs</a></br>
+ </help>    
  <param name="stringAttrName"/>
  <param name="defaultValue"/>
 </args>

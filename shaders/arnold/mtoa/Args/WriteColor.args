@@ -1,6 +1,9 @@
 <args format="1.0">
- <param name="beauty" widget="color"/>
- <param name="input" widget="color"/>
- <param name="aov_name"/>
- <param name="blend" widget="checkBox"/>
+ <help>
+  <br><a href="https://support.solidangle.com/display/mayatut/Ai+WriteColor+Node">Ai WriteColor Node on Arnoldpedia</a></br>
+ </help>    
+ <param label="Beauty" name="beauty" widget="color"/>
+ <param label="Input" name="input" widget="color"/>
+ <param label="AOV Name" name="aov_name"/>
+ <param label="Blemd" name="blend" widget="checkBox"/>
 </args>

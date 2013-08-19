@@ -3,7 +3,7 @@
   <param label="Number of Inputs" name="numInputs"/>
   <param label="Alpha Is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page> 
- <page name="Layer 0 Attributes" open="True">
+ <page name="Layer 0 Attributes --------------------------------------------------------------------------------------------------" open="True">
   <param label="Color" name="color0" widget="color"/>
   <param label="Alpha" name="alpha0" slider="True" slidermin="0" slidermax="1.0"/>
   <param label="Blend Mode" name="blendMode0" constant="True" widget="popup" default="over">
@@ -26,7 +26,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha0" widget="checkBox"/>
   <param label="Layer is Visible" name="visible0" widget="checkBox"/>
  </page> 
- <page name="Layer 1 Attributes" open="False">
+ <page name="Layer 1 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color1" widget="color"/>
   <param label="Alpha" name="alpha1" slider="True" slidermin="0" slidermax="1.0"/>
   <param label="Blend Mode" name="blendMode1" constant="True" widget="popup" default="over">
@@ -49,7 +49,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha1" widget="checkBox"/>
   <param label="Layer is Visible" name="visible1" widget="checkBox"/> 
  </page> 
- <page name="Layer 2 Attributes" open="False">
+ <page name="Layer 2 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color2" widget="color"/>
   <param label="Alpha" name="alpha2" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode2" constant="True" widget="popup" default="over">
@@ -72,7 +72,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha2" widget="checkBox"/>
   <param label="Layer is Visible" name="visible2" widget="checkBox"/> 
  </page> 
- <page name="Layer 3 Attributes" open="False">
+ <page name="Layer 3 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color3" widget="color"/>
   <param label="Alpha" name="alpha3" slider="True" slidermin="0" slidermax="1.0"/>
   <param label="Blend Mode" name="blendMode3" constant="True" widget="popup" default="over">
@@ -95,7 +95,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha3" widget="checkBox"/>
   <param label="Layer is Visible" name="visible3" widget="checkBox"/> 
  </page> 
- <page name="Layer 4 Attributes" open="False">
+ <page name="Layer 4 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color4" widget="color"/>
   <param label="Alpha" name="alpha4" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode4" constant="True" widget="popup" default="over">
@@ -118,7 +118,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha4" widget="checkBox"/>
   <param label="Layer is Visible" name="visible4" widget="checkBox"/> 
  </page> 
- <page name="Layer 5 Attributes" open="False">
+ <page name="Layer 5 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color5" widget="color"/>
   <param label="Alpha" name="alpha5" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode5" constant="True" widget="popup" default="over">
@@ -141,7 +141,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha5" widget="checkBox"/>
   <param label="Layer is Visible" name="visible5" widget="checkBox"/> 
  </page> 
- <page name="Layer 6 Attributes" open="False">
+ <page name="Layer 6 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color6" widget="color"/>
   <param label="Alpha" name="alpha6" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode6" constant="True" widget="popup" default="over">
@@ -164,7 +164,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha6" widget="checkBox"/>
   <param label="Layer is Visible" name="visible6" widget="checkBox"/> 
  </page> 
- <page name="Layer 7 Attributes" open="False">
+ <page name="Layer 7 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color7" widget="color"/>
   <param label="Alpha" name="alpha7" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode7" constant="True" widget="popup" default="over">
@@ -187,7 +187,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha7" widget="checkBox"/>
   <param label="Layer is Visible" name="visible7" widget="checkBox"/> 
  </page> 
- <page name="Layer 8 Attributes" open="False">
+ <page name="Layer 8 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color8" widget="color"/>
   <param label="Alpha" name="alpha8" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode8" constant="True" widget="popup" default="over">
@@ -210,7 +210,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha8" widget="checkBox"/>
   <param label="Layer is Visible" name="visible8" widget="checkBox"/> 
  </page> 
- <page name="Layer 9 Attributes" open="False">
+ <page name="Layer 9 Attributes --------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color9" widget="color"/>
   <param label="Color" name="alpha9" slider="True" slidermin="0" slidermax="1.0"/>
   <param label="Blend Mode" name="blendMode9" constant="True" widget="popup" default="over">
@@ -233,7 +233,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha9" widget="checkBox"/>
   <param label="Layer is Visible" name="visible9" widget="checkBox"/> 
  </page> 
- <page name="Layer 10 Attributes" open="False">
+ <page name="Layer 10 Attributes ------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color10" widget="color"/>
   <param label="Alpha" name="alpha10" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode10" constant="True" widget="popup" default="over">
@@ -256,7 +256,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha10" widget="checkBox"/>
   <param label="Layer is Visible" name="visible10" widget="checkBox"/> 
  </page> 
- <page name="Layer 11 Attributes" open="False">
+ <page name="Layer 11 Attributes ------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color11" widget="color"/>
   <param label="Alpha" name="alpha11" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode11" constant="True" widget="popup" default="over">
@@ -279,7 +279,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha11" widget="checkBox"/>
   <param label="Layer is Visible" name="visible11" widget="checkBox"/> 
  </page> 
- <page name="Layer 12 Attributes" open="False">
+ <page name="Layer 12 Attributes ------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color12" widget="color"/>
   <param label="Alpha" name="alpha12" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode12" constant="True" widget="popup" default="over">
@@ -302,7 +302,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha12" widget="checkBox"/>
   <param label="Layer is Visible" name="visible12" widget="checkBox"/> 
  </page> 
- <page name="Layer 13 Attributes" open="False">
+ <page name="Layer 13 Attributes ------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color13" widget="color"/>
   <param label="Alpha" name="alpha13" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode13" constant="True" widget="popup" default="over">
@@ -325,7 +325,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha13" widget="checkBox"/>
   <param label="Layer is Visible" name="visible13" widget="checkBox"/> 
  </page> 
- <page name="Layer 14 Attributes" open="False">
+ <page name="Layer 14 Attributes ------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color14" widget="color"/>
   <param label="Alpha" name="alpha14" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode14" constant="True" widget="popup" default="over">
@@ -348,7 +348,7 @@
   <param label="Color Connected to Alpha" name="colorConnectedToAlpha14" widget="checkBox"/>
   <param label="Layer is Visible" name="visible14" widget="checkBox"/>  
  </page> 
- <page name="Layer 15 Attributes" open="False">
+ <page name="Layer 15 Attributes ------------------------------------------------------------------------------------------------" open="False">
   <param label="Color" name="color15" widget="color"/>
   <param label="Alpha" name="alpha15" slider="True" slidermin="0" slidermax="1.0"/> 
   <param label="Blend Mode" name="blendMode15" constant="True" widget="popup" default="over">

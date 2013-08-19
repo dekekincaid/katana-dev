@@ -1,4 +1,13 @@
 <args format="1.0">
+ <help>
+  Provides you with information about each point on a surface as it is being sampled, or calculated, for rendering purposes. Sampler Info can give you information about a point's position in space, its orientation and tangency, and its location relative to the camera.
+  <br></br> 
+  <br>Many of the attributes for this node provide values in camera coordinate space, the local object space of the camera. Each camera (in its own space) is located at the point 0, 0, 0. It looks straight along the negative Z axis, and the positive Y axis points up.</br>
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Sampler_Info_utility.htm">Use the Sampler Info utility</a>.</br>
+  <br></br>  
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Sampler_Info.htm">Sampler Info in Autodesk's Maya Docs</a></br>
+ </help>
  <page name="Sampler Info 3D Attributes" open="True">     
   <param label="Mode" name="mode" widget="popup">
    <hintlist name="options">
@@ -10,6 +19,32 @@
     <string value="tangentUCamera"/>
     <string value="tangentVCamera"/>
    </hintlist>
+   <help>
+    <b>mode</b>
+    <br></br>
+    <br><b>Point World</b></br>
+    <br>Provides the position currently being sampled relative to the X-,Y-, and Z-axis of the world.</br>
+    <br></br>
+    <br><b>Point Obj</b></br>
+    <br>Provides the position currently being sampled relative to the X-,Y-, and Z-axis of the object.</br>
+    <br></br>
+    <br><b>Point Camera</b></br>
+    <br>Provides the point of the object being shaded. This point is located in XYZ camera space. You can connect this surface point in materials for the object being shaded to show some interesting effects based on the camera view.</br>
+    <br></br>
+    <br><b>Normal Camera</b></br>
+    <br>Provides the orientation of a face relative to the camera.</br>  
+    <br></br>
+    <br><b>Uv Coord</b></br>
+    <br>Provides the UV coordinates of a point to be shaded. The convention is that UV coordinates are measured from 0 0 to 1 1.</br>  
+    <br></br>
+    <br><b>Ray Direction</b></br>
+    <br>Indicates the direction in which the current point is seen from the camera. Use this attribute in materials for objects to provide the direction towards the camera for every pixel in the object.</br>  
+    <br></br>
+    <br><b>Tangent UCamera, Tangent VCamera</b></br>
+    <br>Sets the surface tangents in camera space (as opposed to world space or object space). For polygons, the tangents are generally not defined. NURBS have a well-defined tangent space (as visible in Maya; create a NURBS object, display its CVs and notice the NURBS object has a U direction and a V direction).</br>      
+    <br></br> 
+    <br>Mathematically, tangents provide an instantaneous direction perpendicular to their point of origin on a surface. Their magnitude is affected by the rate of change (curvature) of the surface. A good math book should have a diagram showing the tangent to a curve, which can then be extrapolated to give you an idea of what tangents on a surface look like. Tangent UCamera and Tangent VCamera attributes are for advanced users only.</br>
+   </help>   
   </param>
  </page>
 </args>

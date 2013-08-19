@@ -1,23 +1,133 @@
 <args format="1.0">
+ <help>
+  Simulates snow on a surface.
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Projection.htm">Use the Projection utility</a>.</br>
+  <br></br>
+  <br><b>Note</b></br>
+  <br>If you assign Snow to geometry whose surface normals and tangents are constant (for example, those of a primitive cone), the Snow texture appears as a uniform color, and the difference between the Snow Color and Surface Color is non-existent.</br>
+  <br></br>
+  <br><b>Tip:</b></br>
+  <br></br>
+  <br>* To display snow on all objects in the scene, apply the Snow texture as a transparency map on a white material and then layer this material onto other shaders.</br>
+  <br></br>
+  <br>* Try combining a Fractal bump map with a Snow color map. The snow only appears on the peaks and valleys of the bump mapped surface. For best results, set the Fractal bump map’s Alpha Gain and Filter values to a low number.</br>
+  <br></br>
+  <br>* To simulate windswept snow, rotate the Snow texture by rotating the 3D Placement Object about a horizontal line.</br>
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Snow.htm">Snow in Autodesk's Maya Docs</a></br>
+ </help>
  <page name="Snow Attributes" open="True">     
-  <param label="Snow Color" name="snowColor" widget="color"/>
-  <param label="Surface Color" name="surfaceColor" widget="color"/>
-  <param label="Threshold" name="threshold" slider="True"/>
-  <param label="Depth Decay" name="depthDecay" slider="True"/>
-  <param label="Thickness" name="thickness" slider="True"/>
+  <param label="Snow Color" name="snowColor" widget="color">
+   <help>
+    <b>snowColor</b>
+    <br></br>      
+    <br>The color of the snow on the top of the surface.</br> 
+   </help>
+  </param>
+  <param label="Surface Color" name="surfaceColor" widget="color">
+   <help>
+    <b>surfaceColor</b>
+    <br></br>      
+    <br>The color of the surface on which the snow lies.</br> 
+   </help>
+  </param>
+  <param label="Threshold" name="threshold" slider="True">
+   <help>
+    <b>threshold</b>
+    <br></br>      
+    <br>Determines the maximum slope that holds snow. The range is 0 (90 degrees from horizontal) to 1 (0 degrees from horizontal). The default is 0.5 (45 degrees from horizontal).</br> 
+   </help>
+  </param>
+  <param label="Depth Decay" name="depthDecay" slider="True">
+   <help>
+    <b>depthDecay</b>
+    <br></br>      
+    <br>The rate at which the snow color blends into the surface color. The range is 0 to 10. The default is 5.</br> 
+   </help>
+  </param>
+  <param label="Thickness" name="thickness" slider="True">
+   <help>
+    <b>thickness</b>
+    <br></br>      
+    <br>The apparent depth of the snow. Thickness controls the opacity of the snow (deeper snow is more opaque). The range is 0 (transparent) to 1 (opaque). The default is 1.</br> 
+   </help>
+  </param>    
  </page>
- <page name="Color Balance" open="False">
-  <param label="Default Color" name="defaultColor" widget="color"/>
-  <param label="Color Gain" name="colorGain" widget="color"/>
-  <param label="Color Offset" name="colorOffset" widget="color"/>
-  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+
+<page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
+ <param label="Default Color" name="defaultColor" widget="color">
+   <help>
+    <b>defaultColor</b>
+    <br></br>      
+    <br>If you map a texture to a material in such a way that it that does not cover the entire surface, the file node's Default Color shows through. To select a different color, click the color bar to open the Color Chooser. To change the texture's coverage, use the placement options.</br> 
+   </help>
+  </param>    
+  <param label="Color Gain" name="colorGain" widget="color">
+   <help>
+    <b>colorGain</b>
+    <br></br>      
+    <br>Scaling factor applied to the texture's outColor channel. For example, you can color-correct a texture that appears too green by setting the Color Gain to a shade of blue. The default color is white (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Color Offset" name="colorOffset" widget="color">
+   <help>
+    <b>colorOffset</b>
+    <br></br>      
+    <br>Offset factor applied to the texture's outColor channel. For example, you can brighten a texture that appears too dark by setting the Color Offset to a shade of gray. The default color is black (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaGain</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Scaling factor applied to the texture's outAlpha channel. The default value is 1 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaOffset</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Offset factor applied to the texture's outAlpha channel. For example, if the Alpha Gain value is -1 and the Alpha Offset value is 1, the outAlpha channel is inverted. The default value is 0 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox">
+   <help>
+    <b>alphaIsLuminance</b>
+    <br></br>      
+    <br>Off by default. The alpha (mask) output depends on the luminance of the color channels. Bright areas of the texture are more opaque when compositing, and dark areas are more transparent.</br> 
+   </help>
+  </param>    
  </page>
- <page name="Effects" open="True">
-  <param label="Invert" name="invert" widget="checkBox"/>
-  <param label="Wrap" name="wrap" widget="checkBox"/>
-  <param label="Local" name="local" widget="checkBox"/>
-  <param label="Placement Matrix" name="placementMatrix" open="True"/>  
- </page> 
+
+ <page name="Effects ---------------------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Invert" name="invert" widget="checkBox">
+   <help>
+    <b>invert</b>
+    <br></br>      
+    <br>Reverses all texture colors (black becomes white, white becomes black, and so on). Invert is off by default. For example, you can change a bump or displacement map's raised regions to depressions and vice versa by setting Invert on or off.</br> 
+   </help>
+  </param>
+  <param label="Wrap" name="wrap" widget="checkBox">
+   <help>
+    <b>wrap</b>
+    <br></br>      
+    <br>Attributes control whether a map is repeated in both U and V. The Wrap attributes are on by default. Turn these off to prevent seams from showing on a closed surface, such as a cylinder or sphere, or to prevent the texture from duplicating itself when you use Translation and Coverage attributes to limit the mapping to a very specific surface area.</br> 
+   </help>
+  </param>    
+  <param label="Local" name="local" widget="checkBox">
+   <help>
+    <b>local</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>
+ </page>
+
+  <param label="PlacementMatrix" name="placementMatrix" open="True">
+   <help>
+    <b>placementMatrix</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>         
 </args>

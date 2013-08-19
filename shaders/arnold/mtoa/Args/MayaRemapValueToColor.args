@@ -1,16 +1,89 @@
 <args format="1.0">
+ <help>
+  Remaps a scalar input to both scalar and color outputs. The scalar output is remapped with a scalar gradient, and the color output is remapped using a color gradient.
+  <br></br> 
+  <br>You can remap color and alpha values and control each of them separately. So, for example, you can define mappings where the alpha is the inverse of the color, or where they have different ranges.</br> 
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Remap_Color_Remap_Hsv_or_Remap_Value_utilities.htm">Use the Remap Color, Remap Hsv, or Remap Value utilities</a>.</br> 
+  <br></br>
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Remap_Value.htm">Remap Value in Autodesk's Maya Docs</a></br>
+ </help>
  <page name="Remap Value to Color Attributes" open="True"> 
-  <param label="Input Value" name="input"/>
+  <param label="Input Value" name="input">
+   <help>
+    <b>input</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>     
+
+
  </page>    
  <page name="Color" open="True">   
-  <param label="Positions" name="positions"/>
-  <param label="Values" name="values"/>
-  <param label="Interpolations" name="interpolations"/>
+  <param label="Positions" name="positions">
+   <help>
+    <b>positions</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>     
+
+
+  <param label="Values" name="values">
+   <help>
+    <b>values</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>     
+
+
+  <param label="Interpolations" name="interpolations">
+   <help>
+    <b>interpolations</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>     
+
+
  </page>  
- <page name="Input and Output Ranges" open="True">   
-  <param label="Input Min" name="inputMin" slider="True"/>
-  <param label="Input Max" name="inputMax" slider="True"/>  
-  <param label="Output Min" name="outputMin" slider="True"/>
-  <param label="Output Max" name="outputMax" slider="True"/>
+ <page name="Input and Output Ranges" open="True">    
+  <param label="Input Min" name="inputMin" slider="True">
+   <help>
+    <b>inputMin</b>
+    <br></br>
+    <br>Define the values that remap into the left and the right of the gradient controls.</br>    
+    <br></br>
+    <br>For example, if your input attribute varied between -1 and 1 you can set the inputMin to -1 and the inputMax to 1. This way your minimum values result in the values defined at the left of the ramp and the maximum map to the right. Values outside the min/max range will be clipped to the value at the edges of the gradient.</br> 
+   </help>
+  </param>  
+  <param label="Input Max" name="inputMax" slider="True">
+   <help>
+    <b>inputMax</b>
+    <br></br>
+    <br>Define the values that remap into the left and the right of the gradient controls.</br>    
+    <br></br>
+    <br>For example, if your input attribute varied between -1 and 1 you can set the inputMin to -1 and the inputMax to 1. This way your minimum values result in the values defined at the left of the ramp and the maximum map to the right. Values outside the min/max range will be clipped to the value at the edges of the gradient.</br> 
+   </help>
+  </param>  
+  <param label="Output Min" name="outputMin" slider="True">
+   <help>
+    <b>outputMin</b>
+    <br></br>
+    <br>Determine the range of the output attribute. These attributes represent the top (max) and bottom (min) values of the gradients, or (in the case of a color gradient control) the displayed white (max) and black (min) output.</br>
+    <br></br>
+    <br>In some cases, you may want the outputMin/Max to match the inputMin/Max. For example if you are remapping the cameraNormalY to object color using a remapValue node, because the camera normal varies between -1 and 1, the inputMin/Max would be set to these values. However we do not want black to be -1,-1,-1, so it would make sense for the outputMin/Max to be 0 to 1.</br> 
+   </help>
+  </param>    
+  <param label="Output Max" name="outputMax" slider="True">
+   <help>
+    <b>outputMax</b>
+    <br></br>
+    <br>Determine the range of the output attribute. These attributes represent the top (max) and bottom (min) values of the gradients, or (in the case of a color gradient control) the displayed white (max) and black (min) output.</br>
+    <br></br>
+    <br>In some cases, you may want the outputMin/Max to match the inputMin/Max. For example if you are remapping the cameraNormalY to object color using a remapValue node, because the camera normal varies between -1 and 1, the inputMin/Max would be set to these values. However we do not want black to be -1,-1,-1, so it would make sense for the outputMin/Max to be 0 to 1.</br> 
+   </help>
+  </param>
  </page>
 </args>

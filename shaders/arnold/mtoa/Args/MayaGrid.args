@@ -1,25 +1,113 @@
 <args format="1.0">
+ <help>
+  Represents a scalar grid pattern.
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Grid.htm">2d Grid in Autodesk's Maya Docs</a></br>
+ </help>    
  <page name="Grid Attributes" open="True">
-  <param label="Line Color" name="lineColor" widget="color"/>
-  <param label="Filler Color" name="fillerColor" widget="color"/>
-  <param label="U Width" name="uWidth" slider="True" slidermin="0.0" min="0.0" slidermax="0.5"/>
-  <param label="V Width" name="vWidth" slider="True" slidermin="0.0" min="0.0" slidermax="0.5"/>
-  <param label="Contrast" name="contrast" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
+  <param label="Line Color" name="lineColor" widget="color">
+   <help>
+    <b>lineColor</b>
+    <br></br>      
+    <br>Color of the grid lines. The default color is white.</br> 
+   </help>
+  </param>      
+  <param label="Filler Color" name="fillerColor" widget="color">
+   <help>
+    <b>fillerColor</b>
+    <br></br>      
+    <br>Color of the spaces between the grid lines. The default color is black.</br> 
+   </help>
+  </param>      
+  <param label="U Width" name="uWidth" slider="True" slidermin="0.0" min="0.0" slidermax="0.5">
+   <help>
+    <b>uWidth</b>
+    <br></br>      
+    <br>Width of the grid lines in the U directions. The valid range is 0 to 1. The range is 0 to 0.5. The default value is 0.1.</br> 
+   </help>
+  </param>      
+  <param label="V Width" name="vWidth" slider="True" slidermin="0.0" min="0.0" slidermax="0.5">
+   <help>
+    <b>vWidth</b>
+    <br></br>      
+    <br>Width of the grid lines in the V directions. The valid range is 0 to 1. The range is 0 to 0.5. The default value is 0.1.</br> 
+   </help>
+  </param>      
+  <param label="Contrast" name="contrast" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
+   <help>
+    <b>contrast</b>
+    <br></br>      
+    <br>Contrast between the <b>Line Color</b> and the <b>Filler Color</b>. The range is 0 (the two colors are averaged over the entire texture) to 1. The default value is 1.</br> 
+   </help>
+  </param>      
  </page>
- <page name="Color Balance" open="False">
-  <param label="Default Color" name="defaultColor" widget="color"/>
-  <param label="Color Gain" name="colorGain" widget="color"/>
-  <param label="Color Offset" name="colorOffset" widget="color"/>
-  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ <page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
+ <param label="Default Color" name="defaultColor" widget="color">
+   <help>
+    <b>defaultColor</b>
+    <br></br>      
+    <br>If you map a texture to a material in such a way that it that does not cover the entire surface, the file node's Default Color shows through. To select a different color, click the color bar to open the Color Chooser. To change the texture's coverage, use the placement options.</br> 
+   </help>
+  </param>    
+  <param label="Color Gain" name="colorGain" widget="color">
+   <help>
+    <b>colorGain</b>
+    <br></br>      
+    <br>Scaling factor applied to the texture's outColor channel. For example, you can color-correct a texture that appears too green by setting the Color Gain to a shade of blue. The default color is white (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Color Offset" name="colorOffset" widget="color">
+   <help>
+    <b>colorOffset</b>
+    <br></br>      
+    <br>Offset factor applied to the texture's outColor channel. For example, you can brighten a texture that appears too dark by setting the Color Offset to a shade of gray. The default color is black (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaGain</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Scaling factor applied to the texture's outAlpha channel. The default value is 1 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaOffset</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Offset factor applied to the texture's outAlpha channel. For example, if the Alpha Gain value is -1 and the Alpha Offset value is 1, the outAlpha channel is inverted. The default value is 0 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox">
+   <help>
+    <b>alphaIsLuminance</b>
+    <br></br>      
+    <br>Off by default. The alpha (mask) output depends on the luminance of the color channels. Bright areas of the texture are more opaque when compositing, and dark areas are more transparent.</br> 
+   </help>
+  </param>    
  </page>
- <page name="Effects" open="True">
-  <param label="Filter" name="filter" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Filter Offset" name="filterOffset" slider="True" slidermin="0.0" slidermax="1.0"/>  
-  <param label="Invert" name="invert" widget="checkBox"/>
+ <page name="Effects ---------------------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Invert" name="invert" widget="checkBox">
+   <help>
+    <b>invert</b>
+    <br></br>      
+    <br>Reverses all texture colors (black becomes white, white becomes black, and so on). Invert is off by default. For example, you can change a bump or displacement map's raised regions to depressions and vice versa by setting Invert on or off.</br> 
+   </help>
+  </param>
+  <param label="Filter Offset" name="filterOffset" slider="True" slidermin="0.0" slidermax="1.0">  
+   <help>
+    <b>filterOffset</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>  
  </page> 
- <page name="UV Coordinates" open="False">
-  <param label="UV Coordinates" name="uvCoord"/>
+ <page name="UV Coordinates --------------------------------------------------------------------------------------------------------" open="False">  
+  <param label="UV Coord" name="uvCoord">
+   <help>
+    <b>uvCoord</b>
+    <br></br>      
+    <br>The UV coordinate values of the current sample point.</br> 
+   </help>
+  </param>
  </page> 
 </args>

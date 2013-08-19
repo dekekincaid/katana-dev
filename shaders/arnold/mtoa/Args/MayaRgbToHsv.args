@@ -1,5 +1,20 @@
 <args format="1.0">
+ <help>
+  Converts an RGB (Red-Green-Blue) color into an HSV (Hue-Saturation-Value) color.
+  <br></br> 
+  <br>Some effects are easier to calculate using HSV values instead of RGB values. You can convert the output of any shading network into HSV values.</br> 
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Rgb_to_Hsv_utility.htm">Use the Rgb to Hsv utility</a>.</br>
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Rgb_to_Hsv.htm">RGB to HSV in Autodesk's Maya Docs</a></br>
+ </help>   
  <page name="RGB to HSV Attributes" open="True">
-  <param label="In Rgb" name="inRgb" widget="color"/>
+  <param label="In Rgb" name="inRgb" widget="color">
+   <help>
+    <b>inRgb</b>
+    <br></br>      
+    <br>The color converted into HSV values.</br> 
+   </help>
+  </param>         
  </page>
 </args>

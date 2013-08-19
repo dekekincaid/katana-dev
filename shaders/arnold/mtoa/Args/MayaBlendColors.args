@@ -1,7 +1,32 @@
 <args format="1.0">
+ <help>
+  To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Blend_Colors_utility.htm">Use the Blend Colors utility</a>.
+  <br></br> 
+  <br>Blends two input values using a mixer. You use a mask to determine where to put two materials placed on an object.</br> 
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Blend_Colors.htm">Blend Colors in Autodesk's Maya Docs</a></br>
+ </help>      
  <page name="Blend Colors Attributes" open="True">
-  <param label="Blender" name="blender" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
-  <param label="Color 1" name="color1" open="True" widget="color"/>
-  <param label="Color 2" name="color2" open="True" widget="color"/>
+  <param label="Blender" name="blender" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
+   <help>
+    <b>blender</b>
+    <br></br>      
+    <br>Controls how much of each of the input colors mixes into the final Output. As the value increases, you see more of Color 1 and less of Color 2. As it decreases, you see more of Color 2 and less of Color 1.</br> 
+   </help>
+  </param>    
+  <param label="Color 1" name="color1" open="True" widget="color">
+   <help>
+    <b>color1</b>
+    <br></br>      
+    <br>Color1 and Color2 are the first and second input colors (or textures)</br> 
+   </help>
+  </param>   
+  <param label="Color 2" name="color2" open="True" widget="color">
+   <help>
+    <b>color2</b>
+    <br></br>      
+    <br>Color1 and Color2 are the first and second input colors (or textures)</br> 
+   </help>
+  </param>   
  </page>
 </args>

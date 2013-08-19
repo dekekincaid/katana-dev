@@ -1,26 +1,132 @@
 <args format="1.0">
+ <help>
+  Lets you remap a three-channel input (such as RGB color) to another three-channel output with three gradient controls for more precise shading.
+  <br></br> 
+  <br>You can also use this utility for non-shading purposes, however. For example, you could connect the translate of one object to remapColor.color, then connect remapColor.outColor to the translate of a second object, which effectively maps the position of one object onto the other. In this particular case, the second object initially follows the first then stops outside a zero to 1 bounding box. (To increase the size of this bounding range, increase both the input and output Min/Max settings.) If you reverse the gradients, the second object moves in the opposite direction. And if the graphs are wiggly, the motion of the second object would also be wiggly.</br> 
+  <br></br> 
+  <br>For descriptions of the utility's input and output ranges, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Remap_Color.htm">Input and Output ranges</a>.</br> 
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Remap_Color.htm">Remap Color in Autodesk's Maya Docs</a></br>
+ </help>
+
  <page name="Remap Color Attributes" open="True">  
-  <param label="Color" name="input" widget="color"/>
- </page>  
+  <param label="Color" name="input" widget="color">
+   <help>
+    <b>input</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param> 
+ </page>
+
  <page name="Red" open="True">  
-  <param label="Positions" name="rPositions"/>
-  <param label="Values" name="rValues"/>
-  <param label="Interpolations" name="rInterpolations"/>
- </page>  
+  <param label="Positions" name="rPositions">
+   <help>
+    <b>rPositions</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>      
+  <param label="Values" name="rValues">
+   <help>
+    <b>rValues</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>     
+  <param label="Interpolations" name="rInterpolations">
+   <help>
+    <b>rInterpolations</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>  
+ </page>
+
  <page name="Green" open="True">    
-  <param label="Positions" name="gPositions"/>
-  <param label="Values" name="gValues"/>
-  <param label="Interpolations" name="gInterpolations"/>
- </page>  
+  <param label="Positions" name="gPositions">
+   <help>
+    <b>gPositions</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>  
+  <param label="Values" name="gValues">
+   <help>
+    <b>gValues</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>     
+  <param label="Interpolations" name="gInterpolations">
+   <help>
+    <b>gInterpolations</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>      
+ </page>
+
  <page name="Blue" open="True">    
-  <param label="Positions" name="bPositions"/>
-  <param label="Values" name="bValues"/>
-  <param label="Interpolations" name="bInterpolations"/>
- </page>  
+  <param label="Positions" name="bPositions">
+   <help>
+    <b>bPositions</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>     
+  <param label="Values" name="bValues">
+   <help>
+    <b>bValues</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>   
+  <param label="Interpolations" name="bInterpolations">
+   <help>
+    <b>bInterpolations</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>  
+ </page>      
+
  <page name="Input and Output Ranges" open="True">    
-  <param label="Input Min" name="inputMin" slider="True"/>
-  <param label="Input Max" name="inputMax" slider="True"/>  
-  <param label="Output Min" name="outputMin" slider="True"/>
-  <param label="Output Max" name="outputMax" slider="True"/>
+  <param label="Input Min" name="inputMin" slider="True">
+   <help>
+    <b>inputMin</b>
+    <br></br>
+    <br>Define the values that remap into the left and the right of the gradient controls.</br>    
+    <br></br>
+    <br>For example, if your input attribute varied between -1 and 1 you can set the inputMin to -1 and the inputMax to 1. This way your minimum values result in the values defined at the left of the ramp and the maximum map to the right. Values outside the min/max range will be clipped to the value at the edges of the gradient.</br> 
+   </help>
+  </param>  
+  <param label="Input Max" name="inputMax" slider="True">
+   <help>
+    <b>inputMax</b>
+    <br></br>
+    <br>Define the values that remap into the left and the right of the gradient controls.</br>    
+    <br></br>
+    <br>For example, if your input attribute varied between -1 and 1 you can set the inputMin to -1 and the inputMax to 1. This way your minimum values result in the values defined at the left of the ramp and the maximum map to the right. Values outside the min/max range will be clipped to the value at the edges of the gradient.</br> 
+   </help>
+  </param>  
+  <param label="Output Min" name="outputMin" slider="True">
+   <help>
+    <b>outputMin</b>
+    <br></br>
+    <br>Determine the range of the output attribute. These attributes represent the top (max) and bottom (min) values of the gradients, or (in the case of a color gradient control) the displayed white (max) and black (min) output.</br>
+    <br></br>
+    <br>In some cases, you may want the outputMin/Max to match the inputMin/Max. For example if you are remapping the cameraNormalY to object color using a remapValue node, because the camera normal varies between -1 and 1, the inputMin/Max would be set to these values. However we do not want black to be -1,-1,-1, so it would make sense for the outputMin/Max to be 0 to 1.</br> 
+   </help>
+  </param>    
+  <param label="Output Max" name="outputMax" slider="True">
+   <help>
+    <b>outputMax</b>
+    <br></br>
+    <br>Determine the range of the output attribute. These attributes represent the top (max) and bottom (min) values of the gradients, or (in the case of a color gradient control) the displayed white (max) and black (min) output.</br>
+    <br></br>
+    <br>In some cases, you may want the outputMin/Max to match the inputMin/Max. For example if you are remapping the cameraNormalY to object color using a remapValue node, because the camera normal varies between -1 and 1, the inputMin/Max would be set to these values. However we do not want black to be -1,-1,-1, so it would make sense for the outputMin/Max to be 0 to 1.</br> 
+   </help>
+  </param>
  </page>
 </args>

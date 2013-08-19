@@ -1,28 +1,140 @@
 <args format="1.0">
+ <help>
+  Lets you adjust the color output of nodes. It converts an RGB input to HSV, remaps using separate HSV gradients, then converts the result to a color output.
+  <br></br> 
+  <br>With this utility, you can fine-tune or completely change the hue, saturation, and luminance of a color with the provided gradients. For example, you could connect the outColor of a file texture to the color (input) attribute on remapHsv, then connect the remapHsvoutColor to your shader color. By editing the gradients you could then modify the brightness range or hue of the file texture with a great deal of control:</br> 
+  <br></br> 
+  <br>* You can make the image black and white make the saturation graph all zero.</br> 
+  <br>* You can invert the brightness for an x-ray effect make the value graph 1 at the left and zero at the right.</br> 
+  <br></br> 
+  <br>You can also remap the color of a shader by connecting the outColor of the shader into remapHsv.color then connecting remapHsv.outColor the outColor of a surface shader node. The surface shader then becomes a color correctable version of the original shader.</br> 
+  <br></br> 
+  <br>Note</br> 
+  <br>The surface shader performs no calculations directly, it is simply a placeholder for a shading outColor attribute.</br>                 
+  <br></br> 
+  <br>For descriptions of the utility's input and output ranges, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Remap_Value.htm">Input and Output ranges</a>.</br> 
+  <br></br>   
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Remap_HSV.htm">Remap HSV in Autodesk's Maya Docs</a></br>
+ </help>
+
  <page name="Remap Hsv Attributes" open="True">  
-  <param label="Color" name="input" widget="color"/>
- </page>  
+  <param label="Color" name="input" widget="color">
+   <help>
+    <b>hPositions</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>     
+ </page>
+
  <page name="Hue" open="True">  
-  <param label="Positions" name="hPositions"/>
-  <param label="Values" name="hValues"/>
-  <param label="Interpolations" name="hInterpolations"/>
- </page>  
+  <param label="Positions" name="hPositions">
+   <help>
+    <b>hPositions</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>  
+  <param label="Values" name="hValues">
+   <help>
+    <b>hValues</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>      
+  <param label="Interpolations" name="hInterpolations">
+   <help>
+    <b>hInterpolations</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>      
+ </page>
+
  <page name="Saturation" open="True">    
-  <param label="Positions" name="sPositions"/>
-  <param label="Values" name="sValues"/>
-  <param label="Interpolations" name="sInterpolations"/>
- </page>  
+  <param label="Positions" name="sPositions">
+   <help>
+    <b>sPositions</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>  
+  <param label="Values" name="sValues">
+   <help>
+    <b>sValues</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>      
+  <param label="Interpolations" name="sInterpolations">
+   <help>
+    <b>sInterpolations</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>      
+ </page>
+
  <page name="Value" open="True">    
-  <param label="Positions" name="vPositions"/>
-  <param label="Values" name="vValues"/>
-  <param label="Interpolations" name="vInterpolations"/>
- </page>  
+  <param label="Positions" name="vPositions">
+   <help>
+    <b>vPositions</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>      
+  <param label="Values" name="vValues">
+   <help>
+    <b>vValues</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>      
+  <param label="Interpolations" name="vInterpolations">
+   <help>
+    <b>vInterpolations</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>      
+ </page>
+
  <page name="Input and Output Ranges" open="True">    
-  <param label="Input Min" name="inputMin" slider="True"/>
-  <param label="Input Max" name="inputMax" slider="True"/>  
-  <param label="Output Min" name="outputMin" slider="True"/>
-  <param label="Output Max" name="outputMax" slider="True"/>
+  <param label="Input Min" name="inputMin" slider="True">
+   <help>
+    <b>inputMin</b>
+    <br></br>
+    <br>Define the values that remap into the left and the right of the gradient controls.</br>    
+    <br></br>
+    <br>For example, if your input attribute varied between -1 and 1 you can set the inputMin to -1 and the inputMax to 1. This way your minimum values result in the values defined at the left of the ramp and the maximum map to the right. Values outside the min/max range will be clipped to the value at the edges of the gradient.</br> 
+   </help>
+  </param>  
+  <param label="Input Max" name="inputMax" slider="True">
+   <help>
+    <b>inputMax</b>
+    <br></br>
+    <br>Define the values that remap into the left and the right of the gradient controls.</br>    
+    <br></br>
+    <br>For example, if your input attribute varied between -1 and 1 you can set the inputMin to -1 and the inputMax to 1. This way your minimum values result in the values defined at the left of the ramp and the maximum map to the right. Values outside the min/max range will be clipped to the value at the edges of the gradient.</br> 
+   </help>
+  </param>  
+  <param label="Output Min" name="outputMin" slider="True">
+   <help>
+    <b>outputMin</b>
+    <br></br>
+    <br>Determine the range of the output attribute. These attributes represent the top (max) and bottom (min) values of the gradients, or (in the case of a color gradient control) the displayed white (max) and black (min) output.</br>
+    <br></br>
+    <br>In some cases, you may want the outputMin/Max to match the inputMin/Max. For example if you are remapping the cameraNormalY to object color using a remapValue node, because the camera normal varies between -1 and 1, the inputMin/Max would be set to these values. However we do not want black to be -1,-1,-1, so it would make sense for the outputMin/Max to be 0 to 1.</br> 
+   </help>
+  </param>    
+  <param label="Output Max" name="outputMax" slider="True">
+   <help>
+    <b>outputMax</b>
+    <br></br>
+    <br>Determine the range of the output attribute. These attributes represent the top (max) and bottom (min) values of the gradients, or (in the case of a color gradient control) the displayed white (max) and black (min) output.</br>
+    <br></br>
+    <br>In some cases, you may want the outputMin/Max to match the inputMin/Max. For example if you are remapping the cameraNormalY to object color using a remapValue node, because the camera normal varies between -1 and 1, the inputMin/Max would be set to these values. However we do not want black to be -1,-1,-1, so it would make sense for the outputMin/Max to be 0 to 1.</br> 
+   </help>
+  </param>
  </page>
 </args>
-
-

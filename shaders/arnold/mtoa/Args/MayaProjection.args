@@ -1,4 +1,12 @@
 <args format="1.0">
+ <help>
+  Turns any 2d texture into a 3d texture you can place on the surface using one of the available projection types. Use to adjust the texture placement on the surface.
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Projection.htm">Use the Projection utility</a>.</br>
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Projection_utility.htm">Projection in Autodesk's Maya Docs</a></br>
+ </help>
+
  <page name="Projection Attributes" open="True">  
   <param label="Projection Type" name="projType" widget="popup">
    <hintlist name="options">
@@ -12,42 +20,247 @@
     <string value="concentric"/>
     <string value="perspective"/>
    </hintlist>
+   <help>
+    <b>projType</b>
+    <br></br>
+    <br>Select a projection type from the drop-down list to display seven projection manipulators.</br>
+    <br></br>
+    <br><b>Off</b></br>
+    <br>Uses no projection type.</br>
+    <br></br>
+    <br><b>Planar</b></br>
+    <br>Default Proj Type. Places the texture on a planar surface and projects it onto the object.</br>    
+    <br></br>
+    <br><b>Spherical</b></br>
+    <br>Places the texture inside a sphere and projects it onto the object.</br>
+    <br></br>
+    <br><b>Cylindrical</b></br>
+    <br>Places the texture inside a cylinder and projects it onto the object.</br>
+    <br></br>
+    <br><b>Ball</b></br>       
+    <br>Places the texture inside a ball and projects it onto the object. For example, Maya projects the texture as if a candy wrapper is pulled around a lollipop. There is one pinch point to the mapping at the -z-pole, as opposed to the two pinch points at the +y and -y poles in spherical and cylindrical mapping.</br>
+    <br></br>
+    <br><b>Cubic</b></br>   
+    <br>Defines the projection surface as a box. Maya places images on each plane and projects them onto the object.</br>
+    <br></br>
+    <br><b>Triplanar</b></br>   
+    <br>Extrudes the texture along the axis defined by the maximum direction of the surface normal. The texture is projected much like fabric pulled around an arc.</br>
+    <br></br>
+    <br><b>Concentric</b></br>           
+    <br>Projects a vertical slice of the texture from the inside to the outside edge of the voxel. The vertical slice used is randomly chosen for each voxel. A voxel is a 3D version of a rectangle—a voxel grid is a series of 3D cubes that line up to form a bigger cube.</br>
+    <br></br>
+    <br><b>Perspective</b></br>    
+    <br>Integrates 3D elements with a background image or a live action sequence.</br>
+   </help>   
   </param>
-  <param label="Image" name="image" widget="color"/>
-  <param label="U Angle" name="uAngle" slider="True"/>
-  <param label="V Angle" name="vAngle" slider="True"/>
+
+  <param label="Image" name="image" widget="color">
+   <help>
+    <b>image</b>
+    <br></br>      
+    <br>The 2D texture to be used as a map.</br> 
+   </help>
+  </param>
+
+  <param label="U Angle" name="uAngle" slider="True">
+   <hintdict name="conditionalLockOps">
+    <string value="perspective" name="conditionalLockValue"/>
+    <string value="contains" name="conditionalLockOp"/>
+    <string value="../../Projection Attributes/projType" name="conditionalLockPath"/>
+   </hintdict>
+   <help>
+    <b>uAngle</b>
+    <br></br>      
+    <br>For spherical and cylindrical mapping only. Changes the U angle.</br> 
+   </help>   
+  </param>
+
+  <param label="V Angle" name="vAngle" slider="True">
+   <hintdict name="conditionalLockOps">
+    <string value="perspective" name="conditionalLockValue"/>
+    <string value="contains" name="conditionalLockOp"/>
+    <string value="../../Projection Attributes/projType" name="conditionalLockPath"/>
+   </hintdict>
+   <help>
+    <b>vAngle</b>
+    <br></br>      
+    <br>For spherical mapping only. Changes the V angle.</br> 
+   </help>   
+  </param>
  </page>
- <page name="Camera Projection Attributes" open="True">  
-  <param label="Link To Camera" name="linkedCamera" widget="scenegraphLocator"/>
+ <page name="Camera Projection Attributes -------------------------------------------------------------------------------------" open="True">
+
+  <param label="Link To Camera" name="linkedCamera" widget="scenegraphLocator">
+   <hintdict name="conditionalLockOps">
+    <string value="perspective" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../../Projection Attributes/projType" name="conditionalLockPath"/>
+   </hintdict>
+   <help>
+    <b>linkedCamera</b>
+    <br></br>      
+    <br>The drop-down list contains a list of the perspective cameras in the scene. Choose the camera from which you want to project the image.</br> 
+   </help>   
+  </param>
+
   <param label="Fit Type" name="fitType" widget="popup">
+   <hintdict name="conditionalLockOps">
+    <string value="perspective" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../../Projection Attributes/projType" name="conditionalLockPath"/>
+   </hintdict>
    <hintlist name="options">
     <string value="none"/>
     <string value="camera_film_gate"/>
     <string value="camera_resolution"/>
    </hintlist>
+   <help>
+    <b>fitType</b>
+    <br>Controls how the texture fits to the camera when Proj Type is Perspective. Select from the following:</br>      
+    <br></br>
+    <br><b>None</b></br>      
+    <br>The image is not squeezed or stretched to fit. One of its axes (determined by the Fit Fill setting) fits to the film gate, and the other resizes appropriately.</br>
+    <br></br>
+    <br><b>Match Camera Film Gate</b></br>          
+    <br>Squeezes the image to fit the film gate.</br>
+    <br></br>      
+    <br><b>Match Camera Resolution</b></br>  
+    <br>If you use this to match a backdrop, match these settings to the settings in the Image Plane. Usually, the image plane is the same size as the rendered image. If so, use the Match Camera Resolution setting.</br> 
+   </help>   
   </param>
+
   <param label="Fit Fill" name="fitFill" widget="popup">
+   <hintdict name="conditionalLockOps">
+    <string value="perspective" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../../Projection Attributes/projType" name="conditionalLockPath"/>
+   </hintdict>
    <hintlist name="options">
     <string value="fill"/>
     <string value="horizontal"/>
     <string value="vertical"/>
    </hintlist>
+   <help>
+    <b>fitFill</b>
+    <br></br>      
+    <br>Only available if Proj Type is Perspective and Fit Type is None. If the image plane aspect ratio is not the same as the film gate aspect ratio, this attribute decides which axis of the image is fit to the film gate.</br> 
+   </help>
   </param>
-  <param label="Wrap" name="wrap" widget="checkBox"/>
-  <param label="Local" name="local" widget="checkBox"/>
-  <param label="Placement Matrix" name="placementMatrix" open="True"/>  
-  <param label="Camera Near Clipping Plane" name="cameraNearPlane" slider="True" slidermin="0.0" min="0.0" slidermax="10.0"/>
-  <param label="Camera Horizontal FOV" name="cameraHorizontalFOV" slider="True" slidermin="0.0" min="0.0" slidermax="360.0"/>
-  <param label="Camera Aspect Ratio" name="cameraAspectRatio" slider="True" slidermin="0.0" min="0.0" slidermax="10.0"/>
+
+
+  <param label="Camera Near Clipping Plane" name="cameraNearPlane" slider="True" slidermin="0.0" min="0.0" slidermax="10.0">
+   <hintdict name="conditionalLockOps">
+    <string value="perspective" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../../Projection Attributes/projType" name="conditionalLockPath"/>
+   </hintdict>
+   <help>
+    <b>cameraNearPlane</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>
+
+  <param label="Camera Horizontal FOV" name="cameraHorizontalFOV" slider="True" slidermin="0.0" min="0.0" slidermax="360.0">
+   <hintdict name="conditionalLockOps">
+    <string value="perspective" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../../Projection Attributes/projType" name="conditionalLockPath"/>
+   </hintdict>
+   <help>
+    <b>cameraHorizontalFOV</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>
+
+  <param label="Camera Aspect Ratio" name="cameraAspectRatio" slider="True" slidermin="0.0" min="0.0" slidermax="10.0">
+   <hintdict name="conditionalLockOps">
+    <string value="perspective" name="conditionalLockValue"/>
+    <string value="doesNotContain" name="conditionalLockOp"/>
+    <string value="../../Projection Attributes/projType" name="conditionalLockPath"/>
+   </hintdict>
+   <help>
+    <b>cameraAspectRatio</b>
+    <br></br>      
+    <br></br> 
+   </help>   
+  </param>
  </page>
- <page name="Color Balance" open="False">
-  <param label="Default Color" name="defaultColor" widget="color"/>
-  <param label="Color Gain" name="colorGain" widget="color"/>
-  <param label="Color Offset" name="colorOffset" widget="color"/>
-  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
+ <page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
+ <param label="Default Color" name="defaultColor" widget="color">
+   <help>
+    <b>defaultColor</b>
+    <br></br>      
+    <br>If you map a texture to a material in such a way that it that does not cover the entire surface, the file node's Default Color shows through. To select a different color, click the color bar to open the Color Chooser. To change the texture's coverage, use the placement options.</br> 
+   </help>
+  </param>    
+  <param label="Color Gain" name="colorGain" widget="color">
+   <help>
+    <b>colorGain</b>
+    <br></br>      
+    <br>Scaling factor applied to the texture's outColor channel. For example, you can color-correct a texture that appears too green by setting the Color Gain to a shade of blue. The default color is white (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Color Offset" name="colorOffset" widget="color">
+   <help>
+    <b>colorOffset</b>
+    <br></br>      
+    <br>Offset factor applied to the texture's outColor channel. For example, you can brighten a texture that appears too dark by setting the Color Offset to a shade of gray. The default color is black (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaGain</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Scaling factor applied to the texture's outAlpha channel. The default value is 1 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaOffset</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Offset factor applied to the texture's outAlpha channel. For example, if the Alpha Gain value is -1 and the Alpha Offset value is 1, the outAlpha channel is inverted. The default value is 0 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox">
+   <help>
+    <b>alphaIsLuminance</b>
+    <br></br>      
+    <br>Off by default. The alpha (mask) output depends on the luminance of the color channels. Bright areas of the texture are more opaque when compositing, and dark areas are more transparent.</br> 
+   </help>
+  </param>    
  </page>
-  <page name="Effects" open="True">
-  <param label="Invert" name="invert" widget="checkBox"/>
+
+ <page name="Effects ---------------------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Invert" name="invert" widget="checkBox">
+   <help>
+    <b>invert</b>
+    <br></br>      
+    <br>Reverses all texture colors (black becomes white, white becomes black, and so on). Invert is off by default. For example, you can change a bump or displacement map's raised regions to depressions and vice versa by setting Invert on or off.</br> 
+   </help>
+  </param>
+  <param label="Wrap" name="wrap" widget="checkBox">
+   <help>
+    <b>wrap</b>
+    <br></br>      
+    <br>Attributes control whether a map is repeated in both U and V. The Wrap attributes are on by default. Turn these off to prevent seams from showing on a closed surface, such as a cylinder or sphere, or to prevent the texture from duplicating itself when you use Translation and Coverage attributes to limit the mapping to a very specific surface area.</br> 
+   </help>
+  </param>    
+  <param label="Local" name="local" widget="checkBox">
+   <help>
+    <b>local</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>
  </page>
+
+  <param label="PlacementMatrix" name="placementMatrix" open="True">
+   <help>
+    <b>placementMatrix</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>         
 </args>

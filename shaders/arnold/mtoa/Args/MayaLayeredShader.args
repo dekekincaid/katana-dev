@@ -8,82 +8,82 @@
   </param>
   <param label="Number of Inputs" name="numInputs"/>
  </page> 
- <page name="Layer 0 Attributes" open="True">  
+ <page name="Layer 0 Attributes --------------------------------------------------------------------------------------------------" open="True">  
   <param label="Color 0" name="color0" widget="color"/>
   <param name="transparency0" widget="color"/>
   <param name="useTransparency0" widget="checkBox"/>
  </page> 
- <page name="Layer 1 Attributes" open="False">    
+ <page name="Layer 1 Attributes --------------------------------------------------------------------------------------------------" open="False">    
   <param label="Color 1" name="color1" widget="color"/>
   <param name="transparency1" widget="color"/>
   <param name="useTransparency1" widget="checkBox"/>
  </page> 
- <page name="Layer 2 Attributes" open="False">    
+ <page name="Layer 2 Attributes --------------------------------------------------------------------------------------------------" open="False">    
   <param label="Color 2" name="color2" widget="color"/>
   <param name="transparency2" widget="color"/>
   <param name="useTransparency2" widget="checkBox"/>
  </page> 
- <page name="Layer 3 Attributes" open="False">    
+ <page name="Layer 3 Attributes --------------------------------------------------------------------------------------------------" open="False">    
   <param label="Color 3" name="color3" widget="color"/>
   <param name="transparency3" widget="color"/>
   <param name="useTransparency3" widget="checkBox"/>
  </page> 
- <page name="Layer 4 Attributes" open="False">    
+ <page name="Layer 4 Attributes --------------------------------------------------------------------------------------------------" open="False">    
   <param label="Color 4" name="color4" widget="color"/>
   <param name="transparency4" widget="color"/>
   <param name="useTransparency4" widget="checkBox"/>
  </page> 
- <page name="Layer 5 Attributes" open="False">  
+ <page name="Layer 5 Attributes --------------------------------------------------------------------------------------------------" open="False">  
   <param label="Color 5" name="color5" widget="color"/>
   <param name="transparency5" widget="color"/>
   <param name="useTransparency5" widget="checkBox"/>
  </page> 
- <page name="Layer 6 Attributes" open="False">  
+ <page name="Layer 6 Attributes --------------------------------------------------------------------------------------------------" open="False">  
   <param label="Color 6" name="color6" widget="color"/>
   <param name="transparency6" widget="color"/>
   <param name="useTransparency6" widget="checkBox"/>
  </page> 
- <page name="Layer 7 Attributes" open="False">  
+ <page name="Layer 7 Attributes --------------------------------------------------------------------------------------------------" open="False">  
   <param label="Color 7" name="color7" widget="color"/>
   <param name="transparency7" widget="color"/>
   <param name="useTransparency7" widget="checkBox"/>
  </page> 
- <page name="Layer 8 Attributes" open="False">  
+ <page name="Layer 8 Attributes --------------------------------------------------------------------------------------------------" open="False">  
     <param label="Color 8" name="color8" widget="color"/>
   <param name="transparency8" widget="color"/>
   <param name="useTransparency8" widget="checkBox"/>
  </page> 
- <page name="Layer 9 Attributes" open="False">  
+ <page name="Layer 9 Attributes --------------------------------------------------------------------------------------------------" open="False">  
     <param label="Color 9" name="color9" widget="color"/>
   <param name="transparency9" widget="color"/>
   <param name="useTransparency9" widget="checkBox"/>
  </page> 
- <page name="Layer 10 Attributes" open="False">  
+ <page name="Layer 10 Attributes ------------------------------------------------------------------------------------------------" open="False">  
     <param label="Color 10" name="color10" widget="color"/>
   <param name="transparency10" widget="color"/>
   <param name="useTransparency10" widget="checkBox"/>
  </page> 
- <page name="Layer 11 Attributes" open="False">  
+ <page name="Layer 11 Attributes ------------------------------------------------------------------------------------------------" open="False">  
     <param label="Color 11" name="color11" widget="color"/>
   <param name="transparency11" widget="color"/>
   <param name="useTransparency11" widget="checkBox"/>
  </page> 
- <page name="Layer 12 Attributes" open="False">  
+ <page name="Layer 12 Attributes ------------------------------------------------------------------------------------------------" open="False">  
     <param label="Color 12" name="color12" widget="color"/>
   <param name="transparency12" widget="color"/>
   <param name="useTransparency12" widget="checkBox"/>
  </page> 
- <page name="Layer 13 Attributes" open="False">  
+ <page name="Layer 13 Attributes ------------------------------------------------------------------------------------------------" open="False">  
     <param label="Color 13" name="color13" widget="color"/>
   <param name="transparency13" widget="color"/>
   <param name="useTransparency13" widget="checkBox"/>
  </page> 
- <page name="Layer 14 Attributes" open="False">  
+ <page name="Layer 14 Attributes ------------------------------------------------------------------------------------------------" open="False">  
     <param label="Color 14" name="color14" widget="color"/>
   <param name="transparency14" widget="color"/>
   <param name="useTransparency14" widget="checkBox"/>
  </page> 
- <page name="Layer 15 Attributes" open="False">  
+ <page name="Layer 15 Attributes ------------------------------------------------------------------------------------------------" open="False">  
     <param label="Color 15" name="color15" widget="color"/>
   <param name="transparency15" widget="color"/>
   <param name="useTransparency15" widget="checkBox"/>

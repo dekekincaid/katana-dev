@@ -1,5 +1,17 @@
 <args format="1.0">
+ <help>
+  Reverses node effects. For instance, you can reverse a transparency map if the white and black areas are the inverse of what they should be.
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Reverse_utility.htm">Projection in Autodesk's Maya Docs</a></br>
+ </help>
+
  <page name="Reverse Attributes" open="True">
-  <param label="Input" name="input" widget="float"/>
+  <param label="Input" name="input" widget="float">
+   <help>
+    <b>input</b>
+    <br></br>      
+    <br>Represents the reversed values.</br> 
+   </help>
+  </param>       
  </page>
 </args>

@@ -4,7 +4,7 @@
   <param label="Channel 1" name="channel1" widget="color"/>
   <param label="Channel 2" name="channel2" widget="color"/>
  </page>
- <page name="Color Balance" open="False">
+ <page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
   <param label="Default Color" name="defaultColor" widget="color"/>
   <param label="Color Gain" name="colorGain" widget="color"/>
   <param label="Color Offset" name="colorOffset" widget="color"/>
@@ -12,7 +12,7 @@
   <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
   <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page>
-  <page name="Effects" open="True">
+  <page name="Effects ---------------------------------------------------------------------------------------------------------------------" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>
   <param label="Wrap" name="wrap" widget="checkBox"/>
   <param label="Local" name="local" widget="checkBox"/>

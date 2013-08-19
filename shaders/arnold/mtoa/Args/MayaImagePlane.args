@@ -13,12 +13,12 @@
   <param label="Image Name" name="filename" widget="fileInput"/>
   <param label="Color" name="color" widget="color"/>
  </page>  
- <page name="Placement Extras" open="True">
+ <page name="Placement Extras ------------------------------------------------------------------------------------------------------" open="True">
   <param label="Coverage XY" name="coverage"/>
   <param label="Coverage Origin XY" name="translate"/>
   <param label="Camera" name="camera"/>
  </page>
- <page name="Color Balance" open="False">
+ <page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
   <param label="Color Gain" name="colorGain" widget="color"/>
   <param label="Color Offset" name="colorOffset" widget="color"/>
   <param label="Alpha Gain" name="alphaGain" slider="True"/>

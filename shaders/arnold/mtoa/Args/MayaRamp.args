@@ -39,7 +39,7 @@
   <param label="Value Noise Frequency" name="valNoiseFreq" slider="True"/>
  </page>
 
- <page name="Color Balance" open="False">
+ <page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
   <param label="Default Color" name="defaultColor" widget="color"/>
   <param label="Color Gain" name="colorGain" widget="color"/>
   <param label="Color Offset" name="colorOffset" widget="color"/>
@@ -48,7 +48,7 @@
   <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page>
 
- <page name="Effects" open="True">
+ <page name="Effects ---------------------------------------------------------------------------------------------------------------------" open="True">
   <param label="Invert" name="invert" widget="checkBox"/>
  </page> 
 </args>

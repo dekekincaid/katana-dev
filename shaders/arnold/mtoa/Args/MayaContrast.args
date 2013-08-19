@@ -1,8 +1,35 @@
 <args format="1.0">
- <page name="Contrast Attributes" open="True">
-  <page label="" name="Contrast Attributes" open="True">  
-   <param label="Value" name="value"/>
-   <param label="Contrast" name="contrast"/>
-   <param label="Bias" name="bias"/>
+ <help>
+  Use to increase or decrease the contrast in a texture. You can control the contrast of each of the R, G, and B channels individually.
+  <br></br> 
+  <br>When you increase Contrast, light colors become lighter and dark colors darker. When you decrease contrast, you bring all the colors closer to the middle range. The Bias attribute controls the center of this range.
+</br> 
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Contrast_utility.htm">Use the Contrast utility</a>.</br>
+  <br></br>       
+  <br><a href="http://download.autodesk.com/global/docs/mayahttp://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Contrast.htm">Contrast in Autodesk's Maya Docs</a></br>
+ </help>        
+ <page name="Contrast Attributes" open="True"> 
+  <param label="Value" name="value">
+   <help>
+    <b>value</b>
+    <br></br>      
+    <br>The input color or texture to adjust.</br> 
+   </help>
+  </param>      
+  <param label="Contrast" name="contrast">
+   <help>
+    <b>contrast</b>
+    <br></br>      
+    <br>Controls the amount of contrast adjustment. You can adjust the contrast of the R, G, and B components individually. Increase Contrast to make light colors lighter, and dark colors darker. Decrease Contrast to make everything gray.</br> 
+   </help>
+  </param>     
+  <param label="Bias" name="bias">
+   <help>
+    <b>bias</b>
+    <br></br>      
+    <br>Controls the middle point of the contrast adjustment. Increase Bias to move the middle point upwards (more of the texture becomes dark as contrast increases). Decrease Bias to move the middle point down (more of the texture becomes light as contrast increases).</br> 
+   </help>
+  </param>     
  </page>
 </args>

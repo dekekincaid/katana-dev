@@ -1,20 +1,84 @@
 <args format="1.0">
+ <help>
+  Represents a random function with a particular frequency distribution (a fractal). You can use the Fractal texture as a bump or displacement map to simulate rock or mountains, or as a transparency map to simulate clouds or flames. The Fractal texture has the same level of detail at any level of magnification (that is, at different distances from the camera).
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Fractal.htm">2d Fractal in Autodesk's Maya Docs</a></br>
+ </help>        
  <page name="Fractal Attributes" open="True">
-  <param label="Aplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Threshold" name="threshold" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Ratio" name="ratio" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0"/>
-  <param label="Frequency Ratio" name="frequencyRatio" slider="True" slidermin="1.0" slidermax="10.0"/>
-  <param label="Level Min" name="levelMin" slider="True" slidermin="0.0" min="0.0" slidermax="25.0" max="25.0"/>
-  <param label="Level Max" name="levelMax" slider="True" slidermin="0.0" min="0.0" slidermax="25.0" max="25.0"/>
-  <param label="Bias" name="bias" slider="True" slidermin="-1.0" slidermax="1.0"/>
-  <param label="Inflection" name="inflection" widget="checkBox"/>
-  <param label="Animated" name="animated" widget="checkBox"/>
+  <param label="Amplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+   <help>
+    <b>amplitude</b>
+    <br></br>      
+    <br>Scaling factor applied to all values in the texture. The valid range is 0 to infinity. The slider range is 0 (no noise) to 1 (strong noise). The default is 1.</br> 
+   </help>
+  </param>    
+  <param label="Threshold" name="threshold" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+   <help>
+    <b>threshold</b>
+    <br></br>      
+    <br>Offset factor applied to all values in the texture. The valid range is 0 to infinity. The slider range is 0 to 1. The default is 0.</br> 
+   </help>   
+  </param>        
+  <param label="Ratio" name="ratio" slider="True" slidermin="0.0" min="0.0" slidermax="1.0" max="1.0">
+   <help>
+    <b>ratio</b>
+    <br></br>      
+    <br>Controls the frequency of the fractal noise. The range is 0 (low frequency) to 1 (high frequency). The default is 0.707.</br> 
+   </help>   
+  </param>        
+  <param label="Frequency Ratio" name="frequencyRatio" slider="True" slidermin="1.0" slidermax="10.0">
+   <help>
+    <b>frequencyRatio</b>
+    <br></br>      
+    <br>Determines the relative spacial scale of noise frequencies. If not a whole number, the fractal does not repeat at the UV boundaries. For instance, a cylinder with default placement would display a seam.</br> 
+   </help> 
+  </param>          
+  <param label="Level Min" name="levelMin" slider="True" slidermin="0.0" min="0.0" slidermax="25.0" max="25.0">
+   <help>
+    <b>levelMin</b>
+    <br></br>      
+    <br>The minimum and maximum number of iterations used to calculate the fractal pattern. These values control the granularity of the fractal pattern. The valid range is 0 to 100. The range is 0 to 25. The default value is 0 for Level Min and 9 for Level Max.</br> 
+   </help> 
+  </param>          
+  <param label="Level Max" name="levelMax" slider="True" slidermin="0.0" min="0.0" slidermax="25.0" max="25.0">
+   <help>
+    <b>levelMax</b>
+    <br></br>      
+    <br>The minimum and maximum number of iterations used to calculate the fractal pattern. These values control the granularity of the fractal pattern. The valid range is 0 to 100. The range is 0 to 25. The default value is 0 for Level Min and 9 for Level Max.</br> 
+   </help>  
+  </param>         
+  <param label="Bias" name="bias" slider="True" slidermin="-1.0" slidermax="1.0">
+   <help>
+    <b>bias</b>
+    <br></br>      
+    <br>Attracts the -1 to 1 noise towards either 1 or 0. Values greater than zero result in a more contrasting fractal while values less than zero make it more flat and spiky.</br> 
+   </help>  
+  </param>         
+  <param label="Inflection" name="inflection" widget="checkBox">
+   <help>
+    <b>inflection</b>
+    <br></br>      
+    <br>Applies a kink in the noise function. This can be useful when creating puffy or bumpy effects. Inflection is off by default.</br> 
+   </help>   
+  </param>        
+  <param label="Animated" name="animated" widget="checkBox">
+   <help>
+    <b>animated</b>
+    <br></br>      
+    <br>Turn on to access the Time and Time Ratio attributes (see next).</br> 
+   </help>  
+  </param>         
   <param label="Time" name="time" slider="True" slidermin="0.0" min="0.0" slidermax="100.0" max="100.0">
    <hintdict name="conditionalLockOps">
     <string value="True" name="conditionalLockValue"/>
     <string value="equalTo" name="conditionalLockOp"/>
     <string value="../animated" name="conditionalLockPath"/>
    </hintdict>
+   <help>
+    <b>time</b>
+    <br></br>      
+    <br>Determines the relative time scale of noise frequencies. If not a whole number, the animation does not repeat when Time = 1.</br> 
+   </help>     
   </param>
   <param label="TimeRatio" name="timeRatio" slider="True" slidermin="1.0" slidermax="10.0">
    <hintdict name="conditionalLockOps">
@@ -22,20 +86,73 @@
     <string value="equalTo" name="conditionalLockOp"/>
     <string value="../animated" name="conditionalLockPath"/>
    </hintdict>
+   <help>
+    <b>timeRatio</b>
+    <br></br>      
+    <br>Default is equal to the Frequency Ratio setting, which means higher frequency noises move faster in direct proportion to the frequency. For example, to create more natural-looking effects, such as water waves, if the Frequency Ratio is 2, set the Time Ratio to 1.4.</br> 
+   </help>     
   </param>
  </page>
- <page name="Color Balance" open="False">
-  <param label="Default Color" name="defaultColor" widget="color"/>
-  <param label="Color Gain" name="colorGain" widget="color"/>
-  <param label="Color Offset" name="colorOffset" widget="color"/>
-  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ <page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
+ <param label="Default Color" name="defaultColor" widget="color">
+   <help>
+    <b>defaultColor</b>
+    <br></br>      
+    <br>If you map a texture to a material in such a way that it that does not cover the entire surface, the file node's Default Color shows through. To select a different color, click the color bar to open the Color Chooser. To change the texture's coverage, use the placement options.</br> 
+   </help>
+  </param>    
+  <param label="Color Gain" name="colorGain" widget="color">
+   <help>
+    <b>colorGain</b>
+    <br></br>      
+    <br>Scaling factor applied to the texture's outColor channel. For example, you can color-correct a texture that appears too green by setting the Color Gain to a shade of blue. The default color is white (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Color Offset" name="colorOffset" widget="color">
+   <help>
+    <b>colorOffset</b>
+    <br></br>      
+    <br>Offset factor applied to the texture's outColor channel. For example, you can brighten a texture that appears too dark by setting the Color Offset to a shade of gray. The default color is black (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaGain</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Scaling factor applied to the texture's outAlpha channel. The default value is 1 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaOffset</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Offset factor applied to the texture's outAlpha channel. For example, if the Alpha Gain value is -1 and the Alpha Offset value is 1, the outAlpha channel is inverted. The default value is 0 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox">
+   <help>
+    <b>alphaIsLuminance</b>
+    <br></br>      
+    <br>Off by default. The alpha (mask) output depends on the luminance of the color channels. Bright areas of the texture are more opaque when compositing, and dark areas are more transparent.</br> 
+   </help>
+  </param>    
  </page>
- <page name="Effects" open="True">
-  <param label="Invert" name="invert" widget="checkBox"/>
- </page>
- <page name="UV Coordinates" open="False">
-  <param label="UV Coord" name="uvCoord"/>
- </page>
+ <page name="Effects ---------------------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Invert" name="invert" widget="checkBox">
+   <help>
+    <b>invert</b>
+    <br></br>      
+    <br>Reverses all texture colors (black becomes white, white becomes black, and so on). Invert is off by default. For example, you can change a bump or displacement map's raised regions to depressions and vice versa by setting Invert on or off.</br> 
+   </help>
+  </param>   
+ </page>  
+ <page name="UV Coordinates --------------------------------------------------------------------------------------------------------" open="False">  
+  <param label="UV Coord" name="uvCoord">
+   <help>
+    <b>uvCoord</b>
+    <br></br>      
+    <br>The UV coordinate values of the current sample point.</br> 
+   </help>
+  </param>    
+ </page>  
 </args>

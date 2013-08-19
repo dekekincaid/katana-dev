@@ -1,18 +1,92 @@
 <args format="1.0">
+ <help>
+  Can be used to create many different types of effects.
+  <br></br>
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Noise.htm">Noise on Maya 2014 Docs</a></br>
+ </help>  
  <page name="Noise Attributes" open="True">  
-  <param label="Threshold" name="threshold" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Amplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Ratio" name="ratio" slider="True" slidermin="0.0" min="0.0" slidermax="1.0"/>
-  <param label="Frequency Ratio" name="frequencyRatio" slider="True" slidermin="1.0" slidermax="10.0"/>
-  <param label="Depth Max" name="depthMax"  int="True" slider="True" slidermin="1.0" min="1.0" slidermax="8.0" max="8.0"/>
-  <param label="Inflection" name="inflection" widget="checkBox"/>
-
-  <param label="Time" name="time" slider="True" slidermin="0.0" slidermax="1.0"/>
-  <param label="Frequency" name="frequency" slider="True" slidermin="0.0" slidermax="100.0"/>
-
-  <param label="Implode" name="implode" slider="True" slidermin="-1.0" slidermax="1.0"/>
-  <param label="Implode Center" name="implodeCenter"/>
-
+  <param label="Threshold" name="threshold" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+   <help>
+    <b>threshold</b>
+    <br></br>      
+    <br>The number added to the whole fractal effect, making it uniformly brighter. If some parts of the fractal are pushed up out of range (greater than 1.0), they are clipped to 1.0. If the Volume Noise is used as a bump map, it appears as plateau regions.</br> 
+   </help>     
+  </param>
+  <param label="Amplitude" name="amplitude" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+   <help>
+    <b>amplitude</b>
+    <br></br>      
+    <br>Scaling factor applied to all the values in the texture, centered around the texture's average value.</br>
+    <br></br>      
+    <br>* When you increase Amplitude, the light areas get lighter and the dark areas get darker.</br> 
+    <br></br>  
+    <br>* If Noise is used as a bump map, increasing Amplitude results in higher bumps and deeper valleys.</br> 
+    <br></br>  
+    <br>* If set to a value greater than 1.0, the parts of the texture that scale out of range are clipped. On a bump map, they display as plateau regions.</br> 
+   </help>     
+  </param>  
+  <param label="Ratio" name="ratio" slider="True" slidermin="0.0" min="0.0" slidermax="1.0">
+   <help>
+    <b>ratio</b>
+    <br></br>      
+    <br>Controls the fractal noise frequency. Increase this value to increase the fineness of the fractal detail.</br> 
+   </help>     
+  </param>    
+  <param label="Frequency Ratio" name="frequencyRatio" slider="True" slidermin="1.0" slidermax="10.0">
+   <help>
+    <b>frequencyRatio</b>
+    <br></br>      
+    <br>Determines the relative spacial scale of the noise frequencies. If not a whole number, the fractal does not repeat at the UV boundaries. For instance, a cylinder with default placement displays a seam.</br> 
+   </help>     
+  </param>    
+  <param label="Depth Max" name="depthMax"  int="True" slider="True" slidermin="1.0" min="1.0" slidermax="8.0" max="8.0">
+   <help>
+    <b>depthMax</b>
+    <br></br>      
+    <br>Controls how much calculation is done by the Noise texture. Since the Fractal texture process produces a more detailed fractal, it takes longer to perform. By default, the texture chooses an appropriate level for the volume being rendered. Use Depth Max to control the maximum amount of calculation for the texture.</br> 
+   </help>     
+  </param>    
+  <param label="Inflection" name="inflection" widget="checkBox">
+   <help>
+    <b></b>
+    <br></br>      
+    <br>Applies a kink in the noise function. Useful for creating puffy or bumpy effects.</br> 
+   </help>     
+  </param>    
+ </page> 
+ <page name="----------------------------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Time" name="time" slider="True" slidermin="0.0" slidermax="1.0">
+   <help>
+    <b>time</b>
+    <br></br>      
+    <br>Used to animate the Noise texture. You can keyframe the Time attribute to control the rate and amount of change of the texture.</br> 
+   </help>     
+  </param>    
+  <param label="Frequency" name="frequency" slider="True" slidermin="0.0" slidermax="100.0">
+   <help>
+    <b>frequency</b>
+    <br></br>      
+    <br>Determines the fundamental frequency for the noise. As this value increases the noise becomes more detailed. It has the inverse effect of the scale parameter.</br> 
+   </help>     
+  </param>    
+ </page> 
+ <page name="-----------------------------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Implode" name="implode" slider="True" slidermin="-1.0" slidermax="1.0">
+   <help>
+    <b>implode</b>
+    <br></br>      
+    <br>This warps the noise function in a concentric fashion about a point defined by the Implode Center. At a value of zero there is no effect, while at a value of 1.0 it is a spherical projection of the noise function, creating a starburst effect. Negative values can be used to skew the noise outward instead of inward.</br> 
+   </help>     
+  </param>    
+  <param label="Implode Center" name="implodeCenter">
+   <help>
+    <b>implodeCenter</b>
+    <br></br>      
+    <br>This defines the center UV point about which the implode effect is defined.</br> 
+   </help>     
+  </param>    
+ </page> 
+ <page name="------------------------------------------------------------------------------------------------------------------------------" open="True">  
   <param label="Noise Type" name="noiseType" widget="popup">
    <hintlist name="options">
     <string value="perlin"/>
@@ -21,34 +95,81 @@
     <string value="wispy"/>
     <string value="spacetime"/>
    </hintlist>
+
+   <help>
+    <b>noiseType</b>   
+    <br>Determines which noise to use during the fractal iteration.</br>
+    <br></br>
+    <br><b>Perlin Noise</b></br>
+    <br>The standard 3D noise used in the solidFractal texture.</br>
+    <br></br>
+    <br><b>Billow</b></br>
+    <br>A sum of 3D noise that has a puffy, cloud like effect.</br>
+    <br></br>
+    <br><b>Wave</b></br>
+    <br>A sum of 3D waves in space.</br>
+    <br></br>
+    <br><b>Wispy</b></br>
+    <br>A Perlin noise that is uses a second noise as a smear map; this makes the noise stretch out in places, looking wispy. When the time value is animated the smear texture is moved causing an undulating effect. It creates an effect similar to thin clouds being blown by wind.</br>
+    <br></br>
+    <br><b>SpaceTime</b></br>
+    <br>A 4-dimensional version of the Perlin noise, where time is the 4th dimension.</br>
+   </help> 
   </param>
-  <param label="Density" slidermin="0.0" name="density" min="0.0" slider="True" slidermax="1.0">
+
+  <param label="Density" name="density" slidermin="0.0" min="0.0" slider="True" slidermax="1.0">
    <hintdict name="conditionalLockOps">
     <string value="billow" name="conditionalLockValue"/>
     <string value="doesNotContain" name="conditionalLockOp"/>
     <string value="../noiseType" name="conditionalLockPath"/>
    </hintdict>
+   <help>
+    <b>density</b>
+    <br></br>      
+    <br>Controls how many cells are imbedded in the medium used by the Billow noise type.</br>
+    <br></br>    
+    <br>At 1.0, the medium is completely packed with cells. Reduce this value to make the cells sparser. If the texture is used as a bump map, low values for Density results in smooth looking surfaces with occasional bumps.</br> 
+   </help>    
   </param>
-  <param label="Spottyness" slidermin="0.0" name="spottyness" min="0.0" slider="True" slidermax="1.0">
+  <param label="Spottyness" name="spottyness" slidermin="0.0" min="0.0" slider="True" slidermax="1.0">
    <hintdict name="conditionalLockOps">
     <string value="billow" name="conditionalLockValue"/>
     <string value="doesNotContain" name="conditionalLockOp"/>
     <string value="../noiseType" name="conditionalLockPath"/>
    </hintdict>
+   <help>
+    <b>spottyness</b>
+    <br></br>      
+    <br>Controls the density randomization of individual cells used by the Billow noise type.</br>
+    <br></br>
+    <br>When set close to 0, all the cells are the same density. As you increase Spottyness, some cells are randomly denser or thinner than others.</br>         
+   </help>    
   </param>
-  <param label="Size Rand" slidermin="0.0" name="sizeRand" min="0.0" slider="True" slidermax="1.0">
+  <param label="Size Rand" name="sizeRand" slidermin="0.0" min="0.0" slider="True" slidermax="1.0">
    <hintdict name="conditionalLockOps">
     <string value="billow" name="conditionalLockValue"/>
     <string value="doesNotContain" name="conditionalLockOp"/>
     <string value="../noiseType" name="conditionalLockPath"/>
    </hintdict>
+   <help>
+    <b>sizeRand</b>
+    <br></br>      
+    <br>Controls the randomization of the size of the individual blobs used by the Billow noise type. When it is close to 0, all the cells are the same size. As you increase Size Rand, some cells are smaller than others, in a random fashion.</br> 
+   </help>    
   </param>
-  <param label="Randomness" slidermin="0.0" name="randomness" min="0.0" slider="True" slidermax="1.0">
+  <param label="Randomness" name="randomness" slidermin="0.0" min="0.0" slider="True" slidermax="1.0">
    <hintdict name="conditionalLockOps">
     <string value="billow" name="conditionalLockValue"/>
     <string value="doesNotContain" name="conditionalLockOp"/>
     <string value="../noiseType" name="conditionalLockPath"/>
    </hintdict>
+   <help>
+    <b>randomness</b>
+    <br></br>     
+    <br>Controls how the cells for the Billow noise type are arranged relative to one another. Set to 1.0 for a more natural random distribution of cells.</br>
+    <br></br>
+    <br>If set to 0, all the spots are laid out in a regular pattern. This can provide interesting effects when used as a bump map for instance, you can make things like insect eyes, or machine-tooled raspy surfaces.</br>       
+   </help>    
   </param>
   <param label="Falloff" name="falloff" widget="popup">
    <hintdict name="conditionalLockOps">
@@ -62,21 +183,103 @@
     <string value="fast"/>
     <string value="bubble"/>
    </hintlist>
+   <help>
+    <b>falloff</b>
+    <br>Controls the way intensity falls off for individual blobs for the Billow noise type.</br>
+    <br></br>
+    <br><b>Linear</b></br>
+    <br>A uniform falloff from the center to a value of zero at the edges of the blobs.</br>
+    <br></br>
+    <br><b>Smooth</b></br>
+    <br>More natural looking, using a gaussian falloff.</br>                
+    <br></br>
+    <br><b>Fast Bubble</b></br>
+    <br>Fast focuses the intensity more towards the center of the blobs.</br>
+    <br>Uses a reverse falloff, fading to zero at the blob center.</br>
+   </help>    
   </param>
 
+  <param label="Num Waves" name="numWaves" int="True" slider="True" slidermin="1.0" min="1.0" slidermax="20.0">
+   <hintdict name="conditionalLockOps">
+    <string value="doesNotContain" name="conditionalLock1Op"/>
+    <string value="wave" name="conditionalLock2Value"/>
+    <string value="../noiseType" name="conditionalLock2Path"/>
+    <string value="../noiseType" name="conditionalLock1Path"/>
+    <string value="doesNotContain" name="conditionalLock2Op"/>
+    <string value="conditionalLock2" name="conditionalLockRight"/>
+    <string value="and" name="conditionalLockOp"/>
+    <string value="conditionalLock1" name="conditionalLockLeft"/>
+    <string value="spacetime" name="conditionalLock1Value"/>
+   </hintdict>
+   <help>
+    <b>numWaves</b>
+    <br></br>      
+    <br>Determines how many waves to generate for the Wave noise type. The larger the number, the more random-looking and slower the texture.</br> 
+   </help>    
+  </param>
 
- <page name="Color Balance" open="False">
-  <param label="Default Color" name="defaultColor" widget="color"/>
-  <param label="Color Gain" name="colorGain" widget="color"/>
-  <param label="Color Offset" name="colorOffset" widget="color"/>
-  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
  </page>
- <page name="Effects" open="True">
-  <param label="Invert" name="invert" widget="checkBox"/>
+
+ <page name="Color Balance ---------------------------------------------------------------------------------------------------------" open="False">
+  <param label="Default Color" name="defaultColor" widget="color">
+   <help>
+    <b>defaultColor</b>
+    <br></br>      
+    <br>If you map a texture to a material in such a way that it that does not cover the entire surface, the file node's Default Color shows through. To select a different color, click the color bar to open the Color Chooser. To change the texture's coverage, use the placement options.</br> 
+   </help>
+  </param>    
+  <param label="Color Gain" name="colorGain" widget="color">
+   <help>
+    <b>colorGain</b>
+    <br></br>      
+    <br>Scaling factor applied to the texture's outColor channel. For example, you can color-correct a texture that appears too green by setting the Color Gain to a shade of blue. The default color is white (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Color Offset" name="colorOffset" widget="color">
+   <help>
+    <b>colorOffset</b>
+    <br></br>      
+    <br>Offset factor applied to the texture's outColor channel. For example, you can brighten a texture that appears too dark by setting the Color Offset to a shade of gray. The default color is black (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaGain</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Scaling factor applied to the texture's outAlpha channel. The default value is 1 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaOffset</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Offset factor applied to the texture's outAlpha channel. For example, if the Alpha Gain value is -1 and the Alpha Offset value is 1, the outAlpha channel is inverted. The default value is 0 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox">
+   <help>
+    <b>alphaIsLuminance</b>
+    <br></br>      
+    <br>Off by default. The alpha (mask) output depends on the luminance of the color channels. Bright areas of the texture are more opaque when compositing, and dark areas are more transparent.</br> 
+   </help>
+  </param>    
+ </page>
+ <page name="Effects -------------------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Invert" name="invert" widget="checkBox">
+   <help>
+    <b>invert</b>
+    <br></br>      
+    <br>Reverses all texture colors (black becomes white, white becomes black, and so on). Invert is off by default. For example, you can change a bump or displacement map's raised regions to depressions and vice versa by setting Invert on or off.</br> 
+   </help>
+  </param>    
  </page> 
- <page name="UV Coordinates" open="True">
-  <param label="UV Coordinates" name="uvCoord"/>
+ <page name="UV Coordinates ------------------------------------------------------------------------------------------------------" open="True">
+  <param label="UV Coordinates" name="uvCoord">
+   <help>
+    <b>uvCoord</b>
+    <br></br>      
+    <br>The UV coordinate values of the current sample point.</br> 
+   </help>
+  </param>    
  </page>  
 </args>

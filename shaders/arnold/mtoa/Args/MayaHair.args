@@ -1,22 +1,122 @@
 <args format="1.0">
+ <help>
+  The hairTubeShader node is created when you convert Paint Effects hair to polygons. (See Tube shading.) Most of the attributes in the hairTubeShader are common to all Maya shaders. For descriptions of these attributes, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Common_surface_material_attributes.htm">Common surface material attributes</a>.
+  <br></br>
+  <br>If you convert your Paint Effects hair system to polygons, then a default Paint Effects tube shader is created. The former color attributes you set in the hair system are converted to the tube shader, but there is no construction history for these attributes. Any shading changes you want to make after you convert Paint Effects to polygons must be done using the tube shader. For descriptions of the attributes in the tube shader, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Hair_Nodes_hairTubeShader.htm">hairTubeShader</a>.</br>
+  <br></br>
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/Nodes/hairTubeShader.html">hairTubeShader in Autodesk's Maya Docs</a></br>
+ </help>
  <page name="Common Material Attributes" open="True">
-  <param label="Color" name="hairColor" widget="color"/>
- </page>  
- <page name="Color Scale" open="True">  
-  <param label="Transparency" name="opacity" slider="True" slidermin="0.0" slidermax="1.0"/>
-  <param label="Translucence" name="translucence" slider="True" slidermin="0.0" slidermax="1.0"/>
-  <param label="Diffuse Rand" name="diffuseRand" slider="True" />
-  <param label="Specular Rand" name="specularRand" slider="True" />
-  <param label="Hue Rand" name="hueRand" slider="True" />
-  <param label="Saturation Rand" name="satRand" slider="True" />
-  <param label="Value Rand" name="valRand" slider="True" />
-  <param label="Cast Shadows" name="castShadows" widget="checkBox"/>  
- </page>  
- <page name="Specular Shading" open="True">
-  <param label="Specular Power" name="specularPower" slider="True" slidermin="2.0" min="2.0" slidermax="100.0"/>
-  <param label="Specular Color" name="specularColor" widget="color"/>
+  <param label="Color" name="hairColor" widget="color">
+   <help>
+    <b>hairColor</b>
+    <br></br>
+    <br></br>
+   </help>
+  </param>
  </page>
- <page name="UNIMPLEMENTED" open="False">
-  <param label="Hair Color Scale" name="hairColorScale"/>  
+ <page name="Color Scale ----------------------------------------------------------------------------------------------------------" open="True">
+  <param label="Hair Color Scale" name="hairColorScale">
+   <help>
+    <b>hairColorScale</b>
+    <br></br>
+    <br>This scales, or multiplies, the base color of the surface. This allows one to vary the color from root to tip of hair tubes. The ramp is mapped along U or V of the surface depending on the tube direction attribute.</br>
+   </help>
+  </param>
+
+ </page>
+ <page name="------------------------------------------------------------------------------------------------------------------------" open="True">
+
+  <param label="Transparency" name="opacity" slider="True" slidermin="0.0" slidermax="1.0">
+   <help>
+    <b>opacity</b>
+    <br></br>
+    <br>A material's color and level of transparency. For example, if the Transparency Value is 0 (black), the surface is totally opaque; if the Transparency value is 1 (white), the surface is totally transparent.</br>
+    <br></br>
+    <br>To make an object semi-transparent, set the Transparency color to a shade of grey or to the same color as the material Color. The default value is 0 (black).</br>
+    <br></br>
+    <br>If you change Transparency from the default black (0), the background of the material's Hypershade swatch becomes a checkered pattern. This is a visual aid and is not rendered.</br>
+    <br></br>
+    <br>For more information, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Asts_Surface_texture.htm#WS17956D7ADBC6E736-51D3585C117AE33DCFA-7FFC">Transparency</a>.</br>
+    <br></br>
+    <br><b>Note</b></br>
+    <br>If the material has specular highlights the transparency setting do not affect the highlights. So if you are trying to make an object disappear by animating the transparency attribute, you may also have to animate the specular highlight attributes.</br>
+   </help>
+  </param>
+  <param label="Translucence" name="translucence" slider="True" slidermin="0.0" slidermax="1.0">
+   <help>
+    <b>translucence</b>
+    <br></br>
+    <br>Gives the material the ability to transmit and diffuse light. Light falling on a translucent surface is first absorbed beneath the surface, and then diffused in all directions. If set to 0, the default, no light shows through the object. If set to 1, all the light shows through. The default value is 0.</br>
+    <br></br>
+    <br><b>Note</b></br>
+    <br>* The Translucence value of a surface lit by a non-shadow-casting light is zero or infinite (all non-zero values).</br>
+    <br>* If the scene combines a translucent surface with a shadow casting spotlight, faint grid-like artifacts may become visible. If this happens, increase the spotlight Filter Size or lower the Resolution.</br>
+    <br>* For high values of Translucence, lower Diffuse accordingly to avoid washout.</br>
+    <br>* A surface’s actual translucence is based on the illumination it receives from lights, and is not related to its transparency. However, as an object becomes more transparent, its translucent (and diffuse) illumination gets dimmer.</br>
+    <br>* Ambient lights have no effect on translucent (or diffuse) illumination.</br>
+   </help>
+  </param>
+  <param label="Diffuse Rand" name="diffuseRand" slider="True">
+   <help>
+    <b>diffuseRand</b>
+    <br></br>
+    <br></br>
+   </help>
+  </param>
+  <param label="Specular Rand" name="specularRand" slider="True">
+   <help>
+    <b>specularRand</b>
+    <br></br>
+    <br></br>
+   </help>
+  </param>
+  <param label="Hue Rand" name="hueRand" slider="True">
+   <help>
+    <b>hueRand</b>
+    <br></br>
+    <br></br>
+   </help>
+  </param>
+  <param label="Saturation Rand" name="satRand" slider="True">
+   <help>
+    <b>satRand</b>
+    <br></br>
+    <br></br>
+   </help>
+  </param>
+  <param label="Value Rand" name="valRand" slider="True">
+   <help>
+    <b>valRand</b>
+    <br></br>
+    <br></br>
+   </help>
+  </param>
+  <param label="Cast Shadows" name="castShadows" widget="checkBox">
+   <help>
+    <b>castShadows</b>
+    <br></br>
+    <br>Enables the computation of shadows cast from this light.</br>
+   </help>
+  </param>
+ </page>
+ <page name="Specular Shading --------------------------------------------------------------------------------------------------" open="True">
+  <param label="Specular Power" name="specularPower" slider="True" slidermin="2.0" min="2.0" slidermax="100.0">
+   <help>
+    <b>specularPower</b>
+    <br></br>
+    <br>Specular Power is used to control the "tightness" of the specular highlights (also called 'hot spots') on the surface. The minimum value is 2. The higher the value, the more tighly focussed (smaller) is the highlight, simulating smoother hair.</br>
+   </help>
+  </param>
+  <param label="Specular Color" name="specularColor" widget="color">
+   <help>
+    <b>specularColor</b>
+    <br></br>
+    <br>The color of shiny highlights on the surface. A black Specular Color produces no surface highlights. The default color value is 0.5.</br>
+    <br></br>
+    <br><b>Tip</b></br>
+    <br>For glossy plastic surfaces, use a whitish Specular Color. For metallic surfaces, use a Specular Color similar to the surface color.</br>
+   </help>
+  </param>
  </page>
 </args>

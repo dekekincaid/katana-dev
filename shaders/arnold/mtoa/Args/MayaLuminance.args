@@ -1,5 +1,21 @@
 <args format="1.0">
+ <help>
+  Converts color to grayscale. The luminance derives from a color value. Maya uses the following formula to calculate the luminance by adding the following amounts of red, green, and blue.
+  <br></br>
+  <br><b>Luminance = 0.3 red + 0.59 green + 0.11 blue</b></br>  
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Luminance_utility.htm">Use the Luminance utility</a>.</br>
+  <br></br>       
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Luminance.htm">Projection in Autodesk's Maya Docs</a></br>
+ </help>
+
  <page name="Luminance Attributes" open="True">
-  <param label="Value" name="value" widget="color"/>
- </page> 
+  <param label="Value" name="value" widget="color">
+   <help>
+    <b>value</b>
+    <br></br>      
+    <br>The input color or texture.</br> 
+   </help>
+  </param>       
+ </page>
 </args>

@@ -1,7 +1,32 @@
 <args format="1.0">
+ <help>
+  Simulates an environment by mapping a texture or image file directly onto the inner surface of an infinite sphere. 
+  <br></br> 
+  <br>To use this texture, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Reflection_and_Environment_Simulate_reflections_with_Env_Sphere.htm">Simulate reflections with Env Sphere</a>.</br>
+  <br></br>       
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Env_Sphere.htm">Env Sphere in Autodesk's Maya Docs</a></br>
+ </help>
  <page name="Environment Sphere Attributes" open="True">      
-  <param label="Image" name="image" widget="fileInput"/>
-  <param label="Flip" name="flip" widget="checkBox"/>
-  <param label="Placement Matrix" name="placementMatrix" open="True"/>
- </page> 
+  <param label="Image" name="image" widget="fileInput">
+   <help>
+    <b>image</b>
+    <br></br>      
+    <br>The texture mapped to the inner surface of an infinite sphere.</br> 
+   </help>
+  </param>  
+  <param label="Flip" name="flip" widget="checkBox">
+   <help>
+    <b>flip</b>
+    <br></br>      
+    <br>Reverses the U and V orientation of the Image texture.</br> 
+   </help>
+  </param>
+ </page>  
+  <param label="Placement Matrix" name="placementMatrix" open="True">
+   <help>
+    <b>placementMatrix</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>      
 </args>

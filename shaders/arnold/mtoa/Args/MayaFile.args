@@ -1,4 +1,11 @@
 <args format="1.0">
+ <help>
+  Lets you use an image file as a 2D texture.
+  <br></br> 
+  <br>File textures are bitmaps scanned from photographs, taken with a digital camera, or painted in a 2D or 3D paint package that you bring into Maya to use as a bitmap. File textures filter better than most procedural textures and can result in better image quality.</br> 
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_File.htm">File in Autodesk's Maya Docs</a></br>
+ </help>     
  <page name="File Attributes" open="True">
   <param label="Filter Type" name="filter" widget="popup">
    <hintlist name="options">
@@ -12,8 +19,15 @@
   <param label="Mip-map Bias" int="True" name="mipBias"/>
   <param label="Use Default Color" name="useDefaultColor" widget="checkBox"/>
   <param label="Invert" name="invert" widget="checkBox"/>
+  <param label="UV Set Name" name="uvSetName">
+   <help>
+    <b>uvset</b>
+    <br></br>
+    <br>If geometry has multiple UV sets then put the desired set name in the uvset parameter to use it in the image node. For example, if you have created a secondary UV set in a polymesh node and named it "UVset2", then you can use this UV set by setting uvset equal to "UVset2". By default, when the uvset parameter is empty, the primary UV set in the polymesh will be used.</br>
+   </help>  
+  </param>
  </page> 
- <page name="2d Texture Placement Attributes" open="True">
+ <page name="2d Texture Placement Attributes ---------------------------------------------------------------------------------" open="True">
   <param label="Coverage" name="coverage"/>
   <param label="Translate Frame" name="translateFrame"/>
   <param label="Rotate Frame" name="rotateFrame" slider="True" slidermin="0.0" slidermax="360.0"/>
@@ -27,12 +41,48 @@
   <param label="Rotate UV" name="rotateUV" slider="True" slidermin="0.0" slidermax="360.0"/>
   <param label="Noise UV" name="noiseUV"/>
  </page>
- <page name="Color Balance" open="False">
-  <param label="Default Color" name="defaultColor" widget="color"/>
-  <param label="Color Gain" name="colorGain" widget="color"/>
-  <param label="Color Offset" name="colorOffset" widget="color"/>
-  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox"/>
+ <page name="Color Balance -----------------------------------------------------------------------------------------------------------" open="False">
+ <param label="Default Color" name="defaultColor" widget="color">
+   <help>
+    <b>defaultColor</b>
+    <br></br>      
+    <br>If you map a texture to a material in such a way that it that does not cover the entire surface, the file node's Default Color shows through. To select a different color, click the color bar to open the Color Chooser. To change the texture's coverage, use the placement options.</br> 
+   </help>
+  </param>    
+  <param label="Color Gain" name="colorGain" widget="color">
+   <help>
+    <b>colorGain</b>
+    <br></br>      
+    <br>Scaling factor applied to the texture's outColor channel. For example, you can color-correct a texture that appears too green by setting the Color Gain to a shade of blue. The default color is white (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Color Offset" name="colorOffset" widget="color">
+   <help>
+    <b>colorOffset</b>
+    <br></br>      
+    <br>Offset factor applied to the texture's outColor channel. For example, you can brighten a texture that appears too dark by setting the Color Offset to a shade of gray. The default color is black (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Gain" name="alphaGain" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaGain</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Scaling factor applied to the texture's outAlpha channel. The default value is 1 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha Offset" name="alphaOffset" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>alphaOffset</b>
+    <br></br>      
+    <br>Only has an effect if the texture is used as a bump or displacement. Offset factor applied to the texture's outAlpha channel. For example, if the Alpha Gain value is -1 and the Alpha Offset value is 1, the outAlpha channel is inverted. The default value is 0 (no effect).</br> 
+   </help>
+  </param>    
+  <param label="Alpha is Luminance" name="alphaIsLuminance" widget="checkBox">
+   <help>
+    <b>alphaIsLuminance</b>
+    <br></br>      
+    <br>Off by default. The alpha (mask) output depends on the luminance of the color channels. Bright areas of the texture are more opaque when compositing, and dark areas are more transparent.</br> 
+   </help>
+  </param>    
  </page>
 </args>

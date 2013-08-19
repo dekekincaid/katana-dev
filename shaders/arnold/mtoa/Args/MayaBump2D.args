@@ -1,22 +1,96 @@
 <args format="1.0">
+ <help>
+  Converts a 2D texture to bump maps. Middle-drag the 2D texture swatch over the material swatch and select bump map from the pop-up menu. Maya creates the bump2d utility.
+  <br></br>   
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Bump_2d_utility.htm">Use the Bump 2d utility</a>.</br> 
+  <br></br> 
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Bump_2d.htm">Bump 2D in Autodesk's Maya Docs</a></br>
+ </help>
+
  <page name="2D Bump Attributes" open="True">
-  <param label="Bump Value" name="bump_map" slider="True" slidermin="0.0" slidermax="2.0"/>
-  <param label="Bump Depth" name="bump_height" slider="True" slidermin="-5.0" slidermax="5.0"/>
+
+  <param label="Bump Value" name="bump_map" slider="True" slidermin="0.0" slidermax="2.0">
+   <help>
+    <b>bump_map</b>
+    <br></br>      
+    <br>The source 2D texture used for the bump map. You can connect the output of any shading network to <b>Bump Value</b> to use as the source of the bumps.</br> 
+   </help>
+  </param> 
+
+  <param label="Bump Depth" name="bump_height" slider="True" slidermin="-5.0" slidermax="5.0">
+   <help>
+    <b>bump_height</b>
+    <br></br>      
+    <br>Controls how high the bumps display on the surface. Increase <b>Bump Depth</b> to make the surface bumpier. Decrease <b>Bump Depth</b> to make the surface smoother.</br>
+    <br>You can achieve almost identical effects by adjusting the Bump Depth or the Alpha Gain and Alpha Offset of the texture. The Bump Depth is determined by reading the alpha gain value of the texture. Both controls can be useful in complex shading networks where there may be multiple bumps. The alpha gain attribute lets you individually adjust the bump for each texture.</br>
+   </help>
+  </param> 
+
   <param label="Use As:" name="use_as" widget="popup">
    <hintlist name="options">
     <string value="bump"/>
     <string value="tangent_normal"/>
     <string value="object_normal"/>
    </hintlist>
-  </param>
+   <help>
+    <b>use_as</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param>   
  </page>
- <page name="Extra Attributes" open="True">
-  <param label="Normal Map" name="normal_map" widget="color"/>
-  <param label="Shader" name="shader" widget="color"/>  
-  <param label="Flip R Channel" name="flip_r" widget="checkBox"/>
-  <param label="Flip G Channel" name="flip_g" widget="checkBox"/>
-  <param label="Swap Tangents" name="swap_tangents" widget="checkBox"/>
-  <param label="Use Derivatives" name="use_derivatives" widget="checkBox"/>
-  <param label="Gamma Correct" name="gamma_correct" widget="checkBox"/>
+
+ <page name="Extra Attributes -----------------------------------------------------------------------------------------------------" open="True">
+  <param label="Normal Map" name="normal_map" widget="color">
+   <help>
+    <b>normal_map</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param> 
+  <param label="Shader" name="shader" widget="color">  
+   <help>
+    <b>shader</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param> 
+ </page>
+ <page name="-----------------------------------------------------------------------------------------------------------------------------" open="True">  
+  <param label="Flip R Channel" name="flip_r" widget="checkBox">
+   <help>
+    <b>flip_r</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param> 
+  <param label="Flip G Channel" name="flip_g" widget="checkBox">
+   <help>
+    <b>flip_g</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param> 
+  <param label="Swap Tangents" name="swap_tangents" widget="checkBox">
+   <help>
+    <b>swap_tangents</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param> 
+  <param label="Use Derivatives" name="use_derivatives" widget="checkBox">
+   <help>
+    <b>use_derivatives</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param> 
+  <param label="Gamma Correct" name="gamma_correct" widget="checkBox">
+   <help>
+    <b>gamma_correct</b>
+    <br></br>      
+    <br></br> 
+   </help>
+  </param> 
  </page>
 </args>

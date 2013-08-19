@@ -1,7 +1,32 @@
 <args format="1.0">
+ <help>
+  Isolates colors within a relatively complex texture.This is helpful when you create complex shader networks.
+  <br></br>
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Clamp_colors_utility.htm">Use the Clamp colors utility</a>.</br>
+  <br></br>  
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Clamp.htm">Clamp in Autodesk's Maya Docs</a></br>
+ </help>       
  <page name="Clamp Color Attributes" open="True">    
-  <param label="Min" name="min" constant="True" widget="float"/>
-  <param label="Max" name="max" constant="True" widget="float"/>
-  <param label="Input" name="input" constant="True" widget="float"/>
+  <param label="Min" name="min" constant="True" widget="float">
+   <help>
+    <b>min</b>
+    <br></br>      
+    <br>The minimum values for the color channels.</br> 
+   </help>
+  </param>    
+  <param label="Max" name="max" constant="True" widget="float">
+   <help>
+    <b>max</b>
+    <br></br>      
+    <br>The maximum values for the color channels.</br> 
+   </help>
+  </param>    
+  <param label="Input" name="input" constant="True" widget="float">
+   <help>
+    <b>input</b>
+    <br></br>      
+    <br>he input color or texture that Maya clamps.</br> 
+   </help>
+  </param>      
  </page>
 </args>

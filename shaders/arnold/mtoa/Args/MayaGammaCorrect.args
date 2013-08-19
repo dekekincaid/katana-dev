@@ -1,6 +1,33 @@
 <args format="1.0">
+ <help>
+  Converts an HSV (Hue-Saturation-Value) color into an RGB (Red-Green-Blue) color. This is useful when you want to control a color using HSV values. For example, you can animate a material to run through all the rainbow colors. (This is the same as animating the Hue of an HSV color).
+  <br></br> 
+  <br>To animate a material, create an HSV to RGB node, connect the Out Rgb attribute to the material’s color, then animate the first channel of InHsv.</br> 
+  <br></br> 
+  <br>Use Gamma Correction to smoothly remap the colors in an image. Extreme values (very light or very dark) do not change much, but you can make mid-range tones brighter or darker.</br>
+  <br></br> 
+  <br>This utility lets you specify different gamma values for the three channels of the input. The typical formula for calculating gamma is:</br> 
+  <br><b>new == old ** (1.0/Gamma)</b></br> 
+  <br></br>
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Gamma_Correct_utility.htm">Use the Gamma Correct utility</a>.</br> 
+  <br></br>
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Gamma_Correct.htm">Gamma Correct in Autodesk's Maya Docs</a></br>
+ </help>    
+
  <page name="Gamma Attributes" open="True">    
-  <param label="Value" name="value" widget="color"/>
-  <param label="Gamma" name="gamma"/>
- </page>
+  <param label="Value" name="value" widget="color">
+   <help>
+    <b>value</b>
+    <br></br>      
+    <br>The input color or texture to gamma-correct.</br> 
+   </help>
+  </param>   
+  <param label="Gamma" name="gamma">
+   <help>
+    <b>gamma</b>
+    <br></br>      
+    <br>Controls the amount of gamma correction applied to each channel. A value of 1 means that the color is not adjusted. Increase Gamma to make the mid-range tones brighter. Decrease Gamma to make them darker.</br> 
+   </help>
+  </param>   
+ </page>   
 </args>

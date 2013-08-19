@@ -1,7 +1,37 @@
 <args format="1.0">
+ <help>
+  Incorporate the <b>Condition</b> utility in shader networks capable of acting one way in one set of circumstances and another way in a different set of circumstances. For example, you can create a double-sided shaded surface <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Asts_Doublesided_shaded_surfaces.htm">(see Double-sided shaded surfaces)</a>.
+  <br></br> 
+  <br>To use this utility, see <a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Render_node_utilities_Use_the_Condition_utility.htm">Use the Condition utility</a>.</br> 
+  <br>Condition produces a color value depending on the conditions you set. It requires one logical operator and two choice values, as shown in the following example:
+</br> 
+  <br></br>  
+  <br><b>If (A operation B)</b></br> 
+  <br><b>Outcolor = Color1</b></br> 
+  <br><b>else</b></br> 
+  <br><b>Outcolor = Color2</b></br> 
+  <br></br>     
+  <br>Condition compares the value in A with the value in B to find out whether the value in A is greater, smaller, equal to, less than, less than or equal to, greater than or equal to, or not equal to the value in B.</br> 
+  <br></br>  
+  <br>Since it is a branching function, it does one thing if a logical expression is true and something else if it is false. For example, if the value in A is not equal to the value in B, <b>Color If True</b> is chosen in <b>OutColor</b>. If the value in A is equal to the value in B, and <b>Color If False</b> is chosen in <b>OutColor</b>.</br> 
+  <br></br>
+  <br><a href="http://download.autodesk.com/global/docs/maya2014/en_us/files/Shading_Nodes_Condition.htm">Condition in Autodesk's Maya Docs</a></br>
+ </help>     
  <page name="Condition Attributes" open="True">
-  <param label="First Term" name="firstTerm"/>
-  <param label="Second Term" name="secondTerm"/>
+  <param label="First Term" name="firstTerm">
+   <help>
+    <b>firstTerm</b>
+    <br></br>      
+    <br>Represents the first term of the condition.</br> 
+   </help>
+  </param>      
+  <param label="Second Term" name="secondTerm">
+   <help>
+    <b>secondTerm</b>
+    <br></br>      
+    <br>Represents the second term of the condition.</br> 
+   </help>
+  </param>    
   <param label="Operation" name="operation" widget="popup">
    <hintlist name="options">
     <string value="equal"/>
@@ -11,8 +41,25 @@
     <string value="lessthan"/>
     <string value="lessorequal"/>
    </hintlist>
+   <help>
+    <b>operation</b>
+    <br></br>      
+    <br>Displays a drop-down list from which you can select an operator. The operators include: Equal, Not Equal, Greater Than, Greater or Equal, Less Than, Less or Equal.</br> 
+   </help>
   </param>  
-  <param label="Color If True" name="colorIfTrue" widget="color"/>
-  <param label="Color If False" name="colorIfFalse" widget="color"/>
+  <param label="Color If True" name="colorIfTrue" widget="color">
+   <help>
+    <b>colorIfTrue</b>
+    <br></br>      
+    <br>The color or texture that is output when the condition is true.</br> 
+   </help>
+  </param>      
+  <param label="Color If False" name="colorIfFalse" widget="color">
+   <help>
+    <b>colorIfFalse</b>
+    <br></br>      
+    <br>The color or texture that is output when the condition is false.</br> 
+   </help>
+  </param>      
  </page>
 </args>
